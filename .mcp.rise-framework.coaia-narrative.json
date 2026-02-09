@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rise-framework-coaia-narrative": {
+         "command": "npx",
+         "args": ["-y", "${CNCV}", "--memory-path", "/src/llms/rise-framework.coaia-narrative.jsonl" ]
+    }
+  }
+}

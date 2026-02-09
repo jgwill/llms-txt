@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+	   "coaiapy_aetherial": {
+      "command": "/opt/anaconda3/envs/src/bin/coaiapy-mcp",
+      "args": [ ],
+      "env": { 
+	      "COAIAPY_ENV_PATH":"/src/.env.aetherial",
+	      "COAIAPY_MCP_FEATURES":"MINIMAL"
+        }
+    },
+     "iaip-mcp": {
+      "command": "node",
+      "args": [
+        "/src/IAIP/mcp/dist/index.js"
+      ],
+      "env": { }
+    }
+,
+    "rise-framework-coaia-narrative": {
+         "command": "npx",
+         "args": ["-y", "coaia-narrative@0.4.11", "--memory-path", "/src/llms/rise-framework.coaia-narrative.jsonl" ]
+    }
+  }
+}
