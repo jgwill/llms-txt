@@ -1,0 +1,25 @@
+
+
+## RELATED PATH: 
+
+### Webhook milestones etc
+
+/src/Miadi/.github-hooks
+/a/src/miette/claude-plan-insights/generate_milestone_context.sh
+
+### World building
+
+#### /workspace/repos/jgwill/761e48b0-8fcf-4b73-ba46-8b1a0650cabc-wintersolstice-worlds-building-260116
+
+* That would become a space to explore having 3 langfuse for the 3 worlds
+
+
+
+### Path use case
+
+/workspace/repos/miadisabelle/trace-750ce987-8ba1-4848-bf7b-922b3c2e68fb-IAIP-MCP
+/a/src/miette/claude-plan-insights/logs/RESUME-issue-4-PRERUN-1fefe2a6-8d09-40ae-9f75-ae59dfb4fd1e-2601101003.sh
+/a/src/miette/claude-plan-insights/logs/RESUME-issue-4-PRERUN-4395fb27-cb07-468a-a4ba-cefc23600376-2601101005.sh
+/a/src/miette/claude-plan-insights/logs/RESUME-issue-4-PRERUN-5734044f-e30d-471c-b421-956825eab705-2601101005.sh
+/a/src/miette/claude-plan-insights/logs/RESUME-issue-4-PRERUN-891370fc-5c6d-4878-94dc-bf17cf958dcb-2601101004.sh
+
