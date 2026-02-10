@@ -1,0 +1,155 @@
+# LLMS.txt Index
+
+> A minimal index of all `llms-*.txt` and `llms-*.md` documents, providing a brief summary and relational links for quick navigation and contextual understanding.
+
+---
+
+## Beyond Numerical Metrics
+> Critiques purely numerical performance metrics and introduces the Managerial Moment of Truth (MMOT) as a superior qualitative approach.
+- **Link**: ./llms-beyond-numerical-metrics.md
+- **Related**: llms-managerial-moment-of-truth.md
+
+## Claude Agent SDK v2
+> A guide to the Claude Agent SDK v2, highlighting breaking changes from v1 and focusing on building autonomous AI agents with tool integration and creative orientation.
+- **Link**: ./llms-claude-agent-sdk-v2.md
+- **Related**: llms-claude-sdk.gemini.md
+
+## Claude Code SDK (DEPRECATED)
+> A deprecated guide to the Claude Code SDK v1, emphasizing a generative, creative orientation in agent development based on structural thinking.
+- **Link**: ./llms-claude-sdk.gemini.md
+- **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
+
+## Claude.ai Skill Creation Guide
+> A guide on how to create custom skills for Claude.ai, using the `aistudio-scaffolder` as a practical example.
+- **Link**: ./llms-claude-skill-creation-guide.md
+- **Related**: llms-txt-compliance-checklist.md
+
+## COAIA Fuse Guidance
+> A guide to using `coaia-fuse` for tracing the generative process of AI-assisted creation, framed as a narrative-driven activity.
+- **Link**: ./llms-coaia-fuse-guidance.md
+- **Related**: llms-creative-orientation.txt, llms-rise-framework.txt
+
+## CoaiAPy CLI Guide
+> A manifesto and guide for the `coaiapy` Python ecosystem, framing its CLI tools as instruments for computational creativity and intelligent workflow automation.
+- **Link**: ./llms-coaiapy-cli-guide.md
+- **Related**: llms-coaiapy-mcp-config-guide.md, llms-coaia-fuse-guidance.md
+
+## Coaiapy Langfuse Tracing Best Practices
+> A standardized guide for creating rich, observable, and structurally sound traces using Langfuse, emphasizing tracing as a narrative craft.
+- **Link**: ./llms-coaiapy-langfuse-tracing-best-practices.md
+- **Related**: llms-coaiapy-cli-guide.md, llms-coaia-fuse-guidance.md, llms-txt-compliance-checklist.md
+
+## coaiapy-mcp Configuration Guide
+> A guide explaining the production and development launch configurations for the `coaiapy-mcp` server used by the Gemini CLI.
+- **Link**: ./llms-coaiapy-mcp-config-guide.md
+- **Related**: llms-coaiapy-cli-guide.md
+
+## Creative Orientation Framework
+> A foundational framework distinguishing between reactive problem-solving and generative creation, based on Robert Fritz's structural dynamics.
+- **Link**: ./llms-creative-orientation.txt
+- **Related**: llms-structural-thinking.gemini.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
+
+## Delayed Resolution Principle
+> Explains the principle of holding structural tension rather than prematurely resolving it, which is critical for the creative process.
+- **Link**: ./llms-delayed-resolution-principle.md
+- **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt
+
+## Digital Decision Making Framework
+> A guide for implementing the TandT (Twos and Threes) digital decision-making methodology to transform subjective analog thinking into structured binary evaluations.
+- **Link**: ./llms-digital-decision-making.md
+- **Related**: llms-structural-thinking.gemini.txt, llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt, llms-creative-orientation.txt
+
+## Epistemological Counter-Article Protocol
+> A protocol for writing academic papers that engage in "deep disagreement" with a source's foundational assumptions about knowledge, reality, or methodology.
+- **Link**: ./llms-epistemological-counter-article-protocol.md
+- **Related**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-creative-orientation.txt, llms-digital-decision-making.md, llms-managerial-moment-of-truth.md, llms-rise-framework.txt, llms-structural-thinking.gemini.txt
+
+## Indigenous Research Paradigm Framework
+> A guide for reframing AI-assisted research to align with Indigenous paradigms, centering relationality, ceremony, and accountability.
+- **Link**: ./llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-narrative-beats.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-structural-thinking.gemini.txt
+
+## Miadi GitHub Hooks Guide (Issue #115)
+> A technical guide to the GitHub webhook event processing system in the Miadi project, including the ETL process and the fix for the `sub_issues` bug.
+- **Link**: ./llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md
+- **Related**: llms-jgwill-miadi-issue-150-milestone.txt
+
+## Miadi Webhook Paths (Issue #150)
+> A short text with paths related to webhook milestones, world-building, and trace logs.
+- **Link**: ./llms-jgwill-miadi-issue-150-milestone.txt
+- **Related**: llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md
+
+## Leadership in Structural Dynamics
+> A guide to leadership through the lens of Structural Dynamics, emphasizing structural intervention over individual will.
+- **Link**: ./llms-leadership.txt
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
+
+## Managerial Moment of Truth (MMOT)
+> Outlines the MMOT, a four-step process for turning discrepancies between expectation and delivery into learning opportunities.
+- **Link**: ./llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-leadership.txt, llms-digital-decision-making.md, llms-structural-thinking.gemini.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md
+
+## Narrative Beats Guide
+> A guide on using narrative beats to document complex stories across three archetypal universes: engineer-world, ceremony-world, and story-engine-world.
+- **Link**: ./llms-narrative-beats.txt
+- **Related**: llms-structural-tension-charts.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+
+## Narrative Remixing Framework
+> A methodology for transforming stories across different domains while preserving their core emotional architecture and structural integrity.
+- **Link**: ./llms-narrative-remixing.txt
+- **Related**: llms-creative-orientation.txt, llms-rise-framework.txt
+
+## Non-Creative Orientation Approaches
+> A brief note on "Gaps analysis" as a non-creative orientation approach and how to potentially reframe it.
+- **Link**: ./llms-non-creative-orientation-approach-to-convert.txt
+- **Related**: llms-creative-orientation.txt
+
+## Critique of "Supermind Ideator"
+> A paradigmatic critique of an academic paper on AI for "creative problem-solving," arguing that its problem-solving bias distorts the nature of generative creativity.
+- **Link**: ./llms-pollution-critique-arxiv-2311.01937v1.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-indigenous-paradigm-v2.0, llms-managerial-moment-of-truth.md, llms-delayed-resolution-principle.md, llms-structural-tension-charts.txt, llms-pollution-detection.md
+
+## Academic Pollution Detection
+> A short note identifying `llms-pollution-critique-arxiv-2311.01937v1.md` as an example of a new type of critique paper.
+- **Link**: ./llms-pollution-detection.md
+- **Related**: llms-pollution-critique-arxiv-2311.01937v1.md
+
+## Pythonista LLM Development Guide
+> A guide for LLMs to generate creative and functional native iOS applications for the Pythonista environment, using the RISE framework.
+- **Link**: ./llms-pythonista-full.gemini.txt
+- **Related**: llms-rise-framework.txt, llms-ui-pythonista-guide.gemini.txt
+
+## RISE Framework
+> The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures.
+- **Link**: ./llms-rise-framework.txt
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-managerial-moment-of-truth.md
+
+## Macrostructural Patterning Analysis (SCCP)
+> A guide for using Robert Fritz's Structural Dynamics to identify and understand recurring behavioral patterns (macrostructural patterning).
+- **Link**: ./llms-sccp-patterning.md
+- **Related**: llms-creative-orientation.txt
+
+## Structural Tension Charts Guide
+> A guide for understanding and using Robert Fritz's structural tension charts, clarifying that action steps are not a to-do list but telescoped sub-charts.
+- **Link**: ./llms-structural-tension-charts.txt
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
+
+## Structural Thinking (Claude)
+> A guide to Robert Fritz's Structural Thinking, a three-step diagnostic discipline for observing reality without preconception.
+- **Link**: ./llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt
+
+## Structural Thinking (Gemini)
+> A concise guide for AI on applying Robert Fritz's principles of Structural Thinking, distinguishing it from problem-solving and creative charting.
+- **Link**: ./llms-structural-thinking.gemini.txt
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
+
+## LLMS.txt Compliance Checklist
+> A checklist for ensuring `LLMS.txt` files meet standards for structure, content quality, machine readability, and AI interaction guidelines.
+- **Link**: ./llms-txt-compliance-checklist.md
+- **Related**: 
+
+## Pythonista UI Generation Guide
+> A guide for LLMs on designing and generating native UIs for Pythonista on iOS, focusing on the `ui` module and `.pyui` file format.
+- **Link**: ./llms-ui-pythonista-guide.gemini.txt
+- **Related**: llms-pythonista-full.gemini.txt
