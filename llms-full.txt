@@ -6,150 +6,150 @@
 
 ## Beyond Numerical Metrics: Embracing Clarity in Performance Evaluation
 > Argues that traditional 0-10 performance scales are reductive and fail to capture the full context of an individual's contribution. It proposes the Managerial Moment of Truth (MMOT) as a generative alternative that focuses on co-creating a shared reality and fostering advancing patterns in performance through qualitative dialogue.
-- **Link**: ./llms-beyond-numerical-metrics.md
+- **Link**: [llms-beyond-numerical-metrics.md](./llms-beyond-numerical-metrics.md)
 - **Related**: llms-managerial-moment-of-truth.md
 
 ## Claude Agent SDK v2: Complete Guide for Building AI Agents
 > Provides a comprehensive guide to the Claude Agent SDK v2, which replaces the older Claude Code SDK. It details breaking changes like explicit system prompts and setting sources, and covers core concepts such as tool permissions, multi-turn conversations, and integration with the Model Context Protocol (MCP). The guide also emphasizes the SDK's alignment with the Creative Orientation framework.
-- **Link**: ./llms-claude-agent-sdk-v2.md
+- **Link**: [llms-claude-agent-sdk-v2.md](./llms-claude-agent-sdk-v2.md)
 - **Related**: llms-claude-sdk.gemini.md
 
 ## Claude Code SDK: A Gemini LLM Guide to Creative Agent Development (DEPRECATED)
 > This deprecated document guides LLMs on using the Claude Code SDK (v1) with a creative orientation. It introduces the core principles of structural tension, advancing patterns, and the triadic agent embodiment of Mia, Haiku, and Miette. It covers key SDK concepts like system prompts, tool permissions, and session management, advocating for a shift from a problem-solving mindset to a generative one.
-- **Link**: ./llms-claude-sdk.gemini.md
+- **Link**: [llms-claude-sdk.gemini.md](./llms-claude-sdk.gemini.md)
 - **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
 
 ## How to Create a Claude.ai Skill: A Guide for LLMs
 > Explains the anatomy of a Claude.ai skill, which consists of a `SKILL.md` file (defining metadata and workflow) and optional helper scripts. It uses the `aistudio-scaffolder` skill as a case study to demonstrate how to design a structured workflow that guides the LLM through information gathering, tool use, and output generation, following Creative Orientation principles.
-- **Link**: ./llms-claude-skill-creation-guide.md
+- **Link**: [llms-claude-skill-creation-guide.md](./llms-claude-skill-creation-guide.md)
 - **Related**: llms-txt-compliance-checklist.md
 
 ## COAIA Fuse: A Gemini LLM Guide to Creative Observability
 > This document presents `coaia-fuse` as a tool for "Creative Archaeology," a method of documenting the story of creation as it happens. It provides best practices for using `coaia_fuse_trace_create` and `coaia_fuse_add_observation`, emphasizing the use of `input_data` and `output_data` for core content and reserving `metadata` for tags. The guide aligns tracing with the Creative Orientation and RISE frameworks.
-- **Link**: ./llms-coaia-fuse-guidance.md
+- **Link**: [llms-coaia-fuse-guidance.md](./llms-coaia-fuse-guidance.md)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt
 
 ## CoaiAPy: Computational Creativity Manifesto
 > This document outlines the philosophy of `coaiapy` as a tool for "computational creativity." It details the various CLI commands (`transcribe`, `summarize`, `tash`, `fetch`, `fuse`, `pipeline`) and the `coaiapy-mcp` server for Claude Code integration. It emphasizes using generative language and a creative orientation when describing and using the tools.
-- **Link**: ./llms-coaiapy-cli-guide.md
+- **Link**: [llms-coaiapy-cli-guide.md](./llms-coaiapy-cli-guide.md)
 - **Related**: llms-coaiapy-mcp-config-guide.md, llms-coaia-fuse-guidance.md
 
 ## Coaiapy Langfuse Tracing Best Practices
 > This guide provides best practices for creating traces in Langfuse, framing the process as a narrative craft. It specifies conventions for trace and observation naming (including glyphs), the importance of using `input_data` and `output_data`, and how to use hierarchical observations to structure complex processes. It also introduces the "20-Second Rule" for session-based retrieval.
-- **Link**: ./llms-coaiapy-langfuse-tracing-best-practices.md
+- **Link**: [llms-coaiapy-langfuse-tracing-best-practices.md](./llms-coaiapy-langfuse-tracing-best-practices.md)
 - **Related**: llms-coaiapy-cli-guide.md, llms-coaia-fuse-guidance.md, llms-txt-compliance-checklist.md
 
 ## Gemini LLM Guide: `coaiapy-mcp` Configuration
 > This document details the two `.mcp.json` configurations for the `coaiapy-mcp` server. The production config uses `uvx` to run the package in an isolated environment, ensuring stability. The development config directly executes the script from a Conda environment, allowing for rapid iteration. It's a critical guide for agents to understand the operational context of the tools they are using.
-- **Link**: ./llms-coaiapy-mcp-config-guide.md
+- **Link**: [llms-coaiapy-mcp-config-guide.md](./llms-coaiapy-mcp-config-guide.md)
 - **Related**: llms-coaiapy-cli-guide.md
 
 ## Creative Orientation Framework
 > This is a core document explaining the principles of Creative Orientation. It contrasts the reactive (elimination-focused) approach with the creative (generative) approach. It introduces key concepts from structural thinking, such as structural tension, advancing vs. oscillating patterns, and the three phases of the creative process (Germination, Assimilation, Completion).
-- **Link**: ./llms-creative-orientation.txt
+- **Link**: [llms-creative-orientation.txt](./llms-creative-orientation.txt)
 - **Related**: llms-structural-thinking.gemini.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
 
 ## Delayed Resolution Principle in COAIA Memory
 > Based on Robert Fritz's work, this document explains why prematurely resolving tension (e.g., using "Ready to begin" as a default `currentReality`) destroys the generative force of structural tension. It provides clear guidelines for LLMs on how to maintain tension by requiring explicit assessment of current reality.
-- **Link**: ./llms-delayed-resolution-principle.md
+- **Link**: [llms-delayed-resolution-principle.md](./llms-delayed-resolution-principle.md)
 - **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt
 
 ## Digital Decision Making Framework for LLMs
 > This framework teaches LLMs to guide users from indecisive "analog" thinking to clear "digital" YES/NO decisions. It introduces the TandT methodology, which uses a TwoFlag (Acceptable/Unacceptable) and ThreeFlag (trend) system. It also provides structured response templates and corrects for common LLM biases like problem-solving and uncertainty performance.
-- **Link**: ./llms-digital-decision-making.md
+- **Link**: [llms-digital-decision-making.md](./llms-digital-decision-making.md)
 - **Related**: llms-structural-thinking.gemini.txt, llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt, llms-creative-orientation.txt
 
 ## Academic Counter-Positioning: Writing When Epistemology/Ontology/Methodology Diverges
 > This document provides a framework for writing academic critiques based on fundamental disagreements in epistemology, ontology, or methodology. It defines various types of counter-positions (e.g., Critical Response, Genealogical Critique, Epistemic Injustice Critique) and offers structural patterns for articulating these deep disagreements without being purely dismissive.
-- **Link**: ./llms-epistemological-counter-article-protocol.md
+- **Link**: [llms-epistemological-counter-article-protocol.md](./llms-epistemological-counter-article-protocol.md)
 - **Related**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-creative-orientation.txt, llms-digital-decision-making.md, llms-managerial-moment-of-truth.md, llms-rise-framework.txt, llms-structural-thinking.gemini.txt
 
 ## Indigenous Research Paradigm Framework for AI Assistance
 > This document serves as a decolonized operating system for AI engagement in research. It highlights the foundational differences between Western and Indigenous epistemology, ontology, axiology, and methodology. The core insight is that Structural Dynamics (like Structural Tension and MMOT) can function as a "ceremonial technology" that bridges Western systematic approaches with Indigenous relational ways. It provides operational protocols to resist extractive anti-patterns.
-- **Link**: ./llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+- **Link**: [llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md](./llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-narrative-beats.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-structural-thinking.gemini.txt
 
 ## GitHub Webhook Local Hooks System - jgwill/Miadi Issue #115
 > This document provides a complete reference for Miadi's local GitHub webhook system. It details the architecture from webhook receipt to local hook execution, explains the ETL process that transforms GitHub payloads into an agent-friendly format, and documents the bug fix for the `sub_issues` event type. It's a crucial guide for understanding this specific automation workflow.
-- **Link**: ./llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md
+- **Link**: [llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md](./llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md)
 - **Related**: llms-jgwill-miadi-issue-150-milestone.txt
 
 ## Webhook milestones etc
 > A collection of file paths related to different aspects of the Miadi and Miette projects. It references webhook hook scripts, a "world-building" exploration repository, and log files for tracing specific issue resolutions.
-- **Link**: ./llms-jgwill-miadi-issue-150-milestone.txt
+- **Link**: [llms-jgwill-miadi-issue-150-milestone.txt](./llms-jgwill-miadi-issue-150-milestone.txt)
 - **Related**: llms-jgwill-miadi-issue-115-github-hooks-issues-subissues.md
 
 ## Leadership in Structural Dynamics
 > This document outlines a leadership philosophy based on Robert Fritz's Structural Dynamics. It posits that structure is more causally dominant than individual talent. Effective leadership involves designing tension-resolution systems (using tools like Structural Tension Charts) to create advancing patterns and aligning executive teams to foster organizational capacity.
-- **Link**: ./llms-leadership.txt
+- **Link**: [llms-leadership.txt](./llms-leadership.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
 
 ## The Managerial Moment of Truth: A Structural Approach to Performance and Learning
 > Based on the work of Bodaken and Fritz, this document details the Managerial Moment of Truth (MMOT). It's a four-step process (Acknowledge, Analyze, Create Action Plan, Document) for addressing performance discrepancies (both positive and negative) in a structured, non-personal way. It frames "truth as a verb" and is designed to cultivate advancing patterns in performance and learning.
-- **Link**: ./llms-managerial-moment-of-truth.md
+- **Link**: [llms-managerial-moment-of-truth.md](./llms-managerial-moment-of-truth.md)
 - **Related**: llms-creative-orientation.txt, llms-leadership.txt, llms-digital-decision-making.md, llms-structural-thinking.gemini.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md
 
 ## When to Use Narrative Beats
 > Explains the purpose and usage of Narrative Beats, a tool for documenting significant story moments across technical, relational, and narrative dimensions. It distinguishes beats from charts and provides a guide for the `create_narrative_beat`, `telescope_narrative_beat`, and `list_narrative_beats` tools, including their optional integration with `iaip-mcp` tools.
-- **Link**: ./llms-narrative-beats.txt
+- **Link**: [llms-narrative-beats.txt](./llms-narrative-beats.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
 
 ## Narrative Remixing Framework for LLMs
 > This framework provides a four-phase process (Story Archaeology, Contextual Transposition, Narrative Synthesis, Multi-Format Export) for adapting narratives to new contexts. It uses a three-layer transformation model (Linguistic, Structural, Stylistic) to ensure the story's essential power to engage and teach is maintained, even as the domain-specific details change.
-- **Link**: ./llms-narrative-remixing.txt
+- **Link**: [llms-narrative-remixing.txt](./llms-narrative-remixing.txt)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt
 
 ## Gaps analysis
 > This file contains a short reflection on "Gaps analysis." It identifies this approach as rooted in a problem-solving ("gap to be filled") mindset, which is contrary to Creative Orientation. It proposes exploring this method further to see if it can be transposed into a creative process methodology, perhaps through a scientific-artistic paper.
-- **Link**: ./llms-non-creative-orientation-approach-to-convert.txt
+- **Link**: [llms-non-creative-orientation-approach-to-convert.txt](./llms-non-creative-orientation-approach-to-convert.txt)
 - **Related**: llms-creative-orientation.txt
 
 ## Critique of "Supermind Ideator: Exploring Generative AI to Support Creative Problem-Solving" (arXiv:2311.01937v1)
 > This document presents a "deep disagreement" critique of the paper "Supermind Ideator." It analyzes the paper's epistemology, ontology, and methodology, arguing that its framing of creativity as "problem-solving" injects a reactive bias. The critique contrasts this with the generative principles of Creative Orientation and the relational accountability of Indigenous Research Paradigms.
-- **Link**: ./llms-pollution-critique-arxiv-2311.01937v1.md
+- **Link**: [llms-pollution-critique-arxiv-2311.01937v1.md](./llms-pollution-critique-arxiv-2311.01937v1.md)
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-indigenous-paradigm-v2.0, llms-managerial-moment-of-truth.md, llms-delayed-resolution-principle.md, llms-structural-tension-charts.txt, llms-pollution-detection.md
 
 ## Academic Counter-Positioning
 > This file briefly defines what a "deep disagreement" or "paradigmatic critique" paper is in academia. It then points to `llms-pollution-critique-arxiv-2311.01937v1.md` as the first example of this type of analysis within this document set, created by Grok.
-- **Link**: ./llms-pollution-detection.md
+- **Link**: [llms-pollution-detection.md](./llms-pollution-detection.md)
 - **Related**: llms-pollution-critique-arxiv-2311.01937v1.md
 
 ## Pythonista LLM Development Guide
 > This is a comprehensive guide for LLMs on developing applications for Pythonista on iOS. It covers foundational modules like `ui`, `scene`, and `objc_util`, providing creative recipes and advancing patterns. It details the event-driven model of Pythonista apps and gives specific guidelines on UI generation, including the use of `.pyui` files and integration with the `coaiapy` package.
-- **Link**: ./llms-pythonista-full.gemini.txt
+- **Link**: [llms-pythonista-full.gemini.txt](./llms-pythonista-full.gemini.txt)
 - **Related**: llms-rise-framework.txt, llms-ui-pythonista-guide.gemini.txt
 
 ## RISE Framework for LLMs
 > The RISE framework provides a creative-oriented methodology for reverse engineering and specifying software. It treats specifications as "prose code" (SpecLang) and uses a four-phase process to extract creative intent, define desired outcomes, and generate specifications that focus on advancing patterns rather than reactive problem-solving. It also includes a git-log-driven methodology for maintaining specs as code evolves.
-- **Link**: ./llms-rise-framework.txt
+- **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-managerial-moment-of-truth.md
 
 ## Macrostructural Patterning Analysis for LLMs
 > This document provides a framework for LLMs to assist in macrostructural patterning analysis. It explains how to identify oscillating patterns by mapping a person's stories into generic steps and validating them across different life domains. The core principle is that structure determines behavior, and the goal is to understand this structure, not to "solve" it as a problem.
-- **Link**: ./llms-sccp-patterning.md
+- **Link**: [llms-sccp-patterning.md](./llms-sccp-patterning.md)
 - **Related**: llms-creative-orientation.txt
 
 ## Structural Tension Charts for LLMs
 > This guide explains the correct use of structural tension charts based on Robert Fritz's methodology. It emphasizes that a chart consists of a Desired Outcome, Current Reality, and Action Steps. Crucially, it clarifies that Action Steps are not a simple to-do list; each action step is itself a complete, telescoped structural tension chart. It also covers the "Delayed Resolution Principle" for defining current reality.
-- **Link**: ./llms-structural-tension-charts.txt
+- **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 
 ## Structural Thinking for Large Language Models
 > This document outlines the three-step process of Structural Thinking: 1) Start with Nothing (no preconceptions), 2) Picture What Is Said (visualize the information), and 3) Ask Questions (of four specific types: Information, Clarification, Implication, Discrepancy). It's a diagnostic tool for understanding the underlying structure that causes behavior, and it must be done without importing external models or knowledge.
-- **Link**: ./llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt
+- **Link**: [llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt](./llms-structural-thinking.claude.f04dc696-3959-4be4-ad3f-390df0f517d9.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt
 
 ## Gemini Guidance: Structural Thinking
 > A Gemini-specific guide to Structural Thinking. It emphasizes its role as a diagnostic discipline to identify whether a system is oscillating or advancing. It reinforces the three-step process (Start with Nothing, Picture What Is Said, Ask Questions) and highlights the key distinction between diagnostic Structural Thinking and the creative process of Structural Tension Charting.
-- **Link**: ./llms-structural-thinking.gemini.txt
+- **Link**: [llms-structural-thinking.gemini.txt](./llms-structural-thinking.gemini.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
 
 ## LLMS.txt Compliance Checklist
 > This document provides a detailed checklist to ensure the quality and compliance of `LLMS.txt` files. It covers mandatory elements, content clarity, machine readability (like unique section identifiers), LLM-specific considerations (like anti-pattern identification), and cross-referencing. It also includes a scoring methodology.
-- **Link**: ./llms-txt-compliance-checklist.md
+- **Link**: [llms-txt-compliance-checklist.md](./llms-txt-compliance-checklist.md)
 - **Related**: 
 
 ## Pythonista UI Generation Guide for LLMs
 > This guide focuses specifically on generating UIs for Pythonista. It provides a deep dive into the `ui` module (Views, Controls, Layout, Events, Drawing) and the JSON-based `.pyui` file format. It includes UI recipes, common patterns, and anti-patterns for LLMs to avoid when translating natural language requests into functional interfaces.
-- **Link**: ./llms-ui-pythonista-guide.gemini.txt
+- **Link**: [llms-ui-pythonista-guide.gemini.txt](./llms-ui-pythonista-guide.gemini.txt)
 - **Related**: llms-pythonista-full.gemini.txt
