@@ -9,7 +9,7 @@ cd "$SCRIPT_DIR"
 # SYNC 1: All files to /src/__llms/ (existing behavior)
 # ══════════════════════════════════════════════════════════════
 mkdir -p ../__llms
-tar cf - *py *md *txt | (cd ../__llms/ && tar xvf - && git add . && git commit -m "sync:llms"; git push)
+tar cf - *py *md *txt | (cd ../__llms/ && tar xvf - && git add . && git commit . -m "sync:llms"; git push)
 
 # ══════════════════════════════════════════════════════════════
 # SYNC 2: RISE guidance files to /etc/claude-code/
@@ -35,6 +35,7 @@ while IFS= read -r file || [[ -n "$file" ]]; do
     fi
 done < "$GUIDANCE_FILE"
 
+if [ "$USER" == "jgi" ];then 
 # Commit and push /etc/claude-code/
 (
     cd "$ETC_DIR" && \
@@ -42,3 +43,5 @@ done < "$GUIDANCE_FILE"
     git commit __llms -m "sync:rise-guidance" && \
     git push
 ) && echo "✅ /etc/claude-code/ synced and pushed" || echo "ℹ️  No changes to commit in /etc/claude-code/"
+fi
+
