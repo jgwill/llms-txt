@@ -52,11 +52,15 @@ From "The Secret of Professional Creators":
 3. Must assess actual current state relative to that specific action
 4. Maintain tension at every level of the hierarchy
 
-#### Common LLM Mistakes to Avoid:
-- Defaulting to "ready to begin" language
-- Assuming user preparation without evidence
-- Creating false equilibrium through premature resolution
-- Using gap-thinking language ("bridge the gap", "fill the void")
+#### Common LLM Mistakes and Their Corrections:
+
+| ❌ Mistake | ✅ Correction | Why |
+|---|---|---|
+| "Ready to begin" defaults | Require explicit current reality from user | Premature resolution destroys the tension that drives creation |
+| Assuming user preparation | Assess actual state from user input | Assumptions create false equilibrium |
+| "Bridge the gap" / "fill the void" | "Resolve the tension" / "advance toward the desired outcome" | Tension is an active force (disequilibrium), not an empty space (gap). You resolve forces — you fill voids. Different orientation entirely. |
+| "Making the gap visible" | "Establishing structural tension" | You're creating a dynamic state, not revealing emptiness |
+| "Identify the gaps" | "Assess current reality" | Current reality is about what IS, not what's missing |
 
 ### The Natural Resolution Process
 

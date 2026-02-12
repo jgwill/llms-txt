@@ -130,7 +130,7 @@
 - **Related**: llms-creative-orientation.txt
 
 ## Structural Tension Charts for LLMs
-> This guide explains the correct use of structural tension charts based on Robert Fritz's methodology. It emphasizes that a chart consists of a Desired Outcome, Current Reality, and Action Steps. Crucially, it clarifies that Action Steps are not a simple to-do list; each action step is itself a complete, telescoped structural tension chart. It also covers the "Delayed Resolution Principle" for defining current reality.
+> This guide explains the correct use of structural tension charts based on Robert Fritz's methodology. A chart consists of a Desired Outcome, Current Reality, and Action Steps. Action Steps are not a to-do list — each is a complete, telescoped structural tension chart. **Critical**: Structural tension is a state of **disequilibrium** (an active, loaded, dynamic force) that seeks resolution through advancement. It is NOT "a gap to bridge" — gap language implies emptiness, while tension is energized and causal. The structure resolves by advancing toward the desired outcome, not by "bridging" or "filling" anything.
 - **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 

@@ -130,7 +130,7 @@
 - **Related**: llms-creative-orientation.txt
 
 ## Structural Tension Charts Guide
-> A guide for understanding and using Robert Fritz's structural tension charts, clarifying that action steps are not a to-do list but telescoped sub-charts.
+> A guide for understanding and using Robert Fritz's structural tension charts. Structural tension is **disequilibrium** — an active, loaded force that resolves through advancement (NOT "a gap to bridge"). Action steps are telescoped sub-charts, not a to-do list.
 - **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 

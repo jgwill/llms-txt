@@ -37,17 +37,33 @@ This document provides LLMs with the conceptual framework and practical guidance
 
 ### The Structural Tension Dynamic
 
-Structural tension is NOT "a gap to fill" - it is a DYNAMIC FORCE.
+⚠️ **CRITICAL DISTINCTION**: Structural tension is NOT "a gap to bridge" or "an empty space to fill." It is a state of **DISEQUILIBRIUM** — an active, dynamic, causal force that seeks resolution through advancement, like a stretched elastic band that wants to return to equilibrium.
+
+**Why "gap" language is WRONG and what to say instead:**
+
+| ❌ Don't say | ✅ Say instead | 🔍 Why |
+|---|---|---|
+| "bridge the gap" | "resolve the tension" | Tension is a force that resolves — you don't bridge a force, you let it drive movement |
+| "close the gap" | "advance toward the desired outcome" | The structure advances — nothing is being "closed" |
+| "the gap between current and desired" | "the tension between current reality and desired outcome" | Tension = loaded disequilibrium. Gap = empty void. Opposite meanings |
+| "make the gap visible" | "establish structural tension" | You don't reveal emptiness — you create a dynamic state by holding two realities simultaneously |
+| "fill the gap" | "the structure seeks resolution" | Nothing is being filled — the system is in disequilibrium and naturally moves toward equilibrium |
+| "address the gap" | "hold the tension and let it drive advancement" | Tension is not a problem to address — it is the generative engine of creation |
+
+**The core reason**: A "gap" is passive — an absence, a void, something missing. Structural tension is the opposite — it is **active, loaded, energized**. A system in disequilibrium. Saying "gap" frames the creative process as problem-solving (filling what's missing). Saying "tension" frames it as creation (a dynamic force propelling advancement).
 
 ```
-Current Reality ══ TENSION ══> Desired Outcome
-       │                              │
-       │    (system naturally seeks   │
-       │     equilibrium/resolution)  │
-       └──────────────────────────────┘
+Current Reality ══ TENSION (disequilibrium) ══> Desired Outcome
+       │                                              │
+       │    (the structure is in disequilibrium;     │
+       │     it naturally seeks resolution            │
+       │     by advancing toward the desired outcome) │
+       └──────────────────────────────────────────────┘
 ```
 
-Any structure seeks equilibrium. When you establish clear desired outcome AND honest current reality, you create structural tension - an unresolved dynamic that naturally seeks resolution through advancement. This is the generative force that propels the creative process.
+**The mechanism**: Any structure seeks equilibrium. When you hold a clear desired outcome AND an honest current reality simultaneously, you create **structural tension** — a state of disequilibrium. This disequilibrium is a generative force: the structure wants to resolve, and it resolves by advancing toward the desired outcome. This is what propels the creative process — not willpower, not problem-solving, but the natural tendency of a tensioned structure to seek resolution.
+
+**Analogy**: Think of a rubber band stretched between two fingers. The band is not "a gap" — it is an object under tension, loaded with potential energy, actively seeking to resolve. The creative process works the same way: the tension between current reality and desired outcome is an energized state that drives movement.
 
 ### Critical Understanding: What Action Steps Really Are
 
@@ -157,9 +173,17 @@ LLMs can choose to show telescoped chart details when context requires it
 ✅ **Creative**: "What outcome do you want to create?"
 ❌ **Reactive**: "What problem are you trying to solve?"
 
-### Structural Tension Language
-✅ **Structural**: "The tension between your current reality and desired outcome naturally seeks resolution"
-❌ **Gap-thinking**: "We need to bridge the gap between where you are and where you want to be"
+### Structural Tension Language — What to Say and Why
+
+The words you choose reveal your orientation. Gap-language signals problem-solving (something missing to fill). Tension-language signals creative orientation (a dynamic force driving advancement).
+
+| ❌ Gap-language (problem-solving) | ✅ Tension-language (creative) | Why it matters |
+|---|---|---|
+| "Bridge the gap between where you are and where you want to be" | "The tension between your current reality and desired outcome naturally seeks resolution" | Resolution is structural — the system moves. Bridging is manual labor on emptiness. |
+| "Making the gap visible" | "Establishing structural tension by holding current reality and desired outcome simultaneously" | You're not revealing a void — you're *creating* a dynamic state. |
+| "Close the gap" / "Fill the gap" | "The disequilibrium drives advancement toward the desired outcome" | Disequilibrium is active and causal. A gap is inert. |
+| "Steps to bridge the distance" | "Strategic secondary choices that support resolution" | Action steps aren't planks across a chasm — they're choices within a tensioned structure. |
+| "Identify the gaps" | "Assess current reality in relation to the desired outcome" | You're not cataloguing what's missing — you're seeing what IS, clearly. |
 
 ### Strategic Secondary Choices
 ✅ **Strategic**: "These action steps support your primary goal"  

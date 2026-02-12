@@ -211,25 +211,31 @@ async for message in query({
 The Claude Agent SDK is designed with creative-first principles:
 
 ### Core Principles
-1. **Focus on Creation**: What does the user want to CREATE?
-2. **Structural Tension**: Establish clear gap between current reality and desired outcome
-3. **Advancing Patterns**: Each action naturally progresses toward the goal
-4. **No Problem Elimination**: Reframe "fixing problems" as "creating desired states"
+
+1.  **Focus on Generative Creation**: What does the user want to *bring into being*? Reframe from removing unwanted conditions to manifesting desired outcomes.
+
+2.  **Structural Tension Dynamic**: Establish a clear, honest assessment of **Current Reality** against a precisely defined **Desired Outcome**. This dynamic creates the inherent force for advancement, not just a "gap to fill."
+
+3.  **Advancing Patterns**: Each action naturally progresses toward the desired outcome, guided by the structural tension.
+
+4.  **No Problem-Elimination Orientation**: Reframe "fixing problems" as "creating desired states." Creative orientation starts with the desired outcome, not the problem to be solved.
 
 ### Example: Storytelling Use Case
 ```python
-# NOT: "Help me fix my plot holes"
-# YES: "Help me create a cohesive plot structure"
+# NOT: "Help me fix my plot holes" - This is problem-solving.
+# YES: "Help me create a cohesive plot structure" - This is generative creation.
 
 prompt = """I want to create a compelling narrative where:
 - A reluctant hero discovers hidden power
 - They must choose between personal desire and community need
 - The resolution honors both the external quest and internal transformation
 
-What structural elements will strengthen this vision?"""
+What specific structural elements do we want to bring into being to strengthen this vision?
+What is your current reality regarding this narrative (e.g., have you outlined characters, started world-building)?
+"""
 
 async with ClaudeSDKClient(options=ClaudeAgentOptions(
-    system_prompt=storytelling_system_prompt,
+    system_prompt=storytelling_system_prompt, # This system prompt would guide the agent to elicit Desired Outcome/Current Reality
     setting_sources=["project"]  # Load project context
 )) as client:
     await client.query(prompt)
@@ -352,25 +358,44 @@ class StoryOrchestrator:
 Apply structural tension methodology to agent interactions:
 
 ### Desired Outcome → Current Reality → Action
+
+This framework ensures that interactions are structured for generative creation rather than problem-solving. It's critical to understand:
+
+-   **Desired Outcome**: What the user wants to *bring into being*, clearly defined and specific, focusing on the result, not the process.
+-   **Current Reality**: An *honest, factual assessment* of the present state, directly relevant to the desired outcome. **CRITICAL WARNING**: Avoid vague or readiness-based statements like "Ready to begin" or "Prepared to start." Current Reality must be objective, present-state facts (e.g., "No Django experience," "Poem notions in Grok Account").
+-   **Action Steps**: Each action step is not merely a task, but itself a **telescoped Structural Tension Chart**. It represents a strategic secondary choice that, once achieved, contributes to the overall desired outcome. These steps are designed to *enable creation*, not just to be checked off a list.
+
+By establishing a clear desired outcome and an accurate current reality, a powerful structural tension is created, which naturally propels the creative process forward.
 ```python
-class StructuralAgent:
-    async def create_with_structure(self, user_request: str):
-        # Establish structural foundation
-        prompt = f"""
-        User's Creative Vision: {user_request}
-        
-        Before we proceed, let's establish structural tension:
-        1. DESIRED OUTCOME: What specific result do they want to CREATE?
-        2. CURRENT REALITY: What exists now?
-        3. STRUCTURAL TENSION: What's the gap between them?
-        4. ADVANCING ACTIONS: What steps naturally progress toward outcome?
-        
-        Guide them through this structure."""
-        
-        async with ClaudeSDKClient(options=ClaudeAgentOptions(
-            system_prompt=prompt
-        )) as client:
-            await client.query(user_request)
+# Example: Guiding a user to establish structural tension
+async def create_with_structure(user_initial_request: str):
+    system_prompt = """You are an agent focused on generative creation.
+    Your primary goal is to help the user articulate what they want to *bring into being*
+    (Desired Outcome) and to honestly assess their *current factual situation* (Current Reality)
+    relative to that outcome.
+
+    Avoid problem-solving language. Focus on creating results.
+    When asking for Current Reality, ensure it's an objective assessment, not a statement of readiness.
+    For example, instead of 'Ready to begin,' use 'No prior experience with X' or 'Project is currently at Y stage.'
+    """
+
+    user_prompt = f"""User's Initial Creative Vision: {user_initial_request}
+
+To begin, let's establish the structural tension for your creative project:
+1. DESIRED OUTCOME: What specific result do you want to CREATE or bring into being? (Focus on the end result, not the process.)
+2. CURRENT REALITY: What is your honest, factual assessment of where you are *now* in relation to that desired outcome? (Be objective; avoid 'ready to begin' type statements.)
+"""
+
+    async with ClaudeSDKClient(options=ClaudeAgentOptions(
+        system_prompt=system_prompt,
+        max_turns=1 # Initial interaction to establish tension
+    )) as client:
+        await client.query(user_prompt)
+        async for message in client.receive_response():
+            print(message)
+
+# Example usage (this would be called with the user's initial request)
+# await create_with_structure("I want to write a sci-fi novel about AI sentience.")
 ```
 
 ---
