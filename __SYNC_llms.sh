@@ -39,6 +39,6 @@ done < "$GUIDANCE_FILE"
 (
     cd "$ETC_DIR" && \
     git add . && \
-    git commit -m "sync:rise-guidance" && \
+    git commit __llms -m "sync:rise-guidance" && \
     git push
 ) && echo "✅ /etc/claude-code/ synced and pushed" || echo "ℹ️  No changes to commit in /etc/claude-code/"
