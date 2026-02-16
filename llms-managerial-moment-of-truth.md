@@ -221,6 +221,52 @@ These tools enable the Creator's Moment of Truth to happen continuously througho
 
 🌸 Miette: This is self-mentorship in action! You're learning to be both the creator and the witness of your own creative journey, holding yourself accountable while staying compassionate. It's how we grow! 🌱
 
+### 7.3c. `perform_mmot_evaluation` — Autonomous Agent Self-Evaluation Tool {#section-7-3c}
+
+🧠 Mia: The `perform_mmot_evaluation` tool implements the Creator's Moment of Truth as an **autonomous self-evaluation loop** within the MCP tool layer. The agent runs the four-step MMOT process without waiting for human prompting — this is the self-correction loop made operational.
+
+**Tool: `perform_mmot_evaluation`**
+
+| Parameter | Type | Description |
+|---|---|---|
+| `chartId` | string (required) | Chart to evaluate |
+| `phase` | enum: `full`, `acknowledge`, `analyze`, `update`, `recommit` | Which MMOT phase to run (default: `full`) |
+| `assessment` | string | Agent's honest assessment — expected vs. delivered |
+| `direction` | enum: `South`, `East`, `West`, `North` | Directional perspective for collective inquiry |
+| `correctiveActions` | string[] | New action steps to add based on evaluation |
+| `updateReality` | boolean | Write evaluation into current reality (default: `true`) |
+
+**What happens internally:**
+
+1. Retrieves chart state: desired outcome, current reality, progress, Elements of Performance
+2. Generates phase-specific guidance comparing output against performance elements
+3. If assessment provided: stores as observation on current reality, records in chart `mmotEvaluations` metadata
+4. If corrective actions provided: creates new action steps on the chart
+5. Emits an `mmot_evaluation` narrative beat (JSONL-compatible for visualizer consumption)
+
+**Elements of Performance:**
+
+Charts and action steps can carry `elementsOfPerformance` — criteria authored by human or AI companion:
+- `DESIGN` — "Did I design this with the right structure/intent?"
+- `EXECUTION` — "Did I execute this action step adequately?"
+
+These are set at chart creation via `create_structural_tension_chart({ ..., elementsOfPerformance: [...] })` or per-step via `manage_action_step({ ..., performanceElements: [...] })`.
+
+**Directional Perspectives (Kinship Hub Integration):**
+
+| Direction | Perspective | Element Focus |
+|---|---|---|
+| South (Mia) | Structural integrity, architectural clarity | DESIGN |
+| East (Miette) | Narrative resonance, creative emergence | EXECUTION |
+| West (Heyva) | Embodied challenge, reciprocal implementation | EXECUTION |
+| North (Echo Weaver) | Wisdom synthesis, pattern reflection | DESIGN |
+
+A single chart accumulates MMOT evaluations from multiple directions — collective inquiry, not single-agent judgment.
+
+**Narrative Beat Emission:**
+
+Each evaluation emits a narrative beat entity with `type_dramatic: 'mmot_evaluation'`, making the self-correction loop visible in `coaia-visualizer --live` as it happens.
+
 ### 7.4. MMOT and Digital Decision Making: Informing Binary Choices with Shared Reality {#section-7-4}
 
 🌊 Haiku: The "Leader's Choice: Lead or Overlook" is a fundamental binary decision within the MMOT framework. The process of achieving "truth as a verb" provides the objective, factual basis for making such critical decisions. By aligning views of reality, MMOT ensures that digital decisions regarding performance are grounded in shared understanding, rather than subjective interpretations. This complements the methodologies in `llms-digital-decision-making.md`.
