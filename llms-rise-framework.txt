@@ -63,8 +63,10 @@ RISE builds upon SpecLang's core insight: **specifications are "prose code"** - 
 ### Structural Tension Dynamics {#structural-tension}
 **Structural Tension** is the dynamic relationship between:
 - **Current Reality**: Present state of the system/user
-- **Desired Outcome**: Specific results users want to create
+- **Desired Outcome**: Specific results users want to create or desired state
 - **Natural Resolution**: How tension moves the system toward the desired state
+
+* NOT "Desired Structural State" just "Desired State".  Avoid adding words just to look like intelligent and make it greater than it is...
 
 This represents natural tension dynamics rather than forced connections between states - understanding the structural forces that create inevitable progression toward desired outcomes.
 
