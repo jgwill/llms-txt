@@ -148,6 +148,8 @@ Replace traditional BDD scenarios with Creative Advancement Scenarios:
 **Resolution**: [Achieved desired outcome]
 ```
 
+* Note that this is "**Current Reality**" NOT "Current Structural Reality" !!!
+
 **4. Supporting Structures**
 - What application features enable this natural progression?
 - How do these features support advancing rather than oscillating patterns?
@@ -230,7 +232,7 @@ RISE specifications are **completely autonomous from any specific codebase**. Th
 
 #### Quality Criteria
 - ✅ Creating Focus: Emphasizes what users create, not problems solved
-- ✅ Structural Dynamics: Natural forces driving progression
+- ✅ Structural Dynamics: Natural forces driving progression (desequilibrium betweer current reality and what is desired)
 - ✅ Advancing Patterns: Inevitable movement toward outcomes
 - ✅ Desired Outcomes: Clear, specific results users want
 - ✅ Natural Progression: Movement through structural dynamics, not forced effort
@@ -266,15 +268,15 @@ For business stakeholders and decision makers:
 **3. User Experience Export**
 For design and UX teams:
 - User Journey Maps: Advancing patterns through desired outcome creation
-- Interface Requirements: Supporting natural structural progression
+- Interface Requirements: Supporting natural progression
 - Interaction Principles: Enabling rather than forcing user advancement
-- Usability Guidelines: Structural dynamics in interface design
+- Usability Guidelines: Adequate dynamics in interface design
 
 **4. Development Team Export**
 For implementation teams:
 - Creative Advancement Scenarios: Detailed outcome-creation flows
 - API Specifications: Endpoints enabling desired outcome achievement
-- Data Models: Structural relationships supporting advancement
+- Data Models: Adequate struture of the relationships to support advancement
 - Testing Frameworks: Validating creative advancement patterns
 
 #### Creative Advancement Scenario Format
@@ -290,6 +292,9 @@ For implementation teams:
 **Achieved Outcome**: [Manifested desired result]
 **Supporting Features**: [Application capabilities enabling this advancement]
 ```
+
+* Note that this is "**Current Reality**" NOT "Current Structural Reality" !!!
+
 
 ## Implementation Guidelines for LLMs
 
@@ -312,7 +317,7 @@ Iterative specification development through the MMOT planning → executing → 
 - Only add detail where the output diverges from intent
 - Analyze *how* the divergence occurred (structural dynamics)
 - Preserve successful inferences (don't over-specify)
-- Each refinement should resolve specific structural tension
+- Each refinement should resolve specific desires.
 
 **4. Stop When Aligned** (Learning Complete)
 - What you see matches what you want
@@ -329,7 +334,7 @@ Iterative specification development through the MMOT planning → executing → 
 **Use These Patterns**:
 - "What does this enable users to create?"
 - "Desired outcomes" vs. "reactive elimination"
-- "Structural dynamics" vs. "forced connections"
+- "Structural dynamics" vs. "forced connections (or free-association)"
 - "Natural progression" vs. "imposed advancement"
 - "Structural tension progression" vs. "artificial linking"
 - "Advancing patterns" vs. "improvement cycles"
