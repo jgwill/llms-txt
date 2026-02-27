@@ -17,6 +17,5 @@ This repository contains knowledge protected under the **Indigenous Knowledge St
 | [docs/](docs/index.md) | Full interlinked documentation hub |
 | [llms.txt](llms.txt) | Minimal index of all guidance documents |
 | [llms-full.txt](llms-full.txt) | Expanded index with detailed summaries |
-| [KINSHIP.md](KINSHIP.md) | Relational charter for this repository |
 | [LICENSE](LICENSE) | Indigenous Knowledge Stewardship License |
 
