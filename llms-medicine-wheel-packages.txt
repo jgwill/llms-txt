@@ -1,0 +1,123 @@
+# Medicine Wheel Developer Suite — Package Reference
+
+> Seven npm packages encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures within a unified platform architecture.
+
+**Version**: 1.0
+**Document ID**: llms-medicine-wheel-packages-v1.0
+**Last Updated**: 2026-02-27
+**Content Source**: Derived from ontology-core spec, medicine-wheel inquiry research, and RISE specifications.
+**License**: Indigenous Knowledge Stewardship License (IKSL)
+
+---
+
+## Platform Overview
+
+The Medicine Wheel Developer Suite is a layered npm package ecosystem where `ontology-core` serves as the platform nucleus. Every other package imports from this core, encoding Indigenous directions (Ojibwe names, colors, seasons, life stages), narrative beats, ceremonies, and structural tension as first-class code structures.
+
+---
+
+## Packages
+
+### medicine-wheel-ontology-core
+> Foundational ontological layer: TypeScript types, RDF vocabulary, Zod schemas, Wilson alignment scoring, and OCAP tracking — all grounded in Indigenous relational ontology where relations are first-class beings with ceremony context and obligations.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-ontology-core
+- **Role**: Platform nucleus — all other packages import from this core
+- **Key types**: `RelationalNode`, `Relation`, `Direction`, `OCAPFlags`, `WilsonAlignment`, `AccountabilityTracking`
+- **Key functions**: `computeWilsonAlignment`, `aggregateWilsonAlignment`, `auditOcapCompliance`, `relationalCompleteness`
+- **Related guidance**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-kinship-hub-system-full.md
+
+### medicine-wheel-relational-query
+> Traverse kinship webs with relational constraints — querying across nodes, relations, and ceremonies with direction-aware, OCAP-respecting filters.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-query
+- **Role**: Relational data traversal
+- **Integration**: LangChain `RelationalNodeRetriever`
+- **Related guidance**: llms-kinship-hub-system.md
+
+### medicine-wheel-narrative-engine
+> Narrative beats and story flow bound to ceremony — documenting complex stories across engineer-world, ceremony-world, and story-engine-world.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-narrative-engine
+- **Role**: Narrative intelligence and beat management
+- **Integration**: LangChain `NarrativeBeatPlanner`
+- **Related guidance**: llms-narrative-beats.txt, llms-narrative-remixing.txt
+
+### medicine-wheel-ceremony-protocol
+> Ceremony types, logs, governance access levels, person roles (steward, elder, firekeeper), and consent workflows — encoding ceremonial accountability as software protocol.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-ceremony-protocol
+- **Role**: Ceremonial workflow and governance
+- **Related guidance**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-delayed-resolution-principle.md
+
+### medicine-wheel-graph-viz
+> Relational graph visualization — rendering kinship webs, structural tension fields, and ceremonial networks as navigable visual structures.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-graph-viz
+- **Role**: Visualization of relational structures
+- **Related guidance**: llms-structural-tension-charts.txt
+
+### medicine-wheel-ui-components
+> Community-facing interface components — designed for stewards and non-programmers to interact with ceremonial, relational, and governance workflows.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-ui-components
+- **Role**: Human-facing interface layer
+- **Related guidance**: llms-kinship-hub-system.md
+
+### medicine-wheel-prompt-decomposition
+> Prompt Decomposition Engine (PDE) — intention exploration as EAST practice, decomposing prompts into explicit and implicit intents mapped to Four Directions.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-prompt-decomposition
+- **Role**: Prompt-level reasoning and intention mapping
+- **Related guidance**: llms-pde.txt
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────┐
+│              ontology-core                       │
+│  (types, RDF, Zod, Wilson, OCAP)                │
+└──────────┬──────────────────────┬───────────────┘
+           │                      │
+    ┌──────▼───────┐    ┌────────▼─────────┐
+    │  relational  │    │    ceremony      │
+    │    query     │    │    protocol      │
+    └──────┬───────┘    └────────┬─────────┘
+           │                      │
+    ┌──────▼───────┐    ┌────────▼─────────┐
+    │  narrative   │    │    graph-viz     │
+    │   engine     │    │                  │
+    └──────┬───────┘    └────────┬─────────┘
+           │                      │
+    ┌──────▼───────┐    ┌────────▼─────────┐
+    │     ui       │    │     prompt       │
+    │  components  │    │  decomposition   │
+    └──────────────┘    └──────────────────┘
+```
+
+---
+
+## LangChain / LangGraph Integration Patterns
+
+### LangChain Tools
+- `RelationalNodeRetriever` — backed by relational-query, surfaces nodes constrained by direction, ceremony context, or OCAP flags
+- `NarrativeBeatPlanner` — backed by narrative-engine, uses structural tension charts to generate next steps
+
+### LangGraph Four Directions Agents
+- **East agent**: Inquiry and bias detection (Nitshkees Thinking mode)
+- **South agent**: Planning and consent (OCAP, ceremony-protocol)
+- **West agent**: Experiential practice (field notes, transcripts, external tools)
+- **North agent**: Reflection and archival (narrative beats, ceremony logs, Wilson metrics)
+
+---
+
+## Alignment
+
+- **Abundant Intelligences**: Reconceptualizing AI based on Indigenous Knowledge Systems, optimized for abundance
+- **Two-Eyed AI**: Algorithmic efficiency + Indigenous relational governance in the same computational space
+- **RISE Framework**: Each package specified through creative archaeology (Reverse-engineer, Intent-extract, Specify, Export)
+- **IKSL**: All knowledge governed by Indigenous Knowledge Stewardship License
+
+---
+
+## Related Documents
+
+- [docs/medicine-wheel-research.md](docs/medicine-wheel-research.md) — extended research context
+- [docs/ceremonial-technology.md](docs/ceremonial-technology.md) — the system these packages serve
+- [llms-inquiry-medicine-wheel-abundance-intelligence-research](llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) — full inquiry document
+- [llms-txt-compliance-checklist.md](llms-txt-compliance-checklist.md) — compliance standards for this document

@@ -144,10 +144,35 @@
 - **Link**: [llms-structural-thinking.gemini.txt](./llms-structural-thinking.gemini.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
 
+## Medicine Wheel Developer Suite — Package Reference
+> Reference for seven npm packages (ontology-core, relational-query, narrative-engine, ceremony-protocol, graph-viz, ui-components, prompt-decomposition) that encode Indigenous relational ontology as first-class code structures. Includes Wilson alignment, OCAP tracking, Four Directions agent patterns, and LangChain/LangGraph integration. Each package is specified through the RISE framework and governed by the Indigenous Knowledge Stewardship License.
+- **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
+- **Related**: llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
+
+## Medicine Wheel & Abundance Intelligence Research
+> A research inquiry connecting the Medicine Wheel Developer Suite to the Abundant Intelligences program and Two-Eyed AI framework. Documents the current medicine-wheel stack, alignment with funded multi-institutional research, portfolio strengths (formal ontology encoding Indigenous directions, published theoretical frame, ceremony as core architecture), gaps (platform narrative, community workflows, relational dashboards, edge deployment, polysynthetic language adapters), and career pathways (Indigenous AI systems architect, relational AI platform lead, research-creation consultant).
+- **Link**: [llms-inquiry-medicine-wheel-abundance-intelligence-research](./llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md)
+- **Related**: llms-medicine-wheel-packages.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+
+## Prompt Decomposition Engine (PDE)
+> PDE transforms complex prompts into structured decompositions: primary and secondary intents (explicit and implicit), Four Directions mapping (East=vision, South=analysis, West=validation, North=action), dependency-ordered action stacks, and named ambiguities held as productive tension. PDE is itself an EAST practice — intention exploration before action, honoring delayed resolution. Decompositions are stored as paired JSON and Markdown files in .pde/ for human annotation and machine processing.
+- **Link**: [llms-pde.txt](./llms-pde.txt)
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md
+
+## Kinship Hub System (Full Protocol with Indigenous Foundations)
+> Extended protocol grounded in Shawn Wilson's research-as-ceremony, Four/Six Rs of Indigenous research, Anishnaabe inawendiwin, and Indigenous kinship law. Provides a ten-section KINSHIP.md schema (Identity, Lineage, Human Relations, More-than-Human Relations, the Rs, Protocols, Accountability, Tensions, Ceremony, Change Log) and detailed LLM behavioral guidelines for creating, updating, and maintaining kinship charters as living ceremonial artifacts. Includes anti-patterns, plurality handling, harm/repair protocols, and integration with all major LLMS frameworks.
+- **Link**: [llms-kinship-hub-system-full.md](./llms-kinship-hub-system-full.md)
+- **Related**: llms-kinship-hub-system.md, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+
 ## LLMS.txt Compliance Checklist
 > This document provides a detailed checklist to ensure the quality and compliance of `LLMS.txt` files. It covers mandatory elements, content clarity, machine readability (like unique section identifiers), LLM-specific considerations (like anti-pattern identification), and cross-referencing. It also includes a scoring methodology.
 - **Link**: [llms-txt-compliance-checklist.md](./llms-txt-compliance-checklist.md)
 - **Related**: 
+
+## Documentation Hub — Relational Science & Ceremonial Technology
+> Interlinked documentation hub covering the two core systems (Relational Science and Ceremonial Technology Development) and the full portfolio of frameworks: Creative Orientation, Structural Tension, RISE, Narrative Craft, Digital Decision Making, Performance Truth, Kinship Hub, Indigenous Research Paradigm, Academic Counter-Positioning, Medicine Wheel Research, AI Companion Skills, and Prompt Decomposition. Designed for both human navigation and AI companion orientation.
+- **Link**: [docs/index.md](./docs/index.md)
+- **Related**: llms-creative-orientation.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-medicine-wheel-packages.txt
 
 ## Pythonista UI Generation Guide for LLMs
 > This guide focuses specifically on generating UIs for Pythonista. It provides a deep dive into the `ui` module (Views, Controls, Layout, Events, Drawing) and the JSON-based `.pyui` file format. It includes UI recipes, common patterns, and anti-patterns for LLMs to avoid when translating natural language requests into functional interfaces.

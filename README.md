@@ -1,14 +1,22 @@
-# Various Guillaume's Isabelle LLMS
+# Guillaume Descoteaux-Isabelle — LLMS-txt
 
-OLD: Gist URL: https://gist.github.com/jgwill/23adc41724854a151b7a9199daa7ffb5
-NOW REPO IS : jgwill/llms-txt.git
+> An interdisciplinary portfolio at the nexus of Indigenous epistemologies, AI systems, and narrative storytelling.
 
+Guidance for AI Companions grounded in relational accountability, structural dynamics, and ceremonial technology.
 
+This repository contains knowledge protected under the **Indigenous Knowledge Stewardship License (IKSL)**.
 
-## [llms.txt](llms.txt)
+---
 
-## [llms-full.txt](llms-full.txt)
+📖 **[Explore the full documentation →](docs/index.md)**
 
+---
 
-
+| Resource | Description |
+|----------|-------------|
+| [docs/](docs/index.md) | Full interlinked documentation hub |
+| [llms.txt](llms.txt) | Minimal index of all guidance documents |
+| [llms-full.txt](llms-full.txt) | Expanded index with detailed summaries |
+| [KINSHIP.md](KINSHIP.md) | Relational charter for this repository |
+| [LICENSE](LICENSE) | Indigenous Knowledge Stewardship License |
 

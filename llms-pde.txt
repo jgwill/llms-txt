@@ -1,0 +1,117 @@
+# Prompt Decomposition Engine (PDE) — llms-txt Reference
+
+> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents, mapping dependencies through Four Directions, and holding ambiguities as productive tension.
+
+**Version**: 0.1 (stub — evolving from practice)
+**Document ID**: llms-pde-v0.1
+**Last Updated**: 2026-02-27
+**Content Source**: Derived from practical PDE usage in this repository and the medicine-wheel-prompt-decomposition npm package.
+
+---
+
+## Purpose
+
+PDE transforms a complex prompt into a structured decomposition that:
+
+1. Identifies **primary** and **secondary** intents (explicit and implicit)
+2. Maps each intent to a **Four Directions** position (East/South/West/North)
+3. Surfaces **ambiguities** as named tensions — not silently resolved assumptions
+4. Produces an **action stack** respecting dependencies between tasks
+
+---
+
+## Four Directions in PDE
+
+The standard PDE directions (adapted from creative-orientation practice):
+
+| Direction | Role in Decomposition | Phase |
+|-----------|----------------------|-------|
+| 🌅 **East** — Vision | Understanding what is being asked; clarifying requirements; envisioning desired outcomes | Germination |
+| 🔥 **South** — Analysis | Research, learning, investigation, growth tasks; planning with human and AI companions | Assimilation |
+| 🌊 **West** — Validation | Testing, reflection, review, accountability checks | Assimilation |
+| ❄️ **North** — Action | Implementation, execution, delivery, completion | Completion |
+
+**Note**: These directions are a starting point. The creative-orientation llms-txt suggests they may be adjusted as practice evolves. PDE is itself an EAST practice — the decomposition is part of the visioning phase where intentions are explored before action begins.
+
+---
+
+## Decomposition Structure
+
+```json
+{
+  "primary": {
+    "action": "main action verb",
+    "target": "what the action applies to",
+    "urgency": "immediate|session|persistent",
+    "confidence": 0.0-1.0
+  },
+  "secondary": [
+    {
+      "action": "verb",
+      "target": "target",
+      "implicit": true/false,
+      "dependency": "what this depends on",
+      "confidence": 0.0-1.0
+    }
+  ],
+  "directions": {
+    "east": [{"text": "vision items", "confidence": 0.0-1.0, "implicit": false}],
+    "south": [{"text": "analysis items"}],
+    "west": [{"text": "validation items"}],
+    "north": [{"text": "action items"}]
+  },
+  "actionStack": [
+    {"text": "task", "direction": "east|south|west|north", "dependency": "or null"}
+  ],
+  "ambiguities": [
+    {"text": "ambiguous part", "suggestion": "how to clarify"}
+  ]
+}
+```
+
+---
+
+## Key Principles
+
+### Implicit Intent Extraction
+
+PDE extracts implicit intents from hedging language: "I assume," "probably," "somehow," "you will need," "I expect." These are flagged with `"implicit": true` and lower confidence scores.
+
+### Delayed Resolution of Ambiguities
+
+Ambiguities are **named and surfaced**, not silently resolved. This honors the delayed-resolution principle — holding productive tension rather than collapsing it through premature assumptions.
+
+### Confidence Scoring
+
+Each intent carries a confidence score (0.0–1.0) reflecting how clearly it was stated. Explicit requests score high; implicit inferences score lower. This transparency enables the human steward to adjust course.
+
+---
+
+## PDE as Relational Practice
+
+When used with an AI companion, PDE is a **ceremonial act of shared visioning**:
+
+- The human brings the intention (however messy or complex)
+- The AI companion surfaces what was said and what was implied
+- Together they refine the vision before entering SOUTH (planning) and NORTH (action)
+- Ambiguities become conversation starters, not blockers
+
+---
+
+## Storage
+
+Decompositions are stored in `.pde/` as paired JSON and Markdown files:
+- `{uuid}.json` — machine-readable structured decomposition
+- `{uuid}.md` — human-editable Four Directions document
+
+The markdown file is designed for human annotation — the steward can edit, add notes, correct interpretations, and refine the vision before work begins.
+
+---
+
+## Related
+
+- [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) — npm package
+- [llms-creative-orientation.txt](llms-creative-orientation.txt) — foundational framework
+- [llms-delayed-resolution-principle.md](llms-delayed-resolution-principle.md) — tension maintenance
+- [llms-structural-tension-charts.txt](llms-structural-tension-charts.txt) — charting methodology
+- [docs/prompt-decomposition.md](docs/prompt-decomposition.md) — extended documentation

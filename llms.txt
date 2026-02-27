@@ -144,10 +144,35 @@
 - **Link**: [llms-structural-thinking.gemini.txt](./llms-structural-thinking.gemini.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt
 
+## Medicine Wheel Developer Suite — Package Reference
+> Reference for seven npm packages encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures.
+- **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
+- **Related**: llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
+
+## Medicine Wheel & Abundance Intelligence Research
+> Research inquiry connecting the Medicine Wheel Developer Suite to the Abundant Intelligences program and Two-Eyed AI framework.
+- **Link**: [llms-inquiry-medicine-wheel-abundance-intelligence-research](./llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md)
+- **Related**: llms-medicine-wheel-packages.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+
+## Prompt Decomposition Engine (PDE)
+> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions.
+- **Link**: [llms-pde.txt](./llms-pde.txt)
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md
+
+## Kinship Hub System (Full Protocol)
+> Extended protocol with Indigenous kinship foundations for treating software projects as beings in networks of relations.
+- **Link**: [llms-kinship-hub-system-full.md](./llms-kinship-hub-system-full.md)
+- **Related**: llms-kinship-hub-system.md, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
+
 ## LLMS.txt Compliance Checklist
 > A checklist for ensuring `LLMS.txt` files meet standards for structure, content quality, machine readability, and AI interaction guidelines.
 - **Link**: [llms-txt-compliance-checklist.md](./llms-txt-compliance-checklist.md)
 - **Related**: 
+
+## Documentation Hub
+> Interlinked documentation covering Relational Science, Ceremonial Technology Development, and the full portfolio of frameworks and practices.
+- **Link**: [docs/index.md](./docs/index.md)
+- **Related**: llms-creative-orientation.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-medicine-wheel-packages.txt
 
 ## Pythonista UI Generation Guide
 > A guide for LLMs on designing and generating native UIs for Pythonista on iOS, focusing on the `ui` module and `.pyui` file format.
