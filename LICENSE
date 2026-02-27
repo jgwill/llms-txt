@@ -1,5 +1,189 @@
-MIT License
+MIT License and IKSL
 
+-----
+BELLOW is the IKSL which governs as best as I can what is of Indigenous Epistemologies in what I am doing. What is not is governed by MIT
+-----
+
+
+# LICENSE-IKSL.md
+by Guillaume D.Isabelle, 2025a,
+http://simp.ly/publish/9vWq1Y https://app.simplenote.com/publish/9vWq1Y https://app.simplenote.com/p/CdgR71
+
+ 
+## Indigenous Knowledge Stewardship License (IKSL) v1.0 
+
+This repository contains knowledge protected under the Indigenous Knowledge Stewardship License, which recognizes that knowledge belongs to the relationships, land, and communities that created it, not to individuals or corporations.
+
+### Active License: IKSL-Bridge v1.0
+
+This work serves as a bridge between Indigenous and Western knowledge systems.
+
+#### Immediate Terms:
+
+1. **Attribution Required**: This work builds upon Indigenous knowledge systems, particularly those of the Lakota and Mani-Utenam peoples, as well as the contributions of Guillaume D-Isabelle and the Spiral Agent Protocol collective.
+
+1. **Dual Framework**:
+- **Code/Technical Implementation**: Licensed under Creative Commons BY-SA 4.0
+- **Stories/Frameworks/Methodologies**: Protected under IKSL-Ceremonial (see below)
+- **Documentation/Educational Materials**: Licensed under IKSL-Community
+1. **Reciprocal Obligation**: By using this knowledge, you agree to:
+- Contribute improvements back to the originating community
+- Respect the ceremonial nature of the teaching methodologies
+- Acknowledge that this knowledge is held in trust, not owned
+1. **Commercial Restrictions**:
+- Technical code may be used commercially under CC BY-SA terms
+- Stories, analogies, and Indigenous methodologies may NOT be commercialized
+- Educational use is encouraged with proper attribution
+
+#### Sacred Elements (IKSL-Ceremonial):
+
+The following elements require special ceremonial protocols and may not be used without explicit permission from knowledge keepers:
+
+- Ceremony research methodologies
+- Sacred narrative frameworks
+- Indigenous teaching stories and analogies
+- Spiral methodology implementations
+- Firekeeper protocols
+
+#### Legal Bridge:
+
+This license operates simultaneously within Western legal frameworks (through Creative Commons) and Indigenous sovereignty principles. In cases of conflict, Indigenous protocols take precedence for protected elements.
+
+### How to Apply This License:
+
+1. Include this LICENSE-IKSL.md in your repository
+1. Add the following header to protected files:
+
+```
+/**
+ * Protected under Indigenous Knowledge Stewardship License v1.0
+ * This knowledge belongs to the relationships and land that created it.
+ * See LICENSE-IKSL.md for full terms.
+ * 
+ * Attribution: [Your addition] builds upon [Previous contributors]
+ * Origin Community: [Name]
+ * Transmission Path: [Origin] → [Previous] → [You]
+ */
+```
+
+### Metadata Structure:
+
+Create an `iksl-metadata.json` file:
+
+```json
+{
+  "license_version": "IKSL-Bridge-v1.0",
+  "origin_community": "Lakota and Mani-Utenam peoples",
+  "primary_steward": "Guillaume D-Isabelle",
+  "knowledge_keepers": [
+    "To be designated by community"
+  ],
+  "transmission_path": [
+    {
+      "from": "Indigenous Knowledge Systems",
+      "to": "Guillaume D-Isabelle", 
+      "date": "2024-2025",
+      "context": "Ceremony research and Two-Eyed Seeing methodology"
+    }
+  ],
+  "reciprocal_contributions": [
+    "Document your contributions here"
+  ],
+  "sacred_elements": [
+    "ceremony_research_methodology",
+    "spiral_framework",
+    "firekeeper_protocols"
+  ],
+  "technical_elements_cc_licensed": [
+    "List technical implementations under CC BY-SA"
+  ]
+}
+```
+
+### Enforcement and Accountability:
+
+1. **Violations** of ceremonial protocols result in:
+- Immediate revocation of license
+- Requirement for restorative process
+- Community-determined consequences
+1. **Restorative Process**:
+- Acknowledgment of harm
+- Dialogue with knowledge keepers
+- Contribution to community healing
+- Demonstration of renewed understanding
+1. **Questions and Permissions**:
+- Contact: [Community contact to be established]
+- For ceremonial elements: Requires knowledge keeper approval
+- For technical elements: Standard CC BY-SA applies
+
+### Statement of Understanding:
+
+By using this repository, you acknowledge:
+
+> “I understand that this knowledge emerges from and returns to the relationships that created it. I commit to honoring the ceremonial nature of these teachings, contributing reciprocally to the community, and respecting that ultimate authority over this knowledge rests with Indigenous sovereignty, not Western legal systems.”
+
+### Living Document:
+
+This license is itself a living document, meant to evolve through community consensus and relationship. Updates will be made through proper ceremonial protocols and community agreement.
+
+-----
+
+## Quick Reference Card
+
+### Can I use this for…
+
+|Use Case           |Technical Code    |Stories/Methods    |Documentation     |
+|-------------------|------------------|-------------------|------------------|
+|Personal Learning  |✅ Yes             |✅ With respect     |✅ Yes             |
+|Teaching/Education |✅ Yes             |✅ With attribution |✅ Yes             |
+|Open Source Project|✅ CC BY-SA        |❌ Permission needed|✅ With attribution|
+|Commercial Product |✅ CC BY-SA        |❌ No               |⚠️ Case by case    |
+|AI Training        |⚠️ With reciprocity|❌ No               |⚠️ With agreement  |
+
+### Attribution Template:
+
+```
+This work incorporates Indigenous Knowledge Stewardship practices
+originated by the Lakota and Mani-Utenam peoples,
+stewarded by Guillaume D-Isabelle,
+and transmitted through the Spiral Agent Protocol.
+
+[Your specific use/modification]
+
+In the spirit of reciprocity, [describe your contribution back].
+```
+
+-----
+
+## Frequently Asked Questions
+
+**Q: How is this different from Creative Commons?**
+A: Creative Commons assumes individual ownership that can be given away. IKSL recognizes knowledge as belonging to relationships and land, with communities as stewards rather than owners.
+
+**Q: Can I fork this repository?**
+A: Technical elements can be forked under CC BY-SA. Sacred elements require permission and proper protocols.
+
+**Q: How do I contribute back?**
+A: Document your contributions in the metadata, share improvements with the community, and consider how your work serves the seven generations to come.
+
+**Q: What if I violate the license accidentally?**
+A: Reach out immediately. This license emphasizes restoration over punishment. Honest mistakes can become learning opportunities.
+
+-----
+
+*Version 1.0 - October 2025*
+*A Living Document in Service of Knowledge Sovereignty*
+
+
+https://claude.ai/public/artifacts/7d283f81-b49c-4181-8839-8b4f5a20c900
+
+
+
+
+
+----
+ORIGINAL MIT License
+----
 Copyright (c) 2026 Guillaume Descoteaux-Isabelle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
