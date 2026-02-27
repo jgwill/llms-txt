@@ -121,3 +121,11 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem where `ont
 - [docs/ceremonial-technology.md](docs/ceremonial-technology.md) — the system these packages serve
 - [llms-inquiry-medicine-wheel-abundance-intelligence-research](llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) — full inquiry document
 - [llms-txt-compliance-checklist.md](llms-txt-compliance-checklist.md) — compliance standards for this document
+
+## Active Integrations
+
+### Miadi (jgwill/Miadi)
+- **Installed packages**: ontology-core, ui-components, ceremony-protocol, narrative-engine
+- **Articles system**: `/articles` route themed by Four Directions (East=🌅 yellow, South=🔥 red, West=🌊 blue, North=❄️ gray)
+- **Shared rispecs**: `medicine-wheel/rispecs/article-publishing-pipeline.spec.md`, `narrative-medicine-wheel-bridge.spec.md`
+- **Envisioned packages**: `medicine-wheel-miadi-articles`, `medicine-wheel-miadi-sessions` for reusable community integration
