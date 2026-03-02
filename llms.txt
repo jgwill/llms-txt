@@ -178,3 +178,10 @@
 > A guide for LLMs on designing and generating native UIs for Pythonista on iOS, focusing on the `ui` module and `.pyui` file format.
 - **Link**: [llms-ui-pythonista-guide.gemini.txt](./llms-ui-pythonista-guide.gemini.txt)
 - **Related**: llms-pythonista-full.gemini.txt
+
+## Storytelling (WillWrite) — AI Narrative Generation
+> AI-powered narrative generation system that transforms prompts into complete multi-chapter stories through advancing patterns, using LangGraph, multi-provider LLMs, RAG, and Indigenous ceremonial integration (IAIP).
+- **Link**: [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt)
+- **Full**: [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt)
+- **Docs**: [docs/storytelling.md](./docs/storytelling.md)
+- **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt

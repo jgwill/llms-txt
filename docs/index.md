@@ -48,6 +48,12 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 | [Academic Counter-Positioning](academic-positioning.md) | Writing when epistemology diverges from mainstream | [counter_articles/](../counter_articles/) |
 | [Medicine Wheel Research](medicine-wheel-research.md) | Abundance Intelligence and the Medicine Wheel Developer Suite | [llms-inquiry-medicine-wheel](../llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) |
 
+### Creative Applications
+
+| Application | Description | Source |
+|-------------|------------|--------|
+| [Storytelling (WillWrite)](storytelling.md) | AI-powered narrative generation through advancing patterns | [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt) |
+
 ### AI Companion Skills & Practices
 
 | Practice | Description | Source |
@@ -74,11 +80,13 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
               │                │                  │
               └────────────────┼──────────────────┘
                                │
-                    ┌──────────▼──────────┐
-                    │  Medicine Wheel     │
-                    │  Developer Suite    │
-                    │  (7 npm packages)   │
-                    └─────────────────────┘
+              ┌────────────────┼────────────────┐
+              │                │                │
+    ┌─────────▼──────┐  ┌─────▼──────┐  ┌──────▼─────────┐
+    │  Medicine Wheel │  │Storytelling │  │   AI Companion │
+    │  Developer Suite│  │ (WillWrite) │  │     Skills     │
+    │  (7 npm pkgs)  │  │ (Python pkg)│  │  (11 skills)   │
+    └────────────────┘  └────────────┘  └────────────────┘
 ```
 
 ---
