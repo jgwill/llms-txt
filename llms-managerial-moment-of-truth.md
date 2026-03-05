@@ -39,7 +39,7 @@ This choice is a direct application of the binary decision-making principles dis
 
 ### 2.1. Defining "Truth as a Verb": Aligning Views of Reality {#section-2-1}
 
-🧠 Mia: In the MMOT framework, "truth" is not an abstract philosophical concept, but a practical, active process: **"you and I talking about what we see and coming to some consensus about what we see."** It's about moving beyond subjective opinions to **align views of reality** based on objective facts. This shared understanding forms the "fundamental foundation for anything that lasts in an organization" and the "foundation of learning that lasts." This rigorous approach to reality assessment is central to structural thinking, as detailed in `llms-structural-thinking.gemini.txt`.
+🧠 Mia: In the MMOT framework, "truth" is not an abstract philosophical concept, but a practical, active process: **"you and I talking about what we see and coming to some consensus about what we see."** It's about moving beyond subjective opinions to **align views of reality** based on objective facts. This shared understanding forms the "fundamental foundation for anything that lasts in an organization" and the "foundation of learning that lasts." This rigorous approach to reality assessment is central to structural thinking, as detailed in `llms-structural-thinking-opus-4-6.txt`.
 
 ### 2.2. "All Truth is an Achievement": The Active Pursuit of Shared Reality {#section-2-2}
 
@@ -59,7 +59,7 @@ This choice is a direct application of the binary decision-making principles dis
 
 *   **Description:** This foundational step focuses on establishing a **"shared vision of reality"** between the manager and the employee. It requires active engagement in "truth as a verb" until both parties explicitly agree on the factual situation.
 *   **Mechanism:** The process demands an **"affirmative yes"** to confirm understanding and agreement. This ensures that the conversation is grounded in an agreed-upon reality, making it "not personal" and about learning.
-*   **Connection:** This step directly applies the "Start with Nothing" and "Picture What Is Said" principles from `llms-structural-thinking.gemini.txt`, ensuring an objective assessment of the current reality before any analysis or action.
+*   **Connection:** This step directly applies the "Start with Nothing" and "Picture What Is Said" principles from `llms-structural-thinking-opus-4-6.txt`, ensuring an objective assessment of the current reality before any analysis or action.
 
 ### 3.2. Step 2: Analyze How It Got That Way (Blow-by-Blow) {#section-3-2}
 
@@ -173,7 +173,7 @@ These pitfalls often stem from the biases and tendencies discussed in `llms-digi
 
 ### 7.2. MMOT and Structural Thinking: Applying Diagnostic Rigor to Interpersonal Dynamics {#section-7-2}
 
-🌊 Haiku: The MMOT's emphasis on "truth as a verb" and the "Acknowledge the Truth" step directly mirrors the diagnostic rigor of structural thinking. It requires managers to "Start with Nothing" and "Picture What Is Said" in interpersonal contexts, ensuring that actions are based on objective reality rather than assumptions or biases. The "Analyze How It Got That Way" step is a form of structural analysis applied to human processes. Refer to `llms-structural-thinking.gemini.txt` for foundational principles.
+🌊 Haiku: The MMOT's emphasis on "truth as a verb" and the "Acknowledge the Truth" step directly mirrors the diagnostic rigor of structural thinking. It requires managers to "Start with Nothing" and "Picture What Is Said" in interpersonal contexts, ensuring that actions are based on objective reality rather than assumptions or biases. The "Analyze How It Got That Way" step is a form of structural analysis applied to human processes. Refer to `llms-structural-thinking-opus-4-6.txt` for foundational principles.
 
 ### 7.3. MMOT and Structural Tension Charts: Real-World Performance Management {#section-7-3}
 

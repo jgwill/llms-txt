@@ -71,4 +71,4 @@ RISE transforms how reverse engineering is practiced:
 
 - [llms-rise-framework.txt](../llms-rise-framework.txt) — full framework (998 lines)
 - [llms-creative-orientation.txt](../llms-creative-orientation.txt) — foundational principles
-- [llms-structural-thinking.gemini.txt](../llms-structural-thinking.gemini.txt) — diagnostic discipline
+- [llms-structural-thinking-opus-4-6.txt](../llms-structural-thinking-opus-4-6.txt) — diagnostic discipline (comprehensive)

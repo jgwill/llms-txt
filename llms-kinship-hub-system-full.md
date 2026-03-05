@@ -12,7 +12,7 @@
 - **Status**: Draft – living protocol
 - **License**: Internal use; grounded in Indigenous scholarship and LLMS structural frameworks
 - **Attribution (Indigenous foundations)**: Shawn Wilson, *Research is Ceremony*; Indigenous research paradigms (Four Rs, Six Rs); Anishnaabe inawendiwin; kin relationality and ecological belonging; Indigenous relationality and kinship law.[^1_1][^1_2][^1_3][^1_4][^1_5][^1_6]
-- **Attribution (LLMS foundations)**: llms-creative-orientation.txt, llms-structural-thinking.gemini.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md, llms-digital-decision-making.md, llms-narrative-beats.txt, llms-narrative-remixing.txt, llms-managerial-moment-of-truth.md, llms-leadership.txt, llms-rise-framework.txt
+- **Attribution (LLMS foundations)**: llms-creative-orientation.txt, llms-structural-thinking-opus-4-6.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md, llms-digital-decision-making.md, llms-narrative-beats.txt, llms-narrative-remixing.txt, llms-managerial-moment-of-truth.md, llms-leadership.txt, llms-rise-framework.txt
 
 ***
 
@@ -502,7 +502,7 @@ This protocol is grounded in and should internally honor:
 
 [^1_13]: https://www.frontiersin.org/articles/10.3389/fpsyg.2023.994508/pdf?isPublishedV2=False
 
-[^1_14]: llms-structural-thinking.gemini.txt
+[^1_14]: llms-structural-thinking-opus-4-6.txt
 
 [^1_15]: llms-delayed-resolution-principle.md
 
