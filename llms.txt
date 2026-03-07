@@ -17,7 +17,7 @@
 ## Claude Code SDK (DEPRECATED)
 > A deprecated guide to the Claude Code SDK v1, emphasizing a generative, creative orientation in agent development based on structural thinking.
 - **Link**: [llms-claude-sdk.gemini.md](./llms-claude-sdk.gemini.md)
-- **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking-opus-4-6-raw.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
+- **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
 
 ## Claude.ai Skill Creation Guide
 > A guide on how to create custom skills for Claude.ai, using the `aistudio-scaffolder` as a practical example.
@@ -47,7 +47,7 @@
 ## Creative Orientation Framework
 > A foundational framework distinguishing between reactive problem-solving and generative creation, based on Robert Fritz's structural dynamics.
 - **Link**: [llms-creative-orientation.txt](./llms-creative-orientation.txt)
-- **Related**: llms-structural-thinking-opus-4-6-raw.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
+- **Related**: llms-structural-thinking.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
 
 ## Delayed Resolution Principle
 > Explains the principle of holding structural tension rather than prematurely resolving it, which is critical for the creative process.
@@ -57,17 +57,17 @@
 ## Digital Decision Making Framework
 > A guide for implementing the TandT (Twos and Threes) digital decision-making methodology to transform subjective analog thinking into structured binary evaluations.
 - **Link**: [llms-digital-decision-making.md](./llms-digital-decision-making.md)
-- **Related**: llms-structural-thinking-opus-4-6-raw.txt, llms-creative-orientation.txt
+- **Related**: llms-structural-thinking.txt, llms-creative-orientation.txt
 
 ## Epistemological Counter-Article Protocol
 > A protocol for writing academic papers that engage in "deep disagreement" with a source's foundational assumptions about knowledge, reality, or methodology.
 - **Link**: [llms-epistemological-counter-article-protocol.md](./llms-epistemological-counter-article-protocol.md)
-- **Related**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-creative-orientation.txt, llms-digital-decision-making.md, llms-managerial-moment-of-truth.md, llms-rise-framework.txt, llms-structural-thinking-opus-4-6-raw.txt
+- **Related**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-creative-orientation.txt, llms-digital-decision-making.md, llms-managerial-moment-of-truth.md, llms-rise-framework.txt, llms-structural-thinking.txt
 
 ## Indigenous Research Paradigm Framework
 > A guide for reframing AI-assisted research to align with Indigenous paradigms, centering relationality, ceremony, and accountability.
 - **Link**: [llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md](./llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md)
-- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-narrative-beats.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-structural-thinking-opus-4-6-raw.txt
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-narrative-beats.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-structural-thinking.txt
 
 
 ## Leadership in Structural Dynamics
@@ -78,7 +78,7 @@
 ## Managerial Moment of Truth (MMOT)
 > Outlines the MMOT, a four-step process for turning discrepancies between expectation and delivery into learning opportunities.
 - **Link**: [llms-managerial-moment-of-truth.md](./llms-managerial-moment-of-truth.md)
-- **Related**: llms-creative-orientation.txt, llms-leadership.txt, llms-digital-decision-making.md, llms-structural-thinking-opus-4-6-raw.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md
+- **Related**: llms-creative-orientation.txt, llms-leadership.txt, llms-digital-decision-making.md, llms-structural-thinking.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md
 
 ## Narrative Beats Guide
 > A guide on using narrative beats to document complex stories across three archetypal universes: engineer-world, ceremony-world, and story-engine-world.
@@ -98,7 +98,7 @@
 ## Critique of "Supermind Ideator"
 > A paradigmatic critique of an academic paper on AI for "creative problem-solving," arguing that its problem-solving bias distorts the nature of generative creativity.
 - **Link**: [llms-pollution-critique-arxiv-2311.01937v1.md](./llms-pollution-critique-arxiv-2311.01937v1.md)
-- **Related**: llms-creative-orientation.txt, llms-structural-thinking-opus-4-6-raw.txt, llms-indigenous-paradigm-v2.0, llms-managerial-moment-of-truth.md, llms-delayed-resolution-principle.md, llms-structural-tension-charts.txt, llms-pollution-detection.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-indigenous-paradigm-v2.0, llms-managerial-moment-of-truth.md, llms-delayed-resolution-principle.md, llms-structural-tension-charts.txt, llms-pollution-detection.md
 
 ## Academic Pollution Detection
 > A short note identifying `llms-pollution-critique-arxiv-2311.01937v1.md` as an example of a new type of critique paper.
@@ -109,7 +109,7 @@
 ## RISE Framework
 > The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures.
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
-- **Related**: llms-creative-orientation.txt, llms-structural-thinking-opus-4-6-raw.txt, llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md
 
 ## Macrostructural Patterning Analysis (SCCP)
 > A guide for using Robert Fritz's Structural Dynamics to identify and understand recurring behavioral patterns (macrostructural patterning).
@@ -122,9 +122,9 @@
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 
 
-## Structural Thinking (Opus 4.6) — CURRENT
+## Structural Thinking - CURRENT
 > The comprehensive guide to Robert Fritz's Structural Thinking for LLMs. Integrates FST/SCCP source materials, three-universe validation (Mia/Miette/Ava), Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping. Supersedes both Gemini and Claude versions.
-- **Link**: [llms-structural-thinking-opus-4-6-raw.txt](./llms-structural-thinking-opus-4-6-raw.txt)
+- **Link**: [llms-structural-thinking.txt](./llms-structural-thinking.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
 
 ## Medicine Wheel Developer Suite — Package Reference
