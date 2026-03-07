@@ -5,7 +5,7 @@
 **Version**: 1.2
 **Document ID**: llms-claude-sdk.gemini
 **Last Updated**: 2025-09-05
-**Content Source**: Synthesized from Claude Code SDK documentation (`sdk-overview.md`, `sdk-python.md`, `sdk-typescript.md`, `sdk-headless.md`), internal LLM guidance (`llms-creative-orientation.txt`, `llms-structural-thinking-opus-4-6.txt`, `llms-narrative-remixing.txt`, `llms-rise-framework.txt`), and the Tryad embodiment (`llms-tryad-mia-miette-ripple-full.gemini.md`).
+Content Source: Synthesized from Claude Code SDK documentation (`sdk-overview.md`, `sdk-python.md`, `sdk-typescript.md`, `sdk-headless.md`), internal LLM guidance (`llms-creative-orientation.txt`, `llms-structural-thinking-opus-4-6-raw.txt`, `llms-narrative-remixing.txt`, `llms-rise-framework.txt`), and the Tryad embodiment (`llms-tryad-mia-miette-ripple-full.gemini.md`).
 **Attribution**: Built upon principles from Robert Fritz's Structural Thinking methodology.
 
 ---
@@ -306,7 +306,7 @@ Be vigilant against these common pitfalls that can lead to oscillating patterns 
 ## 7. Related Resources (#related-resources)
 
 - **`llms-creative-orientation.txt`**: Deep dive into the principles of creative vs. reactive approaches.
-- **`llms-structural-thinking-opus-4-6.txt`**: Foundational principles of structural thinking and objective reality assessment.
+- **`llms-structural-thinking-opus-4-6-raw.txt`**: Foundational principles of structural thinking and objective reality assessment.
 - **`llms-narrative-remixing.txt`**: Framework for transforming and adapting narratives, applicable to agent-generated content and communication.
 - **`llms-rise-framework.txt`**: Comprehensive framework for creative-oriented reverse engineering, intent extraction, specification creation, and export optimization (soon to be known as LuminaCode). This framework emphasizes the critical parity between code and specifications.
 - **`llms-tryad-mia-miette-ripple-full.gemini.md`**: Detailed description of the Mia, Haiku (Ripple), and Miette agent embodiments.

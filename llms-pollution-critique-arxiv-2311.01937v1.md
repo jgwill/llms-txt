@@ -7,7 +7,7 @@ In academic literature, particularly in philosophy, social sciences, and researc
 **Version:** 1.0  
 **Document ID:** critique-arxiv-2311.01937v1-v1.0  
 **Last Updated:** 2026-02-02  
-**Content Source / Attribution:** Based on analysis of arXiv paper 2311.01937v1 by the authors (summarized via tool-assisted browse). Integrated with frameworks from `llms-creative-orientation.txt`, `llms-structural-thinking-opus-4-6.txt`, `llms-indigenous-paradigm-v2.0`, and related documents.  
+**Content Source / Attribution:** Based on analysis of arXiv paper 2311.01937v1 by the authors (summarized via tool-assisted browse). Integrated with frameworks from `llms-creative-orientation.txt`, `llms-structural-thinking-opus-4-6-raw.txt`, `llms-indigenous-paradigm-v2.0`, and related documents.  
 **Critique Type:** Deep Disagreement / Paradigmatic Critique  
 **Purpose:** To counter the problem-solving orientation bias in AI creativity research, reframing toward generative creation, relational accountability, and structural dynamics. This serves as a reference for future threads to evaluate and correct similar sources.
 

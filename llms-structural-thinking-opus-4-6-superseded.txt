@@ -1,0 +1,6 @@
+# DEPRECATED: Structural Thinking for Large Language Models
+
+This document has been superseded by the canonical version:
+[llms-structural-thinking-opus-4-6-raw.txt](./llms-structural-thinking-opus-4-6-raw.txt)
+
+Please update your references to point to the new file.

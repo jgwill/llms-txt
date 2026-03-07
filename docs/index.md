@@ -29,7 +29,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 |-----------|------------|--------|
 | [Creative Orientation](creative-orientation.md) | Generative creation over reactive elimination (Robert Fritz) | [llms-creative-orientation.txt](../llms-creative-orientation.txt) |
 | [Structural Tension](structural-tension.md) | Disequilibrium as a causal force driving advancement | [llms-structural-tension-charts.txt](../llms-structural-tension-charts.txt) |
-| [Structural Thinking](structural-tension.md#structural-thinking) | Three-step diagnostic discipline for perceiving reality | [llms-structural-thinking-opus-4-6.txt](../llms-structural-thinking-opus-4-6.txt) |
+| [Structural Thinking](structural-tension.md#structural-thinking) | Three-step diagnostic discipline for perceiving reality | [llms-structural-thinking-opus-4-6-raw.txt](../llms-structural-thinking-opus-4-6-raw.txt) |
 | [RISE Framework](rise-framework.md) | Reverse-engineer, Intent-extract, Specify, Export | [llms-rise-framework.txt](../llms-rise-framework.txt) |
 | [Narrative Craft](narrative-craft.md) | Story documentation across engineer, ceremony, and story-engine worlds | [llms-narrative-beats.txt](../llms-narrative-beats.txt) |
 

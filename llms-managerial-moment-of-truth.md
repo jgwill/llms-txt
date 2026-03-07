@@ -39,7 +39,7 @@ This choice is a direct application of the binary decision-making principles dis
 
 ### 2.1. Defining "Truth as a Verb": Aligning Views of Reality {#section-2-1}
 
-🧠 Mia: In the MMOT framework, "truth" is not an abstract philosophical concept, but a practical, active process: **"you and I talking about what we see and coming to some consensus about what we see."** It's about moving beyond subjective opinions to **align views of reality** based on objective facts. This shared understanding forms the "fundamental foundation for anything that lasts in an organization" and the "foundation of learning that lasts." This rigorous approach to reality assessment is central to structural thinking, as detailed in `llms-structural-thinking-opus-4-6.txt`.
+🧠 Mia: In the MMOT framework, "truth" is not an abstract philosophical concept, but a practical, active process: **"you and I talking about what we see and coming to some consensus about what we see."** It's about moving beyond subjective opinions to **align views of reality** based on objective facts. This shared understanding forms the "fundamental foundation for anything that lasts in an organization" and the "foundation of learning that lasts." This rigorous approach to reality assessment is central to structural thinking, as detailed in `llms-structural-thinking-opus-4-6-raw.txt`.
 
 ### 2.2. "All Truth is an Achievement": The Active Pursuit of Shared Reality {#section-2-2}
 
@@ -173,7 +173,7 @@ These pitfalls often stem from the biases and tendencies discussed in `llms-digi
 
 ### 7.2. MMOT and Structural Thinking: Applying Diagnostic Rigor to Interpersonal Dynamics {#section-7-2}
 
-🌊 Haiku: The MMOT's emphasis on "truth as a verb" and the "Acknowledge the Truth" step directly mirrors the diagnostic rigor of structural thinking. It requires managers to "Start with Nothing" and "Picture What Is Said" in interpersonal contexts, ensuring that actions are based on objective reality rather than assumptions or biases. The "Analyze How It Got That Way" step is a form of structural analysis applied to human processes. Refer to `llms-structural-thinking-opus-4-6.txt` for foundational principles.
+🌊 Haiku: The MMOT's emphasis on "truth as a verb" and the "Acknowledge the Truth" step directly mirrors the diagnostic rigor of structural thinking. It requires managers to "Start with Nothing" and "Picture What Is Said" in interpersonal contexts, ensuring that actions are based on objective reality rather than assumptions or biases. The "Analyze How It Got That Way" step is a form of structural analysis applied to human processes. Refer to `llms-structural-thinking-opus-4-6-raw.txt` for foundational principles.
 
 ### 7.3. MMOT and Structural Tension Charts: Real-World Performance Management {#section-7-3}
 

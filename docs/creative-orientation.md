@@ -32,7 +32,7 @@ Before creative orientation can function, **clear reality perception is essentia
 2. **Picture What Is Said** — visualize the information as presented
 3. **Ask Questions** — Information, Clarification, Implication, Discrepancy
 
-See: [llms-structural-thinking-opus-4-6.txt](../llms-structural-thinking-opus-4-6.txt) (supersedes Gemini and Claude versions)
+See: [llms-structural-thinking-opus-4-6-raw.txt](../llms-structural-thinking-opus-4-6-raw.txt) (supersedes Gemini and Claude versions)
 
 ---
 
@@ -92,7 +92,7 @@ See: [Relational Science](relational-science.md) · [Indigenous Research Paradig
 ## Key Sources
 
 - [llms-creative-orientation.txt](../llms-creative-orientation.txt) — full framework
-- [llms-structural-thinking-opus-4-6.txt](../llms-structural-thinking-opus-4-6.txt) — diagnostic discipline (comprehensive)
+- [llms-structural-thinking-opus-4-6-raw.txt](../llms-structural-thinking-opus-4-6-raw.txt) — diagnostic discipline (comprehensive)
 - [llms-delayed-resolution-principle.md](../llms-delayed-resolution-principle.md) — tension maintenance
 - [llms-sccp-patterning.md](../llms-sccp-patterning.md) — macrostructural pattern analysis
 - [llms-leadership.txt](../llms-leadership.txt) — leadership through structural design

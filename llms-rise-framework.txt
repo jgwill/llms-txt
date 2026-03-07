@@ -533,7 +533,7 @@ The RISE framework represents a fundamental shift in how we understand the relat
 ### Related LLMS-txt Files
 - `llms-creative-orientation.txt`: Deep dive into creative vs reactive approaches and structural thinking
 - `llms-narrative-remixing.txt`: Methods for transforming technical content into engaging narratives
-- `llms-structural-thinking-opus-4-6.txt`: Core principles of structural dynamics and tension-based progress
+- `llms-structural-thinking-opus-4-6-raw.txt`: Core principles of structural dynamics and tension-based progress
 - `llms-managerial-moment-of-truth.md`: MMOT framework for iterative refinement through planning → executing → learning loops
 
 ### Implementation Examples {#implementation-examples}
