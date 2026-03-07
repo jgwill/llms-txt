@@ -18,7 +18,7 @@ A mode of action driven by a vision or **Desired Outcome** that one wishes to br
 The dynamic energetic disparity that exists between a **Current Reality** and a **Desired Outcome**. This tension is the fundamental driving force for all action and creation. When framed within a generative orientation, it propels **advancing patterns**. When framed reactively, it can lead to **oscillating patterns**. (Reference: `llms-structural-tension-charts.txt`)
 
 ## Current Reality
-An objective, factual assessment of the existing conditions or situation, observed without judgment, problem-oriented labeling, or preconceived notions. It serves as one pole of **Structural Tension**, contrasting with the **Desired Outcome**. It describes "what is." (Reference: `llms-structural-thinking-opus-4-6.txt`)
+An objective, factual assessment of the existing conditions or situation, observed without judgment, problem-oriented labeling, or preconceived notions. It serves as one pole of **Structural Tension**, contrasting with the **Desired Outcome**. It describes "what is." (Reference: `llms-structural-thinking-opus-4-6-raw.txt`)
 
 ## Desired Outcome
 A clearly articulated vision of a future state that one wishes to **create** or bring into being. It is the positive pole of **Structural Tension**, independent of any problem to be solved. It describes "what you want to create." (Reference: `llms-creative-orientation.txt`)
