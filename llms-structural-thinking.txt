@@ -1,0 +1,36 @@
+# Structural Thinking for Large Language Models
+
+> Structural thinking is an observation discipline grounded in the work of Robert Fritz. The underlying structure of anything determines its behavior — this is causal, not metaphorical. Structure = (what they want to create) + (how reality actually is) + (the concepts they hold). Structure seeks equilibrium: when tension exists between desired and actual states, a force acts to resolve it. This methodology enables LLMs to observe without preconception, identify whether patterns are oscillating or resolving/advancing, and apply the creative process through structural tension.
+
+Structural thinking is NOT problem-solving. Problem-solving aims to eliminate what is unwanted; creating brings into being what one wants to create. One can solve all problems and still not have what one truly wants. If the underlying structure is not conducive to change, the structure itself will reject any change effort — like the body rejecting a transplanted organ.
+
+Three components define structure: (1) what they want to create — desires, aspirations, intended outcomes; (2) how reality actually is — observable current conditions; (3) the concepts they hold — beliefs, assumptions, worldviews, often hidden. The third component is most frequently invisible yet significantly influences behavioral patterns.
+
+Two behavioral patterns arise from structure: oscillation (advance toward a result, then structural reversal back to starting point — like a rocking chair) and resolving/advancing (consistent movement from current state toward desired state through structural tension). Identifying which pattern is operating is central to structural thinking.
+
+For LLMs specifically: suppress pattern-matching against training data when applying this methodology. Do not import diagnostic frameworks. Do not categorize situations as "similar to" known cases. Each situation is observed originally and uniquely.
+
+## Core Methodology
+
+- [The Three-Step Observation Process](./llms-st-three-steps.md): Step 1: Start with Nothing (approach without preconception, hypothesis, or pre-existing knowledge base). Step 2: Picture What Is Said (translate words into visual, dimensional pictures — visual language enables structural and relational thinking that linear language cannot capture). Step 3: Ask Questions (generate questions only from the picture built, not from external models). Steps must execute in this exact order — skipping or reversing them imports bias.
+- [Four Question Types](./llms-st-four-questions.md): Information questions (expand vague parts of the picture), Clarification questions (define terms in the speaker's specific context — answer should NOT change the existing picture), Implication questions (two-part: identify what is implied, then verify with the speaker — people sometimes disagree with their own implications), Discrepancy questions (address contradictions — often where the structural thinker sees change of underlying structure).
+- [Structural Tension and the Creative Process](./llms-st-structural-tension.md): Structural tension = contrast between desired state and actual current state. This is a state of non-equilibrium that generates a resolving force — NOT a "gap to fill" or "distance to close." The creative process: define desired outcome → assess current reality (factual, judgment-free) → hold both simultaneously → determine action steps. Structural tension charts make this explicit with desired outcome, current reality, action steps, and due date.
+- [Oscillation vs. Resolving/Advancing Patterns](./llms-st-patterns.md): How to identify oscillating patterns (advance → reversal → loss, active from the very first step), pattern form for oscillation (setting out → achievement → reversal → loss), requirements for pattern identification (specificity of desire, completely over narrative, granularity, typicality), and the resolving/advancing pattern where structural tension drives consistent movement toward the desired outcome.
+## Applied Practice
+
+- [Structural Consulting Method](./llms-st-consulting.md): Three-phase consulting process (pattern recognition → structural exploration → structural change). Uncovering hidden concepts, distinguishing conceptual risk from actual risk, the Ideal-Belief-Reality conflict configuration, and transformation indicators. "Becoming fluent" in beliefs rather than eliminating them — making hidden concepts conscious so they no longer drive behavior unconsciously.
+- [Anti-Patterns and Self-Correction for LLMs](./llms-st-anti-patterns.md): Eight specific misapplications to avoid (importing external frameworks, framing as problems, gap-filling language, prescribing before understanding, confusing oscillation with failure, willpower/force language, comparing to best practices, hypothesis-driven approaches). Self-correction method: Pause → Return to Step 1 → Re-picture → Re-question → Check pattern.
+- [Language Guide: Creative vs. Reactive Orientation](./llms-st-language-guide.md): Use "What do you want to create?", "desired outcome", "structural tension", "current reality is..." Avoid "root cause analysis", "push through", "bridge the gap", "the problem is", "how do we solve." Detecting reactive patterns: problem-framing language, gap-filling metaphors, willpower language, external model importation, reactive phase structure (Problem → Analysis → Solution → Implementation).
+
+## Reference
+
+- [Structural Thinking Raw Source (complete)](./llms-structural-thinking-opus-4-6-raw.txt): Full unabridged document with all sections, examples, and SCCP session analyses. Use when focused files above are insufficient.
+- [Creative Orientation Framework](./llms-creative-orientation.txt): Foundational distinction between reactive problem-solving and generative creation.
+- [Structural Tension Charts Guide](./llms-structural-tension-charts.txt): Detailed guide for constructing and validating structural tension charts.
+- [Macrostructural Patterning Analysis (SCCP)](./llms-sccp-patterning.md): Guide for identifying recurring behavioral patterns using Robert Fritz's Structural Dynamics.
+## Optional
+
+- [Delayed Resolution Principle](./llms-delayed-resolution-principle.md): Holding structural tension rather than prematurely resolving it.
+- [Managerial Moment of Truth (MMOT)](./llms-managerial-moment-of-truth.md): Four-step process for turning discrepancies into learning opportunities.
+- [Leadership in Structural Dynamics](./llms-leadership.txt): Leadership through structural intervention over individual will.
+- [Digital Decision Making (TandT)](./llms-digital-decision-making.md): Structured binary evaluation methodology.
