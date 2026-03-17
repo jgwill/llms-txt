@@ -29,7 +29,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 |-----------|------------|--------|
 | [Creative Orientation](creative-orientation.md) | Generative creation over reactive elimination (Robert Fritz) | [llms-creative-orientation.txt](../llms-creative-orientation.txt) |
 | [Structural Tension](structural-tension.md) | Disequilibrium as a causal force driving advancement | [llms-structural-tension-charts.txt](../llms-structural-tension-charts.txt) |
-| [Structural Thinking](structural-tension.md#structural-thinking) | Three-step diagnostic discipline for perceiving reality | [llms-structural-thinking-opus-4-6-raw.txt](../llms-structural-thinking-opus-4-6-raw.txt) |
+| [Structural Thinking](structural-tension.md#structural-thinking) | Three-step diagnostic discipline for perceiving reality | [llms-structural-thinking.txt](../llms-structural-thinking.txt) |
 | [RISE Framework](rise-framework.md) | Reverse-engineer, Intent-extract, Specify, Export | [llms-rise-framework.txt](../llms-rise-framework.txt) |
 | [Narrative Craft](narrative-craft.md) | Story documentation across engineer, ceremony, and story-engine worlds | [llms-narrative-beats.txt](../llms-narrative-beats.txt) |
 
@@ -38,8 +38,16 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 | Methodology | Description | Source |
 |-------------|------------|--------|
 | [Digital Decision Making](digital-decision-making.md) | TandT binary evaluation for clarity | [llms-digital-decision-making.md](../llms-digital-decision-making.md) |
-| [Performance Truth (MMOT)](performance-truth.md) | Managerial Moment of Truth as relational accountability | [llms-managerial-moment-of-truth.md](../llms-managerial-moment-of-truth.md) |
+| [Performance Review (MMOT)](performance-truth.md) | Managerial Moment of Truth as relational accountability | [llms-managerial-moment-of-truth.md](../llms-managerial-moment-of-truth.md) |
 | [Kinship Hub System](kinship-hub.md) | Treating repos as beings in networks of relations | [llms-kinship-hub-system.md](../llms-kinship-hub-system.md) |
+
+<!--TODO
+* as relational accountability, we would have to talk about it !
+* * At least think of relating the 2 distinctives Ontologies of Fritz and Indigenous to make this coherent
+* * * todo that, fundamental of structural thinking talks about (at least Fritz talks about that in the video) when he teaches us about relational database which is coherent with that ways of knowing where relation are important. Lesson of creating your life on Primary/secondary and fundamental choices might help draw a graph of relation + values
+
+-->
+
 
 ### Research and Academic Positioning
 
@@ -47,13 +55,16 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 |--------|------------|--------|
 | [Indigenous Research Paradigm](indigenous-research-paradigm.md) | Decolonized operating system for AI engagement | [llms-inquiry-6406eb37](../llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md) |
 | [Academic Counter-Positioning](academic-positioning.md) | Writing when epistemology diverges from mainstream | [counter_articles/](../counter_articles/) |
-| [Medicine Wheel Research](medicine-wheel-research.md) | Abundance Intelligence and the Medicine Wheel Developer Suite | [llms-inquiry-medicine-wheel](../llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) |
+| [Medicine Wheel Research](medicine-wheel-research.md) | Abundance Intelligence and the Medicine Wheel Developer Suite | [llms-inquiry-medicine-wheel and Abundance Intelligence Project](../llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) |
 
 ### Creative Applications
 
 | Application | Description | Source |
 |-------------|------------|--------|
-| [Storytelling (WillWrite)](storytelling.md) | AI-powered narrative generation through advancing patterns | [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt) |
+| [Storytelling](storytelling.md) | AI-powered narrative generation through advancing patterns | [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt) |
+
+<!-- app stilm needs some work.  how could we talks about that statement
+-->
 
 ### AI Companion Skills & Practices
 
@@ -61,6 +72,10 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 |---------|------------|--------|
 | [Skills & Companions](skills-and-companions.md) | AI companion skills mapped to llms-txt guidance | [.github/skills/](../.github/skills/) |
 | [Prompt Decomposition (PDE)](prompt-decomposition.md) | Intention exploration as EAST practice | [llms-pde.txt](../llms-pde.txt) |
+<!-- 
+@stcissue 260317135900 Probably llms-pde.txt is outdated and its kinship with STC (pde-to-stc) with coaia-pds and coaia-planning needs analysis of context to upgrade this part of the portfolio.  Potentially the consilodation explored in ceremony jgwill/src#402 will shed some light and even this here would be part of what would trigger this upgrade.
+@stcgoal 260317135901 Also an important point of action-steps when PDE has became a structural tension chart are structural thinking session with the 4 questions make from a team of agents working in the swarn and are activate to feed the adequate ways to either : 1. information 2. clarification 3. implication (validation of what is implicit I guess (negative space in the big picture)) 4. discrepency (contradictions in the specs that would drive the agents into one or another ways and obviously undesired / desired , these needs to be found)
+-->
 
 ---
 
@@ -107,5 +122,7 @@ If you are an AI assistant reading this documentation:
 ## License
 
 This work is governed by the [Indigenous Knowledge Stewardship License](../LICENSE) and the [Terms of Use](../TERMS.md).
+<!--
+I really suspect terms will need a refresh and links to where they are explored.  also maybe a terms and definitiona with each ways of thinking is needed (ex. what relation means for Robert Fritz, for Wilson and for Guillaume (owner of this which implies an essay for a new definition as part of some scolarly/academic work/credential goals)?)
 
 See also: [KINSHIP.md](../KINSHIP.md) for relational accountabilities of this repository.
