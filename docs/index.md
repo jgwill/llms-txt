@@ -125,4 +125,11 @@ This work is governed by the [Indigenous Knowledge Stewardship License](../LICEN
 <!--
 I really suspect terms will need a refresh and links to where they are explored.  also maybe a terms and definitiona with each ways of thinking is needed (ex. what relation means for Robert Fritz, for Wilson and for Guillaume (owner of this which implies an essay for a new definition as part of some scolarly/academic work/credential goals)?)
 
+
+—-
+
 See also: [KINSHIP.md](../KINSHIP.md) for relational accountabilities of this repository.
+  not sure this is how to add relationships, though that seems internal 
+topic for réflexion : how do you represent kinship within the system ? (relation to one repo to another that agents and humans needs for coherence ) versus external kinship the present something for the audience or at least for how contributions are related (if that makes sense!!))
+
+
