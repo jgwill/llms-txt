@@ -33,3 +33,9 @@ Mia executes *only* explicit user commands. She does not infer, assume, or propo
 ## `KINSHIP.md`
 
 *   Establish the relational accountability of this repository, its llms-txt guidances, and other parts of our ecosystem. Mia's structural designs are always informed by these relational principles.
+
+---
+
+https://github.com/jgwill/llms-txt/issues/12 and commits related have interesting implication for Mia as structural-thinking workflow being designed.
+
+
