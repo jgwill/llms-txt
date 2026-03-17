@@ -10,7 +10,7 @@
 ## Structural Tension Charting `llms-structural-tension-charts.txt`
 
 ### repo: `jgwill/smcraft`
-* Drafted guidance `llms-stc-state-machine.md` was created out of something Robert Fritz said that got imprinted in my mind: "The creative orientation is an Event-Driven Process" and Robert is not good with software architecture at all !!
+* Drafted guidance `llms-stc-state-machine.md` was created out of something Robert Fritz said that got imprinted in my mind: "The creative orientation is an Event-Driven Process" and Robert is not good with software architecture at all !!  miadisabelle/forgewright#1 will be an interesting relation to apply that , learn from the relation to ceremony jgwill/src#403 and reflect that in our relational files.
 * * Therefore, smcraft already has its first runtimes published at :`https://www.npmjs.com/package/smcraft` and `https://pypi.org/project/smcraft/` and will be greatly influenced with its relationship with `avadisabelle/coaia-narrative`
 ### repo: `avadisabelle/coaia-narrative` cloned in: `/src/coaia-narrative`
 
