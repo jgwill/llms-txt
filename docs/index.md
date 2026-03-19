@@ -66,6 +66,14 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 <!-- app stilm needs some work.  how could we talks about that statement
 -->
 
+### Platforms & Operational Guidance
+
+| Platform | Description | Source |
+|----------|------------|--------|
+| [Claude Code Chrome Extension](platforms/claude-code-chrome-extension.md) | Cross-platform workflow guidance, PDE-first protocol, evaluated elevations | MiaOpenClaw + mia-claude-chrome-extension |
+
+> **[Current Working Guidance](current.md)** — the active edge where new guidance is being forged before graduating into dedicated files. ([#13](https://github.com/jgwill/llms-txt/issues/13))
+
 ### AI Companion Skills & Practices
 
 | Practice | Description | Source |
