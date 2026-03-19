@@ -104,4 +104,12 @@ When a user creates or works with an STC:
 
 ---
 
+## Guillaume's Notes
+
+* So far, using the "State-Machine", not just as analogy, with LLM agents really helped them understand the graph they must be building when they create a structural tension chart (Strategic Actions Planning).
+* Future prototypes are being explored and are not public yet, they will explore how [llms-pde.txt](llms-pde.txt) relates to 'stc-state-machine'.
+
+
+---
+
 *This document is an LLM comprehension layer — it encodes `llms-structural-tension-charts.txt` (STC methodology) and `llms-creative-orientation.txt` (creative process phases) as event-driven architecture, making the creative process native to LLM reasoning.*
