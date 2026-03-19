@@ -51,6 +51,13 @@ Each skill is designed to be invoked within AI-assisted workflows while maintain
 | **[rise-specification](rise-specification/)** | RISE framework for specification through creative archaeology | [llms-rise-framework.txt](../../llms-rise-framework.txt) | Active |
 | **[narrative-craft](narrative-craft/)** | Document stories across engineer, ceremony, and story-engine worlds | [llms-narrative-beats.txt](../../llms-narrative-beats.txt) | Active |
 
+### Issue & Workflow Practices
+
+| Skill | Purpose | Key Documentation | Status |
+|-------|---------|-------------------|--------|
+| **[forge-issue](forge-issue/)** | Internal: issue authoring workflow within llms-txt | [docs/current.md](../../docs/current.md) | Active |
+| **[structural-issue-authoring](structural-issue-authoring/)** | Portable: structural tension issue authoring for any repo | [SKILL.md](structural-issue-authoring/SKILL.md) | Active |
+
 ### Integration & Observability
 
 | Skill | Purpose | Key Documentation | Status |

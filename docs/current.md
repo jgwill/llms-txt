@@ -29,6 +29,16 @@ Key elevations captured:
 
 ---
 
+### Issue Authoring as Structural Tension
+
+Issues in this ecosystem are forged using the **[forge-issue](../.github/skills/forge-issue/SKILL.md)** skill — five questions that map to five sections:
+
+> *What exists now? → What do I want to exist? → What moves me there? → What's the tension? → What's related?*
+
+See the skill for the full template and authoring principles.
+
+---
+
 ## How to Contribute
 
 1. Append new guidance under the relevant **Active Section** heading (or create a new one)
