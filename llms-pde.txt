@@ -108,6 +108,12 @@ The markdown file is designed for human annotation — the steward can edit, add
 
 ---
 
+## Future directions
+
+* Transform PDE into "Structural Tension Chart" (Strategic Action Planning)
+
+---
+
 ## Related
 
 - [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) — npm package
