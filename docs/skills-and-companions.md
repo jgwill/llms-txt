@@ -1,6 +1,6 @@
 # AI Companion Skills
 
-> Mapping between `.github/skills/` and the llms-txt guidance that grounds them — a living bridge between operational AI companion capabilities and the relational frameworks that orient their use.
+> Mapping between `./skills/` and the llms-txt guidance that grounds them — a living bridge between operational AI companion capabilities and the relational frameworks that orient their use.
 
 ---
 
@@ -65,7 +65,7 @@ This is the **EAST practice** described in [Prompt Decomposition](prompt-decompo
 
 As this portfolio develops, skills will:
 - Be separated into more granular, composable units
-- Carry their own llms-txt guidance within `.github/skills/` directories
+- Carry their own llms-txt guidance within `../skills/` directories
 - Be discoverable by both LLMs and human collaborators
 - Connect to the [Medicine Wheel Developer Suite](medicine-wheel-research.md) as operational capabilities
 
@@ -73,6 +73,6 @@ As this portfolio develops, skills will:
 
 ## Key Sources
 
-- [.github/skills/](../.github/skills/) — skill directories
+- [skills/](../skills/) — skill directories
 - [llms.txt](../llms.txt) — index of all guidance documents
 - [llms-full.txt](../llms-full.txt) — expanded index with summaries

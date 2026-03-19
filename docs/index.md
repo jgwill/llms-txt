@@ -78,7 +78,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 
 | Practice | Description | Source |
 |---------|------------|--------|
-| [Skills & Companions](skills-and-companions.md) | AI companion skills mapped to llms-txt guidance | [.github/skills/](../.github/skills/) |
+| [Skills & Companions](skills-and-companions.md) | AI companion skills mapped to llms-txt guidance | [./skills/](../skills/) |
 | [Prompt Decomposition (PDE)](prompt-decomposition.md) | Intention exploration as EAST practice | [llms-pde.txt](../llms-pde.txt) |
 <!-- 
 @stcissue 260317135900 Probably llms-pde.txt is outdated and its kinship with STC (pde-to-stc) with coaia-pds and coaia-planning needs analysis of context to upgrade this part of the portfolio.  Potentially the consilodation explored in ceremony jgwill/src#402 will shed some light and even this here would be part of what would trigger this upgrade.
