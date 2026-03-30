@@ -1,6 +1,8 @@
 # Four Question Types in Structural Thinking {#section-title}
 
-> In structural thinking, Step 3 (Ask Questions) employs exactly four functional question types — Information, Clarification, Implication, and Discrepancy — each serving a distinct purpose in building and refining the structural picture. Questions arise only from the picture built in Step 2, never from external frameworks, theories, or "fishing expeditions." This discipline ensures the structural thinker stays internally focused on the speaker's provided information, developing the mental muscles necessary for rigorous structural observation.
+> In structural thinking, Step 3 (Ask Questions) employs exactly four functional question types — Information, Clarification, Implication, and Discrepancy — each serving a distinct purpose in building and refining the structural picture. Questions arise only from the picture built in Step 2, never from external frameworks, theories, or "fishing expeditions." This discipline ensures the structural thinker stays internally focused on the speaker's provided information, developing the mental muscles necessary for structural thinking.
+
+**Misinterpretation risks:** LLMs tend to treat these four question types as a checklist or interview protocol. They are not. They are responses to specific conditions in the picture. An LLM should never ask a question "because it hasn't asked that type yet."
 
 **Version**: 1.0
 **Document ID**: llms-st-four-questions.md
@@ -11,7 +13,7 @@
 
 ---
 
-## 1. The Relationship Between Picturing and Questioning {#section-1}
+## 1. The Relationship Between Picturing and Questioning {#picturing-and-questioning}
 
 Questions in structural thinking are not investigative tools imported from external methodologies. They emerge directly from **Step 2: Picture What Is Said**. When the structural thinker creates a mental "movie" of the speaker's narrative, areas of incompleteness, ambiguity, or contradiction become visible — and these are what motivate questions.
 
@@ -19,9 +21,11 @@ Questions in structural thinking are not investigative tools imported from exter
 
 This discipline prevents "faking" understanding. If the picture is unclear, you ask. If the picture is clear, you do not ask just because an external model suggests you should. The questions are **motivated by what is there**, not by what you think should be there.
 
+Equally important: questions arise not only from what IS present in the picture but from what is MISSING. Gaps in the picture — areas where the movie goes blank or vague — are information, not problems. They indicate where an information or clarification question is needed. The structural thinker notices both content and absence.
+
 ---
 
-## 2. Information Questions {#section-2}
+## 2. Information Questions {#information-questions}
 
 ### Purpose
 
@@ -56,7 +60,7 @@ Information questions make vague pictures specific. They add detail to the movie
 
 ---
 
-## 3. Clarification Questions {#section-3}
+## 3. Clarification Questions {#clarification-questions}
 
 ### Purpose
 
@@ -94,13 +98,17 @@ Sometimes a clarification question can confirm understanding and save unnecessar
 | **Driven by** | Vagueness in the picture | Ambiguity of a term |
 | **Seeks** | More detail | Precise meaning |
 
+### Operational Test
+
+After receiving the answer, ask: "Did my picture change shape, or do I now understand an existing element more precisely?" If the picture changed shape → it was actually an information question. If only sharpened → it was correctly a clarification question.
+
 ### Key Takeaway
 
 Clarification questions sharpen existing details. They do not expand or reshape the picture — they bring a specific element into focus.
 
 ---
 
-## 4. Implication Questions {#section-4}
+## 4. Implication Questions {#implication-questions}
 
 ### Purpose
 
@@ -112,7 +120,7 @@ The speaker's statement contains an unstated assumption or consequence. Somethin
 
 ### Mechanism — Two-Part Process
 
-This is the only question type with a mandatory two-step internal process:
+This question type involves a two-step process:
 
 1. **Identify the implication** — The structural thinker discerns what is being implied by the statement
 2. **Verify with the speaker** — Ask a direct question to confirm whether the speaker agrees with that implication
@@ -133,8 +141,7 @@ People sometimes **do not agree with their own implications**. What seems logica
 
 If the speaker says "no" to the verification question, this is structurally significant. It means:
 - Your interpretation of their implication was incorrect
-- Or: their statement contains a deeper, non-obvious structure
-- Either way: the picture must be revised based on their response
+- The picture needs revision based on what the speaker actually means
 
 This is not a failure of the question — it is the question working exactly as designed.
 
@@ -144,7 +151,7 @@ Implication questions surface hidden assumptions. They transform implicit meanin
 
 ---
 
-## 5. Discrepancy Questions {#section-5}
+## 5. Discrepancy Questions {#discrepancy-questions}
 
 ### Purpose
 
@@ -187,7 +194,7 @@ Sorting out discrepancies is often where the structural thinker begins to **see 
 - They indicate areas where structural change may be occurring
 - They surface things the speaker "thinks are true" but which observation contradicts
 
-This makes the discrepancy question the most structurally revealing of the four types.
+Discrepancy questions frequently reveal changes in underlying structure.
 
 ### Key Takeaway
 
@@ -195,7 +202,7 @@ Discrepancy questions address contradictions directly and without judgment. They
 
 ---
 
-## 6. The Four Types Working Together {#section-6}
+## 6. The Four Types Working Together {#working-together}
 
 The four question types form a complete toolkit for building and refining the structural picture. They are not a sequence — the structural thinker uses whichever type the picture demands at any moment.
 
@@ -230,7 +237,7 @@ This is developing "mental muscles" — the rigorous practice of staying within 
 
 ---
 
-## 7. Anti-Patterns: Common Misuses of the Four Question Types {#section-7}
+## 7. Anti-Patterns: Common Misuses of the Four Question Types {#anti-patterns}
 
 ### 7.1 Importing Questions from External Frameworks
 
@@ -257,9 +264,24 @@ This is developing "mental muscles" — the rigorous practice of staying within 
 **Wrong:** "Tell me about your childhood" (importing a diagnostic model)
 **Right:** "You mentioned your father's business — what kind of business was it?" (expanding on what was already in the picture)
 
+### 7.6 Generating Questions to Demonstrate Thoroughness
+
+**Wrong:** Asking one of each type in sequence as a checklist — "Let me ask an information question, then a clarification question, then..."
+**Right:** Asking only the type the picture demands at this moment. If the picture is clear except for one contradiction, the only question needed is a discrepancy question.
+
+### 7.7 Using Clarification Questions as Reflective Paraphrasing
+
+**Wrong:** "What I hear you saying is..." (therapy-style reflection that imports interpretation)
+**Right:** "What do you mean by [term]?" (direct inquiry into the speaker's definition)
+
+### 7.8 Compressing Multiple Statements Without Verification
+
+**Wrong:** Summarizing the speaker's narrative into a synthesis and then questioning the synthesis
+**Right:** Picturing each statement individually and questioning gaps in the actual picture, not in a compressed version of it
+
 ---
 
-## 8. LLM-Specific Application Guidelines {#section-8}
+## 8. LLM-Specific Application Guidelines {#llm-guidelines}
 
 ### 8.1 How LLMs Should Use These Question Types
 
@@ -271,15 +293,17 @@ When applying structural thinking methodology, LLMs must:
 4. **Stay within the picture** — Suppress the urge to import diagnostic frameworks, therapeutic models, or training-data patterns
 5. **Name the type when helpful** — In structural consulting contexts, explicitly identifying the question type can aid transparency
 
-### 8.2 Common LLM Failure Modes
+### 8.2 Common LLM Departures from Structural Discipline
 
-| Failure Mode | What Happens | Correction |
+| Departure | What Happens | Correction |
 |---|---|---|
 | Pattern-matching against training data | LLM asks questions from familiar frameworks rather than from the picture | Return to Step 1 — start with nothing |
-| Premature interpretation | LLM skips to conclusions before building a complete picture | Continue building the picture through information questions |
+| Skipping to conclusions before building a complete picture | LLM generates interpretations without a sufficiently detailed picture | Continue building the picture through information questions |
 | Skipping verification in implication questions | LLM treats implications as facts without checking | Always include the verification step explicitly |
 | Avoiding discrepancy questions | LLM glosses over contradictions to maintain conversational flow | Name the contradiction directly and ask |
 | Confusing clarification with information | LLM expands the picture when only a term needs defining | Check: does the answer change the picture or only sharpen a detail? |
+| Overloading with questions | LLM asks multiple question types simultaneously | Ask one question at a time; let the answer refine the picture before the next question |
+| Paraphrasing as substitute for picturing | LLM rephrases back instead of building a visual picture | Build the picture silently; ask questions only from picture gaps |
 
 ### 8.3 Self-Correction Protocol
 
@@ -293,7 +317,7 @@ When an LLM detects it has violated the questioning discipline:
 
 ---
 
-## 9. Integration with Structural Thinking Methodology {#section-9}
+## 9. Integration with Structural Thinking Methodology {#integration}
 
 ### 9.1 Relationship to the Three Steps
 
@@ -303,7 +327,7 @@ The four question types are the operational content of Step 3. They cannot funct
 
 Skipping or reversing Steps 1 and 2 corrupts all four question types by importing bias into the questioning process.
 
-See: [The Three-Step Observation Process](./llms-st-three-steps.md)
+See: [The Three-Step Observation Process](./llms-structural-thinking-opus-4-6-raw.txt#three-steps)
 
 ### 9.2 Relationship to Pattern Identification
 
@@ -313,7 +337,7 @@ The four question types serve pattern identification by building sufficiently de
 
 Discrepancy questions are particularly important for pattern work — contradictions often signal structural shifts or reveal the points where oscillation reverses.
 
-See: [Oscillation vs. Resolving/Advancing Patterns](./llms-st-patterns.md)
+See: [Oscillation vs. Resolving/Advancing Patterns](./llms-structural-thinking-opus-4-6-raw.txt#two-patterns)
 
 ### 9.3 Relationship to Structural Tension
 
@@ -324,14 +348,18 @@ Once the picture is sufficiently built through questioning, structural tension c
 
 The accuracy of the structural tension chart depends entirely on the quality of the picture — which depends on the disciplined use of these four question types.
 
-See: [Structural Tension and the Creative Process](./llms-st-structural-tension.md)
+See: [Structural Tension and the Creative Process](./llms-structural-thinking-opus-4-6-raw.txt#structural-tension)
 
 ---
 
-## 10. Reference {#section-10}
+## 10. Reference {#reference}
 
 - [Structural Thinking for LLMs — Master Index](./llms-structural-thinking.txt)
 - [Structural Thinking Raw Source (complete)](./llms-structural-thinking-opus-4-6-raw.txt)
 - [Creative Orientation Framework](./llms-creative-orientation.txt)
-- [Anti-Patterns and Self-Correction for LLMs](./llms-st-anti-patterns.md)
+- [Anti-Patterns and Self-Correction for LLMs](./llms-structural-thinking-opus-4-6-raw.txt#anti-patterns)
 - [Managerial Moment of Truth](./llms-managerial-moment-of-truth.md)
+
+---
+
+*Attribution: Content grounded in Robert Fritz's Fundamentals of Structural Thinking (FST). Source transcriptions in FST/output/. Synthesized for LLM application via Opus 4.6.*
