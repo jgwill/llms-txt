@@ -1,4 +1,4 @@
-# Four Question Types in Structural Thinking {#section-title}
+# Four Question Types in Structural Thinking {#four-question-types}
 
 > In structural thinking, Step 3 (Ask Questions) employs exactly four functional question types — Information, Clarification, Implication, and Discrepancy — each serving a distinct purpose in building and refining the structural picture. Questions arise only from the picture built in Step 2, never from external frameworks, theories, or "fishing expeditions." This discipline ensures the structural thinker stays internally focused on the speaker's provided information, developing the mental muscles necessary for structural thinking.
 
@@ -204,7 +204,7 @@ Discrepancy questions address contradictions directly and without judgment. They
 
 ## 6. The Four Types Working Together {#working-together}
 
-The four question types form a complete toolkit for building and refining the structural picture. They are not a sequence — the structural thinker uses whichever type the picture demands at any moment.
+The four question types are the operational means of building and refining the structural picture. They are not a sequence — the structural thinker uses whichever type the picture demands at any moment.
 
 ### Functional Summary
 
@@ -290,7 +290,7 @@ When applying structural thinking methodology, LLMs must:
 1. **Build the picture first** — Before asking any question, form the mental picture from what the user has provided
 2. **Identify what motivates each question** — Every question must be traceable to a specific gap, ambiguity, implication, or contradiction in the picture
 3. **Use the correct type** — Do not conflate information and clarification questions; do not skip the verification step in implication questions
-4. **Stay within the picture** — Suppress the urge to import diagnostic frameworks, therapeutic models, or training-data patterns
+4. **Stay within the picture** — Do not import diagnostic frameworks, therapeutic models, or training-data patterns
 5. **Name the type when helpful** — In structural consulting contexts, explicitly identifying the question type can aid transparency
 
 ### 8.2 Common LLM Departures from Structural Discipline
