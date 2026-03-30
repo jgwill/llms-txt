@@ -307,5 +307,5 @@ Fine-tune models for:
 This framework transforms LLMs from analysis-paralysis enablers into structured decision-making facilitators, using proven methodology to guide users from subjective confusion to objective clarity in 15 minutes instead of months or years.
 
 ## Related Documents (#related-documents)
-- [llms-structural-thinking-opus-4-6-raw.txt](./llms-structural-thinking-opus-4-6-raw.txt) (supersedes Gemini and Claude versions)
+- [llms-structural-thinking.txt](./llms-structural-thinking.txt) — structural thinking methodology
 - [llms-creative-orientation.txt](/src/tandt/llms/llms-creative-orientation.txt)

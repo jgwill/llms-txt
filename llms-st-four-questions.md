@@ -327,7 +327,7 @@ The four question types are the operational content of Step 3. They cannot funct
 
 Skipping or reversing Steps 1 and 2 corrupts all four question types by importing bias into the questioning process.
 
-See: [The Three-Step Observation Process](./llms-structural-thinking-opus-4-6-raw.txt#three-steps)
+See: [The Three-Step Observation Process](./llms-structural-thinking.txt) (Core Methodology section)
 
 ### 9.2 Relationship to Pattern Identification
 
@@ -337,7 +337,7 @@ The four question types serve pattern identification by building sufficiently de
 
 Discrepancy questions are particularly important for pattern work — contradictions often signal structural shifts or reveal the points where oscillation reverses.
 
-See: [Oscillation vs. Resolving/Advancing Patterns](./llms-structural-thinking-opus-4-6-raw.txt#two-patterns)
+See: [Oscillation vs. Resolving/Advancing Patterns](./llms-structural-thinking.txt) (Core Methodology section)
 
 ### 9.3 Relationship to Structural Tension
 
@@ -348,16 +348,15 @@ Once the picture is sufficiently built through questioning, structural tension c
 
 The accuracy of the structural tension chart depends entirely on the quality of the picture — which depends on the disciplined use of these four question types.
 
-See: [Structural Tension and the Creative Process](./llms-structural-thinking-opus-4-6-raw.txt#structural-tension)
+See: [Structural Tension and the Creative Process](./llms-structural-thinking.txt) (Core Methodology section)
 
 ---
 
 ## 10. Reference {#reference}
 
 - [Structural Thinking for LLMs — Master Index](./llms-structural-thinking.txt)
-- [Structural Thinking Raw Source (complete)](./llms-structural-thinking-opus-4-6-raw.txt)
 - [Creative Orientation Framework](./llms-creative-orientation.txt)
-- [Anti-Patterns and Self-Correction for LLMs](./llms-structural-thinking-opus-4-6-raw.txt#anti-patterns)
+- [Anti-Patterns and Self-Correction for LLMs](./llms-structural-thinking.txt) (Applied Practice section)
 - [Managerial Moment of Truth](./llms-managerial-moment-of-truth.md)
 
 ---

@@ -24,10 +24,13 @@ For LLMs specifically: suppress pattern-matching against training data when appl
 
 ## Reference
 
-- [Structural Thinking Raw Source (complete)](./llms-structural-thinking-opus-4-6-raw.txt): Full unabridged document with all sections, examples, and SCCP session analyses. Use when focused files above are insufficient.
 - [Creative Orientation Framework](./llms-creative-orientation.txt): Foundational distinction between reactive problem-solving and generative creation.
 - [Structural Tension Charts Guide](./llms-structural-tension-charts.txt): Detailed guide for constructing and validating structural tension charts.
 - [Macrostructural Patterning Analysis (SCCP)](./llms-sccp-patterning.md): Guide for identifying recurring behavioral patterns using Robert Fritz's Structural Dynamics.
+
+## Source Attribution
+
+This guidance and its focused sub-documents are grounded in Robert Fritz's Fundamentals of Structural Thinking (FST), the Structural Consultation Certificate Program (SCCP), and Structural Dynamics: Patterning. The unabridged source synthesis (with session analyses, transcription references, and project-specific paths) is maintained separately in the source knowledge base — not in this portable guidance repository.
 ## Optional
 
 - [Delayed Resolution Principle](./llms-delayed-resolution-principle.md): Holding structural tension rather than prematurely resolving it.

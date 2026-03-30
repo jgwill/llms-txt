@@ -135,10 +135,10 @@
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 
 
-## Structural Thinking (Opus 4.6) — FULL
-> The comprehensive guide to Robert Fritz's Structural Thinking for LLMs (v2.1). Integrates FST/SCCP source materials, three-universe validation architecture (Mia/Miette/Ava), Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping, structural tension language discipline, and MCP server tool integration. Supersedes both Gemini and Claude versions.
-- **Link**: [llms-structural-thinking-opus-4-6-raw.txt](./llms-structural-thinking-opus-4-6-raw.txt)
-- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt, llms-structural-thinking.txt
+## Structural Thinking — Master Index
+> Structural thinking is an observation discipline grounded in the work of Robert Fritz. This master index links to focused sub-documents covering: three-step observation process, four question types, structural tension and the creative process, oscillation vs. resolving/advancing patterns, structural consulting method, anti-patterns and self-correction for LLMs, and language guide. Each sub-document is self-contained and portable.
+- **Link**: [llms-structural-thinking.txt](./llms-structural-thinking.txt)
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-st-four-questions.md
 
 ## Medicine Wheel Developer Suite — Package Reference
 > Reference for seven npm packages (ontology-core, relational-query, narrative-engine, ceremony-protocol, graph-viz, ui-components, prompt-decomposition) that encode Indigenous relational ontology as first-class code structures. Includes Wilson alignment, OCAP tracking, Four Directions agent patterns, and LangChain/LangGraph integration. Each package is specified through the RISE framework and governed by the Indigenous Knowledge Stewardship License.

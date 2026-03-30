@@ -1,6 +1,6 @@
-# DEPRECATED: Structural Thinking for Large Language Models
+# DEPRECATED: Structural Thinking Raw Source
 
-This document has been superseded by the canonical version:
-[llms-structural-thinking-opus-4-6-raw.txt](./llms-structural-thinking-opus-4-6-raw.txt)
+The raw source document (`llms-structural-thinking-opus-4-6-raw.txt`) has been moved to the source knowledge base (jgwill/CreerSaVieHelper) because it contains project-specific paths (`./SCCP/`, `./FST/output/`, `./patterning/output/`) that are not portable.
 
-Please update your references to point to the new file.
+**For structural thinking guidance, use:**
+[llms-structural-thinking.txt](./llms-structural-thinking.txt) — portable master index with focused sub-documents.
