@@ -152,6 +152,21 @@
 - **Link**: [llms-txt-compliance-checklist.md](./llms-txt-compliance-checklist.md)
 - **Related**: 
 
+## Polyphonic Design Review
+> A multi-voice annotation methodology for reviewing PDE decompositions through a talking circle (GUILLAUME::/MIA::/AVA::/MIETTE::), grounding intentions in relational accountability before execution.
+- **Link**: [llms-polyphonic-design-review.md](./llms-polyphonic-design-review.md)
+- **Related**: llms-pde.txt, llms-creative-orientation.txt, llms-managerial-moment-of-truth.md, llms-kinship-hub-system.md, llms-medicine-wheel-packages.txt
+
+## Inquiry Routing Architecture
+> Structured inquiry generation and routing from PDE decompositions via ava-langchain-inquiry-routing (chain primitives) and ava-langgraph-inquiry-routing-engine (graph orchestration), with relational enrichment and ceremony-hold covenants.
+- **Link**: [llms-inquiry-routing.md](./llms-inquiry-routing.md)
+- **Related**: llms-pde.txt, llms-creative-orientation.txt, llms-kinship-hub-system.md, llms-coaiapy-cli-guide.md, llms-structural-tension-charts.txt
+
+## Ceremony Pipeline
+> An 8-phase pipeline for moving raw experience through ceremony into code/specification, mapping IAIP 5-phase onto agent orchestration with MMOT↔Medicine Wheel direction correspondence and PDE-first architecture.
+- **Link**: [llms-ceremony-pipeline.md](./llms-ceremony-pipeline.md)
+- **Related**: llms-pde.txt, llms-creative-orientation.txt, llms-managerial-moment-of-truth.md, llms-kinship-hub-system.md, llms-structural-tension-charts.txt, llms-polyphonic-design-review.md, llms-inquiry-routing.md
+
 ## Documentation Hub
 > Interlinked documentation covering Relational Science, Ceremonial Technology Development, and the full portfolio of frameworks and practices.
 - **Link**: [docs/index.md](./docs/index.md)
