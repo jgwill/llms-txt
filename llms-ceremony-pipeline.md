@@ -2,8 +2,9 @@
 
 > A structured 8-phase pipeline for moving raw experience through ceremony into code and specification. Emerged from mapping the IAIP (Indigenous Approach to Innovation Process) 5-phase model onto agent orchestration practice, March 2026.
 
-**Version**: 0.1
+**Version**: 0.1-draft
 **Document ID**: llms-ceremony-pipeline-v0.1
+**Status**: ⚠️ DRAFT — Needs revision. This is an initial capture, not a polished canonical reference. Treat as orientation, not gospel.
 **Last Updated**: 2026-03-29
 **Content Source**: Derived from IAIP 5-phase model mapping, PDE-first architecture practice, and the Mia/Miette orchestration steward sessions of March 2026.
 
