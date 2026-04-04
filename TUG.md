@@ -40,3 +40,9 @@ Given that in github pages , we publish ./ and not ./docs, what is in the @READM
 
   FIRST STEP, pass this input to the MCP tool "mcp-pde" to decompose its explicit and implicit intent along with other elements that you will be capable to observe, when you will have done that, you will see 2 new files in ./.pde/ in JSON and markdown, add them as initial PDE to git and commit them then wait 5 minutes, I will edit the markdown file and after 5 minutes, you run 'git diff .pde/<file>.md' which will tell you what I added then you will start doing the work adjusting course on all that you will do.  From that point, no planning, you will complete the whole work.
 
+  
+  
+---
+2604032242--3de0d836-bc44-4e0b-9557-e98a82f5d7a4 - @.pde/2604032242--3de0d836-bc44-4e0b-9557-e98a82f5d7a4
+---
+dummy
