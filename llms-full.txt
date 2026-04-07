@@ -181,3 +181,27 @@
 - **Full**: [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt)
 - **Docs**: [docs/storytelling.md](./docs/storytelling.md)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
+
+## Narintel — Narrative Intelligence Stack
+> A specification-driven repository defining a 4-layer Narrative Intelligence architecture: NCP Schema (core data model), narrative-intelligence LangGraph toolkit (analysis, traversal, classification), narrative-tracing LangChain integration (Langfuse observability), and agent coordination layers (Flowise flywheel, Langflow universal router). Features 7 role-based apps (Architect Studio, Structurist Forge, Storyteller Loom, Editor Anvil, Reader Sanctuary, Collaborator Bridge, Witness Circle) operating through the Three-Universe Model (Engineer/Ceremony/StoryEngine) with Trinity personas (Mia 🧠 structural, Miette 🌸 emotional, Ava8 🎨 atmospheric). Evolved from the Indigenous-AI Collaborative Platform (IAIP) rispecs.
+- **Link**: [docs.narintel.jgwill.com/llms.txt](https://docs.narintel.jgwill.com/llms.txt)
+- **Full**: [docs.narintel.jgwill.com/llms-full.txt](https://docs.narintel.jgwill.com/llms-full.txt)
+- **Related**: llms-rise-framework.txt, llms-narrative-beats.txt, llms-creative-orientation.txt, llms-kinship-hub-system.md
+
+## JGT Trading Ecosystem — Williams 5-Dimension Intelligence Platform
+> A 20+ package trading intelligence platform implementing Bill Williams' Trading Chaos methodology across Python and TypeScript. Organized in layers: Foundation (jgtcore, jgtutils), Data Access (jgtpy, jgtfxcon), Intelligence (jgtml, jgt-analysis-intelligence, jgt-insight), Execution (jgt-code, jgt-transact, jgt-strategy-api), Agent/MCP (jgtagentic, jgt-analysis-mcp), Services (jgt-data-server/service), and Visualization (jgt-charting). Features the ARIANE Four Faces trading gate assessment, campaign lifecycle management, and MCP-integrated analysis tools.
+- **Link**: [jgtsrc.jgwill.com/llms.txt](https://jgtsrc.jgwill.com/llms.txt)
+- **Full**: [jgtsrc.jgwill.com/llms-full.txt](https://jgtsrc.jgwill.com/llms-full.txt)
+- **Related**: llms-structural-tension-charts.txt, llms-digital-decision-making.md, llms-rise-framework.txt
+
+## SMCraft — State Machine Craft
+> A domain-agnostic framework for designing, generating, and executing hierarchical state machines. Extracted from legacy Caishen C# StateForge library, reimplemented across four packages: Python (PyPI: smcraft, CLI: smcg), TypeScript (NPM: smcraft, ESM), MCP Server (11 conversational design tools), and Web Designer (Next.js 16, SVG canvas). Uses SMDF (State Machine Definition Format) JSON schema with 14 validation rules, LCA-based hierarchical transitions, and async runtime execution. Features a conceptual bridge between Structural Tension Charts and Finite State Machines (Desired Outcome ↔ Target State).
+- **Link**: [docs.smcraft.jgwill.com/llms.txt](https://docs.smcraft.jgwill.com/llms.txt)
+- **Full**: [docs.smcraft.jgwill.com/llms-full.txt](https://docs.smcraft.jgwill.com/llms-full.txt)
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt
+
+## Veritas (TandT) — Digital Thinking Platform
+> A full-stack platform for structured, auditable decision-making and performance management built on Robert Fritz's Structural Thinking / MMOT methodology. Two model types: Type 1 (Decision Making) uses pairwise factor comparison to derive dominance rankings for YES/NO verdicts; Type 2 (Performance Review) maps State (acceptable/unacceptable) × Trend (improving/stable/declining) into automatic prioritization (Critical → Success). Three operating modes: Modeling → Analyzing → Structuring. Stack: Next.js 16 + React 18 + TypeScript + Zustand + PostgreSQL (Neon) + Gemini AI. Includes CLI tool and 9-tool MCP server.
+- **Link**: [docs.veritas.jgwill.com/llms.txt](https://docs.veritas.jgwill.com/llms.txt)
+- **Full**: [docs.veritas.jgwill.com/llms-full.txt](https://docs.veritas.jgwill.com/llms-full.txt)
+- **Related**: llms-structural-thinking.txt, llms-digital-decision-making.md, llms-managerial-moment-of-truth.md, llms-creative-orientation.txt
