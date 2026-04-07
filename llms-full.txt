@@ -143,6 +143,7 @@
 ## Medicine Wheel Developer Suite — Package Reference
 > Reference for seven npm packages (ontology-core, relational-query, narrative-engine, ceremony-protocol, graph-viz, ui-components, prompt-decomposition) that encode Indigenous relational ontology as first-class code structures. Includes Wilson alignment, OCAP tracking, Four Directions agent patterns, and LangChain/LangGraph integration. Each package is specified through the RISE framework and governed by the Indigenous Knowledge Stewardship License.
 - **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
+- **Published**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt), [llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
 - **Related**: llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
 
 ## Medicine Wheel & Abundance Intelligence Research
