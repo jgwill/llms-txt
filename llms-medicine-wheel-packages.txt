@@ -1,131 +1,141 @@
 # Medicine Wheel Developer Suite — Package Reference
 
-> Seven npm packages encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures within a unified platform architecture.
+> Fifteen npm packages encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
 
-**Version**: 1.0
-**Document ID**: llms-medicine-wheel-packages-v1.0
-**Last Updated**: 2026-02-27
-**Content Source**: Derived from ontology-core spec, medicine-wheel inquiry research, and RISE specifications.
+**Version**: 1.1
+**Document ID**: llms-medicine-wheel-packages-v1.1
+**Last Updated**: 2026-04-08
+**Content Source**: Derived from @src/** study, ontology-core specifications, and Wilson's relational epistemology research.
 **License**: Indigenous Knowledge Stewardship License (IKSL)
 
 ---
 
 ## Platform Overview
 
-The Medicine Wheel Developer Suite is a layered npm package ecosystem where `ontology-core` serves as the platform nucleus. Every other package imports from this core, encoding Indigenous directions (Ojibwe names, colors, seasons, life stages), narrative beats, ceremonies, and structural tension as first-class code structures.
+The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded in **Two-Eyed Seeing**. It bridges the Engineer-world's precision with the Ceremony-world's relational accountability. `ontology-core` serves as the platform nucleus, defining the fundamental beings (Nodes, Relations, Ceremonies) that all other packages interact with.
 
 ---
 
-## Packages
+## 1. Foundational Layer
+*The soil and the roots.*
 
 ### medicine-wheel-ontology-core
-> Foundational ontological layer: TypeScript types, RDF vocabulary, Zod schemas, Wilson alignment scoring, and OCAP tracking — all grounded in Indigenous relational ontology where relations are first-class beings with ceremony context and obligations.
+> Platform nucleus: TypeScript types, RDF vocabulary, Zod schemas, Wilson alignment scoring, and OCAP tracking. Relationships are first-class beings with ceremony context and obligations.
 - **npm**: https://www.npmjs.com/package/medicine-wheel-ontology-core
-- **Role**: Platform nucleus — all other packages import from this core
-- **Key types**: `RelationalNode`, `Relation`, `Direction`, `OCAPFlags`, `WilsonAlignment`, `AccountabilityTracking`
-- **Key functions**: `computeWilsonAlignment`, `aggregateWilsonAlignment`, `auditOcapCompliance`, `relationalCompleteness`
-- **Related guidance**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-kinship-hub-system-full.md
+- **Role**: Foundational source of truth for all types and constants.
+- **Key types**: `RelationalNode`, `Relation`, `Direction`, `OCAPFlags`, `WilsonAlignment`, `AccountabilityTracking`.
 
-### medicine-wheel-relational-query
-> Traverse kinship webs with relational constraints — querying across nodes, relations, and ceremonies with direction-aware, OCAP-respecting filters.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-query
-- **Role**: Relational data traversal
-- **Integration**: LangChain `RelationalNodeRetriever`
-- **Related guidance**: llms-kinship-hub-system.md
+### medicine-wheel-data-store
+> Shared Redis persistence layer: Provides unified access to relational memory (Nodes, Edges, Ceremonies) and bidirectional session-ceremony linking.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-data-store
+- **Role**: Relational memory storage and access.
 
-### medicine-wheel-narrative-engine
-> Narrative beats and story flow bound to ceremony — documenting complex stories across engineer-world, ceremony-world, and story-engine-world.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-narrative-engine
-- **Role**: Narrative intelligence and beat management
-- **Integration**: LangChain `NarrativeBeatPlanner`
-- **Related guidance**: llms-narrative-beats.txt, llms-narrative-remixing.txt
+---
+
+## 2. Epistemic Layer
+*The Four Ways of Knowing (Land, Dream, Code, Vision).*
+
+### medicine-wheel-importance-unit
+> The fundamental unit of knowledge: Carries epistemic weight, source dimensions, accountability links, and spiral depth tracking (repetition as ceremony).
+- **npm**: https://www.npmjs.com/package/medicine-wheel-importance-unit
+- **Role**: Epistemic weight computation and circle depth tracking.
+
+### medicine-wheel-relational-index
+> Dimensional indexing: Enables querying and cross-dimensional mapping across Land, Dream, Code, and Vision sources.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-index
+- **Role**: Epistemic balance and convergence detection.
+
+---
+
+## 3. Ceremonial & Governance Layer
+*The protocols of relationship.*
 
 ### medicine-wheel-ceremony-protocol
-> Ceremony types, logs, governance access levels, person roles (steward, elder, firekeeper), and consent workflows — encoding ceremonial accountability as software protocol.
+> Ceremony lifecycle management: Handles state transitions (opening, council, integration, closure) and path-based governance enforcement.
 - **npm**: https://www.npmjs.com/package/medicine-wheel-ceremony-protocol
-- **Role**: Ceremonial workflow and governance
-- **Related guidance**: llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md, llms-delayed-resolution-principle.md
+- **Role**: Ceremonial workflow and access control.
 
-### medicine-wheel-graph-viz
-> Relational graph visualization — rendering kinship webs, structural tension fields, and ceremonial networks as navigable visual structures.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-graph-viz
-- **Role**: Visualization of relational structures
-- **Related guidance**: llms-structural-tension-charts.txt
+### medicine-wheel-fire-keeper
+> Coordination agent: Tends the ceremony fire, evaluates gating conditions, and issues stop-work orders when relational integrity is violated.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-fire-keeper
+- **Role**: Active relational alignment agent.
 
-### medicine-wheel-ui-components
-> Community-facing interface components — designed for stewards and non-programmers to interact with ceremonial, relational, and governance workflows.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-ui-components
-- **Role**: Human-facing interface layer
-- **Related guidance**: llms-kinship-hub-system.md
+### medicine-wheel-community-review
+> Validation through consensus: Implements Wilson's vision of Elder review circles and talking circle protocols for artifact validation.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-community-review
+- **Role**: Community-based consensus and Elder validation.
+
+### medicine-wheel-consent-lifecycle
+> Living consent: Transforms consent from a boolean checkbox into a living relational obligation with renewal, renegotiation, and cascading effects.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-consent-lifecycle
+- **Role**: Relational consent tracking and health monitoring.
+
+---
+
+## 4. Narrative & Transformation Layer
+*The story of becoming.*
+
+### medicine-wheel-narrative-engine
+> Story sequencing: Maps narrative beats to the four directions and four-act structure, ensuring arc completeness and ceremonial timing.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-narrative-engine
+- **Role**: Narrative intelligence and beat sequencing.
+
+### medicine-wheel-transformation-tracker
+> Success metrics: Tracks researcher growth, community benefit, and relational shifts. Implements Wilson's validity: "If research doesn't change you, you haven't done it right."
+- **npm**: https://www.npmjs.com/package/medicine-wheel-transformation-tracker
+- **Role**: Transformation monitoring and Wilson validity checks.
+
+### medicine-wheel-session-reader
+> Observability: Reads and analyzes agent session event data (JSONL), extracting tool usage, feedback patterns, and analytics.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-session-reader
+- **Role**: Session analysis and observability.
+
+---
+
+## 5. Reasoning & Query Layer
+*The mind of the wheel.*
+
+### medicine-wheel-relational-query
+> Graph traversal: Fluent API for filtering and traversing kinship webs, respecting ceremony boundaries and OCAP compliance.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-query
+- **Role**: Relational data discovery and traversal.
 
 ### medicine-wheel-prompt-decomposition
-> Prompt Decomposition Engine (PDE) — intention exploration as EAST practice, decomposing prompts into explicit and implicit intents mapped to Four Directions.
+> Intent exploration: PDE that decomposes prompts into explicit/implicit intents mapped to Four Directions, enriched with ontological metadata.
 - **npm**: https://www.npmjs.com/package/medicine-wheel-prompt-decomposition
-- **Role**: Prompt-level reasoning and intention mapping
-- **Related guidance**: llms-pde.txt
+- **Role**: Intention mapping and ceremony guidance generation.
 
 ---
 
-## Architecture
+## 6. Presentation Layer
+*The face of the bundle.*
+
+### medicine-wheel-graph-viz
+> Visualization: Renders circular medicine wheel layouts with direction quadrants, ceremony-aware edges, and OCAP indicators.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-graph-viz
+- **Role**: Visualizing relational and ceremonial structures.
+
+### medicine-wheel-ui-components
+> Interface: Community-facing React components (DirectionCards, BeatTimelines, NodeInspectors) for interacting with the wheel.
+- **npm**: https://www.npmjs.com/package/medicine-wheel-ui-components
+- **Role**: Human-facing interface layer.
+
+---
+
+## Architecture Flow
 
 ```
-┌─────────────────────────────────────────────────┐
-│              ontology-core                       │
-│  (types, RDF, Zod, Wilson, OCAP)                │
-└──────────┬──────────────────────┬───────────────┘
-           │                      │
-    ┌──────▼───────┐    ┌────────▼─────────┐
-    │  relational  │    │    ceremony      │
-    │    query     │    │    protocol      │
-    └──────┬───────┘    └────────┬─────────┘
-           │                      │
-    ┌──────▼───────┐    ┌────────▼─────────┐
-    │  narrative   │    │    graph-viz     │
-    │   engine     │    │                  │
-    └──────┬───────┘    └────────┬─────────┘
-           │                      │
-    ┌──────▼───────┐    ┌────────▼─────────┐
-    │     ui       │    │     prompt       │
-    │  components  │    │  decomposition   │
-    └──────────────┘    └──────────────────┘
+1. INTENTION (EAST)  ──▶ 2. RESEARCH (SOUTH) ──▶ 3. VALIDATION (WEST) ──▶ 4. ACTION (NORTH)
+   prompt-decomposition     relational-query        community-review        narrative-engine
+   fire-keeper              relational-index        consent-lifecycle       data-store
+                            importance-unit         transformation-tracker
 ```
 
 ---
 
-## LangChain / LangGraph Integration Patterns
+## Alignment Principles
 
-### LangChain Tools
-- `RelationalNodeRetriever` — backed by relational-query, surfaces nodes constrained by direction, ceremony context, or OCAP flags
-- `NarrativeBeatPlanner` — backed by narrative-engine, uses structural tension charts to generate next steps
-
-### LangGraph Four Directions Agents
-- **East agent**: Inquiry and bias detection (Nitshkees Thinking mode)
-- **South agent**: Planning and consent (OCAP, ceremony-protocol)
-- **West agent**: Experiential practice (field notes, transcripts, external tools)
-- **North agent**: Reflection and archival (narrative beats, ceremony logs, Wilson metrics)
-
----
-
-## Alignment
-
-- **Abundant Intelligences**: Reconceptualizing AI based on Indigenous Knowledge Systems, optimized for abundance
-- **Two-Eyed AI**: Algorithmic efficiency + Indigenous relational governance in the same computational space
-- **RISE Framework**: Each package specified through creative archaeology (Reverse-engineer, Intent-extract, Specify, Export)
-- **IKSL**: All knowledge governed by Indigenous Knowledge Stewardship License
-
----
-
-## Related Documents
-
-- [docs/medicine-wheel-research.md](docs/medicine-wheel-research.md) — extended research context
-- [docs/ceremonial-technology.md](docs/ceremonial-technology.md) — the system these packages serve
-- [llms-inquiry-medicine-wheel-abundance-intelligence-research](llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) — full inquiry document
-- [llms-txt-compliance-checklist.md](llms-txt-compliance-checklist.md) — compliance standards for this document
-
-## Active Integrations
-
-### Miadi (jgwill/Miadi)
-- **Installed packages**: ontology-core, ui-components, ceremony-protocol, narrative-engine
-- **Articles system**: `/articles` route themed by Four Directions (East=🌅 yellow, South=🔥 red, West=🌊 blue, North=❄️ gray)
-- **Shared rispecs**: `medicine-wheel/rispecs/article-publishing-pipeline.spec.md`, `narrative-medicine-wheel-bridge.spec.md`
-- **Envisioned packages**: `medicine-wheel-miadi-articles`, `medicine-wheel-miadi-sessions` for reusable community integration
+- **Relational Accountability**: Every package serves to strengthen the web of relations between researcher, community, land, and spirit.
+- **Circular Progression**: Work is not linear but spiral; revisiting a topic (circle depth) is a sacred act of deepening understanding.
+- **OCAP® Sovereignty**: Indigenous data sovereignty (Ownership, Control, Access, Possession) is enforced at the code level.
+- **Wilson Validity**: Research is validated by its transformative impact on all participants and the health of the resulting relations.
