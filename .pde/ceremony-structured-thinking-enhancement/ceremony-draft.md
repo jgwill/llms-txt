@@ -1,29 +1,39 @@
-# Ceremony: Enhance PDE Score in llms-txt
+# Ceremony: Structural Thinking × PDE Integration Prototype
 
-**Goal:** Raise context7 structured-thinking subscore (currently ~8/40) by enriching `llms-pde.txt` with real implementation patterns from miaco and miadi.
+**Goal:** Raise context7 score by implementing the Four Questions (`llms-st-four-questions.md`) as a live pipeline stage within PDE — not just enriching docs, but making structural thinking *executable* through the decomposition engine.
+
+## Core Innovation
+
+PDE already surfaces ambiguities. The prototype turns those ambiguities into **structural thinking questions** (information, clarification, implication, discrepancy) — making the Four Questions a first-class output of decomposition.
 
 ## Files to Touch (in order)
 
-| # | File | Action | Why |
-|---|------|--------|-----|
-| 1 | `llms-pde.txt` | Enrich | Add implementation architectures (lean vs 5-layer), MCP tools, engine config, practical example. Currently a concept stub — needs "how to use" content. |
-| 2 | `llms.txt` | Update entry | Expand PDE description + add Related links (ceremony-pipeline, polyphonic-review, structural-thinking) |
-| 3 | `llms-structural-thinking.txt` | Add reference | PDE is missing from the Applied Practice section — it should be there |
+| # | File / Path | Action | Why |
+|---|-------------|--------|-----|
+| 1 | `Miadi/miadi-code/src/pde/` | Prototype | Add Four Questions generation from PDE ambiguities — the core new capability |
+| 2 | `Miadi/miadi-code/src/mcp-pde/` | Extend | MCP tools serve the questions + store in Redis |
+| 3 | `@Miadi/app/api/pde` + `@Miadi/app/pde` | Coordinate | Web UI to view stored decompositions + generated questions from Redis |
+| 4 | `llms-pde.txt` | Enrich | Document the Four Questions integration, implementation architectures, practical examples — *after* prototype works |
+| 5 | `llms.txt` | Update | Expand PDE entry + add Related links |
+| 6 | Other `llms-*.txt` files | TBD | Upgraded as consequence of prototype — scope surfaces during implementation |
 
-## Two Lineages to Document
+**Note:** `llms-structural-thinking.txt` serves — it doesn't need back-references to consumers. No changes there.
 
-- **Miaco** (lean): single `decompose.ts`, shells to CLI engines, flat schema, parent-child nesting, auto-fallback to copilot
-- **Miadi** (deep): 5-layer pipeline (intent→deps→wheel→workflow→execution), dedicated MCP server with 5 tools, webhook integration, richer types
+## Two Lineages
 
-**Approach:** Document both as valid lineages in llms-pde.txt — don't pick one.
+- **Miaco** (lean): `decompose.ts`, multi-engine CLI, flat schema, parent-child nesting — already works, published as `miaco decompose run -p <prompt>`
+- **Miadi** (deep, prototype focus): 5-layer pipeline + MCP server — where Four Questions integration happens
+
+**Storage:** Miadi may not use the same `.pde/` folder convention as miaco — alignment needed as part of the prototype.
 
 ## Before Switching Model Provider
 
-- [ ] PDE decompose round-trip works on all 3 engines (gemini/claude/copilot)
-- [ ] Engine fallback tested (primary fails → copilot catches)
-- [ ] MIAC-18 guard active (no opus/sonnet on copilot engine)
+- [x] PDE decompose round-trip works on all 3 engines (already published via miaco)
 - [ ] Storage format consistent between miaco and miadi (.pde/ folder convention)
+- [ ] Miadi server-side (`app/api/pde`, `app/pde`) coordinated with `miadi-code/mcp-pde` + Redis
+- [ ] Four Questions generation from PDE ambiguities prototyped and tested in Miadi
+- [ ] Multiple `llms-*.txt` files upgraded to reflect new capabilities
 
 ## Score Prediction
 
-Enriched `llms-pde.txt` with implementation guidance + better cross-linking → structured-thinking subscore ~25/40 (from ~8/40).
+Executable structural thinking through PDE (not just documentation) → subscore well beyond 25/40. The prototype makes the *practice* visible, not just the *concept*.
