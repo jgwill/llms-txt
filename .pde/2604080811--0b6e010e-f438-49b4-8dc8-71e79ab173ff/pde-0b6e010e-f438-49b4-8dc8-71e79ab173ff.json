@@ -1,0 +1,214 @@
+{
+  "id": "0b6e010e-f438-49b4-8dc8-71e79ab173ff",
+  "timestamp": "2026-04-08T12:11:41.418Z",
+  "engine": "copilot",
+  "prompt": "How should we integrate structural thinking four questions into PDE decompositions so that ambiguities become actionable inquiry before entering the SOUTH planning phase?",
+  "result": {
+    "primary": {
+      "action": "integrate",
+      "target": "structural thinking four questions into PDE decompositions",
+      "urgency": "session",
+      "confidence": 0.9
+    },
+    "secondary": [
+      {
+        "action": "define",
+        "target": "explicit mapping of the four questions to PDE decomposition stages (intent, constraints, assumptions, ambiguity treatment)",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.9
+      },
+      {
+        "action": "author",
+        "target": "standardized prompts / checklist items that turn ambiguous language into concrete inquiry tasks",
+        "implicit": false,
+        "dependency": "define",
+        "confidence": 0.88
+      },
+      {
+        "action": "update",
+        "target": "PDE templates and decomposition forms to embed the checklist and gating checks",
+        "implicit": false,
+        "dependency": "author",
+        "confidence": 0.86
+      },
+      {
+        "action": "add",
+        "target": "pre-SOUTH validation step that enforces converting ambiguities into actionable inquiry before planning",
+        "implicit": false,
+        "dependency": "update",
+        "confidence": 0.87
+      },
+      {
+        "action": "create",
+        "target": "worked examples and anti-patterns demonstrating ambiguous → actionable transformations",
+        "implicit": false,
+        "dependency": "author",
+        "confidence": 0.82
+      },
+      {
+        "action": "pilot",
+        "target": "run a pilot on live PDE decompositions and collect practitioner feedback",
+        "implicit": true,
+        "dependency": "add",
+        "confidence": 0.75
+      }
+    ],
+    "context": {
+      "files_needed": [
+        "PDE templates (e.g., .pde templates or PDE_TEMPLATES.md)",
+        "process documentation (llms-pde.txt or equivalent)",
+        "existing decomposition examples",
+        "docs checklist file to create (pde-four-questions-checklist.md)"
+      ],
+      "tools_required": [
+        "text editor / repo access (git)",
+        "PR/review tool (gh)",
+        "stakeholder/practitioner review session",
+        "optional PDE engine or script for pre-SOUTH validation"
+      ],
+      "assumptions": [
+        "A SOUTH planning phase exists and is a distinct gating phase in the PDE workflow",
+        "The 'structural thinking four questions' are a known, reusable set (but exact phrasing may need confirmation)",
+        "Current PDE decompositions sometimes leave ambiguities unconverted into inquiry tasks",
+        "The team can change templates/process docs and run a short pilot"
+      ]
+    },
+    "outputs": {
+      "artifacts": [
+        "pde-four-questions-checklist.md",
+        "examples/ambiguous-to-actionable.md (worked examples)",
+        "pde-validation-checklist.json or hook script (optional)"
+      ],
+      "updates": [
+        "PDE templates (embed checklist and fields)",
+        "process documentation (explain gating before SOUTH)",
+        "README or CONTRIBUTING notes describing the flow"
+      ],
+      "communications": [
+        "Create a PR with template + doc changes",
+        "Open an issue to track pilot feedback",
+        "Draft a short facilitator note for practitioners running the pilot"
+      ]
+    },
+    "directions": {
+      "east": [
+        {
+          "text": "Clarify the desired outcome: convert every ambiguity into a named inquiry task before SOUTH",
+          "confidence": 0.92,
+          "implicit": false
+        },
+        {
+          "text": "Agree canonical wording for the 'four questions' and where they map into PDE fields",
+          "confidence": 0.88,
+          "implicit": false
+        }
+      ],
+      "south": [
+        {
+          "text": "Inventory current PDE templates and decomposition artifacts to find ambiguity hotspots",
+          "confidence": 0.87,
+          "implicit": false
+        },
+        {
+          "text": "Design prompts that reliably surface missing assumptions, stakeholders, and unknowns",
+          "confidence": 0.86,
+          "implicit": false
+        }
+      ],
+      "west": [
+        {
+          "text": "Define acceptance criteria that mark an ambiguity as 'actionable inquiry' (owner, question, next step)",
+          "confidence": 0.89,
+          "implicit": false
+        },
+        {
+          "text": "Create test decompositions and peer-review to validate the gating step",
+          "confidence": 0.82,
+          "implicit": false
+        }
+      ],
+      "north": [
+        {
+          "text": "Implement template changes, add the validation hook, and publish the checklist",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Run a short pilot, collect feedback, iterate, then merge changes",
+          "confidence": 0.78,
+          "implicit": false
+        }
+      ]
+    },
+    "actionStack": [
+      {
+        "text": "Clarify and agree canonical phrasing of the structural thinking four questions",
+        "direction": "east",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Map each question to specific PDE decomposition fields and decide where checks run (pre-SOUTH)",
+        "direction": "east",
+        "dependency": "Clarify and agree canonical phrasing of the structural thinking four questions",
+        "completed": false
+      },
+      {
+        "text": "Inventory existing PDE templates and decomposition examples to identify ambiguity patterns",
+        "direction": "south",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Author standardized prompts/checklist items that convert ambiguous language into actionable inquiry tasks",
+        "direction": "south",
+        "dependency": "Map each question to specific PDE decomposition fields and decide where checks run (pre-SOUTH)",
+        "completed": false
+      },
+      {
+        "text": "Update PDE templates/forms to embed prompts and a pre-SOUTH gating validation",
+        "direction": "north",
+        "dependency": "Author standardized prompts/checklist items that convert ambiguous language into actionable inquiry tasks",
+        "completed": false
+      },
+      {
+        "text": "Create worked examples and test cases showing ambiguous → actionable conversions",
+        "direction": "south",
+        "dependency": "Author standardized prompts/checklist items that convert ambiguous language into actionable inquiry tasks",
+        "completed": false
+      },
+      {
+        "text": "Run a pilot with practitioners, collect feedback and measure gating effectiveness",
+        "direction": "north",
+        "dependency": "Update PDE templates/forms to embed prompts and a pre-SOUTH gating validation",
+        "completed": false
+      },
+      {
+        "text": "Refine checklist/templates based on feedback and merge via PR with documentation",
+        "direction": "west",
+        "dependency": "Run a pilot with practitioners, collect feedback and measure gating effectiveness",
+        "completed": false
+      }
+    ],
+    "ambiguities": [
+      {
+        "text": "Exact phrasing and canonical list of the 'structural thinking four questions' is not provided",
+        "suggestion": "Provide the four questions or confirm the canonical source/phrasing to ensure consistent mapping"
+      },
+      {
+        "text": "Format and storage of PDE decompositions/templates is unspecified (file format, template engine, location)",
+        "suggestion": "Specify where PDE templates live (repo path or system) and file format so updates can be scoped precisely"
+      },
+      {
+        "text": "What counts as 'actionable inquiry' (required fields like owner, due date, next step) is not defined",
+        "suggestion": "Define minimal acceptance criteria for an inquiry (e.g., question, owner, proposed next step) to make validation deterministic"
+      }
+    ]
+  },
+  "options": {
+    "extractImplicit": true,
+    "mapDependencies": true
+  },
+  "folder_name": "2604080811--0b6e010e-f438-49b4-8dc8-71e79ab173ff"
+}
