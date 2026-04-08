@@ -67,7 +67,7 @@ Current Reality ══ TENSION (disequilibrium) ══> Desired Outcome
 
 ### Critical Understanding: What Action Steps Really Are
 
-**Action Steps ARE Structural Tension Charts**
+**Action Steps ARE Structural Tension Charts of the Master Chart**
 - Each action step is NOT a simple task
 - Each action step IS a complete structural tension chart (telescoped chart)  
 - The action step title becomes the "Desired Outcome" of its own chart
@@ -508,3 +508,8 @@ Reference `/llms-creative-orientation.txt` for broader creative orientation prin
 - "This sounds like process - what's the actual result you want?"
 - "This sounds like problem-solving - what do you want to bring into being instead?"
 - "What's your current reality in relation to this specific outcome?"
+
+## Clarifications on the differences between **Structural Tension** and **Structural Conflict**
+**Structural Tension**  is not a stress, not a problem but a natural state of growth).  If we dont have structural tension, we might have **Structural Conflict** which is a structure that does not advance, in contrast to structural tension which is a structure that advances.
+
+
