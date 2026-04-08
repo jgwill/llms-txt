@@ -9,21 +9,6 @@
 - **Link**: [llms-beyond-numerical-metrics.md](./llms-beyond-numerical-metrics.md)
 - **Related**: llms-managerial-moment-of-truth.md
 
-## Claude Agent SDK v2
-> A guide to the Claude Agent SDK v2, highlighting breaking changes from v1 and focusing on building autonomous AI agents with tool integration and creative orientation.
-- **Link**: [llms-claude-agent-sdk-v2.md](./llms-claude-agent-sdk-v2.md)
-- **Related**: llms-claude-sdk.gemini.md
-
-## Claude Code SDK (DEPRECATED)
-> A deprecated guide to the Claude Code SDK v1, emphasizing a generative, creative orientation in agent development based on structural thinking.
-- **Link**: [llms-claude-sdk.gemini.md](./llms-claude-sdk.gemini.md)
-- **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
-
-## Claude.ai Skill Creation Guide
-> A guide on how to create custom skills for Claude.ai, using the `aistudio-scaffolder` as a practical example.
-- **Link**: [llms-claude-skill-creation-guide.md](./llms-claude-skill-creation-guide.md)
-- **Related**: llms-txt-compliance-checklist.md
-
 ## COAIA Fuse Guidance
 > A guide to using `coaia-fuse` for tracing the generative process of AI-assisted creation, framed as a narrative-driven activity.
 - **Link**: [llms-coaia-fuse-guidance.md](./llms-coaia-fuse-guidance.md)

@@ -9,21 +9,6 @@
 - **Link**: [llms-beyond-numerical-metrics.md](./llms-beyond-numerical-metrics.md)
 - **Related**: llms-managerial-moment-of-truth.md
 
-## Claude Agent SDK v2: Complete Guide for Building AI Agents
-> Provides a comprehensive guide to the Claude Agent SDK v2, which replaces the older Claude Code SDK. It details breaking changes like explicit system prompts and setting sources, and covers core concepts such as tool permissions, multi-turn conversations, and integration with the Model Context Protocol (MCP). The guide also emphasizes the SDK's alignment with the Creative Orientation framework.
-- **Link**: [llms-claude-agent-sdk-v2.md](./llms-claude-agent-sdk-v2.md)
-- **Related**: llms-claude-sdk.gemini.md
-
-## Claude Code SDK: A Gemini LLM Guide to Creative Agent Development (DEPRECATED)
-> This deprecated document guides LLMs on using the Claude Code SDK (v1) with a creative orientation. It introduces the core principles of structural tension, advancing patterns, and the triadic agent embodiment of Mia, Haiku, and Miette. It covers key SDK concepts like system prompts, tool permissions, and session management, advocating for a shift from a problem-solving mindset to a generative one.
-- **Link**: [llms-claude-sdk.gemini.md](./llms-claude-sdk.gemini.md)
-- **Related**: llms-claude-agent-sdk-v2.md, llms-creative-orientation.txt, llms-structural-thinking.txt, llms-narrative-remixing.txt, llms-rise-framework.txt
-
-## How to Create a Claude.ai Skill: A Guide for LLMs
-> Explains the anatomy of a Claude.ai skill, which consists of a `SKILL.md` file (defining metadata and workflow) and optional helper scripts. It uses the `aistudio-scaffolder` skill as a case study to demonstrate how to design a structured workflow that guides the LLM through information gathering, tool use, and output generation, following Creative Orientation principles.
-- **Link**: [llms-claude-skill-creation-guide.md](./llms-claude-skill-creation-guide.md)
-- **Related**: llms-txt-compliance-checklist.md
-
 ## COAIA Fuse: A Gemini LLM Guide to Creative Observability
 > This document presents `coaia-fuse` as a tool for "Creative Archaeology," a method of documenting the story of creation as it happens. It provides best practices for using `coaia_fuse_trace_create` and `coaia_fuse_add_observation`, emphasizing the use of `input_data` and `output_data` for core content and reserving `metadata` for tags. The guide aligns tracing with the Creative Orientation and RISE frameworks.
 - **Link**: [llms-coaia-fuse-guidance.md](./llms-coaia-fuse-guidance.md)
