@@ -1,0 +1,272 @@
+{
+  "id": "6d54207c-9689-4323-89f2-969e20fd70e5",
+  "timestamp": "2026-04-08T12:28:55.931Z",
+  "engine": "copilot",
+  "prompt": "I want to create a ceremony pipeline that takes voice notes from my walks, transcribes them, decomposes the intention, and somehow routes the fragments to the right place in my ecology. The fragments could be reflections, tasks, issues, or seeds. I assume Whisper will handle transcription and probably qmd will help with routing but I am not sure how the classification works yet.",
+  "result": {
+    "primary": {
+      "action": "create",
+      "target": "ceremony pipeline that ingests voice notes, transcribes, decomposes intention, classifies fragments, and routes them into the user's ecology",
+      "urgency": "persistent",
+      "confidence": 0.95
+    },
+    "secondary": [
+      {
+        "action": "transcribe",
+        "target": "voice notes -> text using Whisper (assumed)",
+        "implicit": true,
+        "dependency": null,
+        "confidence": 0.75
+      },
+      {
+        "action": "decompose",
+        "target": "transcripts -> extract intentions/fragments",
+        "implicit": false,
+        "dependency": "transcribe",
+        "confidence": 0.9
+      },
+      {
+        "action": "classify",
+        "target": "fragments -> categories {reflection, task, issue, seed}",
+        "implicit": false,
+        "dependency": "decompose",
+        "confidence": 0.9
+      },
+      {
+        "action": "route",
+        "target": "classified fragments -> destination in ecology (issues, tasks, seeds, reflections)",
+        "implicit": true,
+        "dependency": "classify",
+        "confidence": 0.8
+      },
+      {
+        "action": "evaluate",
+        "target": "qmd as routing mechanism / integration approach",
+        "implicit": true,
+        "dependency": "classify",
+        "confidence": 0.6
+      },
+      {
+        "action": "design",
+        "target": "taxonomy, mapping rules, and routing policy for fragment types",
+        "implicit": true,
+        "dependency": null,
+        "confidence": 0.85
+      },
+      {
+        "action": "implement",
+        "target": "connectors to destinations (issue tracker, task manager, notes store)",
+        "implicit": true,
+        "dependency": "route",
+        "confidence": 0.8
+      },
+      {
+        "action": "test",
+        "target": "transcription accuracy, decomposition quality, classification precision, routing correctness",
+        "implicit": false,
+        "dependency": "implement",
+        "confidence": 0.88
+      },
+      {
+        "action": "document",
+        "target": "pipeline design, operator instructions, privacy considerations",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.9
+      }
+    ],
+    "context": {
+      "files_needed": [
+        "pipeline.py or pipeline/ (ingest, transcribe, classify, route)",
+        "config.yaml or config.json (routing rules, connectors)",
+        "classifier.py or models/ (decomposition + classification)",
+        "routing_rules.qmd or routing_rules.md",
+        "connectors/*.py (github_issue_connector.py, task_connector.py, notes_store_connector.py)",
+        "tests/test_pipeline.py",
+        "README.md (usage + deployment)",
+        "privacy_and_storage.md"
+      ],
+      "tools_required": [
+        "Whisper (or alternative ASR)",
+        "qmd (or QMD-based routing system) - to evaluate",
+        "Python",
+        "NLP libraries (spaCy, transformers or similar)",
+        "Git / GitHub API (for issues)",
+        "Task management API (e.g., Todoist/Asana) or local task store",
+        "Audio utilities (ffmpeg)",
+        "Testing framework (pytest)"
+      ],
+      "assumptions": [
+        "Whisper will be used/available for transcription (user assumption)",
+        "qmd may be useful for routing (user assumption)",
+        "Fragments map to four categories: reflections, tasks, issues, seeds (user-stated)",
+        "User's 'ecology' has programmatic endpoints for ingestion (implied but not specified)"
+      ]
+    },
+    "outputs": {
+      "artifacts": [
+        "pipeline.py (or equivalent pipeline package)",
+        "classifier and model artifacts under models/ or classifier.py",
+        "routing_rules.qmd (routing spec)",
+        "connectors/ (github_issue_connector.py, task_connector.py, notes_connector.py)",
+        "tests/ for each stage",
+        "config.yaml and README.md"
+      ],
+      "updates": [
+        "README.md (project-level usage and deployment)",
+        "docs/ with design + taxonomy",
+        "possibly KINSHIP.md or relevant documentation describing how the pipeline fits the ecology"
+      ],
+      "communications": [
+        "Create design PR with pipeline implementation",
+        "Open issues for unresolved questions: classification criteria, destination APIs, privacy handling",
+        "Add docs/ design doc and usage guide in repo"
+      ]
+    },
+    "directions": {
+      "east": [
+        {
+          "text": "Define success criteria and taxonomy for fragments (what counts as reflection/task/issue/seed) and the desired destinations in the ecology",
+          "confidence": 0.96,
+          "implicit": false
+        },
+        {
+          "text": "Clarify role of qmd vs other routing approaches and list destination APIs available",
+          "confidence": 0.8,
+          "implicit": true
+        }
+      ],
+      "south": [
+        {
+          "text": "Research Whisper configuration, error modes for walk recordings, and alternatives for on-device or cloud transcription",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Investigate classification approaches (rule-based vs ML) and sample prompts/features to detect intentions",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Prototype qmd-based routing rules and compare to simple rule-engine",
+          "confidence": 0.7,
+          "implicit": true
+        }
+      ],
+      "west": [
+        {
+          "text": "Validate transcription quality on sample walk recordings and measure downstream classification accuracy",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "End-to-end tests that verify fragments land in correct destinations and that metadata (timestamps, origin) are preserved",
+          "confidence": 0.88,
+          "implicit": false
+        }
+      ],
+      "north": [
+        {
+          "text": "Implement ingestion + Whisper transcription module and store transcripts",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Build decomposition/classifier, integrate with pipeline, and implement routing connectors",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Deploy automation (cron or event-driven) and add monitoring/logging",
+          "confidence": 0.8,
+          "implicit": true
+        }
+      ]
+    },
+    "actionStack": [
+      {
+        "text": "Define taxonomy and success criteria for fragment types and map to destination endpoints",
+        "direction": "east",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Confirm transcription tool (Whisper) configuration and install dependencies",
+        "direction": "south",
+        "dependency": "Define taxonomy and success criteria for fragment types and map to destination endpoints",
+        "completed": false
+      },
+      {
+        "text": "Implement transcription module to ingest audio and produce timestamped transcripts",
+        "direction": "north",
+        "dependency": "Confirm transcription tool (Whisper) configuration and install dependencies",
+        "completed": false
+      },
+      {
+        "text": "Design decomposition/spec (features, prompts, rules or ML labels) to extract intent fragments",
+        "direction": "south",
+        "dependency": "Implement transcription module to ingest audio and produce timestamped transcripts",
+        "completed": false
+      },
+      {
+        "text": "Implement classifier/decomposer (rule-based or ML) and unit tests",
+        "direction": "north",
+        "dependency": "Design decomposition/spec (features, prompts, rules or ML labels) to extract intent fragments",
+        "completed": false
+      },
+      {
+        "text": "Evaluate qmd for routing vs alternative rule engine and choose integration approach",
+        "direction": "south",
+        "dependency": "Implement classifier/decomposer (rule-based or ML) and unit tests",
+        "completed": false
+      },
+      {
+        "text": "Implement routing engine and connectors to each destination (issues, tasks, reflections store, seeds store)",
+        "direction": "north",
+        "dependency": "Evaluate qmd for routing vs alternative rule engine and choose integration approach",
+        "completed": false
+      },
+      {
+        "text": "Write end-to-end tests and validate routing correctness and data fidelity",
+        "direction": "west",
+        "dependency": "Implement routing engine and connectors to each destination (issues, tasks, reflections store, seeds store)",
+        "completed": false
+      },
+      {
+        "text": "Document pipeline, privacy considerations, deployment steps, and open design PR",
+        "direction": "east",
+        "dependency": "Write end-to-end tests and validate routing correctness and data fidelity",
+        "completed": false
+      },
+      {
+        "text": "Deploy automation (schedule or event-driven), add logging/monitoring, iterate on classifier/routing based on feedback",
+        "direction": "north",
+        "dependency": "Document pipeline, privacy considerations, deployment steps, and open design PR",
+        "completed": false
+      }
+    ],
+    "ambiguities": [
+      {
+        "text": "How exactly 'ecology' accepts fragments (APIs, git issues, local files, QMD collections) is unspecified",
+        "suggestion": "List specific destination endpoints and formats (e.g., GitHub issues, Todoist project ID, local notes folder, QMD collection) so connectors can be implemented"
+      },
+      {
+        "text": "User says 'I assume Whisper' and 'probably qmd' — transcription and routing choices are uncertain",
+        "suggestion": "Confirm whether Whisper must be used or alternatives are acceptable and clarify whether qmd is required or optional; run short evaluation on both options"
+      },
+      {
+        "text": "Classification approach is unspecified ('not sure how the classification works yet')",
+        "suggestion": "Decide between rule-based heuristics vs ML classifier and provide sample labeled examples or choose a human-in-the-loop starting mode"
+      },
+      {
+        "text": "Privacy/consent/storage retention for voice notes not addressed",
+        "suggestion": "Clarify retention, encryption, and sharing policies for voice data and transcripts before deployment"
+      }
+    ]
+  },
+  "options": {
+    "extractImplicit": true,
+    "mapDependencies": true
+  },
+  "folder_name": "2604080828--6d54207c-9689-4323-89f2-969e20fd70e5"
+}

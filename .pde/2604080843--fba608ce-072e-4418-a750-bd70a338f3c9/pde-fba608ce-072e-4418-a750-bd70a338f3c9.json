@@ -1,0 +1,206 @@
+{
+  "id": "fba608ce-072e-4418-a750-bd70a338f3c9",
+  "timestamp": "2026-04-08T12:43:00.536Z",
+  "engine": "copilot",
+  "model": "gpt-5-mini",
+  "prompt": "Update the README.md to point to the docs/ directory",
+  "result": {
+    "primary": {
+      "action": "update",
+      "target": "README.md (documentation links) to point to docs/ directory",
+      "urgency": "immediate",
+      "confidence": 0.95
+    },
+    "secondary": [
+      {
+        "action": "search",
+        "target": "README.md for existing documentation links/paths",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.9
+      },
+      {
+        "action": "verify",
+        "target": "docs/ directory exists and contains an entry (index/README) to link to",
+        "implicit": true,
+        "dependency": "search",
+        "confidence": 0.8
+      },
+      {
+        "action": "replace",
+        "target": "link(s) in README.md so they point to docs/ (use relative path)",
+        "implicit": false,
+        "dependency": "verify",
+        "confidence": 0.95
+      },
+      {
+        "action": "update",
+        "target": "any other references (badges, TOC) that point to old doc location",
+        "implicit": true,
+        "dependency": "replace",
+        "confidence": 0.7
+      },
+      {
+        "action": "validate",
+        "target": "that updated links resolve locally (e.g., open docs/index.md or run simple link check)",
+        "implicit": false,
+        "dependency": "replace",
+        "confidence": 0.85
+      },
+      {
+        "action": "commit",
+        "target": "git commit README.md change",
+        "implicit": false,
+        "dependency": "replace",
+        "confidence": 0.95
+      },
+      {
+        "action": "push_or_pr",
+        "target": "push branch and/or create PR with the change",
+        "implicit": true,
+        "dependency": "commit",
+        "confidence": 0.6
+      }
+    ],
+    "context": {
+      "files_needed": [
+        "README.md",
+        "docs/"
+      ],
+      "tools_required": [
+        "edit (file editor)",
+        "git (commit/push)",
+        "optional: link-checker or local file viewer"
+      ],
+      "assumptions": [
+        "README.md exists at repo root",
+        "docs/ directory exists and contains documentation entry point",
+        "User intends local relative link (docs/) rather than external URL",
+        "Change should be committed to repo (branch or main) rather than only suggested"
+      ]
+    },
+    "outputs": {
+      "artifacts": [],
+      "updates": [
+        "README.md"
+      ],
+      "communications": [
+        "git commit with message describing README update",
+        "optional: create PR describing change if pushing to branch"
+      ]
+    },
+    "directions": {
+      "east": [
+        {
+          "text": "Goal: Make README.md point readers to the docs/ directory (clear, relative link)",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Decide whether link should be './docs/', 'docs/', or a URL (clarify if needed)",
+          "confidence": 0.7,
+          "implicit": true
+        }
+      ],
+      "south": [
+        {
+          "text": "Locate all documentation links in README.md and identify current targets",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Check that docs/ contains an index or landing page to link to",
+          "confidence": 0.8,
+          "implicit": true
+        }
+      ],
+      "west": [
+        {
+          "text": "Verify updated links resolve locally and in GitHub rendering (open docs/index.md or run link check)",
+          "confidence": 0.85,
+          "implicit": false
+        },
+        {
+          "text": "Review README visually to ensure wording still reads well after link change",
+          "confidence": 0.8,
+          "implicit": false
+        }
+      ],
+      "north": [
+        {
+          "text": "Edit README.md to replace doc paths with docs/ (commit change)",
+          "confidence": 0.95,
+          "implicit": false
+        },
+        {
+          "text": "Push commit and optionally open a PR for review",
+          "confidence": 0.6,
+          "implicit": true
+        }
+      ]
+    },
+    "actionStack": [
+      {
+        "text": "Search README.md for documentation links/paths",
+        "direction": "south",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Verify docs/ directory exists and has an entry point to link to",
+        "direction": "south",
+        "dependency": "Search README.md for documentation links/paths",
+        "completed": false
+      },
+      {
+        "text": "Edit README.md to change documentation links to point to docs/ (use chosen relative form)",
+        "direction": "north",
+        "dependency": "Verify docs/ directory exists and has an entry point to link to",
+        "completed": false
+      },
+      {
+        "text": "Update other references (badges, TOC) that referenced old doc location",
+        "direction": "north",
+        "dependency": "Edit README.md to change documentation links to point to docs/ (use chosen relative form)",
+        "completed": false
+      },
+      {
+        "text": "Validate updated links resolve locally and in GitHub rendering",
+        "direction": "west",
+        "dependency": "Edit README.md to change documentation links to point to docs/ (use chosen relative form)",
+        "completed": false
+      },
+      {
+        "text": "Commit the README.md change to git with an appropriate message",
+        "direction": "north",
+        "dependency": "Edit README.md to change documentation links to point to docs/ (use chosen relative form)",
+        "completed": false
+      },
+      {
+        "text": "Push branch and/or create a PR for the change (optional)",
+        "direction": "north",
+        "dependency": "Commit the README.md change to git with an appropriate message",
+        "completed": false
+      }
+    ],
+    "ambiguities": [
+      {
+        "text": "Which exact link(s) in README.md should be changed (one or multiple references)?",
+        "suggestion": "Provide the line or current link text/URL to update, or confirm 'all doc-related links' should point to docs/"
+      },
+      {
+        "text": "Should links use 'docs/', './docs/', or a full URL?",
+        "suggestion": "Specify preferred link format (relative vs absolute) or confirm default to 'docs/'"
+      },
+      {
+        "text": "Commit workflow: commit directly to main or create a branch and PR?",
+        "suggestion": "State preferred workflow (commit to main, or create branch named like 'fix/readme-docs-link' and open PR)"
+      }
+    ]
+  },
+  "options": {
+    "extractImplicit": true,
+    "mapDependencies": true
+  },
+  "folder_name": "2604080843--fba608ce-072e-4418-a750-bd70a338f3c9"
+}

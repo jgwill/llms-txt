@@ -2,10 +2,10 @@
 
 > Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents, mapping dependencies through Four Directions, and holding ambiguities as productive tension.
 
-**Version**: 0.1 (stub — evolving from practice)
-**Document ID**: llms-pde-v0.1
-**Last Updated**: 2026-02-27
-**Content Source**: Derived from practical PDE usage in this repository and the medicine-wheel-prompt-decomposition npm package.
+**Version**: 0.2
+**Document ID**: llms-pde-v0.2
+**Last Updated**: 2025-07-14
+**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, and implementation in miaco (lean CLI) and miadi-code (5-layer MCP server).
 
 ---
 
@@ -100,24 +100,114 @@ When used with an AI companion, PDE is a **ceremonial act of shared visioning**:
 
 ## Storage
 
-Decompositions are stored in `.pde/` as paired JSON and Markdown files:
-- `{uuid}.json` — machine-readable structured decomposition
-- `{uuid}.md` — human-editable Four Directions document
+Decompositions are stored in `.pde/` as paired JSON and Markdown files within timestamped folders:
 
-The markdown file is designed for human annotation — the steward can edit, add notes, correct interpretations, and refine the vision before work begins.
+```
+.pde/
+  <YYMMDDHHmm>--<uuid>/
+    pde-<uuid>.json   — machine-readable structured decomposition
+    pde-<uuid>.md     — human-editable Four Directions document
+```
+
+- Legacy format: `.pde/<uuid>.json` + `.pde/<uuid>.md` (flat, without folder)
+- The markdown file is designed for human annotation — the steward can edit, add notes, correct interpretations, and refine the vision before work begins
+- Parent-child nesting: a decomposition can reference a `parent_pde_id`, and child folders are stored inside the parent's folder
+
+### Companion Artifacts
+
+Additional files may appear alongside the PDE pair:
+
+- `pde-inquiry-enrichment.md` — knowledge base search results (from `qmd search`/`qmd query`) that enrich the decomposition with discovered content
+- `pde-four-questions.md` — Structural Thinking Four Questions generated from the decomposition's ambiguities and intents (see `llms-pde-structural-thinking.md`)
+
+---
+
+## PDE → Structural Thinking Bridge
+
+PDE surfaces ambiguities at EAST. The Four Questions (`llms-st-four-questions.md`) transform those ambiguities into structured inquiry at SOUTH:
+
+| PDE Output | Question Type | What It Produces |
+|------------|--------------|------------------|
+| Vague intents (low confidence) | **Information** | Specific details that make the picture concrete |
+| Terms used without definition | **Clarification** | The speaker's specific meaning |
+| Hedging language ("I assume", "probably") | **Implication** | What is implied but not stated — verified with the speaker |
+| Contradictory intents or assumptions | **Discrepancy** | Where underlying structure may need to change |
+
+This bridge is implemented in `miaco pde-to-st run --pde <uuid>` and documented in `llms-pde-structural-thinking.md`.
+
+---
+
+## Implementation Architectures
+
+Two lineages implement PDE with different trade-offs:
+
+### Lean Lineage (miaco)
+
+Single-file implementation (`decompose.ts`, ~380 LOC). Multi-engine dispatch shells out to `gemini`, `claude`, or `copilot` CLI binaries. Flat canonical schema matching this document's JSON structure. Parent-child PDE nesting. Auto-fallback to copilot if primary engine fails. Cost guard: MIAC-18 prevents premium models (opus/sonnet) on copilot engine.
+
+```bash
+miaco decompose run -p "<prompt>" -e copilot
+miaco qmd-inquiry-decompose run --pde <uuid>   # enrich with knowledge base
+miaco pde-to-st run --pde <uuid>               # generate Four Questions
+```
+
+### Deep Lineage (miadi-code)
+
+5-layer architecture in dedicated `pde/` module (11 files):
+
+1. **Intent Extraction** — explicit + implicit intents with classification (CREATION, MODIFICATION, ANALYSIS, VALIDATION, INTEGRATION, COMMUNICATION)
+2. **Dependency Analysis** — graph construction with parallelization detection
+3. **Medicine Wheel Mapping** — direction assignment with ceremony type
+4. **Workflow Generation** — staged execution templates (parallel/sequential/conditional)
+5. **Execution Planning** — checkpoints, status tracking, fallback strategies
+
+Dedicated MCP server (`mcp-pde-server.ts`) exposes 5 tools, 2 resources, 1 prompt. Webhook integration sends decompositions to the Miadi event hub.
+
+### MCP Tools (miadi-code)
+
+| Tool | Purpose |
+|------|---------|  
+| `pde_decompose` | Build system prompt for LLM decomposition |
+| `pde_parse_response` | Parse LLM response → DecompositionResult, store, optionally webhook |
+| `pde_get` | Retrieve stored decomposition by ID |
+| `pde_list` | List stored decompositions |
+| `pde_export_markdown` | Export as git-diffable markdown |
+
+---
+
+## Engine Configuration
+
+PDE supports three engines with different cost/quality profiles:
+
+| Engine | Default Model | Binary | Use Case |
+|--------|--------------|--------|----------|
+| copilot | gpt-5-mini | `copilot` | Default — free tier, fast, good for most decompositions |
+| claude | sonnet | `claude` | Higher quality for complex prompts |
+| gemini | gemini-2.5-pro | `gemini` | Alternative, good semantic understanding |
+
+**Fallback**: If the primary engine fails, PDE falls back to copilot automatically.
+**Cost guard (MIAC-18)**: Using opus or sonnet models with copilot engine is blocked to prevent unnecessary premium token consumption.
 
 ---
 
 ## Future directions
 
-* Transform PDE into "Structural Tension Chart" (Strategic Action Planning)
+* Transform PDE into "Structural Tension Chart" (Strategic Action Planning) — implemented in `miaco stc`
+* Inquiry routing from PDE decompositions via `qmd search`/`qmd query` — implemented in `miaco qmd-inquiry-decompose`
+* Four Questions generation from PDE ambiguities — implemented in `miaco pde-to-st`
+* Miadi MCP server integration with Redis storage and web UI
 
 ---
 
 ## Related
 
 - [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) — npm package
+- [llms-pde-structural-thinking.md](llms-pde-structural-thinking.md) — PDE → Structural Thinking Four Questions bridge
+- [llms-st-four-questions.md](llms-st-four-questions.md) — The Four Question Types (inquiry discipline)
 - [llms-creative-orientation.txt](llms-creative-orientation.txt) — foundational framework
 - [llms-delayed-resolution-principle.md](llms-delayed-resolution-principle.md) — tension maintenance
 - [llms-structural-tension-charts.txt](llms-structural-tension-charts.txt) — charting methodology
+- [llms-ceremony-pipeline.md](llms-ceremony-pipeline.md) — 8-phase pipeline (PDE is Phase 3)
+- [llms-polyphonic-design-review.md](llms-polyphonic-design-review.md) — multi-voice review of PDE decompositions
+- [llms-inquiry-routing.md](llms-inquiry-routing.md) — routing from PDE to inquiry
 - [docs/prompt-decomposition.md](docs/prompt-decomposition.md) — extended documentation

@@ -123,9 +123,14 @@
 - **Related**: llms-medicine-wheel-packages.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
 
 ## Prompt Decomposition Engine (PDE)
-> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions.
+> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions. Includes implementation architectures (lean CLI and 5-layer MCP), knowledge base enrichment via qmd, and Structural Thinking Four Questions generation from decomposition ambiguities.
 - **Link**: [llms-pde.txt](./llms-pde.txt)
-- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md
+- **Related**: llms-pde-structural-thinking.md, llms-st-four-questions.md, llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-ceremony-pipeline.md, llms-polyphonic-design-review.md, llms-inquiry-routing.md
+
+## PDE → Structural Thinking Bridge
+> Links EAST decomposition to SOUTH planning via the Four Questions. PDE surfaces ambiguities; Information, Clarification, Implication, and Discrepancy questions transform them into structured inquiry before action begins.
+- **Link**: [llms-pde-structural-thinking.md](./llms-pde-structural-thinking.md)
+- **Related**: llms-pde.txt, llms-st-four-questions.md, llms-structural-thinking.txt, llms-ceremony-pipeline.md
 
 ## Kinship Hub System (Full Protocol)
 > Extended protocol with Indigenous kinship foundations for treating software projects as beings in networks of relations.

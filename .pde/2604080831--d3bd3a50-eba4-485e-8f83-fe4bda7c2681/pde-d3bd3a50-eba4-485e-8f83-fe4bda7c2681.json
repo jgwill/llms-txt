@@ -1,0 +1,220 @@
+{
+  "id": "d3bd3a50-eba4-485e-8f83-fe4bda7c2681",
+  "timestamp": "2026-04-08T12:31:00.583Z",
+  "engine": "copilot",
+  "prompt": "I need to upgrade our context7 score from 30 to 75 by making the llms-pde.txt a proper reference with implementation guidance drawn from miaco and miadi lineages. The score measures structured thinking organization and right now we are weak on practical examples and navigable cross-linking.",
+  "result": {
+    "primary": {
+      "action": "upgrade",
+      "target": "context7 score from 30 to 75",
+      "urgency": "session",
+      "confidence": 0.85
+    },
+    "secondary": [
+      {
+        "action": "rewrite",
+        "target": "llms-pde.txt to be a proper reference",
+        "implicit": false,
+        "dependency": "gather-miaco-miadi-sources",
+        "confidence": 0.95
+      },
+      {
+        "action": "extract",
+        "target": "implementation guidance from miaco and miadi lineages",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.9
+      },
+      {
+        "action": "add",
+        "target": "practical examples and runnable/implementable patterns",
+        "implicit": false,
+        "dependency": "rewrite llms-pde.txt / extract miaco/miadi",
+        "confidence": 0.9
+      },
+      {
+        "action": "link",
+        "target": "navigable cross-linking (TOC, anchors, index) between llms-pde.txt and lineage docs",
+        "implicit": false,
+        "dependency": "rewrite llms-pde.txt",
+        "confidence": 0.88
+      },
+      {
+        "action": "measure",
+        "target": "context7 scoring after changes",
+        "implicit": true,
+        "dependency": "all content and linking updates applied",
+        "confidence": 0.7
+      },
+      {
+        "action": "create",
+        "target": "pull request and review workflow for the updates",
+        "implicit": true,
+        "dependency": "content changes committed",
+        "confidence": 0.8
+      }
+    ],
+    "context": {
+      "files_needed": [
+        "llms-pde.txt",
+        "llms-miadi-a2a-llm-guide.md",
+        "llms-miadi-a2a-human-guide.md",
+        "llms-coaia-fuse-guidance.md",
+        "llms.txt",
+        "README.md"
+      ],
+      "tools_required": [
+        "git",
+        "grep",
+        "view/edit",
+        "editor",
+        "context7 scoring API or CLI",
+        "pull request workflow (gh)"
+      ],
+      "assumptions": [
+        "miaco and miadi lineages contain usable implementation guidance",
+        "Improving structure, examples and cross-links in llms-pde.txt will raise the context7 score",
+        "The repo owner accepts PRs and documented changes",
+        "A reproducible context7 scoring method (API/CLI) is available"
+      ]
+    },
+    "outputs": {
+      "artifacts": [
+        "llms-pde_examples.md",
+        "llms-pde_toc.md"
+      ],
+      "updates": [
+        "llms-pde.txt",
+        "README.md (reference/link to llms-pde.txt)"
+      ],
+      "communications": [
+        "Create PR updating llms-pde.txt with examples and cross-links",
+        "Open issue tracking 'Raise context7 score to 75' and link reviewers",
+        "Add commit message and Co-authored-by trailer"
+      ]
+    },
+    "directions": {
+      "east": [
+        {
+          "text": "Make llms-pde.txt the canonical, implementation-focused reference that demonstrates structured thinking with practical examples and clear navigation",
+          "confidence": 0.95,
+          "implicit": false
+        },
+        {
+          "text": "Define acceptance criteria for context7 score = 75 (which metrics or tests must pass)",
+          "confidence": 0.7,
+          "implicit": true
+        }
+      ],
+      "south": [
+        {
+          "text": "Inventory and extract implementation patterns from miaco and miadi lineage documents",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Identify concrete examples and minimal reproducible implementations to include",
+          "confidence": 0.88,
+          "implicit": false
+        }
+      ],
+      "west": [
+        {
+          "text": "Run context7 scoring after edits and collect reviewer feedback to validate improvements",
+          "confidence": 0.78,
+          "implicit": false
+        },
+        {
+          "text": "Peer review PR to ensure examples are practical and cross-links are navigable",
+          "confidence": 0.82,
+          "implicit": false
+        }
+      ],
+      "north": [
+        {
+          "text": "Edit llms-pde.txt: add implementation guidance, examples, anchor links, and TOC; commit and open PR",
+          "confidence": 0.95,
+          "implicit": false
+        },
+        {
+          "text": "Iterate based on scoring and reviewer comments until context7 score ≥ 75",
+          "confidence": 0.8,
+          "implicit": true
+        }
+      ]
+    },
+    "actionStack": [
+      {
+        "text": "Gather and inventory miaco and miadi lineage documents to extract implementation guidance",
+        "direction": "south",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Define acceptance criteria and measurable signals for context7 score = 75",
+        "direction": "east",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "Draft rewrite of llms-pde.txt to structure it as a reference: TOC, sections for design + implementation, and anchors for linking",
+        "direction": "north",
+        "dependency": "Gather and inventory miaco and miadi lineage documents to extract implementation guidance",
+        "completed": false
+      },
+      {
+        "text": "Add practical examples and runnable snippets drawn from lineage sources into llms-pde.txt (and create examples file if needed)",
+        "direction": "north",
+        "dependency": "Draft rewrite of llms-pde.txt to structure it as a reference",
+        "completed": false
+      },
+      {
+        "text": "Create navigable cross-links and index entries between llms-pde.txt and lineage docs",
+        "direction": "north",
+        "dependency": "Draft rewrite of llms-pde.txt to structure it as a reference",
+        "completed": false
+      },
+      {
+        "text": "Commit changes, open PR, and request targeted reviewers from miaco/miadi lineage owners",
+        "direction": "north",
+        "dependency": "Add practical examples and runnable snippets",
+        "completed": false
+      },
+      {
+        "text": "Run context7 scoring to measure improvement and collect results",
+        "direction": "west",
+        "dependency": "Commit changes, open PR, and request targeted reviewers from miaco/miadi lineage owners",
+        "completed": false
+      },
+      {
+        "text": "Iterate on content and linking based on score output and reviewer feedback until target reached",
+        "direction": "west",
+        "dependency": "Run context7 scoring to measure improvement and collect results",
+        "completed": false
+      }
+    ],
+    "ambiguities": [
+      {
+        "text": "What exactly are 'miaco' and 'miadi' lineage authoritative sources (file paths or external links)?",
+        "suggestion": "Provide specific file names or URLs for miaco and miadi sources to extract guidance reliably"
+      },
+      {
+        "text": "How is the context7 score computed and which submetrics determine the jump from 30 to 75?",
+        "suggestion": "Share the scoring rubric, API/CLI, or test harness used by context7 so changes can be validated programmatically"
+      },
+      {
+        "text": "Are there constraints on example code format, language, licensing, or size?",
+        "suggestion": "Specify preferred languages, license compatibility, and maximum example size or runnable format"
+      },
+      {
+        "text": "Is there a deadline or required reviewers for the PR?",
+        "suggestion": "Provide timelines and target reviewers or approvers to prioritize work"
+      }
+    ]
+  },
+  "options": {
+    "extractImplicit": true,
+    "mapDependencies": true
+  },
+  "folder_name": "2604080831--d3bd3a50-eba4-485e-8f83-fe4bda7c2681"
+}
