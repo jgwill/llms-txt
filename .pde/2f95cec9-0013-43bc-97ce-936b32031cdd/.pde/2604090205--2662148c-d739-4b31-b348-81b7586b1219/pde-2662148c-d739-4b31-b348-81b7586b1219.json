@@ -1,0 +1,236 @@
+{
+  "id": "2662148c-d739-4b31-b348-81b7586b1219",
+  "timestamp": "2026-04-09T06:05:14.627Z",
+  "prompt": "## Mission: Upgrade Polyphonic Design Review with Epistemic Roles\n\n### Current State\nThe polyphonic design review document (llms-polyphonic-design-review.md) already has a strong multi-voice structure with vivid voices, but lacks explicit epistemic frameworks.\n\n### Desired Outcome\nTransform the polyphonic review so that each voice has:\n1. **Explicit Epistemic Role**: What this voice is structurally good at seeing and knowing\n2. **Critique Mandate**: What this voice must not override or suppress\n3. **Adversarial Clarity**: Preserve constructive tension without collapsing into consensus theater\n4. **Schema Separation**: Clear demarcation between \"what this voice sees\" and \"what it must not override\"\n\n### Scope\n- Update llms-polyphonic-design-review.md with epistemic framing\n- Create GitHub issue documenting the upgrade\n- Create GitHub branch for this work\n- Relate all commits to the GitHub issue\n- Use claude-opus-4.6 for all subagent work\n\n### Success Criteria\n- Each voice has named epistemic role (e.g., \"The Witness role sees dynamics that...\")\n- Each voice has stated critique mandate (e.g., \"This voice must never override...\")\n- Document preserves existing multi-voice vividity\n- No consensus theater: real disagreements remain visible\n- GitHub issue linked to all commits on feature branch",
+  "result": {
+    "primary": {
+      "action": "Transform and upgrade",
+      "target": "llms-polyphonic-design-review.md with explicit epistemic roles and critique mandates",
+      "urgency": "session",
+      "confidence": 0.95
+    },
+    "secondary": [
+      {
+        "action": "Create",
+        "target": "GitHub issue documenting the epistemic role upgrade",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.95
+      },
+      {
+        "action": "Create and maintain",
+        "target": "GitHub feature branch for all related work",
+        "implicit": false,
+        "dependency": null,
+        "confidence": 0.95
+      },
+      {
+        "action": "Link",
+        "target": "all commits on feature branch to the GitHub issue",
+        "implicit": false,
+        "dependency": "GitHub issue must be created first",
+        "confidence": 0.9
+      },
+      {
+        "action": "Analyze and map",
+        "target": "existing voices in polyphonic review to understand their current epistemic strengths",
+        "implicit": true,
+        "dependency": null,
+        "confidence": 0.85
+      },
+      {
+        "action": "Design",
+        "target": "epistemic role schema (role name, what it sees, what it must not override)",
+        "implicit": true,
+        "dependency": "analyze existing voices",
+        "confidence": 0.9
+      },
+      {
+        "action": "Preserve",
+        "target": "multi-voice vividity and adversarial clarity without consensus theater",
+        "implicit": true,
+        "dependency": "design epistemic schema",
+        "confidence": 0.85
+      }
+    ],
+    "context": {
+      "files_needed": [
+        "llms-polyphonic-design-review.md",
+        "KINSHIP.md",
+        "README.md"
+      ],
+      "tools_required": [
+        "github CLI (gh)",
+        "git",
+        "view and edit tools for markdown",
+        "task/agent tool for subagent coordination"
+      ],
+      "assumptions": [
+        "The polyphonic design review document exists and has identifiable voices",
+        "GitHub issue creation is permitted in this repository",
+        "Feature branch creation follows the repository's branching conventions",
+        "Commits can reference issue numbers in messages",
+        "All subagent work will use claude-opus-4.6 model",
+        "The upgrade should enhance the existing structure, not replace it"
+      ]
+    },
+    "outputs": {
+      "artifacts": [
+        "Updated llms-polyphonic-design-review.md with epistemic role schema applied to each voice"
+      ],
+      "updates": [
+        "GitHub issue (newly created) documenting the upgrade mission",
+        "Feature branch commits (multiple) linking to the issue"
+      ],
+      "communications": [
+        "GitHub issue with clear success criteria and epistemic framework definition",
+        "Commit messages with issue references (#<issue-number>)"
+      ]
+    },
+    "directions": {
+      "east": [
+        {
+          "text": "Clarify what 'epistemic role' means in context of polyphonic review voices (what each voice is good at seeing, structurally)",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Vision: transform vivid voices into a schema where each voice has explicit role + mandate, preserving adversarial clarity",
+          "confidence": 0.95,
+          "implicit": false
+        }
+      ],
+      "south": [
+        {
+          "text": "Deep-search: analyze existing voices in llms-polyphonic-design-review.md to map their current epistemic strengths",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Research: review creative orientation, structural tension, and relational research paradigms to ground the epistemic framework",
+          "confidence": 0.85,
+          "implicit": false
+        },
+        {
+          "text": "Design: create epistemic role schema (name, what-it-sees, what-it-must-not-override) as a reusable template",
+          "confidence": 0.9,
+          "implicit": true
+        }
+      ],
+      "west": [
+        {
+          "text": "Validate: each voice transformation preserves vividity and doesn't collapse into consensus",
+          "confidence": 0.85,
+          "implicit": false
+        },
+        {
+          "text": "Review: epistemic mandates are genuinely adversarial (not watered-down agreements)",
+          "confidence": 0.85,
+          "implicit": false
+        },
+        {
+          "text": "Check: GitHub issue and branch setup follows repository conventions",
+          "confidence": 0.8,
+          "implicit": false
+        }
+      ],
+      "north": [
+        {
+          "text": "Create GitHub issue with epistemic framework definition and success criteria",
+          "confidence": 0.95,
+          "implicit": false
+        },
+        {
+          "text": "Create feature branch (naming: feature/polyphonic-epistemic-roles or similar)",
+          "confidence": 0.9,
+          "implicit": false
+        },
+        {
+          "text": "Update llms-polyphonic-design-review.md applying epistemic role schema to each voice",
+          "confidence": 0.95,
+          "implicit": false
+        },
+        {
+          "text": "Commit changes with issue reference (#<issue-number>)",
+          "confidence": 0.95,
+          "implicit": false
+        }
+      ]
+    },
+    "actionStack": [
+      {
+        "text": "EAST: Clarify epistemic role definition and desired outcome for the upgrade",
+        "direction": "east",
+        "dependency": null,
+        "completed": false
+      },
+      {
+        "text": "SOUTH: Analyze existing voices in polyphonic review document",
+        "direction": "south",
+        "dependency": "EAST clarification",
+        "completed": false
+      },
+      {
+        "text": "SOUTH: Research epistemic frameworks and relational paradigms",
+        "direction": "south",
+        "dependency": "EAST clarification",
+        "completed": false
+      },
+      {
+        "text": "SOUTH: Design epistemic role schema template",
+        "direction": "south",
+        "dependency": "voice analysis + framework research",
+        "completed": false
+      },
+      {
+        "text": "NORTH: Create GitHub issue with framework definition",
+        "direction": "north",
+        "dependency": "schema design",
+        "completed": false
+      },
+      {
+        "text": "NORTH: Create feature branch",
+        "direction": "north",
+        "dependency": "GitHub issue created",
+        "completed": false
+      },
+      {
+        "text": "NORTH: Apply epistemic role schema to each voice in document",
+        "direction": "north",
+        "dependency": "schema design + feature branch created",
+        "completed": false
+      },
+      {
+        "text": "WEST: Validate transformations preserve vividity and adversarial clarity",
+        "direction": "west",
+        "dependency": "document update",
+        "completed": false
+      },
+      {
+        "text": "NORTH: Commit changes with issue reference",
+        "direction": "north",
+        "dependency": "WEST validation",
+        "completed": false
+      }
+    ],
+    "ambiguities": [
+      {
+        "text": "Which voices exist in the current polyphonic review document? How many are there?",
+        "suggestion": "Read llms-polyphonic-design-review.md to identify all voices before designing schema"
+      },
+      {
+        "text": "What is the naming convention for GitHub branches in this repository?",
+        "suggestion": "Check recent branches in repository or CONTRIBUTING guidelines"
+      },
+      {
+        "text": "Should epistemic mandates be formatted as explicit rules or narrative descriptions?",
+        "suggestion": "Clarify with human or use existing document's voice style as guide"
+      }
+    ]
+  },
+  "options": {
+    "extractImplicit": true,
+    "mapDependencies": true
+  },
+  "folder_name": "2604090205--2662148c-d739-4b31-b348-81b7586b1219"
+}
