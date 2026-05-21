@@ -39,6 +39,11 @@
 - **Link**: [llms-delayed-resolution-principle.md](./llms-delayed-resolution-principle.md)
 - **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt
 
+## Deep Research Foundations — Session Close Protocol
+> When a repo has a derived `deep-research-foundations` skill and a `./foundations/` tree, session close must compare implemented decisions against academic foundation fields, update `source-ledger.yaml` provenance if traceable, then make a scoped issue-referenced commit or state the blocker.
+- **Link**: [llms-deep-research-foundations-session-close.md](./llms-deep-research-foundations-session-close.md)
+- **Related**: llms-rise-framework.txt, llms-narrative-beats.txt
+
 ## Digital Decision Making Framework
 > A guide for implementing the TandT (Twos and Threes) digital decision-making methodology to transform subjective analog thinking into structured binary evaluations.
 - **Link**: [llms-digital-decision-making.md](./llms-digital-decision-making.md)
