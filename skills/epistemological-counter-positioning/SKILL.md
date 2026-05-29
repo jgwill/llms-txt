@@ -91,11 +91,13 @@ Don't prematurely resolve disagreement. Hold the tension:
 
 ## LLM Collaboration Protocol
 
-1. **Load counter-articles** before analyzing academic sources
-2. **Bias-check every source** against known patterns
-3. **Craft counter-position** using appropriate article type
-4. **Fork new counter-article** when encountering undocumented bias
-5. **Revise** with counter-articles present to catch reproduced bias
+1. **Load incompatible sources registry** (`counter_articles/incompatible-sources/README.md`) before analyzing academic sources
+2. **Load counter-articles** before analyzing academic sources
+3. **Bias-check every source** against known patterns and registered incompatible sources
+4. **Craft counter-position** using appropriate article type
+5. **Fork new counter-article** when encountering undocumented bias
+6. **Register new incompatible sources** when bias patterns are confirmed
+7. **Revise** with counter-articles and registry present to catch reproduced bias
 
 ## Counter-Article Template
 
@@ -116,3 +118,5 @@ Don't prematurely resolve disagreement. Hold the tension:
 - **Creative Orientation** (`/creative-orientation`): Advancing vs. oscillating patterns as evaluation framework
 - **Relational Research** (`/relational-research`): Indigenous epistemology provides the paradigmatic alternative
 - **Delayed Resolution** (`/delayed-resolution`): Hold genuine disagreement rather than false synthesis
+- **Incompatible Sources Registry** (`counter_articles/incompatible-sources/`): Pre-loaded reference of sources with known paradigmatic incompatibilities; check before citing, update when new incompatibilities are identified
+- **Deep Research Foundations** (`/deep-research-foundations`): Source compatibility assessment phase (Phase 3.5) integrates with this protocol during research workflows

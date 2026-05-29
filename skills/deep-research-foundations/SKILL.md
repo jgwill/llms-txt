@@ -184,6 +184,39 @@ SOURCE QUALITY: Prefer academic papers, standards, official docs, primary source
 OUTPUT: canonical concepts, key findings, cautions, engineering implications, provenance notes, and sources with URLs/DOIs.
 ```
 
+### Phase 3.5 — Source Compatibility Assessment
+
+Before synthesizing, assess each source for paradigmatic compatibility:
+
+1. **Check the Incompatible Sources Registry**
+   (`counter_articles/incompatible-sources/README.md`)
+   - If a source is registered, flag it with its incompatibility type
+   - Note the bias injection points for that source
+   - Cite the source only with explicit paradigmatic contextualization
+
+2. **Scan unregistered sources for compatibility signals**
+   - Does the source use problem-solving orientation language? ("solve", "fix", "eliminate deficiency", "bridge gap")
+   - Does it assume extractive epistemology? (knowledge as neutral resource, transferable without transformation)
+   - Does it embed autonomous agent ontology? (intelligence in discrete individuals, not relational webs)
+   - Does it assume unmarked Western universalism? (framework presented as paradigm-neutral default)
+
+3. **Record compatibility in source-ledger.yaml**
+   Add a `paradigm_compatibility` field to each source entry:
+
+   ```yaml
+   sources:
+     - id: <short-id>
+       field: <field>
+       title: <title>
+       url: <url>
+       paradigm_compatibility: compatible | incompatible | mixed
+       incompatibility_notes: "<if incompatible or mixed, what specifically>"
+       registered_incompatible: true|false
+   ```
+
+4. **Propose new registry entries**
+   If an unregistered source shows clear incompatibility, note it for potential registration in the Incompatible Sources Registry.
+
 ### Phase 4 — Gap Analysis
 
 After all lanes return:
@@ -191,6 +224,7 @@ After all lanes return:
 - identify contradictions
 - identify unsupported claims
 - identify missing fields or weak evidence
+- identify sources with paradigmatic incompatibility that may distort synthesis
 - run targeted follow-up research where risk is high
 
 ### Phase 5 — Synthesis

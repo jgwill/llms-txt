@@ -116,6 +116,10 @@ Research that builds new capacity with each iteration, rather than oscillating b
 - `llms-creative-orientation.txt` — Positions creative vs. problem-solving paradigm
 - `llms-inquiry-*.md` — Positions ceremonial research from relational standpoint
 - `llms-structural-thinking*.txt` — Positions structural dynamics as causal framework
+- `agent-loop-architectures-counter-article.md` — Positions creative orientation in AI orchestration against problem-solving agent loops
+
+### Incompatible Sources Registry
+- **[Incompatible Sources](incompatible-sources/README.md)** — Curated index of sources with paradigmatic incompatibilities, with bias injection points and counter-positions
 
 ### Seminal Academic Sources
 - **Wilson** (2008): Chapter 1 positions Indigenous research paradigm against Western scientific paradigm
