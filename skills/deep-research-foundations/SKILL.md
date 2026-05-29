@@ -217,6 +217,30 @@ Before synthesizing, assess each source for paradigmatic compatibility:
 4. **Propose new registry entries**
    If an unregistered source shows clear incompatibility, note it for potential registration in the Incompatible Sources Registry.
 
+5. **Run the full checklist when signals are ambiguous**
+   Use [`llms-pollution-detection-checklist.md`](../../llms-pollution-detection-checklist.md) for structured scoring when quick detection signals are inconclusive.
+
+### Phase 3.6 — Compatibility Handoff Protocol
+
+Based on the compatibility assessment from Phase 3.5, follow the appropriate path:
+
+| Rating | Action |
+|---|---|
+| `compatible` | Proceed to synthesis (Phase 5) normally. No special handling required. |
+| `mixed` | Cite with explicit paradigmatic contextualization. Extract specific compatible claims with scoped citations. Name the incompatible layer explicitly. See [Mixed Compatibility Protocol](../../llms-pollution-detection-checklist.md#mixed-compatibility-protocol). |
+| `incompatible` | Trigger the [epistemological-counter-positioning](../epistemological-counter-positioning/SKILL.md) workflow. Choose counter-article type using the mapping below. Register the source in the [Incompatible Sources Registry](../../counter_articles/incompatible-sources/README.md) before synthesizing. |
+| Unregistered source scoring ≥ 9 on checklist | Propose registry entry before synthesizing. Document the detection signals in the source ledger. |
+
+**Incompatibility Type → Counter-Article Type Mapping:**
+
+| Incompatibility Type | Recommended Article Type | Reasoning |
+|---|---|---|
+| Problem-solving orientation | Type 4: Methodological Schism | Core assumption incompatibility — the schism is at the methodological foundation |
+| Extractive epistemology | Type 2: Critical Review or Type 3: Genealogical Critique | Systemic institutional origin requires either direct paradigm mapping or historical power analysis |
+| Autonomous agent ontology | Type 2: Critical Review | Requires full paradigm mapping (ontology → epistemology → methodology → consequences) |
+| Linear progress methodology | Type 3: Genealogical Critique | Historical/power analysis of how linearity became naturalized |
+| Unmarked Western universalism | Type 5: Epistemic Injustice or Type 6: Positioned Response | Silencing mechanism requiring either injustice analysis or standpoint foregrounding |
+
 ### Phase 4 — Gap Analysis
 
 After all lanes return:

@@ -42,7 +42,7 @@ All templates build on these frameworks from `llms-txt`:
 ### Academic Positioning Grounding
 - **[Academic Counter-Positioning](../docs/academic-positioning.md)** — Full theory of counter-article methodology
 - **[Indigenous Research Paradigm](../docs/indigenous-research-paradigm.md)** — Ceremonial research protocols
-- **[Epistemological Counter-Positioning Skill](../.github/skills/epistemological-counter-positioning/README.md)** — Operational implementation
+- **[Epistemological Counter-Positioning Skill](../skills/epistemological-counter-positioning/SKILL.md)** — Operational implementation
 
 ### Paradigm Foundations
 - Wilson, Shawn. (2008). *Research Is Ceremony*. Decolonial positioning of Indigenous research.
@@ -201,7 +201,7 @@ To propose a new counter-position template:
 
 ## Related Resources
 
-- **[.github/skills/epistemological-counter-positioning/](../.github/skills/epistemological-counter-positioning/)** — Operational AI skill for counter-position work
+- **[skills/epistemological-counter-positioning/](../skills/epistemological-counter-positioning/)** — Operational AI skill for counter-position work
 - **[Academic Positioning Documentation](../docs/academic-positioning.md)** — Full theoretical framework
 - **[Indigenous Research Paradigm](../docs/indigenous-research-paradigm.md)** — Ceremonial research grounding
 - **[KINSHIP.md](../KINSHIP.md)** — Relational accountability of this repository

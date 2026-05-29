@@ -92,17 +92,33 @@ Don't prematurely resolve disagreement. Hold the tension:
 ## LLM Collaboration Protocol
 
 1. **Load incompatible sources registry** (`counter_articles/incompatible-sources/README.md`) before analyzing academic sources
+   - **Note**: The registry is growing and does not yet cover all incompatible sources. Pattern-matching against unregistered sources using the [detection checklist](../../llms-pollution-detection-checklist.md) is as important as checking registered entries.
 2. **Load counter-articles** before analyzing academic sources
-3. **Bias-check every source** against known patterns and registered incompatible sources
-4. **Craft counter-position** using appropriate article type
-5. **Fork new counter-article** when encountering undocumented bias
-6. **Register new incompatible sources** when bias patterns are confirmed
-7. **Revise** with counter-articles and registry present to catch reproduced bias
+3. **Bias-check every source** against known patterns, registered incompatible sources, and the detection checklist
+4. **Select article type** using the incompatibility-to-article-type mapping below
+5. **Craft counter-position** using appropriate article type
+6. **Fork new counter-article** when encountering undocumented bias
+7. **Register new incompatible sources** when bias patterns are confirmed
+8. **Revise** with counter-articles and registry present to catch reproduced bias
+
+## Incompatibility Type → Counter-Article Type Mapping
+
+When a source is assessed as `incompatible` or `mixed`, use this mapping to select the appropriate counter-article type:
+
+| Incompatibility Type | Recommended Article Type | Reasoning |
+|---|---|---|
+| Problem-solving orientation | Type 4: Methodological Schism | Core assumption incompatibility at the methodological foundation |
+| Extractive epistemology | Type 2: Critical Review or Type 3: Genealogical Critique | Systemic institutional origin; requires paradigm mapping or historical analysis |
+| Autonomous agent ontology | Type 2: Critical Review | Requires full paradigm mapping across all four pillars |
+| Linear progress methodology | Type 3: Genealogical Critique | Historical/power analysis of naturalized linearity |
+| Unmarked Western universalism | Type 5: Epistemic Injustice or Type 6: Positioned Response | Silencing mechanism requiring injustice analysis or standpoint foregrounding |
+| Multiple types present | Type 2: Critical Review (comprehensive) or Type 4: Methodological Schism (if the divergence is fundamental) | When multiple incompatibilities co-occur, systematic treatment is needed |
 
 ## Counter-Article Template
 
 ```markdown
 # Source Analysis: [Citation]
+## Pollution Detection Score: [score] / Rating: [compatible|mixed|incompatible]
 ## Problem Identified
 ## Epistemological Assumption
 ## Ontological Assumption
@@ -119,4 +135,5 @@ Don't prematurely resolve disagreement. Hold the tension:
 - **Relational Research** (`/relational-research`): Indigenous epistemology provides the paradigmatic alternative
 - **Delayed Resolution** (`/delayed-resolution`): Hold genuine disagreement rather than false synthesis
 - **Incompatible Sources Registry** (`counter_articles/incompatible-sources/`): Pre-loaded reference of sources with known paradigmatic incompatibilities; check before citing, update when new incompatibilities are identified
-- **Deep Research Foundations** (`/deep-research-foundations`): Source compatibility assessment phase (Phase 3.5) integrates with this protocol during research workflows
+- **Deep Research Foundations** (`/deep-research-foundations`): Source compatibility assessment (Phase 3.5) and handoff protocol (Phase 3.6) integrate with this protocol during research workflows
+- **Pollution Detection Checklist** (`llms-pollution-detection-checklist.md`): Structured scoring checklist for paradigm compatibility assessment with severity levels and contextual discrimination guidance
