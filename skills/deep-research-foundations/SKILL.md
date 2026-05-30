@@ -189,7 +189,7 @@ OUTPUT: canonical concepts, key findings, cautions, engineering implications, pr
 Before synthesizing, assess each source for paradigmatic compatibility:
 
 1. **Check the Incompatible Sources Registry**
-   (`counter_articles/incompatible-sources/README.md`)
+   ([counter_articles/incompatible-sources/README.md](../../counter_articles/incompatible-sources/README.md))
    - If a source is registered, flag it with its incompatibility type
    - Note the bias injection points for that source
    - Cite the source only with explicit paradigmatic contextualization
@@ -209,9 +209,9 @@ Before synthesizing, assess each source for paradigmatic compatibility:
        field: <field>
        title: <title>
        url: <url>
-       paradigm_compatibility: compatible | incompatible | mixed
+       paradigm_compatibility: <compatible|incompatible|mixed>
        incompatibility_notes: "<if incompatible or mixed, what specifically>"
-       registered_incompatible: true|false
+       registered_incompatible: <true|false>
    ```
 
 4. **Propose new registry entries**

@@ -96,12 +96,12 @@
 - **Related**: llms-pollution-detection-checklist.md, llms-pollution-critique-arxiv-2311.01937v1.md, counter_articles/incompatible-sources/README.md, counter_articles/agent-loop-architectures-counter-article.md
 
 ## Paradigm Pollution Detection Checklist
-> A structured, operational checklist for assessing whether a source embeds paradigmatic assumptions incompatible with creative-orientation, relational, and ceremonial frameworks. Produces severity scores and paradigm_compatibility ratings. Includes contextual discrimination guidance for when problem-solving IS appropriate, and a worked example using arXiv:2311.01937v1.
+> A structured, operational checklist for assessing whether a source embeds paradigmatic assumptions incompatible with creative-orientation, relational, and ceremonial frameworks. Anchored in the core insight that "Creative Problem Solving" is a fiction — the compound term conflates two structurally incompatible orientations. Produces severity scores and paradigm_compatibility ratings. Includes contextual discrimination guidance (recognizing that over-reacting against problem-solving is itself problem-solving), and a worked example using arXiv:2311.01937v1.
 - **Link**: [llms-pollution-detection-checklist.md](./llms-pollution-detection-checklist.md)
 - **Related**: llms-pollution-detection.md, counter_articles/incompatible-sources/README.md, llms-creative-orientation.txt, llms-epistemological-counter-article-protocol.md
 
 ## Incompatible Sources Registry
-> A curated index of academic and industry sources whose epistemological, ontological, or methodological foundations are fundamentally incompatible with the creative-orientation, relational, and ceremonial paradigms. Makes paradigmatic divergence visible and explicit.
+> A curated index of academic and industry sources whose epistemological, ontological, or methodological foundations are fundamentally incompatible with the creative-orientation, relational, and ceremonial paradigms. Key paradigmatic fiction identified: "Creative Problem Solving" conflates creating and reacting into one category, erasing creation as a distinct structural orientation. Makes paradigmatic divergence visible and explicit.
 - **Link**: [counter_articles/incompatible-sources/README.md](./counter_articles/incompatible-sources/README.md)
 - **Related**: llms-pollution-detection.md, llms-pollution-critique-arxiv-2311.01937v1.md, llms-epistemological-counter-article-protocol.md
 

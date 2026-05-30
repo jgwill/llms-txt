@@ -4,6 +4,16 @@
 
 ---
 
+## Core Insight: "Creative Problem Solving" Is Fiction
+
+The compound term "creative problem-solving" conflates two structurally incompatible orientations — **creating** (bringing a desired outcome into being from structural tension) and **problem-solving** (identifying and eliminating what is wrong). They are not different techniques for the same work; they produce fundamentally different structural patterns: advancing vs. oscillating.
+
+When a source treats "creative problem-solving" as an unproblematic category, it has already made a paradigmatic choice that erases creation as a distinct orientation. This checklist makes that choice visible.
+
+**Important**: Recognizing this fiction does not mean attacking or reacting against problem-solving — that reaction is itself problem-solving (oscillation). The response is generative, not reactive: name the paradigmatic choice, position accordingly, and create from structural tension. Over-vigilance against problem-solving language is itself a problem-solving pattern. The goal is accurate discernment, not policing.
+
+---
+
 ## How to Use This Checklist
 
 1. **Read the source's abstract and methodology sections** first (these are where paradigmatic assumptions are most visible).
@@ -110,12 +120,12 @@ sources:
     field: <field>
     title: <title>
     url: <url>
-    paradigm_compatibility: compatible | mixed | incompatible
+    paradigm_compatibility: <compatible|mixed|incompatible>
     pollution_score: <number>
     incompatibility_types:
       - <type-slug if any signals present>
     incompatibility_notes: "<specific signals found>"
-    registered_incompatible: true|false
+    registered_incompatible: <true|false>
 ```
 
 ---

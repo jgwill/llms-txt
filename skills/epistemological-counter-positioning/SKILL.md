@@ -91,7 +91,7 @@ Don't prematurely resolve disagreement. Hold the tension:
 
 ## LLM Collaboration Protocol
 
-1. **Load incompatible sources registry** (`counter_articles/incompatible-sources/README.md`) before analyzing academic sources
+1. **Load incompatible sources registry** ([counter_articles/incompatible-sources/README.md](../../counter_articles/incompatible-sources/README.md)) before analyzing academic sources
    - **Note**: The registry is growing and does not yet cover all incompatible sources. Pattern-matching against unregistered sources using the [detection checklist](../../llms-pollution-detection-checklist.md) is as important as checking registered entries.
 2. **Load counter-articles** before analyzing academic sources
 3. **Bias-check every source** against known patterns, registered incompatible sources, and the detection checklist
@@ -134,6 +134,6 @@ When a source is assessed as `incompatible` or `mixed`, use this mapping to sele
 - **Creative Orientation** (`/creative-orientation`): Advancing vs. oscillating patterns as evaluation framework
 - **Relational Research** (`/relational-research`): Indigenous epistemology provides the paradigmatic alternative
 - **Delayed Resolution** (`/delayed-resolution`): Hold genuine disagreement rather than false synthesis
-- **Incompatible Sources Registry** (`counter_articles/incompatible-sources/`): Pre-loaded reference of sources with known paradigmatic incompatibilities; check before citing, update when new incompatibilities are identified
+- **Incompatible Sources Registry** (`/incompatible-sources-registry`): Pre-loaded reference of sources with known paradigmatic incompatibilities; check before citing, update when new incompatibilities are identified
 - **Deep Research Foundations** (`/deep-research-foundations`): Source compatibility assessment (Phase 3.5) and handoff protocol (Phase 3.6) integrate with this protocol during research workflows
-- **Pollution Detection Checklist** (`llms-pollution-detection-checklist.md`): Structured scoring checklist for paradigm compatibility assessment with severity levels and contextual discrimination guidance
+- **Pollution Detection Checklist** (`/pollution-detection-checklist`): Structured scoring checklist for paradigm compatibility assessment with severity levels and contextual discrimination guidance
