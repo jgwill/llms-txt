@@ -86,7 +86,7 @@ Methodology: [Process they use]
 - How does this bias reproduce through academic citations?
 
 **Pollution Detection Reference**:
-Run source through `llms-pollution-detection-checklist.md` and document results here.
+Run source through [`llms-pollution-detection-checklist.md`](../llms-pollution-detection-checklist.md) and document results here. Record the total score and `paradigm_compatibility` rating.
 
 **Example Bias Exposure**:
 > "The bias isn't personal—it's structural. Smith's 'Creative Problem-Solving' terminology (2023) traces directly to mid-20th century management cybernetics where systems were problems for expert cognition to solve. Academic publishing rewards this framing: problem identification → methodology → solution → publication. Journals in Smith's domain have cited this paper 847 times, reproducing its Cartesian assumptions without examination. Each citation spreads discrete-agent ontology into new domains, naturalizing a framework that erases relational knowing. The bias is ecological, not individual."

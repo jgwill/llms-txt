@@ -42,7 +42,7 @@ All templates build on these frameworks from `llms-txt`:
 ### Academic Positioning Grounding
 - **[Academic Counter-Positioning](../docs/academic-positioning.md)** — Full theory of counter-article methodology
 - **[Indigenous Research Paradigm](../docs/indigenous-research-paradigm.md)** — Ceremonial research protocols
-- **[Epistemological Counter-Positioning Skill](../.github/skills/epistemological-counter-positioning/README.md)** — Operational implementation
+- **[Epistemological Counter-Positioning Skill](../skills/epistemological-counter-positioning/SKILL.md)** — Operational implementation
 
 ### Paradigm Foundations
 - Wilson, Shawn. (2008). *Research Is Ceremony*. Decolonial positioning of Indigenous research.
@@ -116,6 +116,10 @@ Research that builds new capacity with each iteration, rather than oscillating b
 - `llms-creative-orientation.txt` — Positions creative vs. problem-solving paradigm
 - `llms-inquiry-*.md` — Positions ceremonial research from relational standpoint
 - `llms-structural-thinking*.txt` — Positions structural dynamics as causal framework
+- `agent-loop-architectures-counter-article.md` — Positions creative orientation in AI orchestration against problem-solving agent loops
+
+### Incompatible Sources Registry
+- **[Incompatible Sources](incompatible-sources/README.md)** — Curated index of sources with paradigmatic incompatibilities, with bias injection points and counter-positions
 
 ### Seminal Academic Sources
 - **Wilson** (2008): Chapter 1 positions Indigenous research paradigm against Western scientific paradigm
@@ -197,7 +201,7 @@ To propose a new counter-position template:
 
 ## Related Resources
 
-- **[.github/skills/epistemological-counter-positioning/](../.github/skills/epistemological-counter-positioning/)** — Operational AI skill for counter-position work
+- **[skills/epistemological-counter-positioning/](../skills/epistemological-counter-positioning/)** — Operational AI skill for counter-position work
 - **[Academic Positioning Documentation](../docs/academic-positioning.md)** — Full theoretical framework
 - **[Indigenous Research Paradigm](../docs/indigenous-research-paradigm.md)** — Ceremonial research grounding
 - **[KINSHIP.md](../KINSHIP.md)** — Relational accountability of this repository

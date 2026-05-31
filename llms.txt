@@ -91,9 +91,24 @@
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-indigenous-paradigm-v2.0, llms-managerial-moment-of-truth.md, llms-delayed-resolution-principle.md, llms-structural-tension-charts.txt, llms-pollution-detection.md
 
 ## Academic Pollution Detection
-> A short note identifying `llms-pollution-critique-arxiv-2311.01937v1.md` as an example of a new type of critique paper.
+> A short note identifying `llms-pollution-critique-arxiv-2311.01937v1.md` as an example of a new type of critique paper. Includes references to the Incompatible Sources Registry and the Agent Loop Architectures counter-article.
 - **Link**: [llms-pollution-detection.md](./llms-pollution-detection.md)
-- **Related**: llms-pollution-critique-arxiv-2311.01937v1.md
+- **Related**: llms-pollution-detection-checklist.md, llms-pollution-critique-arxiv-2311.01937v1.md, counter_articles/incompatible-sources/README.md, counter_articles/agent-loop-architectures-counter-article.md
+
+## Paradigm Pollution Detection Checklist
+> A structured, operational checklist for assessing whether a source embeds paradigmatic assumptions incompatible with creative-orientation, relational, and ceremonial frameworks. Anchored in the core insight that "Creative Problem Solving" is a fiction — the compound term conflates two structurally incompatible orientations. Produces severity scores and paradigm_compatibility ratings. Includes contextual discrimination guidance (recognizing that over-reacting against problem-solving is itself problem-solving), and a worked example using arXiv:2311.01937v1.
+- **Link**: [llms-pollution-detection-checklist.md](./llms-pollution-detection-checklist.md)
+- **Related**: llms-pollution-detection.md, counter_articles/incompatible-sources/README.md, llms-creative-orientation.txt, llms-epistemological-counter-article-protocol.md
+
+## Incompatible Sources Registry
+> A curated index of academic and industry sources whose epistemological, ontological, or methodological foundations are fundamentally incompatible with the creative-orientation, relational, and ceremonial paradigms. Key paradigmatic fiction identified: "Creative Problem Solving" conflates creating and reacting into one category, erasing creation as a distinct structural orientation. Makes paradigmatic divergence visible and explicit.
+- **Link**: [counter_articles/incompatible-sources/README.md](./counter_articles/incompatible-sources/README.md)
+- **Related**: llms-pollution-detection.md, llms-pollution-critique-arxiv-2311.01937v1.md, llms-epistemological-counter-article-protocol.md
+
+## Agent Loop Architectures: Problem-Solving vs. Creative Orientation
+> A paradigmatic analysis of AI agent orchestration engines, examining how structural assumptions in agent loop design determine whether systems produce oscillating or advancing patterns. Positions creative orientation as a generative alternative.
+- **Link**: [counter_articles/agent-loop-architectures-counter-article.md](./counter_articles/agent-loop-architectures-counter-article.md)
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-pde.txt, llms-ceremony-pipeline.md, llms-pollution-detection.md
 
 
 ## RISE Framework
