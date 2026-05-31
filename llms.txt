@@ -143,7 +143,7 @@
 - **Related**: llms-medicine-wheel-packages.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
 
 ## Prompt Decomposition Engine (PDE)
-> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions. Includes implementation architectures (lean CLI and 5-layer MCP), knowledge base enrichment via qmd, and Structural Thinking Four Questions generation from decomposition ambiguities.
+> Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions. Includes current `miaco decompose run` strategy guidance (`standard`, `iterative-refinement`, `adversarial-consensus`), mcp-pde compatibility boundaries, knowledge base enrichment via qmd, and Structural Thinking Four Questions generation from decomposition ambiguities.
 - **Link**: [llms-pde.txt](./llms-pde.txt)
 - **Related**: llms-pde-structural-thinking.md, llms-st-four-questions.md, llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-ceremony-pipeline.md, llms-polyphonic-design-review.md, llms-inquiry-routing.md
 

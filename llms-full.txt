@@ -137,7 +137,7 @@
 - **Related**: llms-medicine-wheel-packages.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
 
 ## Prompt Decomposition Engine (PDE)
-> PDE transforms complex prompts into structured decompositions: primary and secondary intents (explicit and implicit), Four Directions mapping (East=vision, South=analysis, West=validation, North=action), dependency-ordered action stacks, and named ambiguities held as productive tension. PDE is itself an EAST practice — intention exploration before action, honoring delayed resolution. Decompositions are stored as paired JSON and Markdown files in .pde/ for human annotation and machine processing.
+> PDE transforms complex prompts into structured decompositions: primary and secondary intents (explicit and implicit), Four Directions mapping (East=vision, South=analysis, West=validation, North=action), dependency-ordered action stacks, and named ambiguities held as productive tension. Current guidance prefers `miaco decompose run` for strategy-aware work, especially `iterative-refinement` for layered Intent Analyst prompts; `standard` remains the compatibility baseline, and `adversarial-consensus` is treated as experimental until parser behavior is verified. mcp-pde remains the stable MCP-standard lineage while strategy-aware MCP support is future work.
 - **Link**: [llms-pde.txt](./llms-pde.txt)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md
 

@@ -6,7 +6,7 @@
 
 ## Skills Overview
 
-The repository contains eleven AI companion skills, each grounded in one or more llms-txt guidance documents:
+The repository contains AI companion skills, each grounded in one or more llms-txt guidance documents:
 
 | Skill | Guidance Source | Domain |
 |-------|----------------|--------|
@@ -21,6 +21,7 @@ The repository contains eleven AI companion skills, each grounded in one or more
 | `epistemological-counter-positioning` | [llms-epistemological-counter-article-protocol.md](../llms-epistemological-counter-article-protocol.md) | Academic deep disagreement |
 | `delayed-resolution` | [llms-delayed-resolution-principle.md](../llms-delayed-resolution-principle.md) | Holding tension without premature collapse |
 | `langfuse-tracing` | [llms-coaiapy-langfuse-tracing-best-practices.md](../llms-coaiapy-langfuse-tracing-best-practices.md) | Observability as narrative craft |
+| `intent-analyst` | [llms-pde.txt](../llms-pde.txt) | Strategy-aware PDE reading before execution |
 
 ---
 
@@ -46,6 +47,7 @@ Skills that create tools honoring relational accountability:
 - **performance-truth** — truth as a verb in relational accountability
 - **digital-decision-making** — clarity through binary evaluation
 - **langfuse-tracing** — observability as relational record-keeping
+- **intent-analyst** — strategy-aware PDE reading before execution
 
 ---
 

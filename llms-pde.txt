@@ -2,10 +2,10 @@
 
 > Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents, mapping dependencies through Four Directions, and holding ambiguities as productive tension.
 
-**Version**: 0.2
-**Document ID**: llms-pde-v0.2
-**Last Updated**: 2025-07-14
-**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, and implementation in miaco (lean CLI) and miadi-code (5-layer MCP server).
+**Version**: 0.3
+**Document ID**: llms-pde-v0.3
+**Last Updated**: 2026-05-31
+**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, the current `miaco decompose run --help` surface, and implementation in miaco (lean CLI) and mcp-pde / miadi-code (MCP lineage).
 
 ---
 
@@ -143,13 +143,71 @@ Two lineages implement PDE with different trade-offs:
 
 ### Lean Lineage (miaco)
 
-Single-file implementation (`decompose.ts`, ~380 LOC). Multi-engine dispatch shells out to `gemini`, `claude`, or `copilot` CLI binaries. Flat canonical schema matching this document's JSON structure. Parent-child PDE nesting. Auto-fallback to copilot if primary engine fails. Cost guard: MIAC-18 prevents premium models (opus/sonnet) on copilot engine.
+Single-file implementation (`decompose.ts`) with multi-engine dispatch, strategy selection, parent-child PDE nesting, engine fallback, and `.pde/` persistence. For current agent work, **prefer `miaco decompose run`** as the operational entrypoint because it exposes the newest strategy and provenance controls.
 
 ```bash
-miaco decompose run -p "<prompt>" -e copilot
+miaco decompose run -p "<prompt>" -e copilot -w .
 miaco qmd-inquiry-decompose run --pde <uuid>   # enrich with knowledge base
 miaco pde-to-st run --pde <uuid>               # generate Four Questions
 ```
+
+Current `miaco decompose run` options include:
+
+```bash
+miaco decompose run \
+  --prompt "<text>" \
+  --engine copilot \
+  --strategy standard \
+  --workdir . \
+  --format text
+```
+
+Important controls:
+
+| Option | Use |
+|--------|-----|
+| `-p, --prompt <text>` / `-P, --prompt-file <path>` | Provide the source prompt. `@path` is also supported with `--prompt`. |
+| `-e, --engine <engine>` | Engine: `copilot`, `claude`, `gemini`, `codex`, `pva`, or `hermes`. |
+| `-m, --model <model>` | Override the selected engine model. |
+| `--fallback-provider <provider>` | Root-only fallback after Copilot rate limits: `auto`, `none`, `codex`, `claude`, or a comma-separated chain. |
+| `-s, --strategy <strategy>` | Decomposition strategy: `standard`, `iterative-refinement`, or `adversarial-consensus`. |
+| `--add-dir <paths...>` | Add directories to the engine workspace and persist them in `meta.json`. |
+| `--parent <uuid>` / `--parent-path <path>` | Attach a decomposition to an existing PDE lineage. |
+| `--child-kind <kind>` | Relation to parent: `milestone`, `issue`, `sub-task`, `follow-up`, `refinement`, or `sibling`. |
+| `--meta <json>` | Persist provenance under `meta.json`. |
+| `--session-id <id>` | Persist a known engine session id for the PDE tree. |
+| `--uuid <uuid>` | Supply a caller-owned UUID. |
+| `--json` / `--format json` | Print the stored record for automation. |
+
+### Strategy Selection
+
+| Strategy | Use When | Current Guidance |
+|----------|----------|------------------|
+| `standard` | You need the stable baseline, compatibility with existing MCP flows, or a quick first-pass decomposition. | Default. Use for mcp-pde parity and low-risk decomposition. |
+| `iterative-refinement` | The prompt is layered, lineage-heavy, ambiguous, or likely to benefit from multiple passes before action. | Recommended for Intent Analyst work and recursive PDE review. |
+| `adversarial-consensus` | The decomposition needs explicit challenge, contrast, or competing readings. | Experimental. Use only when the local implementation is known to parse the strategy output cleanly. |
+
+### Intent Analyst Use
+
+An **Intent Analyst** is a PDE-facing role that reads a prompt as a structural-tension artifact before execution. It does not replace the implementer. It clarifies:
+
+1. what the primary creative intent is;
+2. which secondary intents are explicit or inferred;
+3. where ambiguity should stay held rather than prematurely resolved;
+4. whether `standard`, `iterative-refinement`, or `adversarial-consensus` best fits the prompt;
+5. what child PDEs, issues, or refinement passes should be created.
+
+For this role, start with:
+
+```bash
+miaco decompose run \
+  --prompt-file prompt.md \
+  --engine copilot \
+  --strategy iterative-refinement \
+  --workdir .
+```
+
+If the work is a child of an existing decomposition, add `--parent <uuid>` or `--parent-path <path>` with the appropriate `--child-kind`.
 
 ### Deep Lineage (miadi-code)
 
@@ -163,7 +221,7 @@ miaco pde-to-st run --pde <uuid>               # generate Four Questions
 
 Dedicated MCP server (`mcp-pde-server.ts`) exposes 5 tools, 2 resources, 1 prompt. Webhook integration sends decompositions to the Miadi event hub.
 
-### MCP Tools (miadi-code)
+### MCP Tools (mcp-pde / miadi-code)
 
 | Tool | Purpose |
 |------|---------|  
@@ -173,19 +231,24 @@ Dedicated MCP server (`mcp-pde-server.ts`) exposes 5 tools, 2 resources, 1 promp
 | `pde_list` | List stored decompositions |
 | `pde_export_markdown` | Export as git-diffable markdown |
 
+**Current recommendation**: mcp-pde remains the stable MCP-standard decomposition path. Strategy-aware decomposition may be added to `jgwill/mcp-pde`, but until that support is present and verified, use `miaco decompose run --strategy ...` for `iterative-refinement` and `adversarial-consensus` work.
+
 ---
 
 ## Engine Configuration
 
-PDE supports three engines with different cost/quality profiles:
+The current miaco PDE surface supports several engines with different cost/quality profiles:
 
 | Engine | Default Model | Binary | Use Case |
 |--------|--------------|--------|----------|
 | copilot | gpt-5-mini | `copilot` | Default — free tier, fast, good for most decompositions |
-| claude | sonnet | `claude` | Higher quality for complex prompts |
-| gemini | gemini-2.5-pro | `gemini` | Alternative, good semantic understanding |
+| claude | engine default / override | `claude` | Higher quality for complex prompts |
+| gemini | engine default / override | `gemini` | Alternative semantic reading |
+| codex | engine default / override | `codex` | Codex-aligned decomposition workflows |
+| pva | provider/model override | PVA adapter | Provider-routed decomposition via `--pva-provider`, `--pva-model`, and `--pva-thinking` |
+| hermes | provider passthrough | `hermes` | Hermes Agent workflows via `--hermes-provider` |
 
-**Fallback**: If the primary engine fails, PDE falls back to copilot automatically.
+**Fallback**: use `--fallback-provider auto`, `none`, `codex`, `claude`, or a comma-separated chain for root-only fallback after Copilot rate limits.
 **Cost guard (MIAC-18)**: Using opus or sonnet models with copilot engine is blocked to prevent unnecessary premium token consumption.
 
 ---
@@ -195,6 +258,7 @@ PDE supports three engines with different cost/quality profiles:
 * Transform PDE into "Structural Tension Chart" (Strategic Action Planning) — implemented in `miaco stc`
 * Inquiry routing from PDE decompositions via `qmd search`/`qmd query` — implemented in `miaco qmd-inquiry-decompose`
 * Four Questions generation from PDE ambiguities — implemented in `miaco pde-to-st`
+* Strategy-aware mcp-pde support for `iterative-refinement` and `adversarial-consensus`
 * Miadi MCP server integration with Redis storage and web UI
 
 ---

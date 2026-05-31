@@ -46,6 +46,28 @@ Places where the prompt is vague or uses uncertain language — surfaced explici
 
 ---
 
+## Recommended CLI Path
+
+For current agent work, use `miaco decompose run` as the main operational entrypoint:
+
+```bash
+miaco decompose run -P prompt.md -e copilot -s iterative-refinement -w .
+```
+
+Use `standard` when you need the stable baseline or compatibility with existing MCP decomposition flows. Use `iterative-refinement` when the prompt is layered, recursive, or likely to benefit from multiple readings before action. Treat `adversarial-consensus` as experimental until the local parser and downstream artifact shape are verified.
+
+The current MCP path (`mcp-pde`, repo `jgwill/mcp-pde`) remains the standard decomposition interface. Strategy-aware MCP support is a likely future direction; until it exists, prefer `miaco decompose run --strategy ...` for strategy selection.
+
+---
+
+## Intent Analyst Role
+
+The Intent Analyst is a PDE-facing role for reading a prompt before execution. Its work is to name the primary creative intent, surface secondary explicit and implicit intents, select the decomposition strategy, and decide whether a parent, child, refinement, or sibling PDE should be created.
+
+The role is especially useful when a prompt contains phrases like "probably," "maybe," "I assume," "what will become," or references to prior sessions. Those are signals that `iterative-refinement` may preserve more intent than a single standard pass.
+
+---
+
 ## PDE and Delayed Resolution
 
 PDE embodies the [delayed resolution principle](../llms-delayed-resolution-principle.md): ambiguities are **named and held** rather than silently resolved. This prevents:
@@ -71,3 +93,4 @@ PDE embodies the [delayed resolution principle](../llms-delayed-resolution-princ
 - [llms-pde.txt](../llms-pde.txt) — PDE reference (llms-txt format)
 - [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) — npm package
 - [.pde/](../.pde/) — stored decompositions in this repository
+- [skills/intent-analyst](../skills/intent-analyst/) — operational skill for strategy-aware PDE reading

@@ -36,6 +36,7 @@ Each skill is designed to be invoked within AI-assisted workflows while maintain
 | **[digital-decision-making](digital-decision-making/)** | TandT binary evaluation for clarity and decisiveness | [llms-digital-decision-making.md](../../llms-digital-decision-making.md) | Active |
 | **[performance-truth](performance-truth/)** | Managerial Moment of Truth (MMOT) for relational accountability | [llms-managerial-moment-of-truth.md](../../llms-managerial-moment-of-truth.md) | Active |
 | **[kinship-hub](kinship-hub/)** | Treat software projects as beings in relational networks | [llms-kinship-hub-system.md](../../llms-kinship-hub-system.md) | Active |
+| **[intent-analyst](intent-analyst/)** | Strategy-aware PDE reading before execution | [llms-pde.txt](../../llms-pde.txt) | Active |
 
 ### Research & Academic Positioning
 
