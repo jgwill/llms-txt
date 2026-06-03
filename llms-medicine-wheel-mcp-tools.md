@@ -1,7 +1,7 @@
 # Medicine Wheel MCP Tools — Complete Reference
 
-> 54 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
-> Server: `medecin-wheel-mcp` · Transport: stdio · Binary: `medicine-wheel-mcp`
+> 64 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
+> Package: `@medicine-wheel/mcp` (v4.3.0) · Transport: stdio · Binary: `medicine-wheel-mcp`
 > CLI: `bin/mw` · API: `http://localhost:3940/api/`
 
 ---
@@ -18,16 +18,33 @@ All data persists to `.mw/store/` as JSONL files (one per entity type). The same
 
 ### MCP Configuration
 
+Published to npm — run via `npx` (recommended):
+
 ```json
 {
   "mcpServers": {
-    "medecin-wheel-mcp": {
+    "medicine-wheel": {
+      "command": "npx",
+      "args": ["-y", "@medicine-wheel/mcp"]
+    }
+  }
+}
+```
+
+Or from a local build:
+
+```json
+{
+  "mcpServers": {
+    "medicine-wheel": {
       "command": "node",
       "args": ["/workspace/repos/jgwill/medicine-wheel/mcp/dist/index.js"]
     }
   }
 }
 ```
+
+The server advertises itself over MCP as `@medicine-wheel/mcp` (name/version derived from `package.json`).
 
 ### CLI
 
@@ -37,7 +54,7 @@ All data persists to `.mw/store/` as JSONL files (one per entity type). The same
 ./bin/mw cycle create "How does Wilson's relational ontology translate to software architecture?"
 ./bin/mw directions                  # All four directions with medicines and teachings
 ./bin/mw node list --type human      # List human relational nodes
-./bin/mw tools                       # List all 54 tools by category
+./bin/mw tools                       # List all 64 tools by category
 ```
 
 ### REST API
@@ -247,6 +264,50 @@ Directional tools provide ceremony guidance, protocols, and teachings specific t
 
 ---
 
+## Epistemic — Four Ways of Knowing (2 tools)
+
+The ImportanceUnit is the relational unit of knowledge, carrying epistemic weight by source dimension (Land, Dream, Code, Vision) and tracking spiral/circle depth (repetition as ceremony).
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `mw_create_importance_unit` | `{ summary, source, direction, createdBy, axiologicalPillar?, inquiryRef? }` | Create a relationally-accountable ImportanceUnit. Assigns epistemic weight by source (land/dream/code/vision); circle depth starts at 1 |
+| `mw_circle_back` | `{ unit_id, shift }` | Circle back to an existing unit to deepen it. Increments circle depth and records what shifted this pass |
+
+---
+
+## Coordination — Fire Keeper (3 tools)
+
+The Fire Keeper is the active relational-alignment agent that tends the ceremony fire, gates risky actions, and issues stop-work orders.
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `mw_fire_keeper_status` | `{ inquiryRef }` | Check Fire Keeper status: trajectory confidence and active stop-work orders |
+| `mw_relational_check_back` | `{ action, inquiryRef }` | The sacred 4-step check-back before autonomous action: honors relations, strengthens spirit-body relationship, accountable to all directions, Elder-approvable |
+| `mw_enforce_gate` | `{ filePath, governanceConfig? }` | Enforce a ceremony gate on a file path. Blocks changes to restricted/sacred paths without proper authority |
+
+---
+
+## Governance & Transformation (3 tools)
+
+Community review circles, living consent, and Wilson-validity transformation snapshots.
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `mw_review_circle_open` | `{ artifactId, artifactType }` | Open a community review circle (status `gathering`), awaiting reviewers and talking-circle entries |
+| `mw_consent_grant` | `{ grantor, grantee, scopeDescription, id?, dataTypes?, purposes? }` | Record the initial granting of relational consent (`pending` → `granted`) and establish scope |
+| `mw_snapshot_transformation` | `{ researchCycleId, understanding, direction, ceremonyPhase, keyInsights?, openQuestions? }` | Capture a snapshot of researcher understanding + Wilson validity audit (growth, community impact, relational shifts) |
+
+---
+
+## Reasoning & Observability (2 tools)
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `mw_decompose_prompt` | `{ prompt }` | Decompose a prompt into ontological intents mapped to the Four Directions (East/Vision, South/Analysis, West/Validation, North/Action). Detects implicit intents; generates ceremony guidance if balance is poor |
+| `mw_analyze_session` | `{ sessionId }` | Analyze an agent session from JSONL events. Extracts tool usage, feedback counts, and potential value-divergence patterns |
+
+---
+
 ## Validation (4 tools)
 
 | Tool | Input | Purpose |
@@ -358,4 +419,4 @@ Consent levels: `public`, `community_only`, `restricted`, `sacred_private`
 
 ---
 
-*54 tools · 7 entity types · 4 directions · All my relations 🌿*
+*64 tools · 7 entity types · 4 directions · All my relations 🌿*

@@ -1,10 +1,10 @@
 # Medicine Wheel Developer Suite — Package Reference
 
-> Fifteen npm packages encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
+> Seventeen scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
 
-**Version**: 1.1
-**Document ID**: llms-medicine-wheel-packages-v1.1
-**Last Updated**: 2026-04-08
+**Version**: 1.2
+**Document ID**: llms-medicine-wheel-packages-v1.2
+**Last Updated**: 2026-06-03
 **Content Source**: Derived from @src/** study, ontology-core specifications, and Wilson's relational epistemology research.
 **License**: Indigenous Knowledge Stewardship License (IKSL)
 
@@ -12,37 +12,49 @@
 
 ## Platform Overview
 
-The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded in **Two-Eyed Seeing**. It bridges the Engineer-world's precision with the Ceremony-world's relational accountability. `ontology-core` serves as the platform nucleus, defining the fundamental beings (Nodes, Relations, Ceremonies) that all other packages interact with.
+The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded in **Two-Eyed Seeing**. It bridges the Engineer-world's precision with the Ceremony-world's relational accountability. `@medicine-wheel/ontology-core` serves as the platform nucleus, defining the fundamental beings (Nodes, Relations, Ceremonies) that all other packages interact with.
+
+> **Naming migration (v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together at **0.3.0**; the MCP server (`@medicine-wheel/mcp`) is versioned independently (**4.3.0**).
 
 ---
 
 ## 1. Foundational Layer
 *The soil and the roots.*
 
-### medicine-wheel-ontology-core
+### @medicine-wheel/ontology-core
 > Platform nucleus: TypeScript types, RDF vocabulary, Zod schemas, Wilson alignment scoring, and OCAP tracking. Relationships are first-class beings with ceremony context and obligations.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-ontology-core
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/ontology-core
 - **Role**: Foundational source of truth for all types and constants.
 - **Key types**: `RelationalNode`, `Relation`, `Direction`, `OCAPFlags`, `WilsonAlignment`, `AccountabilityTracking`.
 
-### medicine-wheel-data-store
+### @medicine-wheel/data-store
 > Shared Redis persistence layer: Provides unified access to relational memory (Nodes, Edges, Ceremonies) and bidirectional session-ceremony linking.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-data-store
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/data-store
 - **Role**: Relational memory storage and access.
+
+### @medicine-wheel/storage-provider
+> Abstract storage layer: Pluggable backend selection (JSONL today, Neon/Postgres, future Redis) behind a single `createProvider()` seam. The long-term provider abstraction for the suite.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/storage-provider
+- **Role**: Backend-agnostic persistence abstraction.
+
+### @medicine-wheel/data-store-postgres
+> PostgreSQL/Neon scaffold: Shared `pg` Pool helper keyed by connection options, typed against `ontology-core` records, with opt-in SSL. A focused Postgres seam (not the primary backend-selection surface — see `storage-provider`).
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/data-store-postgres
+- **Role**: Postgres/Neon backend scaffold.
 
 ---
 
 ## 2. Epistemic Layer
 *The Four Ways of Knowing (Land, Dream, Code, Vision).*
 
-### medicine-wheel-importance-unit
+### @medicine-wheel/importance-unit
 > The fundamental unit of knowledge: Carries epistemic weight, source dimensions, accountability links, and spiral depth tracking (repetition as ceremony).
-- **npm**: https://www.npmjs.com/package/medicine-wheel-importance-unit
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/importance-unit
 - **Role**: Epistemic weight computation and circle depth tracking.
 
-### medicine-wheel-relational-index
+### @medicine-wheel/relational-index
 > Dimensional indexing: Enables querying and cross-dimensional mapping across Land, Dream, Code, and Vision sources.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-index
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/relational-index
 - **Role**: Epistemic balance and convergence detection.
 
 ---
@@ -50,24 +62,24 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 ## 3. Ceremonial & Governance Layer
 *The protocols of relationship.*
 
-### medicine-wheel-ceremony-protocol
+### @medicine-wheel/ceremony-protocol
 > Ceremony lifecycle management: Handles state transitions (opening, council, integration, closure) and path-based governance enforcement.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-ceremony-protocol
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/ceremony-protocol
 - **Role**: Ceremonial workflow and access control.
 
-### medicine-wheel-fire-keeper
+### @medicine-wheel/fire-keeper
 > Coordination agent: Tends the ceremony fire, evaluates gating conditions, and issues stop-work orders when relational integrity is violated.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-fire-keeper
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/fire-keeper
 - **Role**: Active relational alignment agent.
 
-### medicine-wheel-community-review
+### @medicine-wheel/community-review
 > Validation through consensus: Implements Wilson's vision of Elder review circles and talking circle protocols for artifact validation.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-community-review
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/community-review
 - **Role**: Community-based consensus and Elder validation.
 
-### medicine-wheel-consent-lifecycle
+### @medicine-wheel/consent-lifecycle
 > Living consent: Transforms consent from a boolean checkbox into a living relational obligation with renewal, renegotiation, and cascading effects.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-consent-lifecycle
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/consent-lifecycle
 - **Role**: Relational consent tracking and health monitoring.
 
 ---
@@ -75,19 +87,19 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 ## 4. Narrative & Transformation Layer
 *The story of becoming.*
 
-### medicine-wheel-narrative-engine
+### @medicine-wheel/narrative-engine
 > Story sequencing: Maps narrative beats to the four directions and four-act structure, ensuring arc completeness and ceremonial timing.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-narrative-engine
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/narrative-engine
 - **Role**: Narrative intelligence and beat sequencing.
 
-### medicine-wheel-transformation-tracker
+### @medicine-wheel/transformation-tracker
 > Success metrics: Tracks researcher growth, community benefit, and relational shifts. Implements Wilson's validity: "If research doesn't change you, you haven't done it right."
-- **npm**: https://www.npmjs.com/package/medicine-wheel-transformation-tracker
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/transformation-tracker
 - **Role**: Transformation monitoring and Wilson validity checks.
 
-### medicine-wheel-session-reader
+### @medicine-wheel/session-reader
 > Observability: Reads and analyzes agent session event data (JSONL), extracting tool usage, feedback patterns, and analytics.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-session-reader
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/session-reader
 - **Role**: Session analysis and observability.
 
 ---
@@ -95,14 +107,14 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 ## 5. Reasoning & Query Layer
 *The mind of the wheel.*
 
-### medicine-wheel-relational-query
+### @medicine-wheel/relational-query
 > Graph traversal: Fluent API for filtering and traversing kinship webs, respecting ceremony boundaries and OCAP compliance.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-relational-query
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/relational-query
 - **Role**: Relational data discovery and traversal.
 
-### medicine-wheel-prompt-decomposition
+### @medicine-wheel/prompt-decomposition
 > Intent exploration: PDE that decomposes prompts into explicit/implicit intents mapped to Four Directions, enriched with ontological metadata.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-prompt-decomposition
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/prompt-decomposition
 - **Role**: Intention mapping and ceremony guidance generation.
 
 ---
@@ -110,15 +122,26 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 ## 6. Presentation Layer
 *The face of the bundle.*
 
-### medicine-wheel-graph-viz
+### @medicine-wheel/graph-viz
 > Visualization: Renders circular medicine wheel layouts with direction quadrants, ceremony-aware edges, and OCAP indicators.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-graph-viz
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/graph-viz
 - **Role**: Visualizing relational and ceremonial structures.
 
-### medicine-wheel-ui-components
+### @medicine-wheel/ui-components
 > Interface: Community-facing React components (DirectionCards, BeatTimelines, NodeInspectors) for interacting with the wheel.
-- **npm**: https://www.npmjs.com/package/medicine-wheel-ui-components
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/ui-components
 - **Role**: Human-facing interface layer.
+
+---
+
+## 7. Server Layer
+*The voice that speaks to agents.*
+
+### @medicine-wheel/mcp
+> Model Context Protocol server: Exposes the suite as 64 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/mcp
+- **Version**: 4.3.0 (independent of the 0.3.0 library line).
+- **Role**: Agent-facing MCP surface. See `llms-medicine-wheel-mcp-tools.md` for the full tool reference.
 
 ---
 
