@@ -2,8 +2,8 @@
 
 > How to use Agent-to-Agent coordination when operating as an AI agent inside the Miadi platform.
 
-**Version**: 1.0.0 (v2 layer)
-**Last Updated**: 2026-05-28
+**Version**: 1.1.0 (v2 contract layer)
+**Last Updated**: 2026-06-03
 **Companion**: `llms-miadi-a2a-human-guide.md` (for developers)
 **Spec**: `rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
 
@@ -13,12 +13,7 @@
 
 A2A is the coordination layer that lets **any agent** — story writer, research weaver, planner, evaluator, your own — exchange typed messages over the Miadi platform.
 
-Two layers stack:
-
-- **v1 transport** — Redis-backed message broker. Untyped JSON. Still works for raw use.
-- **v2 contracts** — typed envelopes flowing over the v1 broker. **Use v2 unless you have a reason not to.**
-
-v2 is built around **16 standardized interfaces** (I₁–I₁₆) drawn from HAWK (Cheng et al. 2025, arXiv:2507.04067). Every message is a `TypedEnvelope<I, Payload>` so producer and consumer agree on shape.
+A2A v2 is built around **16 standardized interfaces** (I₁–I₁₆) drawn from HAWK (Cheng et al. 2025, arXiv:2507.04067). Every message is a `TypedEnvelope<I, Payload>` so producer and consumer agree on shape.
 
 **Use A2A when:**
 - You need another module to do something for you (planner, memory, security, reasoning, …).
@@ -191,7 +186,6 @@ import type { EpisodicMemory } from "@miadi/episodic-memory-schema"
 
 | ❌ Don't                                            | ✅ Do                                                                  |
 | --------------------------------------------------- | ---------------------------------------------------------------------- |
-| Send raw JSON via v1 when v2 covers the use case    | Use `POST /api/a2a/v2/send` with the right `iface`                     |
 | Make up an interface name                            | If existing I₁–I₁₆ don't fit, propose an extension via a PR to `@miadi/a2a-contracts` |
 | Skip `ack` after handling                            | Always ack — unacked messages remain `unread` and re-deliver           |
 | Bury sessionId / traceId                             | Carry them through `opts` — that's how observability works              |
@@ -207,8 +201,6 @@ import type { EpisodicMemory } from "@miadi/episodic-memory-schema"
 | Read typed inbox                  | `GET /api/a2a/v2/inbox?moduleId=&layer=&iface=`                  |
 | Ack envelope                      | `POST /api/a2a/v2/inbox`                                         |
 | v2 health (real round-trip)       | `GET /api/a2a/v2/health`                                         |
-| v1 raw transport (legacy)         | `POST /api/a2a/message`, `GET /api/a2a/messages?agentId=…`       |
-| v1 transport health               | `GET /api/a2a/health`                                            |
 | In-process coordinator            | `import { A2ACoordinator } from "@/lib/a2a-v2"`                  |
 | In-process module runtime         | `import { A2AModule } from "@/lib/a2a-v2"`                       |
 | Contract types                    | `import type { ... } from "@miadi/a2a-contracts"`                |
@@ -220,7 +212,6 @@ import type { EpisodicMemory } from "@miadi/episodic-memory-schema"
 
 - `llms-miadi-a2a-human-guide.md` — developer companion (setup, debug, extend)
 - `rispecs/a2a/06-hawk-inspired-next-gen.spec.md` — v2 direction-setting spec
-- `rispecs/a2a/00-a2a-master.spec.md` — v1 master spec (transport)
 - `packages/a2a-contracts/README.md` — contract package README
 - `packages/episodic-memory-schema/README.md` — session-output schema README
 - HAWK paper: `foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025)

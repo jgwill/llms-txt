@@ -2,8 +2,8 @@
 
 > How to set up, extend, and debug the Agent-to-Agent coordination layer in the Miadi platform.
 
-**Version**: 1.0.0 (v2 layer)
-**Last Updated**: 2026-05-28
+**Version**: 1.1.0 (v2 contract layer)
+**Last Updated**: 2026-06-03
 **Companion**: `llms-miadi-a2a-llm-guide.md` (for AI agents)
 **Spec**: `rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
 
@@ -11,14 +11,13 @@
 
 ## Overview
 
-A2A is the coordination plane every Miadi agent — narrative agents, planners, evaluators, storage modules, your own — uses to exchange typed messages. It comes in two layers:
+A2A is the coordination plane every Miadi agent — narrative agents, planners, evaluators, storage modules, your own — uses to exchange typed messages. 
 
 | Layer | Job | Code path |
 | --- | --- | --- |
-| **v1 transport** | Move arbitrary JSON between agent IDs over Redis. | `lib/a2a-message-broker.ts`, `lib/a2a-tracer.ts`, `app/api/a2a/*` |
-| **v2 contracts**  | Wrap every message in a typed envelope keyed by a HAWK interface (I₁–I₁₆). Same Redis underneath. | `lib/a2a-v2/*`, `app/api/a2a/v2/*`, `@miadi/a2a-contracts` |
+| **v2 contracts**  | Wrap every message in a typed envelope keyed by a HAWK interface (I₁–I₁₆). | `lib/a2a-v2/*`, `app/api/a2a/v2/*`, `@miadi/a2a-contracts` |
 
-**Default to v2.** It's only thin wrapper code over the v1 broker, but it gives you compile-time payload safety and a stable contract that any agent runtime can target.
+**Miadi A2A is contract-driven.** It provides compile-time payload safety and a stable contract that any agent runtime can target. Every message is a `TypedEnvelope<I, Payload>` flowing through standardized interfaces.
 
 When to point an LLM at the companion guide: any session where an AI agent needs to send / receive messages or coordinate with another module.
 
@@ -36,7 +35,7 @@ When to point an LLM at the companion guide: any session where an AI agent needs
 ### Verify it works
 
 ```bash
-# v2 layer end-to-end (round-trips a real typed envelope through Redis)
+# v2 layer end-to-end (round-trips a real typed envelope through the coordination plane)
 curl -s http://localhost:3335/api/a2a/v2/health | jq
 
 # Offline verification (no server needed, exercises contracts + transport directly)
@@ -66,14 +65,8 @@ Expected: 4 contract checks + 3 live round-trip checks all pass.
                   │ ─────────────────────────────────────                    │
                   │                                                          ▼
                   │                                                ┌──────────────────┐
-                  │                                                │  v1 broker       │
-                  │                                                │ lib/a2a-message- │
-                  │                                                │   broker.ts      │
-                  │                                                └────────┬─────────┘
-                  │                                                          │
-                  │                                                          ▼
-                  │                                                ┌──────────────────┐
-                  └────────────────────────────────────────────────│  Upstash Redis   │
+                  │                                                │  Redis Transport │
+                  └────────────────────────────────────────────────│    Substrate     │
                                                                    └──────────────────┘
 ```
 
@@ -88,14 +81,9 @@ Tracing: every send/ack/drain hits `lib/tracer.ts` → `TRACE_LOG_PATH` (default
 | `lib/a2a-v2/coordinator.ts`              | Typed send / inbox / reply / ack.                      |
 | `lib/a2a-v2/module.ts`                   | Base class for long-running modules.                   |
 | `lib/a2a-v2/index.ts`                    | Public surface.                                        |
-| `lib/a2a-message-broker.ts`              | v1 Redis primitive (transport substrate).              |
-| `lib/a2a-tracer.ts`                      | v1 structured tracing.                                 |
 | `app/api/a2a/v2/send/route.ts`           | POST — send typed envelope.                            |
 | `app/api/a2a/v2/inbox/route.ts`          | GET inbox / POST ack.                                  |
 | `app/api/a2a/v2/health/route.ts`         | GET — end-to-end round-trip health.                    |
-| `app/api/a2a/message/route.ts`           | POST — v1 raw send (legacy).                           |
-| `app/api/a2a/messages/route.ts`          | GET/PATCH/DELETE — v1 inbox / read / clear.            |
-| `app/api/a2a/health/route.ts`            | GET — v1 transport health.                             |
 | `scripts/verify-a2a-v2.mjs`              | Standalone verification (no dev server required).      |
 
 ---
@@ -140,26 +128,6 @@ curl -X POST http://localhost:3335/api/a2a/v2/inbox \
 
 ```bash
 curl http://localhost:3335/api/a2a/v2/health | jq
-```
-
----
-
-## v1 API (transport, kept for raw use)
-
-```bash
-# Send raw message
-curl -X POST http://localhost:3335/api/a2a/message \
-  -H 'Content-Type: application/json' \
-  -d '{"from":"a","to":"b","type":"plain","payload":{"hello":"world"}}'
-
-# Read inbox (also returns v2 envelopes — they show up as type: "a2a.v2.envelope")
-curl "http://localhost:3335/api/a2a/messages?agentId=b"
-
-# Mark a message read
-curl -X PATCH "http://localhost:3335/api/a2a/messages?messageId=msg-xxx"
-
-# Health
-curl http://localhost:3335/api/a2a/health | jq
 ```
 
 ---
@@ -255,7 +223,6 @@ redis-cli -u $KV_REST_API_URL GET agent:message:msg-xxx
 | ------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------- |
 | `inboxFor(...)` empty                 | Wrong moduleId / layer, OR consumer already acked     | Confirm address; re-send if test                                     |
 | 500 from `/api/a2a/v2/send`           | Env vars missing                                       | `set -a && source .env && set +a`                                    |
-| Envelope reads back as v1 raw         | Reader used `/api/a2a/messages` not `/api/a2a/v2/inbox` | Use the v2 inbox endpoint or filter `type === "a2a.v2.envelope"`     |
 | Type-check fails on `@miadi/...`       | tsconfig path mapping missing                          | `tsconfig.json` has `paths['@miadi/a2a-contracts']` → packages/      |
 | `ERR_MODULE_NOT_FOUND` in Node script | Compiled imports lack `.js`                            | Use v0.1.1+ of the packages (source uses `.js` suffix)               |
 
@@ -288,7 +255,6 @@ sessionId: sw-2026-05-28-001
 - HAWK paper: `foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025, arXiv:2507.04067). Registered in `foundations/source-ledger.yaml` as `mas.cheng-2025-hawk`.
 - Companion published packages: `@miadi/a2a-contracts`, `@miadi/episodic-memory-schema` (npm, MIT).
 - v2 direction-setting spec: `rispecs/a2a/06-hawk-inspired-next-gen.spec.md`.
-- v1 master spec: `rispecs/a2a/00-a2a-master.spec.md`.
 
 ---
 
