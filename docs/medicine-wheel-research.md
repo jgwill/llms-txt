@@ -1,6 +1,6 @@
 # Medicine Wheel & Abundance Intelligence Research
 
-> The Medicine Wheel Developer Suite — seventeen scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
+> The Medicine Wheel Developer Suite — eighteen scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
 
 ---
 
@@ -17,13 +17,35 @@ The suite provides a layered architecture for relational AI, bridging the Engine
 | **Reasoning** | `@medicine-wheel/prompt-decomposition` | PDE intent exploration as EAST practice. |
 | **Query** | `@medicine-wheel/relational-query` | Traverse kinship webs with OCAP-compliant discovery. |
 | **Coordination** | `@medicine-wheel/fire-keeper` | Active relational-alignment agent and governance firewall. |
+| **Application** | `@medicine-wheel/app` | Unified CLI (`mw`) and Server (`mwsrv`) for research orchestration. |
 | **Server** | `@medicine-wheel/mcp` | Agent-facing surface (64 tools) composing the full suite. |
 
 ### Platform Nucleus
 
 The `@medicine-wheel/ontology-core` package defines a foundational ontological layer where **relations are first-class beings** with ceremony context and obligations. Every other package imports from this core — making it a genuine platform nucleus, not a bag of utilities.
 
-The suite encompasses seventeen packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
+The suite encompasses eighteen packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
+
+---
+
+## Human Interface: mw & mwsrv CLI
+
+The `@medicine-wheel/app` package provides the primary human-facing interfaces for the platform.
+
+### mw — Medicine Wheel CLI
+The `mw` tool allows researchers to manage the relational research lifecycle directly from the command line.
+
+- **Ceremony**: `mw ceremony open <intention>` / `mw ceremony close <id>`
+- **Research**: `mw cycle create <question>` / `mw beat create <dir> <title>`
+- **Relational**: `mw node create` / `mw edge create` / `mw web <id>`
+- **Validation**: `mw validate wilson` / `mw validate ocap`
+
+### mwsrv — Medicine Wheel Server
+The `mwsrv` tool launches the platform's Next.js application, which serves as the data hub and collaborative interface.
+
+- **Local Development**: `mwsrv` starts the server on port 3940.
+- **Docker Deployment**: `mwsrv --docker` runs the full stack in a containerized environment with persistent volume mapping to `.mw/store`.
+- **Backend Selection**: Supports switching between `jsonl` and `postgres` storage providers via environment variables.
 
 ---
 

@@ -1,6 +1,6 @@
 # Medicine Wheel Developer Suite — Package Reference
 
-> Seventeen scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
+> Eighteen scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
 
 **Version**: 1.2
 **Document ID**: llms-medicine-wheel-packages-v1.2
@@ -144,6 +144,16 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/mcp
 - **Version**: 4.3.0 (independent of the 0.3.0 library line).
 - **Role**: Agent-facing MCP surface. See `llms-medicine-wheel-mcp-tools.md` for the full tool reference.
+
+---
+
+## 8. Application Layer
+*The tools for the journey.*
+
+### @medicine-wheel/app
+> The unified platform application: Provides the `mw` CLI for research ceremonies and the `mwsrv` server for local or Docker-based collaboration.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/app
+- **Role**: Human-facing CLI and server orchestration.
 
 ---
 
