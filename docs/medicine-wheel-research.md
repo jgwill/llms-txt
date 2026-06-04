@@ -1,28 +1,29 @@
 # Medicine Wheel & Abundance Intelligence Research
 
-> The Medicine Wheel Developer Suite — seven npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
+> The Medicine Wheel Developer Suite — seventeen scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
 
 ---
 
 ## The Medicine Wheel Developer Suite
 
-Seven published npm packages form a layered architecture for relational AI:
+The suite provides a layered architecture for relational AI, bridging the Engineer-world's precision with the Ceremony-world's relational accountability.
 
-| Package | npm | Role |
-|---------|-----|------|
-| **ontology-core** | [medicine-wheel-ontology-core](https://www.npmjs.com/package/medicine-wheel-ontology-core) | Foundation: TypeScript types, RDF vocabulary, Zod schemas, Wilson alignment, OCAP tracking |
-| **relational-query** | [medicine-wheel-relational-query](https://www.npmjs.com/package/medicine-wheel-relational-query) | Traverse kinship webs with relational constraints |
-| **narrative-engine** | [medicine-wheel-narrative-engine](https://www.npmjs.com/package/medicine-wheel-narrative-engine) | Narrative beats and story flow bound to ceremony |
-| **ceremony-protocol** | [medicine-wheel-ceremony-protocol](https://www.npmjs.com/package/medicine-wheel-ceremony-protocol) | Ceremony types, logs, governance access levels, consent |
-| **graph-viz** | [medicine-wheel-graph-viz](https://www.npmjs.com/package/medicine-wheel-graph-viz) | Relational graph visualization |
-| **ui-components** | [medicine-wheel-ui-components](https://www.npmjs.com/package/medicine-wheel-ui-components) | Community-facing interface components |
-| **prompt-decomposition** | [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) | PDE — intention exploration as EAST practice |
+| Layer | Primary Package | Role |
+|-------|-----------------|------|
+| **Foundational** | `@medicine-wheel/ontology-core` | Platform nucleus: types, RDF vocabulary, Wilson alignment, OCAP tracking. |
+| **Epistemic** | `@medicine-wheel/importance-unit` | The fundamental unit of knowledge: carries weight and source dimensions. |
+| **Ceremonial** | `@medicine-wheel/ceremony-protocol` | Handles state transitions and path-based governance enforcement. |
+| **Narrative** | `@medicine-wheel/narrative-engine` | Story sequencing and 4-act structure bound to ceremonial timing. |
+| **Reasoning** | `@medicine-wheel/prompt-decomposition` | PDE intent exploration as EAST practice. |
+| **Query** | `@medicine-wheel/relational-query` | Traverse kinship webs with OCAP-compliant discovery. |
+| **Coordination** | `@medicine-wheel/fire-keeper` | Active relational-alignment agent and governance firewall. |
+| **Server** | `@medicine-wheel/mcp` | Agent-facing surface (64 tools) composing the full suite. |
 
 ### Platform Nucleus
 
-The `ontology-core` package defines a foundational ontological layer where **relations are first-class beings** with ceremony context and obligations. Every other package imports from this core — making it a genuine platform nucleus, not a bag of utilities.
+The `@medicine-wheel/ontology-core` package defines a foundational ontological layer where **relations are first-class beings** with ceremony context and obligations. Every other package imports from this core — making it a genuine platform nucleus, not a bag of utilities.
 
-The seven packages describe seven "shapes" of intelligence: data ontology, queries, narrative flow, ceremonial workflow, graph structures, UI affordances, and prompt-level reasoning.
+The suite encompasses seventeen packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
 
 ---
 
