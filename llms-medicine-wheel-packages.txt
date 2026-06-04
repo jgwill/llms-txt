@@ -14,6 +14,8 @@
 
 The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded in **Two-Eyed Seeing**. It bridges the Engineer-world's precision with the Ceremony-world's relational accountability. `@medicine-wheel/ontology-core` serves as the platform nucleus, defining the fundamental beings (Nodes, Relations, Ceremonies) that all other packages interact with.
 
+Full documentation: `https://docs.medicine-wheel.jgwill.com/`
+
 > **Naming migration (v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together at **0.3.0**; the MCP server (`@medicine-wheel/mcp`) is versioned independently (**4.3.0**).
 
 ---

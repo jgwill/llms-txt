@@ -10,6 +10,8 @@
 
 The Medicine Wheel MCP server provides structured tools for creating and managing relational research within an Indigenous epistemological framework. It is grounded in Shawn Wilson's *Research Is Ceremony* (2008), Elder Albert Marshall's Two-Eyed Seeing (Etuaptmumk), and OCAP® (Ownership, Control, Access, Possession) data sovereignty principles.
 
+Full documentation: `https://docs.medicine-wheel.jgwill.com/`
+
 All data persists to `.mw/store/` as JSONL files (one per entity type). The same store is shared between the MCP server and the Next.js Web UI.
 
 ---
@@ -412,10 +414,10 @@ Consent levels: `public`, `community_only`, `restricted`, `sacred_private`
 
 | Project | Relationship |
 |---------|-------------|
-| [medicine-wheel-pi](/workspace/repos/jgwill/medicine-wheel-pi/) | Ceremony-focused Pi agent platform consuming these MCP tools |
-| [agent-pi](/workspace/repos/jgwill/agent-pi/) | General-purpose Pi agent (sibling to medicine-wheel-pi) |
-| [mino-sdk](/a/src/mino-sdk/) | Shared @mino packages (types, inquiry, ceremony, store, agent, view, cli) |
-| [mcp-medicine-wheel](/a/src/mcp-medicine-wheel/) | Elder MCP server (Redis-backed, predecessor) |
+| [medicine-wheel-pi](https://docs.medicine-wheel.jgwill.com/workspace/repos/jgwill/medicine-wheel-pi/) | Ceremony-focused Pi agent platform consuming these MCP tools |
+| [agent-pi](https://docs.medicine-wheel.jgwill.com/workspace/repos/jgwill/agent-pi/) | General-purpose Pi agent (sibling to medicine-wheel-pi) |
+| [mino-sdk](https://docs.medicine-wheel.jgwill.com/a/src/mino-sdk/) | Shared @mino packages (types, inquiry, ceremony, store, agent, view, cli) |
+| [mcp-medicine-wheel](https://docs.medicine-wheel.jgwill.com/a/src/mcp-medicine-wheel/) | Elder MCP server (Redis-backed, predecessor) |
 
 ---
 
