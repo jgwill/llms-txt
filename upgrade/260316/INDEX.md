@@ -15,12 +15,16 @@ Start here: **03-executive-summary.md**
 - Priority timeline
 - Key insights
 
+→ **Then read**: **05-synthesis-context7-medicine-wheel.md** for Medicine Wheel paradigm grounding
+
 ### 🔍 For Analysts  
 Start here: **01-context7-queries-and-answers.md**
 - Raw Context7 query results
 - 5 focused research questions
 - Concrete answers with source links
 - Key findings per domain
+
+→ **Then read**: **04-medicine-wheel-ontologies.trace** for ceremonial ontological mapping
 
 ### ✍️ For Implementation Teams
 Start here: **02-recommendations.md**
@@ -29,15 +33,28 @@ Start here: **02-recommendations.md**
 - Validation checklist
 - Next steps
 
+→ **Then read**: **05-synthesis-context7-medicine-wheel.md** for direction-specific enrichments
+
 ### 📖 For Overview
 Start here: **README.md**
 - What's included in this package
 - How to use the analysis
 - Audience guidance (maintainers, developers, writers, ceremony keepers)
 
+→ **Then read**: **INDEX.md** (this file) for complete package overview
+
+### 🌿 For Medicine Wheel Integration
+Start here: **04-medicine-wheel-ontologies.trace**
+- Complete ceremonial research cycle
+- 4 ontology nodes created (one per MW direction)
+- Relational edges and structural tension chart
+- Gaps and next steps
+
+→ **Then read**: **05-synthesis-context7-medicine-wheel.md** for integrated insights
+
 ---
 
-## The Deliverable: 5 Context7 Queries + Answers
+## The Deliverable: 5 Context7 Queries + Answers + Medicine Wheel Ontology
 
 | # | Query | Document | Status |
 |----|-------|----------|--------|
@@ -46,6 +63,9 @@ Start here: **README.md**
 | 3️⃣ | Configuration and Deployment Best Practices | 01-context7... | ✅ Complete |
 | 4️⃣ | External System Integration (MCP, Langfuse, Tools) | 01-context7... | ✅ Complete |
 | 5️⃣ | Ceremony and Relational Paradigm in Kits | 01-context7... | ✅ Complete |
+| 🌿 | **Medicine Wheel MCP Ontology Mapping** | **04-medicine-wheel...** | **✅ Complete** |
+
+**New**: Ontological grounding through Medicine Wheel MCP with 4 relational nodes, ceremony lifecycle, and synthesis with Context7 findings.
 
 ---
 
@@ -66,12 +86,14 @@ Start here: **README.md**
 upgrade/260316/
 ├── README.md                                 (5.3K) Overview + usage guide
 ├── INDEX.md                                  (this file)
-├── 01-context7-queries-and-answers.md        (8.8K) Raw research + findings
-├── 02-recommendations.md                     (9.0K) Implementation strategy
-└── 03-executive-summary.md                   (11K) Decision-maker summary
+├── 01-context7-queries-and-answers.md        (8.8K) Raw Context7 research + findings
+├── 02-recommendations.md                     (9.0K) LLMS-txt implementation strategy
+├── 03-executive-summary.md                   (11K) Decision-maker summary
+├── 04-medicine-wheel-ontologies.trace        (23K) Medicine Wheel MCP ontology mapping
+└── 05-synthesis-context7-medicine-wheel.md   (16K) Integrated analysis + MW enrichments
 ```
 
-**Total**: 44K of detailed analysis, ready for integration planning.
+**Total**: 96K of detailed analysis including Medicine Wheel ontological grounding.
 
 ---
 
