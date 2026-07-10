@@ -77,10 +77,11 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 ### AI Companion Skills & Practices
 
 | Practice | Description | Source |
-|---------|------------|--------|
+| --------- |------------ | -------- |
 | [Skills & Companions](skills-and-companions.md) | AI companion skills mapped to llms-txt guidance | [./skills/](../skills/) |
 | [Prompt Decomposition (PDE)](prompt-decomposition.md) | Intention exploration as EAST practice | [llms-pde.txt](../llms-pde.txt) |
 | [Intent Analyst](../skills/intent-analyst/SKILL.md) | Strategy-aware PDE reading before execution | [skills/intent-analyst](../skills/intent-analyst/) |
+
 <!-- 
 @stcissue 260317135900 Probably llms-pde.txt is outdated and its kinship with STC (pde-to-stc) with coaia-pds and coaia-planning needs analysis of context to upgrade this part of the portfolio.  Potentially the consilodation explored in ceremony jgwill/src#402 will shed some light and even this here would be part of what would trigger this upgrade.
 @stcgoal 260317135901 Also an important point of action-steps when PDE has became a structural tension chart are structural thinking session with the 4 questions make from a team of agents working in the swarn and are activate to feed the adequate ways to either : 1. information 2. clarification 3. implication (validation of what is implicit I guess (negative space in the big picture)) 4. discrepency (contradictions in the specs that would drive the agents into one or another ways and obviously undesired / desired , these needs to be found)
