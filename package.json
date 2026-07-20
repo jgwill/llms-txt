@@ -1,4 +1,7 @@
 {
+  "name": "llms-txt-site",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -6,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@miadi/hooks-core": "^0.3.0",
+    "marked": "^18.0.6",
     "next": "^16.2.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
