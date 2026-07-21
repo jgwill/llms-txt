@@ -1,16 +1,22 @@
+import fs from 'node:fs'
+
 /**
  * llms.jgwill.com runs as a Next.js application on Vercel's runtime.
  *
- * Two things have to stay true at once:
+ * Three things have to stay true at once:
  *
  *  1. The canonical raw addresses — /llms.txt, /llms-rise-framework.txt,
  *     /docs/index.md, /LICENSE — must return the repository file byte-for-byte
  *     as plain text. AI agents and indexers fetch these directly.
- *  2. Everything else is a rendered, server-backed React application.
+ *  2. The original document names must also resolve *without* their extension —
+ *     /llms-rise-framework returns the rendered reading page. Extension present
+ *     → raw artifact; extension absent → rendered page.
+ *  3. Everything else is a rendered, server-backed React application.
  *
  * `rewrites()` maps (1) onto a Route Handler that reads the file from disk at
- * request time. They sit in `afterFiles`, which Next evaluates after real page
- * and public files are checked, so no page route is ever shadowed by a rewrite.
+ * request time, and (2) onto the prerendered `/guidance/<slug>` page. They sit
+ * in `afterFiles`, which Next evaluates after real page and public files are
+ * checked, so no page route is ever shadowed by a rewrite.
  */
 
 /** Repository-relative globs the raw reader and the server components need on disk. */
@@ -71,6 +77,44 @@ const NON_CORPUS_GLOBS = [
 /** Individual repository-root files published verbatim, as a rewrite alternation. */
 const ROOT_FILES = ['README\\.md', 'KINSHIP\\.md', 'MIA\\.md', 'TERMS\\.md', 'TUG\\.md', 'LICENSE', 'context7\\.json', 'CNAME']
 
+/**
+ * The original published basenames — a guidance filename with its `.txt`/`.md`
+ * extension removed. `/llms-rise-framework` (basename) must resolve to the
+ * rendered reading page while `/llms-rise-framework.txt` still returns raw bytes.
+ *
+ * This mirrors `listRootGuidanceFiles()` in `lib/content.ts`: the same corpus
+ * seen through Node's `fs` at config-load time, because `next.config.mjs` cannot
+ * import the TypeScript loader. The list is read once, at build start, so the
+ * emitted rewrite table is deterministic for a given repository state.
+ *
+ * Each basename becomes an *explicit literal* rewrite entry — never a broad
+ * regex. Three basenames carry dots (`llms-pythonista-full.gemini`,
+ * `llms-ui-pythonista-guide.gemini`, `llms-pollution-critique-arxiv-2311.01937v1`);
+ * a pattern such as `/:name(llms[^/]+)` would swallow the raw `.txt`/`.md` forms
+ * and could shadow the raw handler. A literal source cannot: `.` is a literal in
+ * path-to-regexp, and a source with no extension can never match an extension
+ * form. Order within `afterFiles` is therefore not load-bearing between the two
+ * groups — the raw rewrites require the extension, these forbid it — but the raw
+ * entries are still listed first for legibility.
+ */
+function listGuidanceBasenames() {
+  return fs
+    .readdirSync('.', { withFileTypes: true })
+    .filter((e) => e.isFile())
+    .map((e) => e.name)
+    .filter((name) => /^llms[-.].*\.(txt|md)$/.test(name) || name === 'llms.txt')
+    .map((name) => name.replace(/\.(txt|md)$/, ''))
+    .sort((a, b) => a.localeCompare(b))
+}
+
+/** One internal rewrite per basename: `/<basename>` → `/guidance/<basename>`. */
+function basenameRewrites() {
+  return listGuidanceBasenames().map((basename) => ({
+    source: `/${basename}`,
+    destination: `/guidance/${basename}`,
+  }))
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -98,6 +142,7 @@ const nextConfig = {
     return {
       beforeFiles: [],
       afterFiles: [
+        // (1) RAW — extension present → byte-identical plain text.
         // Root guidance documents and the two indexes.
         { source: '/:file(llms[^/]*\\.txt)', destination: '/api/raw/:file' },
         { source: '/:file(llms[^/]*\\.md)', destination: '/api/raw/:file' },
@@ -111,6 +156,11 @@ const nextConfig = {
 
         // Standalone root files.
         { source: `/:file(${ROOT_FILES.join('|')})`, destination: '/api/raw/:file' },
+
+        // (2) RENDERED — extension absent → the prerendered reading page.
+        // One explicit literal per basename; cannot shadow the raw rewrites
+        // above because those require the extension these forbid.
+        ...basenameRewrites(),
       ],
       fallback: [],
     }

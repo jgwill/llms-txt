@@ -24,7 +24,12 @@ export async function GET(request: Request) {
       file: entry.file,
       bytes: entry.bytes,
       related: entry.related,
+      // Extension present → raw artifact; extension absent → rendered page.
       rawUrl: `${base}${entry.rawPath}`,
+      renderedUrl: `${base}${entry.renderedPath}`,
+      // The original basename alias at the root (guidance only; null for docs).
+      basename: entry.basename,
+      // Kept for backward compatibility — the browsable /guidance/<slug> entry.
       humanUrl: `${base}${entry.href}`,
     }))
 

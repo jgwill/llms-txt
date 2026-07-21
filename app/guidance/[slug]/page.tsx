@@ -25,17 +25,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!doc) return {}
   const description =
     doc.summary || `${doc.title} — guidance document published as ${doc.file} at ${SITE.name}.`
+  // The canonical address is the original published basename at the root
+  // (`/llms-rise-framework`), closest to the document's natural name and the
+  // address the root-level rewrite serves. `/guidance/<slug>` stays reachable as
+  // the browsable index entry, but points here so the two never read as
+  // duplicate content.
   return {
     title: doc.title,
     description,
-    alternates: { canonical: `/guidance/${doc.slug}` },
+    alternates: { canonical: `/${doc.slug}` },
     // The share card itself comes from `opengraph-image.tsx` in this segment;
     // Next attaches it to whatever `openGraph` block is declared here.
     openGraph: {
       type: 'article',
       title: doc.title,
       description,
-      url: `/guidance/${doc.slug}`,
+      url: `/${doc.slug}`,
     },
   }
 }

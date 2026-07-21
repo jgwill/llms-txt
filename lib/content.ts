@@ -516,8 +516,19 @@ export interface CorpusEntry {
   summary: string
   /** Repository-relative path. */
   file: string
-  /** Reading view on this site. */
+  /** Reading view on this site — the browsable index entry. */
   href: string
+  /**
+   * Canonical rendered address. For guidance this is the original basename at
+   * the root (`/llms-rise-framework`); for docs it is the `/docs/<slug>` page.
+   * This is the address declared as `<link rel="canonical">` on the page.
+   */
+  renderedPath: string
+  /**
+   * The extension-less basename alias at the root, present only for guidance
+   * documents (`llms-rise-framework`). `null` for docs, which have no root alias.
+   */
+  basename: string | null
   /** Canonical plain-text address. */
   rawPath: string
   bytes: number
@@ -547,6 +558,8 @@ function buildCorpus(): IndexedEntry[] {
       summary: doc.summary,
       file: doc.file,
       href: `/guidance/${doc.slug}`,
+      renderedPath: `/${doc.slug}`,
+      basename: doc.slug,
       rawPath: doc.rawPath,
       bytes: doc.bytes,
       related: doc.related.map((r) => r.label),
@@ -566,6 +579,8 @@ function buildCorpus(): IndexedEntry[] {
       summary: page.summary,
       file: page.file,
       href,
+      renderedPath: href,
+      basename: null,
       rawPath: page.rawPath,
       bytes: page.bytes,
       related: [],
@@ -694,6 +709,8 @@ export function searchCorpus(query: string, limit = 40): { total: number; hits: 
       summary: entry.summary,
       file: entry.file,
       href: entry.href,
+      renderedPath: entry.renderedPath,
+      basename: entry.basename,
       rawPath: entry.rawPath,
       bytes: entry.bytes,
       related: entry.related,
