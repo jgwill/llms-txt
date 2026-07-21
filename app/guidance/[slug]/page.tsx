@@ -30,6 +30,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // address the root-level rewrite serves. `/guidance/<slug>` stays reachable as
   // the browsable index entry, but points here so the two never read as
   // duplicate content.
+  //
+  // This basename resolves because its root rewrite is generated from the same
+  // corpus listing at build time. On the deployment target (Vercel) the deployed
+  // filesystem IS the build snapshot, so the baked rewrite set always equals the
+  // content served and this canonical never dangles. The one theoretical gap is
+  // a document that appears in the runtime filesystem without a rebuild — not
+  // possible on an immutable deploy, only under a long-lived local `next start`.
+  // There, `dynamicParams` still serves `/guidance/<slug>` and the raw `.txt`
+  // alias (a runtime regex rewrite), but this canonical basename would 404 until
+  // the next build. Accepted: the reader is always served; only the canonical
+  // hint lags, and only in a mode we do not deploy.
   return {
     title: doc.title,
     description,
