@@ -1,6 +1,6 @@
 # Medicine Wheel & Abundance Intelligence Research
 
-> The Medicine Wheel Developer Suite — eighteen scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
+> The Medicine Wheel Developer Suite — twenty-one scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
 
 ---
 
@@ -17,14 +17,17 @@ The suite provides a layered architecture for relational AI, bridging the Engine
 | **Reasoning** | `@medicine-wheel/prompt-decomposition` | PDE intent exploration as EAST practice. |
 | **Query** | `@medicine-wheel/relational-query` | Traverse kinship webs with OCAP-compliant discovery. |
 | **Coordination** | `@medicine-wheel/fire-keeper` | Active relational-alignment agent and governance firewall. |
+| **Perception & Film** | `@medicine-wheel/perception-layer` | Witnesses film-production material as typed perceptual events; `narrative-cluster` turns them into edit briefs. |
 | **Application** | `@medicine-wheel/app` | Unified CLI (`mw`) and Server (`mwsrv`) for research orchestration. |
-| **Server** | `@medicine-wheel/mcp` | Agent-facing surface (64 tools) composing the full suite. |
+| **Server** | `@medicine-wheel/mcp` | Agent-facing surface (70 tools) composing the full suite. |
 
 ### Platform Nucleus
 
 The `@medicine-wheel/ontology-core` package defines a foundational ontological layer where **relations are first-class beings** with ceremony context and obligations. Every other package imports from this core — making it a genuine platform nucleus, not a bag of utilities.
 
-The suite encompasses eighteen packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
+The suite encompasses twenty-one packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
+
+Two package pairs joined the suite most recently: `perception-layer` and `narrative-cluster` extend it into agent-supported Indigenous film production (witnessing rushes as perceptual events, then clustering them into a Film Edit Brief), while `ceremonial-diary` and `github-ceremony` came home from Miadi to carry the participant's ceremonial voice and to witness GitHub activity as relational ceremony beads.
 
 ---
 

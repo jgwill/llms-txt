@@ -1,10 +1,10 @@
 # Medicine Wheel Developer Suite — Package Reference
 
-> Eighteen scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
+> Twenty-one scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
 
-**Version**: 1.2
-**Document ID**: llms-medicine-wheel-packages-v1.2
-**Last Updated**: 2026-06-03
+**Version**: 1.3
+**Document ID**: llms-medicine-wheel-packages-v1.3
+**Last Updated**: 2026-07-22
 **Content Source**: Derived from @src/** study, ontology-core specifications, and Wilson's relational epistemology research.
 **License**: Indigenous Knowledge Stewardship License (IKSL)
 
@@ -16,7 +16,7 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 
 Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
-> **Naming migration (v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together at **0.3.0**; the MCP server (`@medicine-wheel/mcp`) is versioned independently (**4.3.0**).
+> **Naming migration (at v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together in lockstep (currently **0.5.1**); the MCP server (`@medicine-wheel/mcp`) is versioned independently (currently **4.5.0**).
 
 ---
 
@@ -84,6 +84,16 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/consent-lifecycle
 - **Role**: Relational consent tracking and health monitoring.
 
+### @medicine-wheel/ceremonial-diary
+> The participant's voice: Intention, observation, and reflection entries across the Five-Phase ceremonial methodology, with pattern detection, statistics, Markdown export, and optional projection into the chronicle wheel. Persists via `@medicine-wheel/storage-provider`. Came home from Miadi.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/ceremonial-diary
+- **Role**: First-person ceremonial journaling and reflection.
+
+### @medicine-wheel/github-ceremony
+> Witness in code: Reads GitHub webhook events (issues, PRs, merges, commits) through a ceremonial lens and records them as relational ceremony beads. Pure, framework-free functions over a `@medicine-wheel/storage-provider`. Came home from Miadi.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/github-ceremony
+- **Role**: Development activity as relational ceremony.
+
 ---
 
 ## 4. Narrative & Transformation Layer
@@ -136,18 +146,33 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 7. Server Layer
+## 7. Perception & Film Layer
+*The eyes and ears of Indigenous film production.*
+
+### @medicine-wheel/perception-layer
+> Witnessing surface: Reads a belt-device recording / transcript as typed `PerceptualEvent`s and seeds a production knowledge graph in `ontology-core`. The eyes & ears of agent-supported Indigenous film production.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/perception-layer
+- **Role**: Witness raw film-production material as typed perceptual events.
+
+### @medicine-wheel/narrative-cluster
+> Edit intelligence: Turns witnessed perceptual events / rushes into thematic clusters, narrative beats, and a Film Edit Brief (EDL markers). Deterministic; consumes `perception-layer` output.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/narrative-cluster
+- **Role**: Cluster perception into narrative beats and edit briefs.
+
+---
+
+## 8. Server Layer
 *The voice that speaks to agents.*
 
 ### @medicine-wheel/mcp
-> Model Context Protocol server: Exposes the suite as 64 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
+> Model Context Protocol server: Exposes the suite as 70 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/mcp
-- **Version**: 4.3.0 (independent of the 0.3.0 library line).
+- **Version**: 4.5.0 (independent of the 0.5.1 library line).
 - **Role**: Agent-facing MCP surface. See `llms-medicine-wheel-mcp-tools.md` for the full tool reference.
 
 ---
 
-## 8. Application Layer
+## 9. Application Layer
 *The tools for the journey.*
 
 ### @medicine-wheel/app

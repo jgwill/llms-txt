@@ -133,12 +133,12 @@
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
 
 ## Medicine Wheel Developer Suite — Package Reference
-> Reference for the seventeen scoped `@medicine-wheel/*` npm packages (plus the `@medicine-wheel/mcp` server) encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures.
+> Reference for the twenty-one scoped `@medicine-wheel/*` npm packages (plus the `@medicine-wheel/mcp` server) encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures.
 - **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
 - **Related**: llms-medicine-wheel-mcp-tools.md, llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
 
 ## Medicine Wheel MCP Tools — Complete Reference
-> Complete reference for the 64 tools of the `@medicine-wheel/mcp` server (v4.3.0): ceremony lifecycle, relational CRUD, research cycles, structural tension, four-direction guidance, epistemic units, Fire Keeper coordination, governance, reasoning/observability, validation, and archival.
+> Complete reference for the 70 tools of the `@medicine-wheel/mcp` server (v4.5.0): ceremony lifecycle, relational CRUD, research cycles, structural tension, four-direction guidance, epistemic units, Fire Keeper coordination, governance, reasoning/observability, inquiry weaves, plan perspectives, validation, and archival.
 - **Link**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
 - **Related**: llms-medicine-wheel-packages.txt, llms-pde.txt, llms-structural-tension-charts.txt
 

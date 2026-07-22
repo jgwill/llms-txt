@@ -1,7 +1,7 @@
 # Medicine Wheel MCP Tools — Complete Reference
 
-> 64 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
-> Package: `@medicine-wheel/mcp` (v4.3.0) · Transport: stdio · Binary: `medicine-wheel-mcp`
+> 70 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
+> Package: `@medicine-wheel/mcp` (v4.5.0) · Transport: stdio · Binary: `medicine-wheel-mcp`
 > CLI: `bin/mw` · API: `http://localhost:3940/api/`
 
 ---
@@ -56,7 +56,7 @@ The server advertises itself over MCP as `@medicine-wheel/mcp` (name/version der
 ./bin/mw cycle create "How does Wilson's relational ontology translate to software architecture?"
 ./bin/mw directions                  # All four directions with medicines and teachings
 ./bin/mw node list --type human      # List human relational nodes
-./bin/mw tools                       # List all 64 tools by category
+./bin/mw tools                       # List all 70 tools by category
 ```
 
 ### REST API
@@ -335,6 +335,30 @@ Community review circles, living consent, and Wilson-validity transformation sna
 
 ---
 
+## Inquiry Weaves (3 tools)
+
+The three-identity weave relating an artefact, its GitHub issue, and an episode — projected into Medicine Wheel storage and queryable by episode, issue, or artefact.
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `register_inquiry_weave` | `{ record }` | Register or update an Inquiry Weave record projection in Medicine Wheel storage (requires `record.id`) |
+| `list_inquiry_weaves` | `{ episode_path?, episode_number?, issue?, artefact? }` | List Inquiry Weave records with optional episode, issue, or artefact filters |
+| `get_inquiry_weave` | `{ id }` | Get one Inquiry Weave record by id |
+
+---
+
+## Plan Perspectives (3 tools)
+
+Narrative projections of a session's plan (title, prose, lineage, episode links) into Medicine Wheel storage. Upserts preserve perspective prose and union episode paths.
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `register_plan_perspective` | `{ record }` | Register or upsert a Plan Perspective record projection. Upserts by id, unions episode paths, and never rewrites perspective prose (`record.id` must start with `plan-perspective:`) |
+| `list_plan_perspectives` | `{ episode_path?, session_id?, id? }` | List Plan Perspective records by episode path, session id, or record id. Requires at least one filter |
+| `get_plan_perspective` | `{ id }` | Get one Plan Perspective record by id |
+
+---
+
 ## Archive (1 tool)
 
 ### archive_for_seven_generations
@@ -421,4 +445,4 @@ Consent levels: `public`, `community_only`, `restricted`, `sacred_private`
 
 ---
 
-*64 tools · 7 entity types · 4 directions · All my relations 🌿*
+*70 tools · 7 entity types · 4 directions · All my relations 🌿*
