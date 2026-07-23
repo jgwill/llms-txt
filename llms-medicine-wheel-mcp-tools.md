@@ -2,7 +2,7 @@
 
 > 70 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
 > Package: `@medicine-wheel/mcp` (v4.5.0) · Transport: stdio · Binary: `medicine-wheel-mcp`
-> CLI: `bin/mw` · API: `http://localhost:3940/api/`
+> CLI: `bin/mw` · API: `http://localhost:8040/api/`
 
 ---
 
