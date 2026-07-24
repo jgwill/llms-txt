@@ -138,7 +138,7 @@
 - **Related**: llms-medicine-wheel-mcp-tools.md, llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
 
 ## Medicine Wheel MCP Tools — Complete Reference
-> Complete reference for the 70 tools of the `@medicine-wheel/mcp` server (v4.5.0): ceremony lifecycle, relational CRUD, research cycles, structural tension, four-direction guidance, epistemic units, Fire Keeper coordination, governance, reasoning/observability, inquiry weaves, plan perspectives, validation, and archival.
+> Complete reference for the 71 tools of the `@medicine-wheel/mcp` server (v4.5.2): ceremony lifecycle, relational CRUD, research cycles, structural tension, four-direction guidance, epistemic units, Fire Keeper coordination, governance, reasoning/observability, inquiry weaves, plan perspectives, validation, and archival.
 - **Link**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
 - **Related**: llms-medicine-wheel-packages.txt, llms-pde.txt, llms-structural-tension-charts.txt
 

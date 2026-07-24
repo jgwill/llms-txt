@@ -1,7 +1,7 @@
 # Medicine Wheel MCP Tools — Complete Reference
 
-> 70 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
-> Package: `@medicine-wheel/mcp` (v4.5.0) · Transport: stdio · Binary: `medicine-wheel-mcp`
+> 71 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
+> Package: `@medicine-wheel/mcp` (v4.5.2) · Transport: stdio · Binary: `medicine-wheel-mcp`
 > CLI: `bin/mw` · API: `http://localhost:8040/api/`
 
 ---
@@ -56,7 +56,7 @@ The server advertises itself over MCP as `@medicine-wheel/mcp` (name/version der
 ./bin/mw cycle create "How does Wilson's relational ontology translate to software architecture?"
 ./bin/mw directions                  # All four directions with medicines and teachings
 ./bin/mw node list --type human      # List human relational nodes
-./bin/mw tools                       # List all 70 tools by category
+./bin/mw tools                       # List all 71 tools by category
 ```
 
 ### REST API
@@ -179,7 +179,24 @@ Ceremony types: `smudging`, `talking_circle`, `spirit_feeding`, `opening`, `clos
 
 | Tool | Input | Returns |
 |------|-------|---------|
-| `create_narrative_beat` | `{ direction, title, description, learnings, ceremony_ids?, relations_honored? }` | Beat record |
+| `create_narrative_beat` | `{ direction, title, description, learnings, ceremony_ids?, relations_honored?, prose?, cycle_id?, parent_beat_id?, origin_producer?, origin_source_ref? }` | Beat record |
+| `create_sub_beats` | `{ parent_beat_id, sub_beats[] }` | Parent plus the sub-beats it was telescoped into |
+
+Beats are authored through `@medicine-wheel/narrative-engine`, which validates a
+draft before it is stored: an unknown direction, an empty title, or an empty
+description blocks creation, while missing learnings or relations pass with a
+warning — the wheel would rather hold a thin record than lose the moment.
+
+`act` is **derived from `direction`** (east 1, south 2, west 3, north 4), not
+supplied. Pass `cycle_id` at creation: a beat without one is an orphan that no
+narrative arc will read, and the tool returns a warning saying so.
+
+`create_sub_beats` **writes** — it telescopes a beat into finer grain, keeping
+the parent as the lens its children are read through. This is distinct from
+`telescope_narrative_beat`, which **reads** a beat's relational web. Note that
+`coaia-narrative` uses the name `telescope_narrative_beat` for the *writing*
+move; an agent holding both toolsets should choose by what it intends to do,
+not by the name alone.
 
 ---
 
@@ -445,4 +462,4 @@ Consent levels: `public`, `community_only`, `restricted`, `sacred_private`
 
 ---
 
-*70 tools · 7 entity types · 4 directions · All my relations 🌿*
+*71 tools · 7 entity types · 4 directions · All my relations 🌿*

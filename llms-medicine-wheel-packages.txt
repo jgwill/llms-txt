@@ -16,7 +16,7 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 
 Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
-> **Naming migration (at v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together in lockstep (currently **0.5.1**); the MCP server (`@medicine-wheel/mcp`) is versioned independently (currently **4.5.0**).
+> **Naming migration (at v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together in lockstep (currently **0.5.2**); the MCP server (`@medicine-wheel/mcp`) is versioned independently (currently **4.5.2**).
 
 ---
 
@@ -167,7 +167,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 ### @medicine-wheel/mcp
 > Model Context Protocol server: Exposes the suite as 70 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/mcp
-- **Version**: 4.5.0 (independent of the 0.5.1 library line).
+- **Version**: 4.5.2 (independent of the 0.5.2 library line).
 - **Role**: Agent-facing MCP surface. See `llms-medicine-wheel-mcp-tools.md` for the full tool reference.
 
 ---
