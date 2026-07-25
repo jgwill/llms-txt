@@ -1,7 +1,7 @@
 # Medicine Wheel MCP Tools — Complete Reference
 
 > 71 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
-> Package: `@medicine-wheel/mcp` (v4.5.2) · Transport: stdio · Binary: `medicine-wheel-mcp`
+> Package: `@medicine-wheel/mcp` (v4.5.3) · Transport: stdio · Binary: `medicine-wheel-mcp`
 > CLI: `bin/mw` · API: `http://localhost:8040/api/`
 
 ---
