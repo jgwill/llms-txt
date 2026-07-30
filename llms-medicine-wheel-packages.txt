@@ -1,10 +1,10 @@
 # Medicine Wheel Developer Suite — Package Reference
 
-> Twenty-one scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
+> Twenty-six scoped `@medicine-wheel/*` npm packages plus the `@medicine-wheel/mcp` server, encoding Indigenous relational ontology, ceremonial protocol, narrative intelligence, and epistemic sophistication as first-class code structures within a unified platform architecture.
 
-**Version**: 1.3
-**Document ID**: llms-medicine-wheel-packages-v1.3
-**Last Updated**: 2026-07-25
+**Version**: 1.4
+**Document ID**: llms-medicine-wheel-packages-v1.4
+**Last Updated**: 2026-07-30
 **Content Source**: Derived from @src/** study, ontology-core specifications, and Wilson's relational epistemology research.
 **License**: Indigenous Knowledge Stewardship License (IKSL)
 
@@ -16,11 +16,43 @@ The Medicine Wheel Developer Suite is a layered npm package ecosystem grounded i
 
 Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
-> **Naming migration (at v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together in lockstep (currently **0.5.3**); the MCP server (`@medicine-wheel/mcp`) is versioned independently (currently **4.5.3**).
+> **Naming migration (at v0.3.0)**: Packages were renamed from the flat `medicine-wheel-*` form to the scoped `@medicine-wheel/*` form. The legacy `medicine-wheel-ontology-core` (≤0.2.2) is superseded by `@medicine-wheel/ontology-core`. All library packages are published together in lockstep (currently **0.5.5**); the MCP server (`@medicine-wheel/mcp`) is versioned independently (currently **4.5.5**).
 
 ---
 
-## 1. Foundational Layer
+## 1. Orientation Layer
+*The question asked before an instrument is chosen.*
+
+Two situations look identical under pressure and are not: something worked and stopped (a fire — there is a prior state to restore), and something has never existed and is wanted (a creating act — there is no baseline to close toward). Using the wrong instrument is how rigorous work goes in circles. This layer sits **below** ontology-core and depends on nothing, so the routing question carries no obligation to the instruments it routes to.
+
+### @medicine-wheel/creative-orientation
+> The orientation question itself: is there a prior state you are restoring? Yes — this is a fire, route to gap analysis. No — you are creating, route to structural tension. Reads the claim the caller supplies; it never inspects the caller's reasoning and never refuses.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/creative-orientation
+- **Role**: Routing, not instrumentation. Urgency is not evidence.
+- **Key exports**: `readOrientation`, `reorient`, `routeFor`, `worthSaying`, `ADVANCING_MARKERS`, `ELIMINATION_MARKERS`.
+- **Dependencies**: none.
+
+### @medicine-wheel/gap-analysis
+> Problem-solving built properly for the case where it genuinely applies — something worked and stopped. Evidenced baseline, observation, difference, verifiable elimination steps. Root cause, incidents, regressions, troubleshooting.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/gap-analysis
+- **Role**: The correct instrument for a fire. The baseline requirement is what separates a fire from a creating act.
+- **Key exports**: `openGapAnalysis`, `addStep`, `markDone`, `isClosed`, `doorAdvice`.
+
+### @medicine-wheel/creative-problem-solving
+> A signpost, not a door — it holds no logic of its own and never will. Carries the routing question and re-exports `@medicine-wheel/creative-orientation`.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/creative-problem-solving
+- **Role**: The door people arrive at, which sends them one of two ways.
+- **Key exports**: `THE_QUESTION`, plus the full creative-orientation surface.
+
+### @medicine-wheel/brainstorming
+> Idea into committed design through approval gates a human holds. Every outcome it emits — including its own multiple-choice questions — passes the orientation check before it is spoken.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/brainstorming
+- **Role**: Ideation, requirements gathering, and design review under human-held gates.
+- **Key exports**: `openSession`, `advance`, `ask`, `answer`, `checkEmission`, `PHASE_ORDER`, `GATED_PHASES`.
+
+---
+
+## 2. Foundational Layer
 *The soil and the roots.*
 
 ### @medicine-wheel/ontology-core
@@ -44,9 +76,15 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/data-store-postgres
 - **Role**: Postgres/Neon backend scaffold.
 
+### @medicine-wheel/infra
+> Typed infrastructure facets: hosts, tenants, services, and port bindings keyed by relational node id — a home for the machine specifics (`port`, `unit`, `linger`) that otherwise leak into `metadata: Record<string, unknown>`. Port-conflict detection runs over declared ∪ observed state, so an undocumented binding still collides with a declared one.
+- **npm**: https://www.npmjs.com/package/@medicine-wheel/infra
+- **Role**: Infrastructure as facets over the existing ontology. The closed `NodeType` union is reused, never widened.
+- **Key exports**: `detectPortConflicts`, `FACET_NODE_TYPES`, `HostFacetSchema`, `TenantFacetSchema`, `ServiceFacetSchema`, `PortBindingSchema`, `PortConflictSchema`.
+
 ---
 
-## 2. Epistemic Layer
+## 3. Epistemic Layer
 *The Four Ways of Knowing (Land, Dream, Code, Vision).*
 
 ### @medicine-wheel/importance-unit
@@ -61,7 +99,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 3. Ceremonial & Governance Layer
+## 4. Ceremonial & Governance Layer
 *The protocols of relationship.*
 
 ### @medicine-wheel/ceremony-protocol
@@ -96,7 +134,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 4. Narrative & Transformation Layer
+## 5. Narrative & Transformation Layer
 *The story of becoming.*
 
 ### @medicine-wheel/narrative-engine
@@ -116,7 +154,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 5. Reasoning & Query Layer
+## 6. Reasoning & Query Layer
 *The mind of the wheel.*
 
 ### @medicine-wheel/relational-query
@@ -131,7 +169,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 6. Presentation Layer
+## 7. Presentation Layer
 *The face of the bundle.*
 
 ### @medicine-wheel/graph-viz
@@ -146,7 +184,7 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 7. Perception & Film Layer
+## 8. Perception & Film Layer
 *The eyes and ears of Indigenous film production.*
 
 ### @medicine-wheel/perception-layer
@@ -161,18 +199,18 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 
 ---
 
-## 8. Server Layer
+## 9. Server Layer
 *The voice that speaks to agents.*
 
 ### @medicine-wheel/mcp
-> Model Context Protocol server: Exposes the suite as 70 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
+> Model Context Protocol server: Exposes the suite as 74 MCP tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering. Composes ontology-core, ceremony-protocol, fire-keeper, importance-unit, narrative-engine, and the rest into stdio-served tools. Binary `medicine-wheel-mcp`.
 - **npm**: https://www.npmjs.com/package/@medicine-wheel/mcp
-- **Version**: 4.5.3 (independent of the 0.5.3 library line).
+- **Version**: 4.5.5 (independent of the 0.5.5 library line).
 - **Role**: Agent-facing MCP surface. See `llms-medicine-wheel-mcp-tools.md` for the full tool reference.
 
 ---
 
-## 9. Application Layer
+## 10. Application Layer
 *The tools for the journey.*
 
 ### @medicine-wheel/app
@@ -185,11 +223,17 @@ Full documentation: `https://docs.medicine-wheel.jgwill.com/`
 ## Architecture Flow
 
 ```
-1. INTENTION (EAST)  ──▶ 2. RESEARCH (SOUTH) ──▶ 3. VALIDATION (WEST) ──▶ 4. ACTION (NORTH)
-   prompt-decomposition     relational-query        community-review        narrative-engine
-   fire-keeper              relational-index        consent-lifecycle       data-store
-                            importance-unit         transformation-tracker
+0. ORIENTATION ──▶ 1. INTENTION (EAST)  ──▶ 2. RESEARCH (SOUTH) ──▶ 3. VALIDATION (WEST) ──▶ 4. ACTION (NORTH)
+   creative-           prompt-decomposition     relational-query        community-review        narrative-engine
+   orientation         fire-keeper              relational-index        consent-lifecycle       data-store
+   gap-analysis                                 importance-unit         transformation-tracker
+   brainstorming
 ```
+
+Orientation is step 0, not step 1: it decides whether the wheel is the right
+instrument at all. A situation with a real prior state to restore belongs to
+`gap-analysis`, and routing it into the creative cycle would aim the work at a
+list of known failures instead of at the outcome.
 
 ---
 

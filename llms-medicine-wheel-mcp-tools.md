@@ -1,7 +1,7 @@
 # Medicine Wheel MCP Tools — Complete Reference
 
-> 71 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
-> Package: `@medicine-wheel/mcp` (v4.5.3) · Transport: stdio · Binary: `medicine-wheel-mcp`
+> 74 tools for relational research, ceremonial technology development, and Indigenous-aligned software engineering.
+> Package: `@medicine-wheel/mcp` (v4.5.5) · Transport: stdio · Binary: `medicine-wheel-mcp`
 > CLI: `bin/mw` · API: `http://localhost:8040/api/`
 
 ---
@@ -56,7 +56,7 @@ The server advertises itself over MCP as `@medicine-wheel/mcp` (name/version der
 ./bin/mw cycle create "How does Wilson's relational ontology translate to software architecture?"
 ./bin/mw directions                  # All four directions with medicines and teachings
 ./bin/mw node list --type human      # List human relational nodes
-./bin/mw tools                       # List all 71 tools by category
+./bin/mw tools                       # List all 74 tools by category
 ```
 
 ### REST API
@@ -75,6 +75,22 @@ POST /api/narrative/cycles           → { research_question, current_direction 
 GET  /api/directions                 → Four directions with Ojibwe names, medicines, teachings
 GET  /api/resources                  → Wilson paradigm, OCAP®, teaching resources
 ```
+
+---
+
+## Orientation (3 tools)
+
+Registered **first** in the tool list, because list order is scan order and the routing question belongs ahead of the instruments it routes to.
+
+Two situations look identical under pressure and are not: something worked and stopped is a fire, and restoring the prior state is correct work. Something that has never existed and is wanted is a creating act, where there is no baseline to close toward and elimination framing aims the work at a list of known failures rather than at the outcome. These tools read the claim the caller supplies. They do not inspect the caller's reasoning, and they never refuse.
+
+| Tool | Input | Purpose |
+|------|-------|---------|
+| `orient_before_solving` | `{ outcome, restores?, evidence? }` | Call BEFORE any problem-solving, debugging, fixing, troubleshooting, or root-cause work. A prior state you can name, with evidence of when it existed, means route to `open_gap_analysis`. No prior state means route to `create_structural_tension_chart`. Urgency is not evidence |
+| `open_gap_analysis` | `{ baseline_description, baseline_evidence, current_description, current_source?, difference }` | Open a gap analysis for a genuine fire. The baseline and its evidence are both required — a baseline nobody can evidence is the tell that this is not a fire |
+| `check_emitted_outcome` | `{ statement, restores?, evidence? }` | Check a statement before it is spoken, including the tool's own multiple-choice questions |
+
+Backed by `@medicine-wheel/creative-orientation`, `@medicine-wheel/gap-analysis`, and `@medicine-wheel/brainstorming`.
 
 ---
 
@@ -143,7 +159,7 @@ Store a relational memory as a knowledge node.
 
 ---
 
-## Relational CRUD (12 tools)
+## Relational CRUD (13 tools)
 
 ### Nodes
 
@@ -340,6 +356,8 @@ Community review circles, living consent, and Wilson-validity transformation sna
 
 ## Read/Search (7 tools)
 
+A cross-cutting view, not a disjoint family: four of these (`list_relational_nodes`, `list_ceremonies`, `list_cycles`, `list_edges`) are also counted under Relational CRUD and Research Cycles above. The section headings therefore sum to 78; the unique tool count is **74**.
+
 | Tool | Input | Purpose |
 |------|-------|---------|
 | `list_relational_nodes` | `{ type?, direction?, limit? }` | List nodes |
@@ -462,4 +480,4 @@ Consent levels: `public`, `community_only`, `restricted`, `sacred_private`
 
 ---
 
-*71 tools · 7 entity types · 4 directions · All my relations 🌿*
+*74 tools · 7 entity types · 4 directions · All my relations 🌿*
