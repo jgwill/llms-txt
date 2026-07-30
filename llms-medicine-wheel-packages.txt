@@ -4,7 +4,7 @@
 
 **Version**: 1.3
 **Document ID**: llms-medicine-wheel-packages-v1.3
-**Last Updated**: 2026-07-22
+**Last Updated**: 2026-07-25
 **Content Source**: Derived from @src/** study, ontology-core specifications, and Wilson's relational epistemology research.
 **License**: Indigenous Knowledge Stewardship License (IKSL)
 

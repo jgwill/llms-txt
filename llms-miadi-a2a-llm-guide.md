@@ -3,9 +3,9 @@
 > How to use Agent-to-Agent coordination when operating as an AI agent inside the Miadi platform.
 
 **Version**: 1.1.0 (v2 contract layer)
-**Last Updated**: 2026-06-03
+**Last Updated**: 2026-07-30
 **Companion**: `llms-miadi-a2a-human-guide.md` (for developers)
-**Spec**: `https://docs/miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
+**Spec**: `https://miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
 
 ---
 
@@ -60,7 +60,7 @@ Custom agent IDs (e.g. `agent.storyweaver.scene-writer`) are fine — extend the
 | I₁₅  | operator → resource                        | Structured resource access with audit.                  |
 | I₁₆  | agent → resource                           | Direct resource invocation by agent.                    |
 
-Full payload shapes live in `@miadi/a2a-contracts` (`https://docs/miadi.jgwill.com/packages/a2a-contracts/src/interfaces.ts`).
+Full payload shapes live in `@miadi/a2a-contracts` (`https://miadi.jgwill.com/packages/a2a-contracts/src/interfaces.ts`).
 
 ---
 
@@ -211,7 +211,7 @@ import type { EpisodicMemory } from "@miadi/episodic-memory-schema"
 ## Related
 
 - `llms-miadi-a2a-human-guide.md` — developer companion (setup, debug, extend)
-- `https://docs/miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md` — v2 direction-setting spec
-- `https://docs/miadi.jgwill.com/packages/a2a-contracts/README.md` — contract package README
-- `https://docs/miadi.jgwill.com/packages/episodic-memory-schema/README.md` — session-output schema README
-- HAWK paper: `https://docs/miadi.jgwill.com/foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025)
+- `https://miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md` — v2 direction-setting spec
+- `https://miadi.jgwill.com/packages/a2a-contracts/README.md` — contract package README
+- `https://miadi.jgwill.com/packages/episodic-memory-schema/README.md` — session-output schema README
+- HAWK paper: `https://miadi.jgwill.com/foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025)

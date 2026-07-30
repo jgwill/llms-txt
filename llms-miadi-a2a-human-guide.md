@@ -3,9 +3,9 @@
 > How to set up, extend, and debug the Agent-to-Agent coordination layer in the Miadi platform.
 
 **Version**: 1.1.0 (v2 contract layer)
-**Last Updated**: 2026-06-03
+**Last Updated**: 2026-07-30
 **Companion**: `llms-miadi-a2a-llm-guide.md` (for AI agents)
-**Spec**: `https://docs/miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
+**Spec**: `https://miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`
 
 ---
 
@@ -15,7 +15,7 @@ A2A is the coordination plane every Miadi agent — narrative agents, planners, 
 
 | Layer | Job | Code path |
 | --- | --- | --- |
-| **v2 contracts**  | Wrap every message in a typed envelope keyed by a HAWK interface (I₁–I₁₆). | `https://docs/miadi.jgwill.com/lib/a2a-v2/*`, `https://docs/miadi.jgwill.com/app/api/a2a/v2/*`, `@miadi/a2a-contracts` |
+| **v2 contracts**  | Wrap every message in a typed envelope keyed by a HAWK interface (I₁–I₁₆). | `https://miadi.jgwill.com/lib/a2a-v2/*`, `https://miadi.jgwill.com/app/api/a2a/v2/*`, `@miadi/a2a-contracts` |
 
 **Miadi A2A is contract-driven.** It provides compile-time payload safety and a stable contract that any agent runtime can target. Every message is a `TypedEnvelope<I, Payload>` flowing through standardized interfaces.
 
@@ -70,21 +70,21 @@ Expected: 4 contract checks + 3 live round-trip checks all pass.
                                                                    └──────────────────┘
 ```
 
-Tracing: every send/ack/drain hits `https://docs/miadi.jgwill.com/lib/tracer.ts` → `TRACE_LOG_PATH` (default `/src/logs.miadi.log`).
+Tracing: every send/ack/drain hits `https://miadi.jgwill.com/lib/tracer.ts` → `TRACE_LOG_PATH` (default `/src/logs.miadi.log`).
 
 ### File map
 
 | File                                     | Purpose                                                |
 | ---------------------------------------- | ------------------------------------------------------ |
-| `https://docs/miadi.jgwill.com/packages/a2a-contracts/`                | The 16 typed interfaces + envelope (npm-published).    |
-| `https://docs/miadi.jgwill.com/packages/episodic-memory-schema/`       | Session-output schema (npm-published, pairs with A2A). |
-| `https://docs/miadi.jgwill.com/lib/a2a-v2/coordinator.ts`              | Typed send / inbox / reply / ack.                      |
-| `https://docs/miadi.jgwill.com/lib/a2a-v2/module.ts`                   | Base class for long-running modules.                   |
-| `https://docs/miadi.jgwill.com/lib/a2a-v2/index.ts`                    | Public surface.                                        |
-| `https://docs/miadi.jgwill.com/app/api/a2a/v2/send/route.ts`           | POST — send typed envelope.                            |
-| `https://docs/miadi.jgwill.com/app/api/a2a/v2/inbox/route.ts`          | GET inbox / POST ack.                                  |
-| `https://docs/miadi.jgwill.com/app/api/a2a/v2/health/route.ts`         | GET — end-to-end round-trip health.                    |
-| `https://docs/miadi.jgwill.com/scripts/verify-a2a-v2.mjs`              | Standalone verification (no dev server required).      |
+| `https://miadi.jgwill.com/packages/a2a-contracts/`                | The 16 typed interfaces + envelope (npm-published).    |
+| `https://miadi.jgwill.com/packages/episodic-memory-schema/`       | Session-output schema (npm-published, pairs with A2A). |
+| `https://miadi.jgwill.com/lib/a2a-v2/coordinator.ts`              | Typed send / inbox / reply / ack.                      |
+| `https://miadi.jgwill.com/lib/a2a-v2/module.ts`                   | Base class for long-running modules.                   |
+| `https://miadi.jgwill.com/lib/a2a-v2/index.ts`                    | Public surface.                                        |
+| `https://miadi.jgwill.com/app/api/a2a/v2/send/route.ts`           | POST — send typed envelope.                            |
+| `https://miadi.jgwill.com/app/api/a2a/v2/inbox/route.ts`          | GET inbox / POST ack.                                  |
+| `https://miadi.jgwill.com/app/api/a2a/v2/health/route.ts`         | GET — end-to-end round-trip health.                    |
+| `https://miadi.jgwill.com/scripts/verify-a2a-v2.mjs`              | Standalone verification (no dev server required).      |
 
 ---
 
@@ -252,15 +252,15 @@ sessionId: sw-2026-05-28-001
 
 ## Provenance
 
-- HAWK paper: `https://docs/miadi.jgwill.com/foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025, arXiv:2507.04067). Registered in `https://docs/miadi.jgwill.com/foundations/source-ledger.yaml` as `mas.cheng-2025-hawk`.
+- HAWK paper: `https://miadi.jgwill.com/foundations/sources/HAWK/2507.04067v1.pdf` (Cheng et al. 2025, arXiv:2507.04067). Registered in `https://miadi.jgwill.com/foundations/source-ledger.yaml` as `mas.cheng-2025-hawk`.
 - Companion published packages: `@miadi/a2a-contracts`, `@miadi/episodic-memory-schema` (npm, MIT).
-- v2 direction-setting spec: `https://docs/miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`.
+- v2 direction-setting spec: `https://miadi.jgwill.com/rispecs/a2a/06-hawk-inspired-next-gen.spec.md`.
 
 ---
 
 ## Related
 
 - `llms-miadi-a2a-llm-guide.md` — the LLM-facing reference.
-- `https://docs/miadi.jgwill.com/packages/a2a-contracts/README.md` — contract package README.
-- `https://docs/miadi.jgwill.com/packages/episodic-memory-schema/README.md` — session-output schema README.
-- `https://docs/miadi.jgwill.com/app/docs/miadi-agent/storyweaver/` — narrative use-case wired against the schema.
+- `https://miadi.jgwill.com/packages/a2a-contracts/README.md` — contract package README.
+- `https://miadi.jgwill.com/packages/episodic-memory-schema/README.md` — session-output schema README.
+- `https://miadi.jgwill.com/app/docs/miadi-agent/storyweaver/` — narrative use-case wired against the schema.
