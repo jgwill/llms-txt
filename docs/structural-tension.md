@@ -72,6 +72,14 @@ When a discrepancy appears between expectation and delivery, the [Managerial Mom
 
 The principle of [delayed resolution](../llms-delayed-resolution-principle.md) prevents premature collapse of structural tension. Current reality must be genuinely assessed, not defaulted to comfortable starting positions.
 
+### As a State Machine
+
+A chart is structurally a state machine — desired outcome = final state, current reality = initial
+state, a completed action step = a transition, a telescoped step = a composite state, a Creator
+Moment of Truth = a guard. Not analogy: equivalence. That framing is what lets an LLM reason about
+a chart in its native vocabulary, and what lets a chart be validated, drawn and actually run. See
+[llms-stc-state-machine.md](../llms-stc-state-machine.md).
+
 ---
 
 ## Key Sources
@@ -80,3 +88,4 @@ The principle of [delayed resolution](../llms-delayed-resolution-principle.md) p
 - [llms-creative-orientation.txt](../llms-creative-orientation.txt) — foundational framework
 - [llms-delayed-resolution-principle.md](../llms-delayed-resolution-principle.md) — tension maintenance
 - [llms-managerial-moment-of-truth.md](../llms-managerial-moment-of-truth.md) — MMOT process
+- [llms-stc-state-machine.md](../llms-stc-state-machine.md) — the chart as event-driven architecture, and the `stateloom` runtime that executes it

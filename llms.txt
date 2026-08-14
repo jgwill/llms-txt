@@ -126,6 +126,10 @@
 - **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 
+## STC as State Machine — Event-Driven Creative Architecture
+> The comprehension layer: a structural tension chart IS a state machine, by structural equivalence and not by analogy. Desired outcome = final state, current reality = initial state, completed action step = transition, telescoped step = composite state, Creator Moment of Truth = guard. Carries the eight-event STC vocabulary, a worked chart in SMDF, the validation rules read as chart hygiene, and the optional `stateloom` runtime that executes, draws and live-syncs a chart between a human and an agent.
+- **Link**: [llms-stc-state-machine.md](./llms-stc-state-machine.md)
+- **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-pde.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md
 
 ## Structural Thinking - CURRENT
 > The comprehensive guide to Robert Fritz's Structural Thinking for LLMs. Integrates FST/SCCP source materials, three-universe validation (Mia/Miette/Ava), Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping. Supersedes both Gemini and Claude versions.
@@ -193,3 +197,10 @@
 - **Full**: [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt)
 - **Docs**: [docs/storytelling.md](./docs/storytelling.md)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt
+
+## Stateloom (formerly SMCraft) — State Machine Craft
+> Design, validate, generate, run and live-edit hierarchical state machines from one `.smdf.json` document. Ten `@miadi/stateloom-*` npm packages plus `miadi-stateloom-engine` on PyPI — engine, protocol, hub, clients, canvas, `smcx` CLI, 15-tool MCP server, agent skill pack, prebuilt designer. The `smcraft` package names are deprecated. This is the runtime that executes llms-stc-state-machine.md.
+- **Link**: [docs.smcraft.jgwill.com/llms.txt](https://docs.smcraft.jgwill.com/llms.txt)
+- **Full**: [docs.smcraft.jgwill.com/llms-full.txt](https://docs.smcraft.jgwill.com/llms-full.txt)
+- **Repository**: [github.com/jgwill/smcraft](https://github.com/jgwill/smcraft)
+- **Related**: llms-stc-state-machine.md, llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt

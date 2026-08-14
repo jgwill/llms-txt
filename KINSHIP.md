@@ -12,6 +12,7 @@
 ### repo: `jgwill/smcraft`
 * Drafted guidance `llms-stc-state-machine.md` was created out of something Robert Fritz said that got imprinted in my mind: "The creative orientation is an Event-Driven Process" and Robert is not good with software architecture at all !!  miadisabelle/forgewright#1 will be an interesting relation to apply that , learn from the relation to ceremony jgwill/src#403 and reflect that in our relational files.
 * * Therefore, smcraft already has its first runtimes published at :`https://www.npmjs.com/package/smcraft` and `https://pypi.org/project/smcraft/` and will be greatly influenced with its relationship with `avadisabelle/coaia-narrative`
+* * *(2026-08-14 — those two package names are now DEPRECATED. The runtimes ship as the `@miadi/stateloom-*` family on npm — engine, protocol, client, hub, react, canvas, cli, mcp, skills, web — and `miadi-stateloom-engine` on PyPI. The repo is still `jgwill/smcraft`. `llms-stc-state-machine.md` v2.0 carries the current names, the STC→MCP tool mapping and the PDE→chart→machine→rispec path.)*
 ### repo: `avadisabelle/coaia-narrative` cloned in: `/src/coaia-narrative`
 
 * create Structural Tension Charting with MCP and CLI tools.
