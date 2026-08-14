@@ -28,6 +28,7 @@ Each skill is designed to be invoked within AI-assisted workflows while maintain
 | **[creative-orientation](creative-orientation/)** | Shift from reactive problem-solving to generative creation | [llms-creative-orientation.txt](../../llms-creative-orientation.txt) | Active |
 | **[delayed-resolution](delayed-resolution/)** | Hold productive tension rather than prematurely collapsing it | [llms-delayed-resolution-principle.md](../../llms-delayed-resolution-principle.md) | Active |
 | **[structural-tension-charting](structural-tension-charting/)** | Map structural tension as advancement methodology | [llms-structural-tension-charts.txt](../../llms-structural-tension-charts.txt) | Active |
+| *(no skill — read the doc)* | The chart AS a state machine: states, transitions, guards, and the `stateloom` runtime that validates, draws and runs one | [llms-stc-state-machine.md](../../llms-stc-state-machine.md) | Active |
 
 ### Operational Methodologies
 

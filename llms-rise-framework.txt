@@ -535,6 +535,7 @@ The RISE framework represents a fundamental shift in how we understand the relat
 - `llms-narrative-remixing.txt`: Methods for transforming technical content into engaging narratives
 - `llms-structural-thinking.txt`: Core principles of structural dynamics and tension-based progress
 - `llms-managerial-moment-of-truth.md`: MMOT framework for iterative refinement through planning → executing → learning loops
+- `llms-stc-state-machine.md`: structural tension charts as state machines — and one concrete Exportation terminus, where a designed machine emits its own rispec (`generate_rispec`), folding in the originating PDE decomposition's intent
 
 ### Implementation Examples {#implementation-examples}
 

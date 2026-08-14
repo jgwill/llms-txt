@@ -271,6 +271,7 @@ The current miaco PDE surface supports several engines with different cost/quali
 - [llms-creative-orientation.txt](llms-creative-orientation.txt) — foundational framework
 - [llms-delayed-resolution-principle.md](llms-delayed-resolution-principle.md) — tension maintenance
 - [llms-structural-tension-charts.txt](llms-structural-tension-charts.txt) — charting methodology
+- [llms-stc-state-machine.md](llms-stc-state-machine.md) — the chart as event-driven architecture; §8 there carries the PDE → chart → machine → rispec path, where `settings._source.pdeId` keeps a decomposition's held ambiguities legible in the exported specification
 - [llms-ceremony-pipeline.md](llms-ceremony-pipeline.md) — 8-phase pipeline (PDE is Phase 3)
 - [llms-polyphonic-design-review.md](llms-polyphonic-design-review.md) — multi-voice review of PDE decompositions
 - [llms-inquiry-routing.md](llms-inquiry-routing.md) — routing from PDE to inquiry

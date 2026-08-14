@@ -16,8 +16,10 @@ This is an **LLM comprehension layer** — it translates Robert Fritz's creative
 event-driven architecture so that LLMs can reason about structural tension, desired outcomes and
 action steps using their native cognitive vocabulary (states, transitions, guards, events).
 
-The framing is primary and stands alone. A chart drawn on paper is a state machine whether or not
-any software is running.
+This document is **NOT** a build spec for any particular tool. The framing is primary and stands
+alone: a chart drawn on paper is a state machine whether or not any software is running. Tools are
+*consumers* of this framing — §6 names one because a reader who wants to run a chart should not
+have to guess, not because the framing depends on it.
 
 What changed since v1.1: the runtime is no longer hypothetical. In March 2026 this document could
 only say a tool *may* execute this framing some day. Since then the state-machine suite was built,
@@ -70,6 +72,14 @@ This is not metaphor or analogy. It is structural equivalence:
 
 The last three are new in v2.0. They matter because they are the three shapes a chart most often
 takes that a flat to-do list cannot express at all.
+
+**Two of them outrun today's interpreter, and an LLM should say so rather than discover it.** The
+format expresses history states and parallel regions, the validators check them, the code
+generators emit them — but the in-memory `Machine` (§6) **throws at construction** on a parallel
+region, and a transition targeting a history state parks on the pseudo-state instead of resuming
+where you left off. Model a chart with either and it still validates, still draws, still generates
+code; it will not *run* in the interpreter. The equivalence is sound; the runtime is younger than
+the equivalence. Only the internal transition is fully live today.
 
 ---
 
@@ -203,18 +213,32 @@ Read it back as a chart:
 
 ## 5. The Validators Are Chart Hygiene
 
-The format ships fourteen validation rules, V001–V014. Six of them are structural-tension findings
+The format specifies fourteen validation rules, V001–V014. Several are structural-tension findings
 wearing engineering names, and this is the most useful thing in this document for an LLM helping
 someone plan:
 
-| Rule | Says | Reads as |
-|---|---|---|
-| V001 | Exactly one root state | One chart has one desired outcome. Two outcomes is two charts. |
-| V006 | Every `nextState` must exist | An action step pointing at a state nobody defined is a step toward nothing. |
-| V007 | Final states have no outgoing transitions | Nothing follows the desired outcome. If work continues past it, it was never the outcome — it was a milestone. |
-| V009 | A composite state needs a non-final initial child | A telescoped action step with no first move is a wish, not a chart. |
-| V011 | Parallel region transitions stay in-region or hit the exit | Concurrent action steps may not reach into each other's business. |
-| V012 | A composite state has at least one child | You telescoped and then wrote nothing underneath. |
+| Rule | Says | Reads as | Where it runs |
+|---|---|---|---|
+| V006 | Every `nextState` must exist | An action step pointing at a state nobody defined is a step toward nothing. | both engines |
+| V007 | Final states have no outgoing transitions | Nothing follows the desired outcome. If work continues past it, it was never the outcome — it was a milestone. | both engines |
+| V002 | State names are unique | Two states with one name is one position the chart cannot address. | both engines |
+| V009 | A composite state needs a non-final initial child | A telescoped action step with no first move is a wish, not a chart. | **Python only** |
+| V011 | Parallel region transitions stay in-region or hit the exit | Concurrent action steps may not reach into each other's business. | **Python only** |
+| V012 | A composite state has at least one child | You telescoped and then wrote nothing underneath. | **Python only** |
+
+**Know which validator you are actually holding** — three of them are not everywhere:
+
+- The **Python engine** (`miadi-stateloom-engine`) implements all fourteen.
+- The **TypeScript engine** implements seven: V001, V002, V003, V005, V006, V007, V013. A chart
+  with a telescoped step and nothing under it passes there and fails in Python.
+- The **MCP server's `validate_definition`** runs its own smaller reference/uniqueness set, and
+  **its rule IDs are not the engine's** — its `V001` means "no events defined", not "one root
+  state"; its `V004` means an unknown transition target. An LLM that reads an MCP `V001` as the
+  engine's V001 will misdiagnose the chart. Read the message, never the number.
+
+One-outcome discipline — *one chart has one desired outcome; two outcomes is two charts* — is
+doctrine, not a rule any validator enforces. Nothing stops a definition from carrying two final
+states. That check is yours.
 
 Validation is not bureaucracy here. It is the machine noticing what the person has not yet decided.
 
@@ -235,7 +259,8 @@ Optional. Nothing above depends on it. But when an LLM wants the chart to actual
 drawn, or to be edited by a human and an agent at the same time, this is the suite — published,
 versioned, and usable from a cold start.
 
-It was formerly named `smcraft` on npm and PyPI. **That name is deprecated.** The current family:
+It was formerly named `smcraft` on npm and PyPI. **That name is deprecated.** The current family —
+versions current as of 2026-08-14, with <https://docs.smcraft.jgwill.com/llms.txt> canonical:
 
 | Install | What it is |
 |---|---|
@@ -283,18 +308,29 @@ canvas reporting `○ no disk` while the agent writes happily somewhere else.
 | STC operation | Tool | Effect on the machine |
 |---|---|---|
 | Establish a chart | `create_state_machine(namespace, name)` | Instantiate: Root state, empty event source |
+| Name current reality | `add_state(name)` | The initial state — **add it first**, see below |
 | Name the desired outcome | `add_state(name, kind: "final")` | The target state |
-| Name current reality | `add_state(name)` + first transition from it | The initial state |
 | Add an action step | `add_state` + `add_transition(state, event, nextState)` | A transition trigger |
 | Telescope an action step | `add_state(name, parent: <that step>)` | The step becomes a composite state |
 | Write a Moment of Truth | `add_transition(..., condition: "…")` | A guard on the transition |
-| Check the chart holds | `validate_definition()` | V001–V014 |
+| Check the chart holds | `validate_definition()` | Reference and uniqueness checks in the server's own numbering — **not** the engine's V001–V014 (§5) |
 | See it | `render_diagram(format: "png")` | Writes the picture *and* returns it inline, so the agent can look at what it designed |
 | Export as specification | `generate_rispec(intent?)` | RISE terminus — §8 |
 | Switch chart mid-session | `set_project_file(path)` | Disk target and live room both move |
 
-Full list is 15 tools; the rest read (`get_definition`, `list_states`, `list_events`,
-`load_definition`), remove (`remove_state`, `add_event`) or generate code (`generate_code`).
+**Call order is load-bearing.** `add_state` appends to the parent's children, and a machine enters
+its **first non-history child**. Name the desired outcome before current reality and the final state
+becomes the initial state: the machine is `done` at construction and every event answers
+`handled: false, error: "machine has reached a final state"`. Current reality first, always — which
+is also the honest order to think in.
+
+Full list is 15 tools; the rest read (`get_definition`, `get_project_file`, `list_states`,
+`list_events`, `load_definition`), build (`add_event`), remove (`remove_state`) or generate code
+(`generate_code`).
+
+One shape difference worth knowing: the MCP writes the document wrapped as
+`{"stateMachine": { … }}`, while §4's example is the bare `{settings, events, state}`. Both are read
+everywhere; a chart built through the agent simply will not look byte-for-byte like §4.
 
 ### Running the chart, not just drawing it
 
@@ -302,24 +338,43 @@ Full list is 15 tools; the rest read (`get_definition`, `list_states`, `list_eve
 import { Machine } from "@miadi/stateloom-engine/machine";
 
 const machine = new Machine(definition, { context: { through_line_holds: true } });
-machine.state;                          // "CurrentReality"
-machine.send("tension_established");     // → "Germination_Gathering"
-machine.send("action_step_completed");   // → "Germination_ThroughLineNamed"
+machine.state;                           // "CurrentReality"
+machine.send("tension_established");     // state is now "Germination_Gathering"
+machine.send("action_step_completed");   // state is now "Germination_ThroughLineNamed"
 machine.availableEvents();               // what this position can even respond to
-machine.send("moment_of_truth");         // guard consulted; false ⇒ no advance
+machine.send("moment_of_truth");         // guard `through_line_holds` consulted → advances
 machine.visited;                         // the path so far — read it for oscillation
 machine.done;                            // true once the desired outcome is reached
 ```
 
-`context` is the guard lookup table: a Moment of Truth answered honestly. With no context given,
-guards **fail closed** — the machine refuses to advance rather than pretending. That default is the
-right one for creative work: unexamined guards do not become permission.
+`send()` returns `{ handled, changed, from, to, event }` — it reports what happened, it does not
+return the new state; read `machine.state` for that. `handled: true, changed: false` is the
+internal transition: reality reassessed, position unmoved.
+
+`context` is the guard lookup table: a Moment of Truth answered honestly. Build the same machine
+with **no** context and `moment_of_truth` is refused — guards **fail closed** rather than pretend.
+That default is the right one for creative work: unexamined guards do not become permission.
 
 ### The live loop — human and agent on one chart
 
-Start the hub (4599) and the canvas (4598) and both an agent and a person hold the same board:
-the agent's `add_state` blooms on the canvas within a second; a box dragged on the canvas is in
-the agent's next `get_definition`. Two invariants make it trustworthy:
+```bash
+export STATELOOM_PROJECT_FILE=/absolute/path/to/chart.smdf.json     # the same absolute path
+                                                                    # every surface must name
+npx -y @miadi/stateloom                                             # the hub,    :4599
+npx -y @miadi/stateloom-web --doc "$STATELOOM_PROJECT_FILE" \
+                            --bridge http://127.0.0.1:4599          # the canvas, :4598
+smcx watch                                                          # the same doc as live ASCII
+```
+
+The hub keys its rooms by the **absolute project-file path** — document identity and room identity
+are the same thing, which is why every surface must be handed the identical path and why
+`set_project_file` moves the disk target and the live room together. The canvas asks the process
+serving it, at runtime, which hub the browser should dial (`GET /api/config`), so pointing it
+elsewhere is a restart, never a rebuild.
+
+With those up, an agent and a person hold the same board: the agent's `add_state` blooms on the
+canvas within a second; a box dragged on the canvas is in the agent's next `get_definition`. Two
+invariants make it trustworthy:
 
 - **Persist first, emit second.** Every surface writes the file, then announces it. Hub down means
   no animation, never lost work.

@@ -32,12 +32,12 @@
 ## Creative Orientation Framework
 > This is a core document explaining the principles of Creative Orientation. It contrasts the reactive (elimination-focused) approach with the creative (generative) approach. It introduces key concepts from structural thinking, such as structural tension, advancing vs. oscillating patterns, and the three phases of the creative process (Germination, Assimilation, Completion).
 - **Link**: [llms-creative-orientation.txt](./llms-creative-orientation.txt)
-- **Related**: llms-structural-thinking.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
+- **Related**: llms-structural-thinking.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt, llms-stc-state-machine.md
 
 ## Delayed Resolution Principle in COAIA Memory
 > Based on Robert Fritz's work, this document explains why prematurely resolving tension (e.g., using "Ready to begin" as a default `currentReality`) destroys the generative force of structural tension. It provides clear guidelines for LLMs on how to maintain tension by requiring explicit assessment of current reality.
 - **Link**: [llms-delayed-resolution-principle.md](./llms-delayed-resolution-principle.md)
-- **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt
+- **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt, llms-stc-state-machine.md
 
 ## Digital Decision Making Framework for LLMs
 > This framework teaches LLMs to guide users from indecisive "analog" thinking to clear "digital" YES/NO decisions. It introduces the TandT methodology, which uses a TwoFlag (Acceptable/Unacceptable) and ThreeFlag (trend) system. It also provides structured response templates and corrects for common LLM biases like problem-solving and uncertainty performance.
@@ -107,7 +107,7 @@
 ## RISE Framework for LLMs
 > The RISE framework provides a creative-oriented methodology for reverse engineering and specifying software. It treats specifications as "prose code" (SpecLang) and uses a four-phase process to extract creative intent, define desired outcomes, and generate specifications that focus on advancing patterns rather than reactive problem-solving. It also includes a git-log-driven methodology for maintaining specs as code evolves.
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
-- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
 
 ## Macrostructural Patterning Analysis for LLMs
 > This document provides a framework for LLMs to assist in macrostructural patterning analysis. It explains how to identify oscillating patterns by mapping a person's stories into generic steps and validating them across different life domains. The core principle is that structure determines behavior, and the goal is to understand this structure, not to "solve" it as a problem.
@@ -117,7 +117,7 @@
 ## Structural Tension Charts for LLMs
 > This guide explains the correct use of structural tension charts based on Robert Fritz's methodology. A chart consists of a Desired Outcome, Current Reality, and Action Steps. Action Steps are not a to-do list — each is a complete, telescoped structural tension chart. **Critical**: Structural tension is a state of **disequilibrium** (an active, loaded, dynamic force) that seeks resolution through advancement. It is NOT "a gap to bridge" — gap language implies emptiness, while tension is energized and causal. The structure resolves by advancing toward the desired outcome, not by "bridging" or "filling" anything.
 - **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
-- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
 
 ## STC as State Machine — Event-Driven Creative Architecture
 > The LLM comprehension layer between the chart methodology and event-driven architecture, asserting structural equivalence rather than analogy: current reality = initial state, desired outcome = final state, completed action step = transition event, telescoped action step = composite state (a chart inside a chart), Creator Moment of Truth = guard condition, oscillating pattern = a cycle with no path to a final state, reassessing without moving = an internal transition. Defines the eight-event STC vocabulary (`tension_established`, `action_step_completed`, `reality_updated`, `moment_of_truth`, `phase_advance`, `phase_retreat`, `tension_resolve`, `tension_oscillate`), shows a full chart written as SMDF JSON with a telescoped step and a guarded transition, and reads six of the format's fourteen validators back as chart hygiene — V007 (nothing follows the desired outcome; if work continues past it, it was a milestone), V009 (a telescoped step with no first move is a wish), V012 (you telescoped and wrote nothing underneath). Version 2.0 adds the runtime that exists now: the published `@miadi/stateloom-*` suite (engine, MCP server with 15 tools, CLI, canvas, hub, agent skills — formerly named `smcraft`, deprecated), the mapping from STC operations to MCP tool calls, the `Machine` interpreter whose guards fail closed when unexamined, the live loop where a human canvas and an agent edit one chart at once, and the PDE → chart → machine → RISE-rispec path that carries a decomposition's held ambiguities through to the written specification. The framing precedes the runtime and stands without it.
@@ -143,7 +143,7 @@
 ## Prompt Decomposition Engine (PDE)
 > PDE transforms complex prompts into structured decompositions: primary and secondary intents (explicit and implicit), Four Directions mapping (East=vision, South=analysis, West=validation, North=action), dependency-ordered action stacks, and named ambiguities held as productive tension. Current guidance prefers `miaco decompose run` for strategy-aware work, especially `iterative-refinement` for layered Intent Analyst prompts; `standard` remains the compatibility baseline, and `adversarial-consensus` is treated as experimental until parser behavior is verified. mcp-pde remains the stable MCP-standard lineage while strategy-aware MCP support is future work.
 - **Link**: [llms-pde.txt](./llms-pde.txt)
-- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-stc-state-machine.md
 
 ## Kinship Hub System (Full Protocol with Indigenous Foundations)
 > Extended protocol grounded in Shawn Wilson's research-as-ceremony, Four/Six Rs of Indigenous research, Anishnaabe inawendiwin, and Indigenous kinship law. Provides a ten-section KINSHIP.md schema (Identity, Lineage, Human Relations, More-than-Human Relations, the Rs, Protocols, Accountability, Tensions, Ceremony, Change Log) and detailed LLM behavioral guidelines for creating, updating, and maintaining kinship charters as living ceremonial artifacts. Includes anti-patterns, plurality handling, harm/repair protocols, and integration with all major LLMS frameworks.

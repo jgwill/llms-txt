@@ -32,12 +32,12 @@
 ## Creative Orientation Framework
 > A foundational framework distinguishing between reactive problem-solving and generative creation, based on Robert Fritz's structural dynamics.
 - **Link**: [llms-creative-orientation.txt](./llms-creative-orientation.txt)
-- **Related**: llms-structural-thinking.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt
+- **Related**: llms-structural-thinking.txt, llms-delayed-resolution-principle.md, llms-rise-framework.txt, llms-stc-state-machine.md
 
 ## Delayed Resolution Principle
 > Explains the principle of holding structural tension rather than prematurely resolving it, which is critical for the creative process.
 - **Link**: [llms-delayed-resolution-principle.md](./llms-delayed-resolution-principle.md)
-- **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt
+- **Related**: llms-creative-orientation.txt, llms-structural-tension-charts.txt, llms-stc-state-machine.md
 
 ## Deep Research Foundations — Session Close Protocol
 > When a repo has a derived `deep-research-foundations` skill and a `./foundations/` tree, session close must compare implemented decisions against academic foundation fields, update `source-ledger.yaml` provenance if traceable, then make a scoped issue-referenced commit or state the blocker.
@@ -114,7 +114,7 @@
 ## RISE Framework
 > The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures.
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
-- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
 
 ## Macrostructural Patterning Analysis (SCCP)
 > A guide for using Robert Fritz's Structural Dynamics to identify and understand recurring behavioral patterns (macrostructural patterning).
@@ -124,7 +124,7 @@
 ## Structural Tension Charts Guide
 > A guide for understanding and using Robert Fritz's structural tension charts. Structural tension is **disequilibrium** — an active, loaded force that resolves through advancement (NOT "a gap to bridge"). Action steps are telescoped sub-charts, not a to-do list.
 - **Link**: [llms-structural-tension-charts.txt](./llms-structural-tension-charts.txt)
-- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
+- **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
 
 ## STC as State Machine — Event-Driven Creative Architecture
 > The comprehension layer: a structural tension chart IS a state machine, by structural equivalence and not by analogy. Desired outcome = final state, current reality = initial state, completed action step = transition, telescoped step = composite state, Creator Moment of Truth = guard. Carries the eight-event STC vocabulary, a worked chart in SMDF, the validation rules read as chart hygiene, and the optional `stateloom` runtime that executes, draws and live-syncs a chart between a human and an agent.
@@ -154,7 +154,7 @@
 ## Prompt Decomposition Engine (PDE)
 > Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents mapped to Four Directions. Includes current `miaco decompose run` strategy guidance (`standard`, `iterative-refinement`, `adversarial-consensus`), mcp-pde compatibility boundaries, knowledge base enrichment via qmd, and Structural Thinking Four Questions generation from decomposition ambiguities.
 - **Link**: [llms-pde.txt](./llms-pde.txt)
-- **Related**: llms-pde-structural-thinking.md, llms-st-four-questions.md, llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-ceremony-pipeline.md, llms-polyphonic-design-review.md, llms-inquiry-routing.md
+- **Related**: llms-pde-structural-thinking.md, llms-st-four-questions.md, llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-ceremony-pipeline.md, llms-polyphonic-design-review.md, llms-inquiry-routing.md, llms-stc-state-machine.md
 
 ## PDE → Structural Thinking Bridge
 > Links EAST decomposition to SOUTH planning via the Four Questions. PDE surfaces ambiguities; Information, Clarification, Implication, and Discrepancy questions transform them into structured inquiry before action begins.

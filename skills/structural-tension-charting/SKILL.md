@@ -111,3 +111,4 @@ How will you track whether changes are actually being made? What reminds you of 
 - **Creative Orientation** (`/creative-orientation`): Foundational principles this skill implements
 - **Delayed Resolution** (`/delayed-resolution`): Tension maintenance principle applied throughout
 - **Performance Truth** (`/performance-truth`): MMOT process extends Creator Moment of Truth to interpersonal contexts
+- **The chart as a state machine** ([llms-stc-state-machine.md](../../llms-stc-state-machine.md)): desired outcome = final state, current reality = initial state, completed action step = transition, telescoped step = composite state, Creator Moment of Truth = guard. Reach for it when a chart should be validated, drawn, run, or edited live by a person and an agent at once — the `stateloom` runtime named there does all four.
