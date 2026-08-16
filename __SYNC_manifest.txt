@@ -1,0 +1,23 @@
+# __SYNC_manifest.txt — the canonical distribution set of jgwill/llms-txt
+#
+# These files are copied into the agent-instruction target (default /etc/claude-code)
+# by __SYNC_llms.sh. This list is the SOURCE side of the contract: a fresh host with an
+# empty target still gets the right set from here.
+#
+# The target may carry its own `guidance.txt` naming host-local additions. The script
+# syncs the UNION and writes the union back to the target's guidance.txt, so that file
+# stays an honest record of what is installed on that host.
+#
+# Adding a file here is how a new guidance doc reaches every host. `--check` will tell
+# you when a target's CLAUDE.md or skills reference an llms-* file this list omits.
+
+llms-rise-framework.txt
+llms-creative-orientation.txt
+llms-narrative-remixing.txt
+llms-structural-thinking.txt
+llms-managerial-moment-of-truth.md
+llms-st-four-questions.md
+llms-stc-state-machine.md
+llms-kinship-hub-system.md
+llms-pde.txt
+llms-pde-structural-thinking.md

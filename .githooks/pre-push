@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# pre-push — jgwill/llms-txt release seam.
+#
+# Publishing this repo IS the release. A guidance file that is pushed here but never
+# reaches /etc/claude-code is written, not in effect — the exact five-month drift that
+# earned the rewrite of __SYNC_llms.sh on 2026-08-16.
+#
+# Install:  ./__SYNC_llms.sh --install-hook      (sets core.hooksPath=.githooks)
+# Bypass:   LLMS_SYNC_SKIP=1 git push
+#
+# This hook NEVER blocks the push. The condition of a downstream target is not a reason
+# to refuse to publish the source; it is a reason to say so loudly. Read the report.
+#
+# Ordering caveat, stated rather than hidden: git offers no post-push, so the target is
+# synced from the working tree just BEFORE this push lands. If the push to origin then
+# fails, the target's commit references a source revision that is still local. Re-push.
+
+set -uo pipefail
+
+if [[ "${LLMS_SYNC_SKIP:-0}" == "1" ]]; then
+    echo "ℹ️  LLMS_SYNC_SKIP=1 — not distributing guidance to the agent-instruction target"
+    exit 0
+fi
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+SYNC="$REPO_ROOT/__SYNC_llms.sh"
+
+[[ -x "$SYNC" ]] || { echo "ℹ️  no executable __SYNC_llms.sh — skipping distribution"; exit 0; }
+
+echo "── llms-txt release: distributing guidance ──────────────────────────────"
+"$SYNC" --from-hook
+rc=$?
+
+case $rc in
+    0) : ;;
+    1) echo "⚠️  distribution reported drift it would not resolve on its own (exit 1)."
+       echo "   The push to origin continues. Read the report above and finish the crossing." ;;
+    2) echo "⚠️  could not look at the target (exit 2) — not the same as nothing to do."
+       echo "   The push to origin continues; this host simply could not distribute." ;;
+    *) echo "⚠️  distribution exited $rc." ;;
+esac
+echo "─────────────────────────────────────────────────────────────────────────"
+
+exit 0

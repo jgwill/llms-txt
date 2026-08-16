@@ -55,3 +55,38 @@
 * repo/path that might influence how we distribute, access what is being created in here
 
 ### `/workspace/repos/miadisabelle/mia-context7`
+
+### `jgwill/etc-claude-code` — cloned at `/etc/claude-code` on every host
+
+**This is where a guidance file stops being a document and starts being an instruction.**
+`/etc/claude-code/CLAUDE.md` is organization-managed policy loaded into every agent session on
+the host, and its skills (`rise-framework`, `pde-vessel-ceremony`, …) read the `llms-*` files
+sitting beside it. A doc published here but absent there is written, not in effect.
+
+The crossing is `./__SYNC_llms.sh`, and it runs at `git push`:
+
+```bash
+./__SYNC_llms.sh --install-hook   # once per checkout: core.hooksPath = .githooks
+./__SYNC_llms.sh --check          # what would travel, changing nothing
+LLMS_SYNC_SKIP=1 git push         # publish without distributing
+```
+
+What travels is the **union** of `__SYNC_manifest.txt` (this repo's canonical set — a fresh
+host bootstraps from it) and `<target>/guidance.txt` (host-local additions). The union is
+written back to the target's `guidance.txt`, so that file stays an honest record of what is
+installed there rather than a wish list.
+
+Two checks run on every pass, because a distribution that only copies cannot notice what it
+is failing to carry:
+
+| finding | meaning |
+|---|---|
+| `REFERENCED-BUT-UNLISTED` | the target's `CLAUDE.md`/skills name an `llms-*` file that exists here and neither list carries — `--adopt` installs it, or add it to `__SYNC_manifest.txt` if every host should have it |
+| `DANGLING-REFERENCE` | the target sends an agent to a file that exists neither here nor there — renamed, or never written |
+
+Exit codes follow the `reconcile.py` contract the ecosystem already uses: `0` clean or synced,
+`1` drift found, `2` **could not look** — the target is absent, unwritable, or not a git tree.
+That third code is the point. Before 2026-08-16 this script answered a missing target with
+`exit 0`, so the host that needed the sync most was the one reported as already done.
+
+Related: `jgwill/llms-txt#12` → ceremony `jgwill/src#403`.
