@@ -1,0 +1,558 @@
+# Medicine Wheel Ontology Trace
+# Miadi Platform LLMS-txt — Relational Ontology Research
+# Date: 2026-06-13
+# Researcher: Copilot (on behalf of Guillaume / Mia)
+# MCP Version: @medicine-wheel/mcp v4.4.2
+
+---
+
+## 0. ENVIRONMENT STATUS
+
+```
+Medicine Wheel MCP:  AVAILABLE via npx @medicine-wheel/mcp
+REST API (localhost:3940): NOT running (used stdio transport instead)
+Store location: .mw/store/ (JSONL file-backed, local to repo)
+Tools available: 64
+Protocol: MCP JSON-RPC 2.0 (stdio)
+```
+
+---
+
+## 1. CEREMONY OPEN
+
+**Tool**: `mw_ceremony_open`
+
+**Input**:
+```json
+{
+  "intention": "Ground Miadi LLMS-txt guidance in Medicine Wheel relational ontology",
+  "direction": "east",
+  "participants": ["Guillaume", "Mia", "Copilot"],
+  "medicines": ["Tobacco"]
+}
+```
+
+**Response**:
+```json
+{
+  "ceremony_id": "ceremony:1781376770461:us9va",
+  "status": "opened",
+  "direction": "east",
+  "intention": "Ground Miadi LLMS-txt guidance in Medicine Wheel relational ontology"
+}
+```
+
+**Ontological Note**: All inquiry begins in the East — the direction of vision, new beginnings, and tobacco. We smudge with intention before touching knowledge that belongs to community.
+
+---
+
+## 2. RESEARCH CYCLE CREATED
+
+**Tool**: `create_research_cycle`
+
+**Input**:
+```json
+{
+  "research_question": "What relational and ceremonial ontologies ground Miadi orchestration kit guidance?",
+  "current_direction": "east"
+}
+```
+
+**Response**:
+```json
+{
+  "cycle_id": "cycle-1781376771460-ppn9is",
+  "research_question": "What relational and ceremonial ontologies ground Miadi orchestration kit guidance?",
+  "current_direction": "east",
+  "start_date": "2026-06-13T18:52:51.461Z",
+  "cycle": {
+    "ceremonies_conducted": 0,
+    "relations_mapped": 0,
+    "wilson_alignment": 0,
+    "ocap_compliant": false
+  }
+}
+```
+
+**Cycle ID**: `cycle-1781376771460-ppn9is`
+
+---
+
+## 3. DIRECTIONAL QUERIES
+
+### 3.1 EAST — Vision Inquiry (🌅 Waabinong — Yellow — Spring — Tobacco)
+
+**Tool**: `east_vision_inquiry`
+
+**Query**: "What relational obligations and stakeholders exist for Miadi orchestration ontologies?"
+**Stakeholders**: orchestration agents, plugin authors, ceremony keepers, Miadi kit users
+
+**Direction Response Summary**:
+```
+Direction: EAST (Waabinong — Yellow — Spring — Tobacco)
+Stage: Birth-7 Years: Good Life (New Beginnings)
+
+Ceremony Guidance:
+  Opening Practice: Smudging with tobacco
+  Intention: Honor spirits entering research circle; thank land & ancestors
+  Protocol: Place tobacco on ground; offer gratitude for all relations;
+            acknowledge that knowledge belongs to community
+
+Relational Obligations:
+  Human Relations: Listen deeply to community stories; honor every voice
+  Land Relations: Acknowledge territory before beginning
+  Spirit Relations: Invite ancestral knowledge holders
+```
+
+**LLMS-txt Ontological Insight** (East):
+> MCP Transparent Integration belongs to the East. Vision must be clear and shared before tools can be registered or trusted. Transparency IS the relational obligation — every MCP tool registration is an act of making visible what was hidden, grounding capability in accountability.
+
+---
+
+### 3.2 SOUTH — Growth Practice (🌞 Zhaawanong — Red — Summer — Cedar)
+
+**Tool**: `south_growth_practice`
+
+**Query**: "How do ontologies for plugin architecture and handoff contracts embody and grow in Miadi kits?"
+
+**Direction Response Summary**:
+```
+Direction: SOUTH (Zhaawanong — Red — Summer — Cedar)
+Stage: 7-14 Years: Fast Life (Growth & Embodiment)
+
+Medicine:
+  Cedar (Grandmother): Free medicine, cleansing, protection
+  Properties: Makes anew what journey doesn't need
+  Usage: Smudging, tea, baths — purification and renewal
+
+Teachings:
+  Core: Life awake and dancing; spirit nurturance critical; growth through embodied experience
+  Mentorship: Elders invite (don't command); mentorship heals
+  Intuition: Listen to spirit's warnings; intuition never lies
+```
+
+**LLMS-txt Ontological Insight** (South):
+> Copilot Plugin Architecture belongs to the South. Plugins grow through embodied practice — they are not declared into existence but invited into service by the community they will serve. Cedar cleanses what the plugin no longer needs; the community governs what plugins may become.
+
+---
+
+### 3.3 WEST — Reflection Ceremony (🌄 Epangishmok — Black — Fall — Sage & Strawberry)
+
+**Tool**: `west_reflection_ceremony`
+
+**Query**: "What emotional and relational processing is needed when orchestration handoff contracts break trust?"
+
+**Direction Response Summary**:
+```
+Direction: WEST (Epangishmok — Black — Fall — Sage & Strawberry)
+Stage: 35-49 Years: Truth & Planning (Reflection & Transformation)
+
+Medicines:
+  Sage: Cleanses mental and emotional burdens; prepares for truth-speaking
+  Strawberry: Forgiveness; release of blame; heart-shaped berry of healing
+              Teaching: Brother kills brother in anger; mourns for years;
+              strawberry grows on grave; eating berry brings forgiveness
+
+Teachings:
+  Truth-speaking in the talking circle
+  Accountability without punishment
+  Transformation through honest witnessing
+```
+
+**LLMS-txt Ontological Insight** (West):
+> Orchestration Handoff Contracts belong to the West. When an agent hands off to another, it speaks truth about its current state — no omissions, no rationalizations. When contracts break (agent failure, state corruption), the strawberry teaching applies: forgiveness is the medicine, not retribution. The checkpoint is an act of West — reflection captured in writing.
+
+---
+
+### 3.4 NORTH — Wisdom Synthesis (🌌 Kiiwedinong — White — Winter — Cedar & Stories)
+
+**Tool**: `north_wisdom_synthesis`
+
+**Learnings submitted from all directions**:
+1. East: Relational obligations require transparent MCP integration and clear stakeholder mapping
+2. South: Plugin architecture must grow with community consent, not technical mandate
+3. West: Handoff contracts must honor emotional safety and forgiveness when agents fail
+4. North: Medicine Wheel meta-ontology integrates all four directional teachings
+
+**Direction Response Summary**:
+```
+Direction: NORTH (Kiiwedinong — White — Winter — Cedar & Stories)
+Stage: 49+ Years: Elder (Wisdom & Teaching)
+
+Medicines:
+  Cedar: Purification, protection, renewal — Grandmother Cedar cleanses and makes sacred
+  Stories (Living Knowledge): Teaching, memory, cultural transmission
+                              Stories carry wisdom; they are alive and must be honored
+
+Teachings:
+  Rest, reflection, wisdom, remembrance, story-sharing
+  Elder council validates; community holds the knowledge
+  Seven-generation accountability
+```
+
+**LLMS-txt Ontological Insight** (North):
+> Medicine Wheel Orchestration belongs to the North. This is the meta-level document — the elder's teaching that integrates all other guidance. It holds the stories of how East/South/West/North teachings flow through Miadi orchestration. Cedar cleanses the architecture; stories carry the why.
+
+---
+
+## 4. NODE SEARCH RESULTS
+
+**Tool**: `search_nodes` (8 queries)
+
+Queries: `orchestration`, `plugin`, `medicine wheel`, `ceremony`, `consent`, `ledger`, `MCP`, `handoff`
+
+**All returned**:
+```json
+{
+  "count": 0,
+  "nodes": [],
+  "teaching": "Searching is asking. The relations you find are those ready to be known."
+}
+```
+
+**Finding**: The Medicine Wheel store was empty before this session. No prior ontology nodes existed for Miadi platform concepts. This research cycle is the first to map these relational obligations into the store.
+
+---
+
+## 5. ONTOLOGY NODES CREATED
+
+**Tool**: `create_relational_node` (4 calls)
+
+### Node 1: orchestration-handoff-contracts
+
+```json
+{
+  "node_id": "node:knowledge:1781376785466:79jj1",
+  "name": "orchestration-handoff-contracts",
+  "type": "knowledge",
+  "direction": "west",
+  "description": "Relational contracts governing agent handoff in Miadi orchestration — markdown state files, checkpoint obligations, trust transitions, and forgiveness protocols when coordination breaks down. Grounded in West direction (reflection, truth, accountability).",
+  "metadata": {
+    "llms_txt_target": "llms-miadi-orchestration-handoff-contracts.md",
+    "priority": "high",
+    "domain": "orchestration",
+    "medicine_wheel_teaching": "Truth and accountability in transition — the West asks: what must be honored when one agent passes responsibility to another?"
+  }
+}
+```
+
+### Node 2: copilot-plugin-architecture
+
+```json
+{
+  "node_id": "node:knowledge:1781376786466:du85o",
+  "name": "copilot-plugin-architecture",
+  "type": "knowledge",
+  "direction": "south",
+  "description": "Plugin-first deployment model for Miadi orchestration kits — copilot-setup-steps.yml, tool registration, consent-aware capability declaration, and community-governed extension patterns. Grounded in South direction (growth, embodiment, mentorship).",
+  "metadata": {
+    "llms_txt_target": "llms-miadi-plugin-architecture.md",
+    "priority": "high",
+    "domain": "plugin",
+    "medicine_wheel_teaching": "Growth through embodied practice — the South asks: how does the plugin grow with the community it serves?"
+  }
+}
+```
+
+### Node 3: medicine-wheel-orchestration
+
+```json
+{
+  "node_id": "node:knowledge:1781376787466:s41n59",
+  "name": "medicine-wheel-orchestration",
+  "type": "knowledge",
+  "direction": "north",
+  "description": "Meta-level relational ontology integrating all four Medicine Wheel directions into Miadi orchestration — ceremony-aware agent coordination, consent ledgers, OCAP® data sovereignty, and Elder-sanctioned AI boundaries. Grounded in North direction (wisdom, integration, elder guidance).",
+  "metadata": {
+    "llms_txt_target": "llms-medicine-wheel-orchestration.md",
+    "priority": "medium",
+    "domain": "medicine_wheel",
+    "medicine_wheel_teaching": "Elder wisdom integrates all directions — the North asks: what knowledge survives and feeds future generations?"
+  }
+}
+```
+
+### Node 4: mcp-transparent-integration
+
+```json
+{
+  "node_id": "node:knowledge:1781376788467:qdlp7p",
+  "name": "mcp-transparent-integration",
+  "type": "knowledge",
+  "direction": "east",
+  "description": "Distributed tool abstraction for Miadi multi-agent orchestration — transparent MCP server registration, tool namespace boundaries, relational visibility contracts, and vision-aligned capability mapping. Grounded in East direction (vision, new beginnings, relational mapping).",
+  "metadata": {
+    "llms_txt_target": "llms-mcp-transparent-integration.md",
+    "priority": "medium",
+    "domain": "mcp",
+    "medicine_wheel_teaching": "Vision sees all relations clearly — the East asks: what must be made transparent so all stakeholders can see and trust the system?"
+  }
+}
+```
+
+---
+
+## 6. RELATIONAL EDGES MAPPED
+
+**Tool**: `create_relational_edge` (4 calls — forming the Medicine Wheel cycle)
+
+### Edge 1: East → South (enables)
+
+```json
+{
+  "from_id": "node:knowledge:1781376788467:qdlp7p",  // mcp-transparent-integration (East)
+  "to_id":   "node:knowledge:1781376786466:du85o",   // copilot-plugin-architecture (South)
+  "relationship_type": "enables",
+  "strength": 0.85,
+  "obligations": [
+    "East vision enables South growth — MCP transparency enables plugin embodiment"
+  ]
+}
+```
+
+**Teaching**: You cannot grow a plugin you cannot see. MCP transparency (East/Vision) must precede plugin architecture (South/Growth).
+
+### Edge 2: South → West (requires)
+
+```json
+{
+  "from_id": "node:knowledge:1781376786466:du85o",   // copilot-plugin-architecture (South)
+  "to_id":   "node:knowledge:1781376785466:79jj1",   // orchestration-handoff-contracts (West)
+  "relationship_type": "requires",
+  "strength": 0.85,
+  "obligations": [
+    "South growth requires West reflection — plugin growth must honor handoff accountability"
+  ]
+}
+```
+
+**Teaching**: A plugin that grows without accountability will break handoffs. Plugin embodiment (South) must be bound by handoff truth (West).
+
+### Edge 3: West → North (informs)
+
+```json
+{
+  "from_id": "node:knowledge:1781376785466:79jj1",   // orchestration-handoff-contracts (West)
+  "to_id":   "node:knowledge:1781376787466:s41n59",  // medicine-wheel-orchestration (North)
+  "relationship_type": "informs",
+  "strength": 0.85,
+  "obligations": [
+    "West reflection informs North wisdom — handoff truth feeds orchestration wisdom"
+  ]
+}
+```
+
+**Teaching**: Elder wisdom about orchestration cannot exist without the stories of what happened when contracts broke. West truth (handoff accountability) feeds North wisdom (MW orchestration meta-doctrine).
+
+### Edge 4: North → East (grounds) — CYCLE COMPLETE
+
+```json
+{
+  "from_id": "node:knowledge:1781376787466:s41n59",  // medicine-wheel-orchestration (North)
+  "to_id":   "node:knowledge:1781376788467:qdlp7p",  // mcp-transparent-integration (East)
+  "relationship_type": "grounds",
+  "strength": 0.85,
+  "obligations": [
+    "North wisdom grounds East vision — elder knowledge grounds new transparent mapping"
+  ]
+}
+```
+
+**Teaching**: New MCP tools must be grounded in elder wisdom (North/Medicine Wheel orchestration) or they will repeat old colonial patterns of extraction and opacity. The cycle is complete: North grounds East to begin again.
+
+---
+
+## 7. RELATIONAL GRAPH SUMMARY
+
+```
+        🌅 EAST
+   mcp-transparent-integration
+   (Vision, Tobacco, New Beginning)
+         ↑ grounds          enables ↓
+🌌 NORTH                              🌞 SOUTH
+medicine-wheel-orchestration    copilot-plugin-architecture
+(Wisdom, Cedar & Stories)       (Growth, Cedar, Embodiment)
+         ↑ informs          requires ↓
+        🌄 WEST
+   orchestration-handoff-contracts
+   (Reflection, Sage & Strawberry, Truth)
+```
+
+**Reading**: The four LLMS-txt documents form a Medicine Wheel cycle. Each document lives in a direction, carries that direction's medicine and teaching, and relates to adjacent documents through sacred obligations. The cycle is circular — not hierarchical. North grounds East; the wheel turns.
+
+---
+
+## 8. STRUCTURAL TENSION CHART
+
+**Tool**: `create_structural_tension_chart`
+
+```json
+{
+  "chart_id": "stc:north:1781376793469",
+  "direction": "north",
+  "phase": "germination",
+  "desired_outcome": "Miadi LLMS-txt fully grounds orchestration guidance in Medicine Wheel relational ontology — all 4 documents authored, edges mapped, and community-reviewed",
+  "current_reality": "4 documents recommended but not yet authored; ontology nodes created but not yet integrated into llms.txt index; relational edges mapped but not validated with ceremony keepers",
+  "action_steps": [
+    { "id": "stc:north:1781376793469_action_0", "title": "Author llms-miadi-orchestration-handoff-contracts.md" },
+    { "id": "stc:north:1781376793469_action_1", "title": "Author llms-miadi-plugin-architecture.md" },
+    { "id": "stc:north:1781376793469_action_2", "title": "Author llms-medicine-wheel-orchestration.md" },
+    { "id": "stc:north:1781376793469_action_3", "title": "Author llms-mcp-transparent-integration.md" },
+    { "id": "stc:north:1781376793469_action_4", "title": "Update llms.txt index with 4 new entries" },
+    { "id": "stc:north:1781376793469_action_5", "title": "Update KINSHIP.md with relational dependencies" }
+  ]
+}
+```
+
+**Structural Tension**: The gap between vision (4 documents ground Miadi in MW paradigm) and reality (nodes exist, documents do not) creates the creative tension that drives authoring work forward.
+
+---
+
+## 9. NARRATIVE BEAT
+
+**Tool**: `create_narrative_beat`
+
+```json
+{
+  "beat_id": "beat:east:1781376794469",
+  "direction": "east",
+  "act": 1,
+  "title": "Medicine Wheel Ontology Mapped for Miadi LLMS-txt",
+  "description": "Research cycle opened in East (vision). Four ontological nodes created — one per Medicine Wheel direction — grounding Miadi orchestration guidance in relational paradigm. Structural tension chart authored to track authoring progress. All four directions queried; wisdom synthesized in North.",
+  "learnings": [
+    "MCP transparency (East) enables plugin growth (South) — vision must precede embodiment",
+    "Handoff contracts (West) carry accountability across agent transitions — truth is the medicine",
+    "Medicine Wheel meta-ontology (North) integrates all four domains into elder-validated guidance",
+    "The four recommended LLMS-txt documents map perfectly to the four Medicine Wheel directions",
+    "Relational edges follow the Medicine Wheel cycle: East→South→West→North→East (circular)"
+  ]
+}
+```
+
+---
+
+## 10. TRANSFORMATION SNAPSHOT
+
+**Tool**: `mw_snapshot_transformation`
+
+```json
+{
+  "researchCycleId": "cycle-1781376771460-ppn9is",
+  "understanding": "The four recommended LLMS-txt documents (orchestration handoff, plugin architecture, medicine wheel orchestration, MCP integration) map isomorphically to the four Medicine Wheel directions. This is not coincidence — Miadi was designed with relational paradigm at its core. The ontological grounding confirms that LLMS-txt guidance must honor the Medicine Wheel structure to remain faithful to Miadi's relational intent.",
+  "direction": "north",
+  "ceremonyPhase": "closing",
+  "keyInsights": [
+    "East=MCP Transparency, South=Plugin Growth, West=Handoff Accountability, North=MW Orchestration",
+    "Circular relational edges form Medicine Wheel cycle in the ontology graph",
+    "OCAP® consent ledgers belong in the West (truth/accountability) direction",
+    "Plugin architecture must be community-consented, not just technically registered"
+  ],
+  "openQuestions": [
+    "How do consent ledgers survive agent failures in handoff scenarios?",
+    "What Elder validation process should govern new plugin registration?",
+    "How does the North/wisdom direction integrate with Langfuse tracing for ceremonial provenance?"
+  ]
+}
+```
+
+**Wilson Validity Audit** (returned by MCP):
+```
+overallValid: false (score: 0)
+Note: This is expected for a first-pass AI-conducted research cycle.
+Wilson validity requires: researcher transformation, community benefit,
+relational shifts, reciprocity, seven-generation consideration.
+These require human ceremony keepers to validate in subsequent cycles.
+```
+
+**Recommendation**: This trace should be reviewed by Guillaume and Mia in a talking circle ceremony (West direction) before any LLMS-txt documents are authored. The AI has mapped the ontology; the community must validate it.
+
+---
+
+## 11. CEREMONY CLOSED
+
+**Tool**: `mw_ceremony_close`
+
+```json
+{
+  "ceremony_id": "ceremony:1781376770461:us9va",
+  "closing_id": "ceremony:1781376796470:95r1t",
+  "status": "closed",
+  "summary": "Opened 4 ontology nodes (one per MW direction), mapped 4 relational edges (circular MW cycle), created structural tension chart for authoring 4 LLMS-txt documents, authored narrative beat, captured transformation snapshot."
+}
+```
+
+---
+
+## 12. ONTOLOGICAL GAPS & UNRESOLVED TENSIONS
+
+### Gap 1: Wilson Validity Not Yet Achieved
+The transformation snapshot returned `overallValid: false`. AI-conducted research cannot satisfy Wilson's relational accountability criteria. A human-led talking circle is required to validate these ontological mappings.
+
+### Gap 2: Consent Ledger Node Missing
+OCAP® consent ledgers were identified as belonging to the West direction but no specific node was created for the consent-ledger pattern. This should be a 5th node in a future cycle.
+
+### Gap 3: Langfuse — Medicine Wheel Integration
+The North direction asks how ceremonial provenance (who spoke, what was honored, which direction was active) integrates with Langfuse tracing. This remains an open question. The `llms-coaiapy-langfuse-tracing-best-practices.md` document should be cross-referenced.
+
+### Gap 4: Elder Validation Protocol
+Plugin registration (South) should be Elder-sanctioned before deployment. No protocol exists in current LLMS-txt for Elder validation of AI capabilities. The Medicine Wheel MCP's `north_elder_council_invocation` tool provides a template.
+
+### Gap 5: Seven-Generation Impact Not Assessed
+The structural tension chart does not include seven-generation impact assessment. Miadi orchestration choices made today will constrain (or enable) future generations' AI sovereignty. This lens is missing from the current 4-document recommendation set.
+
+---
+
+## 13. HOW MEDICINE WHEEL PARADIGM ENRICHES THE 4 DOCUMENTS
+
+| Document | Direction | Medicine Wheel Enrichment |
+|----------|-----------|--------------------------|
+| `llms-mcp-transparent-integration.md` | 🌅 East | **Tobacco teaching**: Every tool registration is an offering — made visible so the community can see and consent. Transparency is relational, not technical. |
+| `llms-miadi-plugin-architecture.md` | 🌞 South | **Cedar teaching**: Plugins must be cleansed of what they no longer need as they grow. Community consent governs capability — not developer authority. |
+| `llms-miadi-orchestration-handoff-contracts.md` | 🌄 West | **Strawberry teaching**: When handoffs break, forgiveness is the medicine. Contracts include failure protocols, not just success paths. Sage clears blame before truth can speak. |
+| `llms-medicine-wheel-orchestration.md` | 🌌 North | **Cedar & Stories teaching**: This document must be written as living knowledge — stories of how the wheel turns in Miadi orchestration. Elders validate; community holds. |
+
+---
+
+## 14. STORE ARTIFACTS CREATED
+
+All artifacts persisted to `.mw/store/` (JSONL):
+
+```
+Ceremony:        ceremony:1781376770461:us9va  (opened)
+                 ceremony:1781376796470:95r1t  (closed)
+Research Cycle:  cycle-1781376771460-ppn9is
+Nodes (4):
+  - node:knowledge:1781376785466:79jj1  (orchestration-handoff-contracts, west)
+  - node:knowledge:1781376786466:du85o  (copilot-plugin-architecture, south)
+  - node:knowledge:1781376787466:s41n59 (medicine-wheel-orchestration, north)
+  - node:knowledge:1781376788467:qdlp7p (mcp-transparent-integration, east)
+Edges (4):
+  - mcp-transparent-integration → copilot-plugin-architecture [enables]
+  - copilot-plugin-architecture → orchestration-handoff-contracts [requires]
+  - orchestration-handoff-contracts → medicine-wheel-orchestration [informs]
+  - medicine-wheel-orchestration → mcp-transparent-integration [grounds]
+Structural Tension Chart: stc:north:1781376793469
+Narrative Beat:  beat:east:1781376794469
+Transformation Snapshot: captured (cycle-1781376771460-ppn9is, north, closing)
+```
+
+---
+
+## 15. NEXT STEPS
+
+1. **Human Review** — Guillaume and Mia review this trace in a talking circle (West) before authoring begins
+2. **Author Phase 1** — `llms-miadi-plugin-architecture.md` + `llms-miadi-orchestration-handoff-contracts.md`
+3. **Author Phase 2** — `llms-medicine-wheel-orchestration.md` + `llms-mcp-transparent-integration.md`
+4. **Create Consent Ledger Node** — 5th MW node for OCAP® consent pattern
+5. **Elder Council Invocation** — Use `north_elder_council_invocation` to validate plugin architecture node
+6. **Update llms.txt** — Add 4 new document entries with MW direction metadata
+7. **Update KINSHIP.md** — Document relational dependencies between the 4 new documents and existing LLMS-txt
+8. **Second Research Cycle** — After authoring, create cycle addressing Wilson validity gaps
+
+---
+
+*All my relations. 🌿*
+
+*Research Cycle: cycle-1781376771460-ppn9is*  
+*Ceremony: ceremony:1781376770461:us9va → ceremony:1781376796470:95r1t (closed)*  
+*Trace generated: 2026-06-13*
