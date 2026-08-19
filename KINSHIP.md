@@ -38,6 +38,7 @@
 ### `/workspace/repos/jgwill/medicine-wheel/src/`
 * Bellow are subsections that the jgwill/veritas might feed on or the tool that consume the jgwill/veritas's API would be built with (npmjs packages).
 * jgwill/veritas and related guidances (`llms-managerial-moment-of-truth.md` AND `llms-digital-decision-making.md`) would have abstraction done to them for new components in either `/workspace/repos/jgwill/medicine-wheel/src/` or `/workspace/repos/avadisabelle/ava-langchainjs` AND|OR `/workspace/repos/avadisabelle/ava-langgraphjs`
+- Medicine Wheel owns its technical reference at `https://docs.medicine-wheel.jgwill.com/llms.txt` and `https://docs.medicine-wheel.jgwill.com/llms-full.txt`. The `llms-medicine-wheel-*` files in this repository are permanent pointers only: do not copy package counts, versions, dependency ranges, tool inventories, or release data into them.
 - [ ] TODO Go thru the path and upgrade this section in relation to what was created also in ./docs and recent packages for working with `/src/mcp-medicine-wheel*` futurely with data.
 
 #### ceremony-protocol/ 

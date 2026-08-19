@@ -19,19 +19,22 @@ The core insight: Robert Fritz's structural dynamics (Structural Tension, MMOT, 
 
 ## The Medicine Wheel Developer Suite
 
-The primary technical manifestation of Ceremonial Technology is the **Medicine Wheel Developer Suite** — seven published npm packages that encode Indigenous relational ontology as first-class code structures:
+The primary technical manifestation of Ceremonial Technology is the **Medicine
+Wheel Developer Suite** — a published package ecosystem encoding Indigenous
+relational ontology as first-class code structures. Representative packages
+include:
 
 | Package | Role | Direction |
 |---------|------|-----------|
-| `medicine-wheel-ontology-core` | Foundational types, RDF vocab, Zod schemas, Wilson alignment, OCAP | Center |
-| `medicine-wheel-relational-query` | Traverse kinship webs with relational constraints | East |
-| `medicine-wheel-narrative-engine` | Narrative beats and story flow bound to ceremony | South |
-| `medicine-wheel-ceremony-protocol` | Ceremony types, logs, governance, consent workflows | West |
-| `medicine-wheel-graph-viz` | Relational graph visualization | North |
-| `medicine-wheel-ui-components` | Community-facing interface components | Bridge |
-| `medicine-wheel-prompt-decomposition` | PDE — intention exploration as EAST practice | East |
+| `@medicine-wheel/ontology-core` | Foundational types, RDF vocab, Zod schemas, Wilson alignment, OCAP | Center |
+| `@medicine-wheel/relational-query` | Traverse kinship webs with relational constraints | East |
+| `@medicine-wheel/narrative-engine` | Narrative beats and story flow bound to ceremony | South |
+| `@medicine-wheel/ceremony-protocol` | Ceremony types, logs, governance, consent workflows | West |
+| `@medicine-wheel/graph-viz` | Relational graph visualization | North |
+| `@medicine-wheel/ui-components` | Community-facing interface components | Bridge |
+| `@medicine-wheel/prompt-decomposition` | PDE — intention exploration as EAST practice | East |
 
-See: [Medicine Wheel Research](medicine-wheel-research.md) · [llms-medicine-wheel-packages.txt](../llms-medicine-wheel-packages.txt)
+See: [Medicine Wheel Research](medicine-wheel-research.md) · [live technical documentation](https://docs.medicine-wheel.jgwill.com/llms.txt)
 
 ---
 

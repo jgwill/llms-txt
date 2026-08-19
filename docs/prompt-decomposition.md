@@ -91,6 +91,6 @@ PDE embodies the [delayed resolution principle](../llms-delayed-resolution-princ
 ## Key Sources
 
 - [llms-pde.txt](../llms-pde.txt) — PDE reference (llms-txt format)
-- [medicine-wheel-prompt-decomposition](https://www.npmjs.com/package/medicine-wheel-prompt-decomposition) — npm package
+- [@medicine-wheel/prompt-decomposition](https://www.npmjs.com/package/@medicine-wheel/prompt-decomposition) — npm package
 - [.pde/](../.pde/) — stored decompositions in this repository
 - [skills/intent-analyst](../skills/intent-analyst/) — operational skill for strategy-aware PDE reading

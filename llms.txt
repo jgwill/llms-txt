@@ -137,13 +137,15 @@
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
 
 ## Medicine Wheel Developer Suite — Package Reference
-> Reference for the twenty-six scoped `@medicine-wheel/*` npm packages (plus the `@medicine-wheel/mcp` server) encoding Indigenous relational ontology, ceremonial protocol, and narrative intelligence as first-class code structures.
-- **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
+> Live reference for the `@medicine-wheel/*` package ecosystem, maintained and published by the Medicine Wheel repository. The local file is a permanent pointer, not a copied inventory.
+- **Link**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt)
+- **Pointer**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
 - **Related**: llms-medicine-wheel-mcp-tools.md, llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
 
-## Medicine Wheel MCP Tools — Complete Reference
-> Complete reference for the 74 tools of the `@medicine-wheel/mcp` server (v4.5.5): orientation routing, ceremony lifecycle, relational CRUD, research cycles, structural tension, four-direction guidance, epistemic units, Fire Keeper coordination, governance, reasoning/observability, inquiry weaves, plan perspectives, validation, and archival.
-- **Link**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
+## Medicine Wheel MCP Tools — Live Reference
+> Live MCP reference maintained and published by the Medicine Wheel repository. The local file is a permanent pointer, so tool and transport changes require no update here.
+- **Link**: [docs.medicine-wheel.jgwill.com/llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
+- **Pointer**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
 - **Related**: llms-medicine-wheel-packages.txt, llms-pde.txt, llms-structural-tension-charts.txt
 
 ## Medicine Wheel & Abundance Intelligence Research

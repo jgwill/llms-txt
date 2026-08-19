@@ -130,10 +130,17 @@
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-st-four-questions.md
 
 ## Medicine Wheel Developer Suite — Package Reference
-> Reference for twenty-six scoped `@medicine-wheel/*` npm packages (creative-orientation, gap-analysis, creative-problem-solving, brainstorming, ontology-core, data-store, storage-provider, data-store-postgres, importance-unit, relational-index, ceremony-protocol, fire-keeper, community-review, consent-lifecycle, ceremonial-diary, github-ceremony, narrative-engine, transformation-tracker, session-reader, relational-query, prompt-decomposition, graph-viz, ui-components, perception-layer, narrative-cluster, infra) that encode Indigenous relational ontology as first-class code structures. Includes Wilson alignment, OCAP tracking, Four Directions agent patterns, and LangChain/LangGraph integration. Each package is specified through the RISE framework and governed by the Indigenous Knowledge Stewardship License.
-- **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
-- **Published**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt), [llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
+> Canonical live reference for the `@medicine-wheel/*` package ecosystem, including its relational ontology, ceremony, narrative, storage, application, and MCP surfaces. Medicine Wheel owns the inventory and publishes it directly; this repository keeps no copied technical reference.
+- **Link**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt)
+- **Expanded**: [docs.medicine-wheel.jgwill.com/llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
+- **Pointer**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
 - **Related**: llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
+
+## Medicine Wheel MCP Tools — Live Reference
+> Canonical MCP tools, transports, storage behavior, and API guidance maintained by Medicine Wheel. The local pointer deliberately contains no copied tool inventory or release data.
+- **Link**: [docs.medicine-wheel.jgwill.com/llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
+- **Pointer**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
+- **Related**: llms-medicine-wheel-packages.txt, llms-pde.txt, llms-structural-tension-charts.txt
 
 ## Medicine Wheel & Abundance Intelligence Research
 > A research inquiry connecting the Medicine Wheel Developer Suite to the Abundant Intelligences program and Two-Eyed AI framework. Documents the current medicine-wheel stack, alignment with funded multi-institutional research, portfolio strengths (formal ontology encoding Indigenous directions, published theoretical frame, ceremony as core architecture), gaps (platform narrative, community workflows, relational dashboards, edge deployment, polysynthetic language adapters), and career pathways (Indigenous AI systems architect, relational AI platform lead, research-creation consultant).

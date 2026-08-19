@@ -1,6 +1,10 @@
 # Medicine Wheel & Abundance Intelligence Research
 
-> The Medicine Wheel Developer Suite — twenty-six scoped `@medicine-wheel/*` npm packages encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
+> The Medicine Wheel Developer Suite — a published `@medicine-wheel/*` package ecosystem encoding Indigenous relational ontology as first-class code structures, positioned within the Abundant Intelligences research program and Two-Eyed AI framework.
+
+Live technical documentation and the current package inventory are maintained by
+Medicine Wheel at [docs.medicine-wheel.jgwill.com](https://docs.medicine-wheel.jgwill.com/).
+This page holds the research relationship, not a second technical reference.
 
 ---
 
@@ -19,15 +23,20 @@ The suite provides a layered architecture for relational AI, bridging the Engine
 | **Coordination** | `@medicine-wheel/fire-keeper` | Active relational-alignment agent and governance firewall. |
 | **Perception & Film** | `@medicine-wheel/perception-layer` | Witnesses film-production material as typed perceptual events; `narrative-cluster` turns them into edit briefs. |
 | **Application** | `@medicine-wheel/app` | Unified CLI (`mw`) and Server (`mwsrv`) for research orchestration. |
-| **Server** | `@medicine-wheel/mcp` | Agent-facing surface (74 tools) composing the full suite. |
+| **Server** | `@medicine-wheel/mcp` | Agent-facing surface composing the suite. |
 
 ### Platform Nucleus
 
 The `@medicine-wheel/ontology-core` package defines a foundational ontological layer where **relations are first-class beings** with ceremony context and obligations. Every other package imports from this core — making it a genuine platform nucleus, not a bag of utilities.
 
-The suite encompasses twenty-six packages describing specialized "shapes" of intelligence: from foundational data structures and persistence (`data-store`, `storage-provider`) to high-level governance (`community-review`, `consent-lifecycle`) and presentation (`graph-viz`, `ui-components`).
+The suite encompasses specialized "shapes" of intelligence: from foundational
+data structures and persistence to high-level governance and presentation. The
+canonical inventory lives in Medicine Wheel's
+[LLM index](https://docs.medicine-wheel.jgwill.com/llms.txt).
 
-Two package pairs joined the suite most recently: `perception-layer` and `narrative-cluster` extend it into agent-supported Indigenous film production (witnessing rushes as perceptual events, then clustering them into a Film Edit Brief), while `ceremonial-diary` and `github-ceremony` came home from Miadi to carry the participant's ceremonial voice and to witness GitHub activity as relational ceremony beads.
+Its relationships include agent-supported Indigenous film production, the
+participant's ceremonial voice, and the witnessing of development activity as
+relational ceremony.
 
 ---
 
@@ -110,6 +119,6 @@ Graph-level governance ensures sacred knowledge edges require ceremony logs and 
 ## Key Sources
 
 - [llms-inquiry-medicine-wheel-abundance-intelligence-research](../llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md) — full research document
-- [llms-medicine-wheel-packages.txt](../llms-medicine-wheel-packages.txt) — package reference (llms-txt format)
+- [Medicine Wheel LLM index](https://docs.medicine-wheel.jgwill.com/llms.txt) — live package reference
 - [KINSHIP.md](../KINSHIP.md) — relational charter
 - Related repos: `jgwill/medicine-wheel`, `avadisabelle/ava-langchainjs`, `avadisabelle/ava-langgraphjs`
