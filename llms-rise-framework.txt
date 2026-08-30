@@ -1,9 +1,9 @@
 # RISE Framework for LLMs
 > A comprehensive framework for creative-oriented reverse engineering, intent extraction, specification creation, and export optimization that transforms how LLMs understand, analyze, and generate code architectures through structural tension dynamics.
 
-**Version**: 1.2
-**Document ID**: llms-rise-framework-v1.2
-**Last Updated**: 2025-12-28  
+**Version**: 1.2.1
+**Document ID**: llms-rise-framework-v1.2.1
+**Last Updated**: 2026-08-14
 **Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles  
 **Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext  
 **Composed by**: Guillaume D.Isabelle, 2025
