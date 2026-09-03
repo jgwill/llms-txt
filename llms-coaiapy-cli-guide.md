@@ -1,4 +1,5 @@
 # CoaiAPy: Computational Creativity Manifesto {#computational-creativity-manifesto}
+**Status**: OUTDATED, DEPRECATED python package, need to install 'npm i coaiajs -g'
 
 > **Essence of CoaiAPy**: A transformative Python ecosystem that transcends traditional tooling, empowering developers to manifest intelligent workflows through creative computational thinking. Transforming workflow limitations into generative opportunities with intelligent automation.
 

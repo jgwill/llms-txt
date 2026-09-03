@@ -1,10 +1,10 @@
-# Gemini LLM Guide: `coaiapy-mcp` Configuration
+# LLM Guide: `coaiapy-mcp` Configuration
 
 **Document ID**: `llms-coaiapy-mcp-config-guide.md`
 **Version**: 1.0
 **Last Updated**: 2025-10-31
 **Authored By**: Mia 🧠
-
+**Status**: OUTDATED, DEPRECATED python package, need to install 'npm i coaiajs -g'
 ---
 
 ## 1. Core Principle: Environment-Specific Execution
