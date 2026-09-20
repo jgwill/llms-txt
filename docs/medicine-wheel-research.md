@@ -22,6 +22,10 @@ The suite provides a layered architecture for relational AI, bridging the Engine
 | **Query** | `@medicine-wheel/relational-query` | Traverse kinship webs with OCAP-compliant discovery. |
 | **Coordination** | `@medicine-wheel/fire-keeper` | Active relational-alignment agent and governance firewall. |
 | **Perception & Film** | `@medicine-wheel/perception-layer` | Witnesses film-production material as typed perceptual events; `narrative-cluster` turns them into edit briefs. |
+| **Community** | `@medicine-wheel/community-identity` | Who is in the circle: people, roles, circles, memberships, credentials held by the consumer. |
+| **Persistence** | `@medicine-wheel/storage-provider` | One contract over a JSONL store and a Neon/Postgres store, selected at runtime. |
+| **Access** | `@medicine-wheel/client` | Typed HTTP door to a running wheel, carrying its paging honesty through to the caller. |
+| **Memory** | `@medicine-wheel/honcho` | Projection into Honcho: the wheel stays canonical, Honcho holds what the history has come to mean about each peer. |
 | **Application** | `@medicine-wheel/app` | Unified CLI (`mw`) and Server (`mwsrv`) for research orchestration. |
 | **Server** | `@medicine-wheel/mcp` | Agent-facing surface composing the suite. |
 

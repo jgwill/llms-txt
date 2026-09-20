@@ -113,7 +113,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
     ┌─────────▼──────┐  ┌─────▼──────┐  ┌──────▼─────────┐
     │  Medicine Wheel │  │Storytelling │  │   AI Companion │
     │  Developer Suite│  │ (WillWrite) │  │     Skills     │
-    │  (26 npm pkgs) │  │ (Python pkg)│  │                │
+    │  (npm suite)    │  │ (Python pkg)│  │                │
     └────────────────┘  └────────────┘  └────────────────┘
 ```
 
