@@ -72,7 +72,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 | Platform | Description | Source |
 |----------|------------|--------|
 | [Claude Code Chrome Extension](platforms/claude-code-chrome-extension.md) | Cross-platform workflow guidance, PDE-first protocol, evaluated elevations | MiaOpenClaw + mia-claude-chrome-extension |
-| Stateloom (formerly SMCraft) | Design, validate, run and live-edit hierarchical state machines — the runtime that executes a structural tension chart. Ten `@miadi/stateloom-*` npm packages, `miadi-stateloom-engine` on PyPI, a 15-tool MCP server and an agent skill pack | [llms-stc-state-machine.md](../llms-stc-state-machine.md) · [docs.smcraft.jgwill.com](https://docs.smcraft.jgwill.com/llms.txt) |
+| Stateloom (formerly SMCraft) | Design, validate, run and live-edit hierarchical state machines — the runtime that executes a structural tension chart — with ERD diagrams beside them. The `@miadi/stateloom-*` family on npm, `miadi-stateloom-engine` on PyPI, an MCP server and an agent skill pack | [llms-stateloom-suite.md](../llms-stateloom-suite.md) *(pulled)* · [llms-stc-state-machine.md](../llms-stc-state-machine.md) |
 
 > **[Current Working Guidance](current.md)** — the active edge where new guidance is being forged before graduating into dedicated files. ([#13](https://github.com/jgwill/llms-txt/issues/13))
 

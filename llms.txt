@@ -137,15 +137,15 @@
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
 
 ## Medicine Wheel Developer Suite — Package Reference
-> Live reference for the `@medicine-wheel/*` package ecosystem, maintained and published by the Medicine Wheel repository. The local file is a permanent pointer, not a copied inventory.
-- **Link**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt)
-- **Pointer**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt)
+> The `@medicine-wheel/*` package inventory — the ontology, ceremony, narrative, storage, film-production and application libraries, what each is for, and how the suite versions. Medicine Wheel authors it; `__PULL_upstream.sh` carries it here, so the local copy is generated and never retyped.
+- **Link**: [llms-medicine-wheel-packages.txt](./llms-medicine-wheel-packages.txt) *(pulled)*
+- **Canonical**: [docs.medicine-wheel.jgwill.com/llms.txt](https://docs.medicine-wheel.jgwill.com/llms.txt)
 - **Related**: llms-medicine-wheel-mcp-tools.md, llms-inquiry-medicine-wheel-abundance-intelligence-research--d971fc13-64ee-41ab-8fcd-bb5900197ab8.md, llms-kinship-hub-system.md
 
 ## Medicine Wheel MCP Tools — Live Reference
-> Live MCP reference maintained and published by the Medicine Wheel repository. The local file is a permanent pointer, so tool and transport changes require no update here.
-- **Link**: [docs.medicine-wheel.jgwill.com/llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
-- **Pointer**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md)
+> The `@medicine-wheel/mcp` tool surface by family, its stdio and StreamableHTTP transports, the opt-in server-mediated store, and the app's REST API. Pulled from Medicine Wheel's own index by `__PULL_upstream.sh`, so a tool added upstream arrives here without an edit.
+- **Link**: [llms-medicine-wheel-mcp-tools.md](./llms-medicine-wheel-mcp-tools.md) *(pulled)*
+- **Canonical**: [docs.medicine-wheel.jgwill.com/llms-full.txt](https://docs.medicine-wheel.jgwill.com/llms-full.txt)
 - **Related**: llms-medicine-wheel-packages.txt, llms-pde.txt, llms-structural-tension-charts.txt
 
 ## Medicine Wheel & Abundance Intelligence Research
@@ -201,8 +201,9 @@
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt
 
 ## Stateloom (formerly SMCraft) — State Machine Craft
-> Design, validate, generate, run and live-edit hierarchical state machines from one `.smdf.json` document. Ten `@miadi/stateloom-*` npm packages plus `miadi-stateloom-engine` on PyPI — engine, protocol, hub, clients, canvas, `smcx` CLI, 15-tool MCP server, agent skill pack, prebuilt designer. The `smcraft` package names are deprecated. This is the runtime that executes llms-stc-state-machine.md.
-- **Link**: [docs.smcraft.jgwill.com/llms.txt](https://docs.smcraft.jgwill.com/llms.txt)
+> Design, validate, generate, run and live-edit hierarchical state machines from one `.smdf.json` document — and entity-relationship diagrams from `.erdf.json` beside them. The `@miadi/stateloom-*` family on npm plus `miadi-stateloom-engine` on PyPI: engine, protocol, hub, clients, canvas, the `smcx` terminal, an MCP server, an agent skill pack and the prebuilt designer. The `smcraft` package names are deprecated. This is the runtime that executes llms-stc-state-machine.md; the package table and tool counts live in the pulled file, not in this summary.
+- **Link**: [llms-stateloom-suite.md](./llms-stateloom-suite.md) *(pulled)*
+- **Canonical**: [docs.smcraft.jgwill.com/llms.txt](https://docs.smcraft.jgwill.com/llms.txt)
 - **Full**: [docs.smcraft.jgwill.com/llms-full.txt](https://docs.smcraft.jgwill.com/llms-full.txt)
 - **Repository**: [github.com/jgwill/smcraft](https://github.com/jgwill/smcraft)
 - **Related**: llms-stc-state-machine.md, llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt

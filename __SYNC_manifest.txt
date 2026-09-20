@@ -18,6 +18,7 @@ llms-structural-thinking.txt
 llms-managerial-moment-of-truth.md
 llms-st-four-questions.md
 llms-stc-state-machine.md
+llms-stateloom-suite.md
 llms-kinship-hub-system.md
 llms-pde.txt
 llms-pde-structural-thinking.md

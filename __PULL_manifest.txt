@@ -1,0 +1,73 @@
+# __PULL_manifest.txt — what jgwill/llms-txt pulls IN from the repos that own it.
+#
+# The outbound half of this repo (__SYNC_llms.sh → /etc/claude-code) carries guidance
+# OUT. This is the inbound half: technical facts that another repo owns — package
+# inventories, version tables, tool counts, transport contracts — are pulled from that
+# repo's own published llms.txt / llms-full.txt rather than retyped here.
+#
+# The rule this encodes: a fact has ONE author. Medicine Wheel owns its package list.
+# Stateloom owns its version table. This repo owns the framing that reads them back as
+# structural tension. Pulled content is generated; framing is written.
+#
+# Run:  ./__PULL_upstream.sh          pull and rewrite the generated files
+#       ./__PULL_upstream.sh --check  report drift only, change nothing (exit 1 if stale)
+#
+# ── sources ──────────────────────────────────────────────────────────────────────
+# A source is read from its local checkout when one is present, and from its published
+# docs site when it is not — so a host with no /workspace/repos still syncs.
+#
+#   url   published docs base (the CNAME of that repo's gh-pages)
+#   path  local checkout; defaults to $LLMS_PULL_REPOS_ROOT/<slug> (/workspace/repos)
+
+[@source jgwill/medicine-wheel]
+url  = https://docs.medicine-wheel.jgwill.com
+
+[@source jgwill/smcraft]
+url  = https://docs.smcraft.jgwill.com
+
+# ── pulls ────────────────────────────────────────────────────────────────────────
+# Each stanza is one upstream read landing in one file here. Several stanzas may name
+# the same destination; they are appended in the order written.
+#
+#   mode = copy      the whole upstream file
+#   mode = section   one heading's section (section = the exact heading line)
+#   mode = graft     replace a marked block inside a file AUTHORED here (block = its id)
+#
+# copy/section destinations are generated end to end — editing one by hand is writing
+# into a file the next pull overwrites. graft destinations are authored here and carry
+# exactly one generated region, fenced by PULLED markers.
+
+[llms-medicine-wheel-packages.txt]
+title   = Medicine Wheel Developer Suite — Package Reference
+intro   = The package inventory of the `@medicine-wheel/*` suite: what each library is for, how the suite versions, and where the specs live.
+source  = jgwill/medicine-wheel
+file    = llms.txt
+mode    = copy
+
+[llms-medicine-wheel-mcp-tools.md]
+title   = Medicine Wheel MCP Tools — Live Reference
+intro   = The `@medicine-wheel/mcp` tool surface, its two transports, the server-mediated store, and the app's REST API.
+source  = jgwill/medicine-wheel
+file    = llms.txt
+mode    = section
+section = ## MCP Server & HTTP API
+
+[llms-medicine-wheel-mcp-tools.md]
+source  = jgwill/medicine-wheel
+file    = llms-full.txt
+mode    = section
+section = ## MCP Server (@medicine-wheel/mcp)
+
+[llms-stateloom-suite.md]
+title   = Stateloom — The Suite That Runs a Chart
+intro   = The published `@miadi/stateloom-*` family: packages and versions, SMDF and ERDF, the MCP tool surface, the `smcx` terminal, the agent skills, and the environment contract. The runtime named by llms-stc-state-machine.md §6.
+source  = jgwill/smcraft
+file    = llms.txt
+mode    = copy
+
+[llms-stc-state-machine.md]
+source  = jgwill/smcraft
+file    = llms.txt
+mode    = graft
+block   = stateloom-packages
+section = ## Packages

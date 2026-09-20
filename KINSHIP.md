@@ -13,6 +13,7 @@
 * Drafted guidance `llms-stc-state-machine.md` was created out of something Robert Fritz said that got imprinted in my mind: "The creative orientation is an Event-Driven Process" and Robert is not good with software architecture at all !!  miadisabelle/forgewright#1 will be an interesting relation to apply that , learn from the relation to ceremony jgwill/src#403 and reflect that in our relational files.
 * * Therefore, smcraft already has its first runtimes published at :`https://www.npmjs.com/package/smcraft` and `https://pypi.org/project/smcraft/` and will be greatly influenced with its relationship with `avadisabelle/coaia-narrative`
 * * *(2026-08-14 — those two package names are now DEPRECATED. The runtimes ship as the `@miadi/stateloom-*` family on npm — engine, protocol, client, hub, react, canvas, cli, mcp, skills, web — and `miadi-stateloom-engine` on PyPI. The repo is still `jgwill/smcraft`. `llms-stc-state-machine.md` v2.0 carries the current names, the STC→MCP tool mapping and the PDE→chart→machine→rispec path.)*
+* * *(2026-09-20 — the suite's own surface is no longer described here by hand. `llms-stateloom-suite.md` is pulled from `jgwill/smcraft`'s `llms.txt` by `./__PULL_upstream.sh`, and §6 of `llms-stc-state-machine.md` carries its package table as a grafted block. The framing stays authored; the versions stay upstream's.)*
 ### repo: `avadisabelle/coaia-narrative` cloned in: `/src/coaia-narrative`
 
 * create Structural Tension Charting with MCP and CLI tools.
@@ -38,7 +39,7 @@
 ### `/workspace/repos/jgwill/medicine-wheel/src/`
 * Bellow are subsections that the jgwill/veritas might feed on or the tool that consume the jgwill/veritas's API would be built with (npmjs packages).
 * jgwill/veritas and related guidances (`llms-managerial-moment-of-truth.md` AND `llms-digital-decision-making.md`) would have abstraction done to them for new components in either `/workspace/repos/jgwill/medicine-wheel/src/` or `/workspace/repos/avadisabelle/ava-langchainjs` AND|OR `/workspace/repos/avadisabelle/ava-langgraphjs`
-- Medicine Wheel owns its technical reference at `https://docs.medicine-wheel.jgwill.com/llms.txt` and `https://docs.medicine-wheel.jgwill.com/llms-full.txt`. The `llms-medicine-wheel-*` files in this repository are permanent pointers only: do not copy package counts, versions, dependency ranges, tool inventories, or release data into them.
+- Medicine Wheel owns its technical reference at `https://docs.medicine-wheel.jgwill.com/llms.txt` and `https://docs.medicine-wheel.jgwill.com/llms-full.txt`. Package counts, versions, dependency ranges, tool inventories and release data are **never typed into this repository** — `./__PULL_upstream.sh` carries them here from that repo's own index. The `llms-medicine-wheel-*` files are generated: their headers say so, and an edit made in one is lost at the next pull. Between 2026-08-19 and 2026-09-20 those two files were bare URL pointers, which held the same rule by carrying no content at all; the script is the version of that rule that still leaves something for a reader, and for context7, to find.
 - [ ] TODO Go thru the path and upgrade this section in relation to what was created also in ./docs and recent packages for working with `/src/mcp-medicine-wheel*` futurely with data.
 
 #### ceremony-protocol/ 

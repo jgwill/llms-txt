@@ -259,22 +259,45 @@ Optional. Nothing above depends on it. But when an LLM wants the chart to actual
 drawn, or to be edited by a human and an agent at the same time, this is the suite — published,
 versioned, and usable from a cold start.
 
-It was formerly named `smcraft` on npm and PyPI. **That name is deprecated.** The current family —
-versions current as of 2026-08-14, with <https://docs.smcraft.jgwill.com/llms.txt> canonical:
+It was formerly named `smcraft` on npm and PyPI. **That name is deprecated.** The current family
+is not retyped here. The block below is pulled from that repo's own index by
+`__PULL_upstream.sh`, so a version bump upstream arrives here without anyone editing this
+document — and a number in it is as old as the last pull, never older:
+
+<!-- PULLED:stateloom-packages BEGIN — generated from jgwill/smcraft `llms.txt` § Packages by __PULL_upstream.sh. Edit upstream, not between these markers. -->
+Ten published npm packages, plus the Python engine on PyPI. The designer source (`web/`) stays `"private": true`; its prebuilt standalone build ships as `@miadi/stateloom-web`.
 
 | Install | What it is |
 |---|---|
-| `npm i @miadi/stateloom-engine` (0.4.4) | The engine — SMDF parser, validators V001–V014, hierarchical runtime, the `Machine` interpreter, Python + TypeScript code generators |
-| `pip install miadi-stateloom-engine` (0.2.1) | The Python twin, plus the `smcg` generator CLI |
-| `npx -y @miadi/stateloom-mcp` (0.2.3) | The MCP server — 15 tools an agent designs with conversationally |
-| `npm i -g @miadi/stateloom-cli` (0.1.3) | `smcx` — drive the loom from a terminal, render without a browser |
-| `npx -y @miadi/stateloom-web` (0.1.3) | The visual canvas, prebuilt. Serves on 4598 |
-| `npx -y @miadi/stateloom` (0.1.3) | The socket.io hub. Serves on 4599 |
-| `npx -y @miadi/stateloom-skills` (0.2.2) | Installs eight ready-to-use agent skills into `.claude/skills/` |
-| `@miadi/stateloom-protocol` · `-client` · `-react` · `-canvas` | The libraries underneath: patch ops, wire protocol, React binding, the canvas as a mountable component |
+| `npm i @miadi/stateloom-engine` (0.4.4) | The engine. SMDF parser, validator (a subset of V001–V014 — see below), hierarchical runtime, the `Machine` SMDF interpreter, TypeScript code generator. |
+| `pip install miadi-stateloom-engine` (0.2.1) | The Python twin of the engine: the full validator V001–V014, the Python code generator, and the `smcg` CLI. |
+| `npm i @miadi/stateloom-protocol` (0.1.8) | Zero-runtime-dependency foundation: patch ops, diff/apply, wire envelopes, layout, edge routing, viewport math, ASCII/Mermaid render, export naming, env aliasing. |
+| `npm i @miadi/stateloom-client` (0.1.2) | Framework-agnostic socket.io-client wrapper: join / patch / full / presence with auto-resync. |
+| `npm i @miadi/stateloom` (0.1.4) | The socket.io hub. Bin `smcraft-bridge`. |
+| `npm i @miadi/stateloom-react` (0.1.6) | React 19 binding: `useSmcraftBridge`, session core. Re-exports the protocol's viewport helpers at the address the web designer has always imported them from. |
+| `npm i @miadi/stateloom-canvas` (0.1.4) | The design surface as a mountable component: `<StateMachineCanvas>` — wheel/⌃wheel/middle-drag/Space+drag/pinch navigation, composite drill-down, box dragging, routed edges, settled event chips, zoom HUD. Props in, callbacks out; every colour a `--slc-*` CSS variable. Ship `@miadi/stateloom-canvas/styles.css` with it. |
+| `npm i -g @miadi/stateloom-cli` (0.1.3) | Bin `smcx` — drive the loom from a terminal. |
+| `npx -y @miadi/stateloom-mcp` (0.2.6) | The MCP server. Bins `stateloom-mcp` and legacy `smcraft-mcp`. |
+| `npx -y @miadi/stateloom-skills` (0.3.2) | Bin `stateloom` — installs agent skills into `.claude/skills/`. |
+| `npx -y @miadi/stateloom-web` (0.1.9) | Bin `stateloom-web` — the visual designer, prebuilt. Serves on 4598; reads its bridge URL at runtime from `GET /api/config`, so a published build carries nobody's URL and a redeploy is a restart, never a rebuild. |
 
-Repository: <https://github.com/jgwill/smcraft> · docs: <https://docs.smcraft.jgwill.com/llms.txt>
-(and `llms-full.txt` there for the deep reference — schema, tool surface, runtime semantics).
+Dependency direction: everything points at `@miadi/stateloom-protocol`. Nothing points back.
+
+```
+stateloom-protocol ──┬── stateloom-client ──┬── stateloom-react ──┬── web/ (designer)
+                     │                      └── stateloom-mcp     │
+                     ├── stateloom-canvas ───────────────────────┬─┘
+                     │                                           └── forgewright
+                     ├── stateloom (hub) ─── stateloom-cli ── stateloom-mcp
+                     └── (render, layout, viewport, exportName, env used by all)
+stateloom-engine ── generated code imports the runtime at execution time
+```
+<!-- PULLED:stateloom-packages END -->
+
+Repository: <https://github.com/jgwill/smcraft> · docs: <https://docs.smcraft.jgwill.com/llms.txt>.
+The whole surface — MCP tools, ERDF beside SMDF, the `smcx` terminal, the agent skills, the
+environment contract — is carried here, pulled, in
+[`llms-stateloom-suite.md`](llms-stateloom-suite.md).
 
 ### Fastest path from nothing to a running chart
 
@@ -324,9 +347,13 @@ becomes the initial state: the machine is `done` at construction and every event
 `handled: false, error: "machine has reached a final state"`. Current reality first, always — which
 is also the honest order to think in.
 
-Full list is 15 tools; the rest read (`get_definition`, `get_project_file`, `list_states`,
-`list_events`, `load_definition`), build (`add_event`), remove (`remove_state`) or generate code
-(`generate_code`).
+The rest of the surface reads (`get_definition`, `get_project_file`, `list_states`,
+`list_events`, `load_definition`), builds (`add_event`), removes (`remove_state`), generates code
+(`generate_code`) or leaves working notes for whoever opens the board next (`get_notes`,
+`set_notes`). The server also carries a second document type — entity-relationship diagrams — with
+its own tools. The live count and the full list are in
+[`llms-stateloom-suite.md`](llms-stateloom-suite.md); this section maps chart operations, not the
+inventory.
 
 One shape difference worth knowing: the MCP writes the document wrapped as
 `{"stateMachine": { … }}`, while §4's example is the bare `{settings, events, state}`. Both are read

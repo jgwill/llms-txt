@@ -24,6 +24,22 @@ fi
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 SYNC="$REPO_ROOT/__SYNC_llms.sh"
+PULL="$REPO_ROOT/__PULL_upstream.sh"
+
+# Distributing a stale fact is the same defect as never distributing it: the target reads
+# it with full confidence either way. So say, before the crossing, whether anything here
+# is behind the repo that authors it. This REPORTS; it never pulls and never blocks —
+# a pull mid-push would land content in a commit that is already on its way out.
+if [[ -x "$PULL" ]]; then
+    "$PULL" --check --offline
+    case $? in
+        0) : ;;
+        1) echo "⚠️  a guidance file is behind its upstream. Run ./__PULL_upstream.sh, commit, push again."
+           echo "   This push continues — what it carries is simply older than what exists." ;;
+        *) echo "ℹ️  upstream check could not look (no local checkouts?). Not a reason to hold the push." ;;
+    esac
+    echo ""
+fi
 
 [[ -x "$SYNC" ]] || { echo "ℹ️  no executable __SYNC_llms.sh — skipping distribution"; exit 0; }
 
