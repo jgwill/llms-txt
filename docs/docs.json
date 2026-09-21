@@ -1,0 +1,53 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "jgwill/llms-txt — Guidance for AI Companions",
+  "colors": {
+    "primary": "#16A34A"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Portfolio",
+        "pages": ["index"]
+      },
+      {
+        "group": "Two Core Systems",
+        "pages": ["relational-science", "ceremonial-technology"]
+      },
+      {
+        "group": "Foundational Frameworks",
+        "pages": [
+          "creative-orientation",
+          "structural-tension",
+          "rise-framework",
+          "narrative-craft"
+        ]
+      },
+      {
+        "group": "Operational Methodologies",
+        "pages": ["digital-decision-making", "performance-truth", "kinship-hub"]
+      },
+      {
+        "group": "Research and Academic Positioning",
+        "pages": [
+          "indigenous-research-paradigm",
+          "academic-positioning",
+          "medicine-wheel-research"
+        ]
+      },
+      {
+        "group": "Creative Applications",
+        "pages": ["storytelling"]
+      },
+      {
+        "group": "Platforms & Operational Guidance",
+        "pages": ["platforms/claude-code-chrome-extension", "current"]
+      },
+      {
+        "group": "AI Companion Skills & Practices",
+        "pages": ["skills-and-companions", "prompt-decomposition"]
+      }
+    ]
+  }
+}
