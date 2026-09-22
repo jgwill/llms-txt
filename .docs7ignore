@@ -1,0 +1,5 @@
+# Docs7 (Context7) builds every .md/.mdx under its docs folder as a page.
+# Its folder is the repo root, so keep it to docs/ — the llms-* files are
+# guidance, not site pages, and some carry HTML the MDX renderer rejects.
+/*
+!/docs/
