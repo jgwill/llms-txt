@@ -38,7 +38,7 @@ Each beat captures:
 - **Title**: Short name (e.g., "The Sacred Object Violation")
 - **Act**: Position in narrative sequence (1, 2, 3...)
 - **Dramatic Type**: Crisis, Discovery, Resolution, New Awareness, Character Development
-- **Universes**: Which of the three are involved
+- **Perspective types**: Which of the three perspectives are involved (`perspective_types`; `universes` still accepted)
 - **Description**: Factual summary
 - **Prose**: Full narrative showing how the moment reads from each of the three perspectives
 - **Lessons**: Key insights or learnings

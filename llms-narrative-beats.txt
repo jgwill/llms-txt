@@ -12,7 +12,7 @@ Use narrative beats when you need to capture **how a story unfolds across multip
 | Aspect | Chart | Narrative Beat |
 |--------|-------|-----------------|
 | **Purpose** | Create a desired outcome from current reality | Document how a complex story unfolds |
-| **Structure** | Outcome + Reality + Actions | Act + Prose + Universes + Lessons |
+| **Structure** | Outcome + Reality + Actions | Act + Prose + Perspectives + Lessons |
 | **Scope** | Individual goal/strategy | Incident/milestone across all dimensions |
 | **When to use** | Building toward something | Making sense of what happened |
 | **Output** | Action steps toward goal | Integrated understanding of story |
@@ -43,10 +43,11 @@ Creates a new narrative beat documenting a story event from the three perspectiv
 - `title`: Short name of the beat (e.g., "The Sacred Object Violation")
 - `act`: Which act in the narrative sequence (1, 2, 3, 4, 5...)
 - `type_dramatic`: Story function—Crisis/Antagonist Force, Discovery/Learning, Resolution Beginning, New Awareness, Character Development
-- `universes`: List of which archetypal universes this beat involves
-  - "engineer-world" — technical/analytical view
-  - "ceremony-world" — relational/spiritual view
-  - "story-engine-world" — narrative/creative view
+- `perspective_types`: List of which perspectives this beat involves
+  - "engineer" — technical/analytical view
+  - "ceremony" — relational/spiritual view
+  - "story_engine" — narrative/creative view
+  - Since coaia-narrative 0.17.0. `universes` with "engineer-world", "ceremony-world" and "story-engine-world" is still accepted and read from older beats.
 - `description`: Factual summary of what happened (visible in list)
 - `prose`: Full narrative prose showing how the moment reads from each of the three perspectives
 - `lessons`: Key insights or learnings from this beat
@@ -101,7 +102,7 @@ Lists all narrative beats, optionally filtered by parent chart.
 
 **Result**: Shows all beats with:
 - Title and act number
-- Dramatic type and universes involved
+- Dramatic type and perspectives involved
 - Full description and prose
 - Explicit lessons
 - Relational alignment assessments (if invoked)
@@ -147,7 +148,7 @@ Begins a structured four-direction exploration of the beat's themes.
 - Don't use beats to establish goals
 
 ❌ **Ignoring the three perspectives**
-- A beat with only "engineer-world" perspective isn't complete
+- A beat with only the "engineer" perspective isn't complete
 - Each significant beat should engage all three or explicitly explain why only some apply
 
 ❌ **Creating too many beats**

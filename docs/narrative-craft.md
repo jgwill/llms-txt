@@ -33,7 +33,7 @@ Narrative beats capture significant moments across three simultaneous dimensions
 | Aspect | Chart | Narrative Beat |
 |--------|-------|----------------|
 | Purpose | Create a desired outcome | Document how a story unfolds |
-| Structure | Outcome + Reality + Actions | Act + Prose + Universes + Lessons |
+| Structure | Outcome + Reality + Actions | Act + Prose + Perspectives + Lessons |
 | When | Building toward something | Making sense of what happened |
 
 ### 2. Narrative Remixing — Transforming Stories
