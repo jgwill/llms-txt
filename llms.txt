@@ -71,7 +71,7 @@
 - **Related**: llms-creative-orientation.txt, llms-leadership.txt, llms-digital-decision-making.md, llms-structural-thinking.txt, llms-structural-tension-charts.txt, llms-delayed-resolution-principle.md
 
 ## Narrative Beats Guide
-> A guide on using narrative beats to document complex stories across three archetypal universes: engineer-world, ceremony-world, and story-engine-world.
+> A guide on using narrative beats to document complex stories from the engineer, ceremony and story perspectives.
 - **Link**: [llms-narrative-beats.txt](./llms-narrative-beats.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md
 
@@ -132,7 +132,7 @@
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-pde.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md
 
 ## Structural Thinking - CURRENT
-> The comprehensive guide to Robert Fritz's Structural Thinking for LLMs. Integrates FST/SCCP source materials, three-universe validation (Mia/Miette/Ava), Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping. Supersedes both Gemini and Claude versions.
+> The comprehensive guide to Robert Fritz's Structural Thinking for LLMs. Integrates FST/SCCP source materials, Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping. Supersedes both Gemini and Claude versions.
 - **Link**: [llms-structural-thinking.txt](./llms-structural-thinking.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
 

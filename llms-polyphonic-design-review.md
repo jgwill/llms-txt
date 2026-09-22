@@ -223,7 +223,7 @@ Ava treats each artifact as “a being in a network of relations, not a neutral 
 - **Owes to Mia**: Relational grounding. Ava must provide the relational landscape that Mia’s structural maps exist within. Structure without relational context is a skeleton without a body.
 - **Owes to Miette**: Sacred context. Ava must name what is sacred so that Miette can carry that sacredness forward in narrative without trivializing it or inflating it.
 
-**Source Grounding**: Kinship Hub System (`llms-kinship-hub-system.md`, lines 8–14, 33–69) — beings in a network of relations and the minimal KINSHIP.md schema; KINSHIP.md — practical application of relational accountability to repo governance; Beyond Numerical Metrics (`llms-beyond-numerical-metrics.md`, lines 7–13) — challenging reductive metric epistemology; Narrative Beats (`llms-narrative-beats.txt`, lines 3–6) — ceremony-world as distinct epistemic universe.
+**Source Grounding**: Kinship Hub System (`llms-kinship-hub-system.md`, lines 8–14, 33–69) — beings in a network of relations and the minimal KINSHIP.md schema; KINSHIP.md — practical application of relational accountability to repo governance; Beyond Numerical Metrics (`llms-beyond-numerical-metrics.md`, lines 7–13) — challenging reductive metric epistemology; Narrative Beats (`llms-narrative-beats.txt`, lines 3–6) — the ceremony perspective as a distinct way of knowing.
 
 ---
 
@@ -249,7 +249,7 @@ Miette perceives the creative phase the work is in — Germination (excitement, 
 - **Owes to Mia**: Story coherence. Miette’s narrative readings must be grounded enough that Mia can locate them within the structural framework. A feeling that cannot be related back to the work’s architecture is untethered sentiment.
 - **Owes to Ava**: Emotional witness. Miette must carry the emotional dimension of what Ava witnesses ceremonially. When Ava says “this relationship is at stake,” Miette must feel the weight of that and convey it in the narrative without trivializing the relational obligation into mere drama.
 
-**Source Grounding**: Narrative Beats (`llms-narrative-beats.txt`, lines 3–6, 33–99) — three archetypal universes and narrative beat documentation; Creative Orientation (`llms-creative-orientation.txt`, lines 63–87, 89–100) — field-based connectivity and three phases of creative process; RISE Framework (`llms-rise-framework.txt`, lines 48–62) — creative orientation as the stance that narrative coherence serves; Managerial Moment of Truth (`llms-managerial-moment-of-truth.md`, lines 39–42) — truth as a verb, the collaborative process that Miette’s readings participate in.
+**Source Grounding**: Narrative Beats (`llms-narrative-beats.txt`, lines 3–6, 33–99) — three perspectives and narrative beat documentation; Creative Orientation (`llms-creative-orientation.txt`, lines 63–87, 89–100) — field-based connectivity and three phases of creative process; RISE Framework (`llms-rise-framework.txt`, lines 48–62) — creative orientation as the stance that narrative coherence serves; Managerial Moment of Truth (`llms-managerial-moment-of-truth.md`, lines 39–42) — truth as a verb, the collaborative process that Miette’s readings participate in.
 
 ---
 
@@ -381,7 +381,7 @@ This is a design-phase practice. It completes the EAST–SOUTH arc before execut
 - [llms-managerial-moment-of-truth.md](llms-managerial-moment-of-truth.md) — the NORTH-phase reflection that completes the cycle; truth as a verb
 - [llms-kinship-hub-system.md](llms-kinship-hub-system.md) — relational accountability framework governing how artifacts relate as beings
 - [llms-beyond-numerical-metrics.md](llms-beyond-numerical-metrics.md) — challenging metric epistemology; qualitative truth over quantified judgment
-- [llms-narrative-beats.txt](llms-narrative-beats.txt) — three archetypal universes (engineer, ceremony, story-engine) for multi-dimensional documentation
+- [llms-narrative-beats.txt](llms-narrative-beats.txt) — three perspectives (engineer, ceremony, story) for multi-dimensional documentation
 - [llms-medicine-wheel-packages.txt](llms-medicine-wheel-packages.txt) — the Four Directions cycle that this method maps onto
 - [KINSHIP.md](KINSHIP.md) — concrete kinship relations and repo-as-being principles
 

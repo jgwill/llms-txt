@@ -1,9 +1,9 @@
 ## When to Use Narrative Beats
 
-**Narrative beats** document complex stories across three archetypal universes simultaneously:
-- **Engineer-world**: Technical/analytical perspective
-- **Ceremony-world**: Relational/spiritual protocol awareness
-- **Story-engine-world**: Narrative/creative progression
+**Narrative beats** document complex stories from three perspectives at once:
+- **Engineer perspective**: technical and analytical
+- **Ceremony perspective**: relational and spiritual protocol awareness
+- **Story perspective**: narrative and creative progression
 
 Use narrative beats when you need to capture **how a story unfolds across multiple dimensions**—not just what happened technically, but what it means relationally and narratively.
 
@@ -34,9 +34,9 @@ Use narrative beats when you need to capture **how a story unfolds across multip
 
 ### 1. `create_narrative_beat`
 
-Creates a new narrative beat documenting a story event across the three universes.
+Creates a new narrative beat documenting a story event from the three perspectives.
 
-**When to use**: When a significant moment (learning, transgression, discovery, integration) needs multi-universe documentation.
+**When to use**: When a significant moment (learning, transgression, discovery, integration) needs documentation from more than one perspective.
 
 **Parameters**:
 - `parentChartId`: The chart this beat belongs to (required)
@@ -48,7 +48,7 @@ Creates a new narrative beat documenting a story event across the three universe
   - "ceremony-world" — relational/spiritual view
   - "story-engine-world" — narrative/creative view
 - `description`: Factual summary of what happened (visible in list)
-- `prose`: Full narrative prose showing how all three universes experienced this moment
+- `prose`: Full narrative prose showing how the moment reads from each of the three perspectives
 - `lessons`: Key insights or learnings from this beat
 - `assessRelationalAlignment` (optional): Boolean—invoke iaip-mcp to assess relational science alignment
 - `initiateFourDirectionsInquiry` (optional): Boolean—invoke iaip-mcp for Four Directions guidance
@@ -57,9 +57,9 @@ Creates a new narrative beat documenting a story event across the three universe
 ```
 Create a narrative beat titled "The Sacred Object Violation"
 Act 2, Crisis/Antagonist Force
-Engineer-world: Technical boundary crossed (direct file editing)
-Ceremony-world: Sacred artifact dishonored
-Story-engine-world: Character reveals flaw through action
+Engineer perspective: Technical boundary crossed (direct file editing)
+Ceremony perspective: Sacred artifact dishonored
+Story perspective: Character reveals flaw through action
 ```
 
 **Result**: Beat created with:
@@ -146,7 +146,7 @@ Begins a structured four-direction exploration of the beat's themes.
 - Beats document what happened; charts create what you want
 - Don't use beats to establish goals
 
-❌ **Ignoring the three universes**
+❌ **Ignoring the three perspectives**
 - A beat with only "engineer-world" perspective isn't complete
 - Each significant beat should engage all three or explicitly explain why only some apply
 
@@ -166,7 +166,7 @@ Begins a structured four-direction exploration of the beat's themes.
 2. **Add action steps** as strategic intermediaries
 3. **Complete action steps** as you work
 4. **Recognize significant learning** from an action
-5. **Create narrative beat** documenting that learning across three universes
+5. **Create narrative beat** documenting that learning from three perspectives
 6. **Telescope the beat** to show sub-moments if needed
 7. **Use list_narrative_beats** to view your narrative arc
 

@@ -10,7 +10,7 @@ This page holds the research relationship, not a second technical reference.
 
 ## The Medicine Wheel Developer Suite
 
-The suite provides a layered architecture for relational AI, bridging the Engineer-world's precision with the Ceremony-world's relational accountability.
+The suite provides a layered architecture for relational AI, bridging the engineer perspective's precision with the ceremony perspective's relational accountability.
 
 | Layer | Primary Package | Role |
 |-------|-----------------|------|

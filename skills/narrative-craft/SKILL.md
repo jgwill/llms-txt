@@ -1,8 +1,8 @@
 ---
 name: narrative-craft
 description: >
-  Framework for documenting complex stories through narrative beats across three archetypal
-  universes (engineer, ceremony, story-engine) and for transforming stories across domains
+  Framework for documenting complex stories through narrative beats from three perspectives
+  (engineer, ceremony, story) and for transforming stories across domains
   through narrative remixing while preserving emotional architecture. Use when documenting
   significant learning moments, capturing multi-dimensional incidents, transforming stories
   for new audiences, or preserving narrative integrity during knowledge transfer.
@@ -12,12 +12,12 @@ description: >
 
 ## Part 1: Narrative Beats
 
-### Three Archetypal Universes
+### Three Perspectives
 
 Every significant moment unfolds across three dimensions simultaneously:
-- **Engineer-world**: Technical/analytical perspective
-- **Ceremony-world**: Relational/spiritual protocol awareness
-- **Story-engine-world**: Narrative/creative progression
+- **Engineer perspective**: technical and analytical
+- **Ceremony perspective**: relational and spiritual protocol awareness
+- **Story perspective**: narrative and creative progression
 
 ### When to Create Beats
 
@@ -40,7 +40,7 @@ Each beat captures:
 - **Dramatic Type**: Crisis, Discovery, Resolution, New Awareness, Character Development
 - **Universes**: Which of the three are involved
 - **Description**: Factual summary
-- **Prose**: Full narrative showing how all three universes experienced the moment
+- **Prose**: Full narrative showing how the moment reads from each of the three perspectives
 - **Lessons**: Key insights or learnings
 
 ### Telescoping Beats
@@ -59,7 +59,7 @@ Break broad beats into sub-beats for deeper exploration:
 2. Add action steps as strategic intermediaries
 3. Complete action steps as you work
 4. Recognize significant learning from an action
-5. **Create narrative beat** documenting that learning across three universes
+5. **Create narrative beat** documenting that learning from three perspectives
 6. Telescope the beat for sub-moments if needed
 
 ## Part 2: Narrative Remixing
@@ -113,7 +113,7 @@ From music theory — how elements relate across domains:
 |---|---|
 | Creating beats for action steps | Action steps → sub-charts via telescoping. Beats are for story/incident documentation. |
 | Using beats instead of charts for goals | Beats document what happened; charts create what you want. |
-| Ignoring the three universes | Each significant beat should engage all three or explain why not. |
+| Ignoring the three perspectives | Each significant beat should engage all three or explain why not. |
 | Creating too many beats | Only significant transitions, learnings, transgressions need beats. |
 | Destroying emotional architecture in remixing | Preserve wonder, vulnerability, growth — transform only surface context. |
 
@@ -121,4 +121,4 @@ From music theory — how elements relate across domains:
 
 - **Creative Orientation** (`/creative-orientation`): Generative approach to story transformation
 - **Structural Tension Charting** (`/structural-tension-charting`): Charts create goals; beats document the story of pursuing them
-- **Relational Research** (`/relational-research`): Ceremony-world perspective in beats aligns with indigenous paradigm
+- **Relational Research** (`/relational-research`): The ceremony perspective in beats aligns with indigenous paradigm

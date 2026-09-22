@@ -89,7 +89,7 @@ Counter-articles connect to broader guidance:
 | [Creative Orientation](../llms-creative-orientation.txt) | Counter-article uses advancing-pattern orientation; starts with desired outcome, not rejection |
 | [Structural Tension](../llms-structural-tension-charts.txt) | Paradigm shift as structural tension: current reality + desired outcome + creative actions |
 | [Digital Decision Making](../llms-digital-decision-making.md) | Counter-article makes binary evaluation visible (acceptable relational paradigm vs. unacceptable extraction) |
-| [Narrative Craft](../llms-narrative-beats.txt) | Story documentation across engineer, ceremony, and story-engine worlds |
+| [Narrative Craft](../llms-narrative-beats.txt) | Story documentation from the engineer, ceremony, and story perspectives |
 | [RISE Framework](../llms-rise-framework.txt) | Reverse-engineer your paradigm → Intent → Specifications → Export methodology |
 
 ---

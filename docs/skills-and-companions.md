@@ -43,7 +43,7 @@ Skills that create tools honoring relational accountability:
 - **creative-orientation** — foundational generative practice
 - **structural-tension-charting** — ceremonial technology for entering sacred space
 - **rise-specification** — creative archaeology for code
-- **narrative-craft** — story documentation across three universes
+- **narrative-craft** — story documentation from three perspectives
 - **performance-truth** — truth as a verb in relational accountability
 - **digital-decision-making** — clarity through binary evaluation
 - **langfuse-tracing** — observability as relational record-keeping

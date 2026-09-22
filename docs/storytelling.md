@@ -46,7 +46,7 @@ The [README.md](https://github.com/jgwill/storytelling) at [storytelling.jgwill.
 
 1. **Story Generation Pipeline** — full LangGraph node graph with STC phases (Germination / Assimilation / Completion)
 2. **STC State Machine** — pipeline stages as creative phase state transitions; reveals oscillation risk in the chapter revision loop
-3. **NarrativeAware Enrichment Loop** — Three-Universe Analysis → Emotional Scoring → Gap Identification → Enrichment cycle
+3. **NarrativeAware Enrichment Loop** — Three-Perspective Analysis → Emotional Scoring → Gap Identification → Enrichment cycle
 
 Plus the **Wâpano (NARINTEL:EAST)** envisioned architecture — the Four Directions multi-agent system that begins the structural decolonization of this package.
 

@@ -1,6 +1,6 @@
 # Narrative Craft
 
-> Documenting stories across three archetypal universes — engineer-world, ceremony-world, and story-engine-world — and transforming narratives across domains while preserving emotional architecture.
+> Documenting stories from the engineer, ceremony and story perspectives, and transforming narratives across domains while preserving emotional architecture.
 
 ---
 
@@ -12,11 +12,11 @@ Narrative Craft encompasses two interrelated practices:
 
 Narrative beats capture significant moments across three simultaneous dimensions:
 
-| Universe | Perspective | What It Captures |
+| Perspective | Reading | What It Captures |
 |----------|------------|------------------|
-| **Engineer-world** | Technical/analytical | What happened technically |
-| **Ceremony-world** | Relational/spiritual | What it means relationally and ceremonially |
-| **Story-engine-world** | Narrative/creative | How the story progresses |
+| **Engineer perspective** | Technical/analytical | What happened technically |
+| **Ceremony perspective** | Relational/spiritual | What it means relationally and ceremonially |
+| **Story perspective** | Narrative/creative | How the story progresses |
 
 ### When to Create Narrative Beats
 
@@ -55,7 +55,7 @@ The three-layer transformation model ensures fidelity:
 
 ## Narrative Craft in Ceremonial Technology
 
-In the context of [Ceremonial Technology Development](ceremonial-technology.md), narrative beats serve as **ceremony-world records** — documenting key relational events, harms, repairs, and new covenants.
+In the context of [Ceremonial Technology Development](ceremonial-technology.md), narrative beats serve as **ceremony records** — documenting key relational events, harms, repairs, and new covenants.
 
 The [Kinship Hub System](kinship-hub.md) references narrative beats in its Ceremony, Story, and Memory section, ensuring that the relational history of a project stays visible.
 

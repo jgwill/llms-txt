@@ -51,7 +51,7 @@ Each skill is designed to be invoked within AI-assisted workflows while maintain
 | Skill | Purpose | Key Documentation | Status |
 |-------|---------|-------------------|--------|
 | **[rise-specification](rise-specification/)** | RISE framework for specification through creative archaeology | [llms-rise-framework.txt](../../llms-rise-framework.txt) | Active |
-| **[narrative-craft](narrative-craft/)** | Document stories across engineer, ceremony, and story-engine worlds | [llms-narrative-beats.txt](../../llms-narrative-beats.txt) | Active |
+| **[narrative-craft](narrative-craft/)** | Document stories from the engineer, ceremony, and story perspectives | [llms-narrative-beats.txt](../../llms-narrative-beats.txt) | Active |
 
 ### Issue & Workflow Practices
 
@@ -265,7 +265,7 @@ To propose a new skill:
 | "I feel stuck/uncertain" | delayed-resolution | Hold tension productively |
 | "How do I map this project?" | structural-tension-charting | Visualize advancement pathway |
 | "Was this a success?" | performance-truth | Beyond metrics—relational truth |
-| "How do I document this?" | narrative-craft | Story across three worlds |
+| "How do I document this?" | narrative-craft | Story from three perspectives |
 | "What does this code enable?" | rise-specification | Reverse-engineer intent |
 | "Who's accountable?" | relational-research | Relational accountability protocol |
 | "Is my approach rigorous?" | epistemological-counter-positioning | Paradigm integrity check |

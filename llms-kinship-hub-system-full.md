@@ -37,7 +37,7 @@ This protocol applies when:
 - LLMs are:
     - Creating new directories or significant files
     - Refactoring/moving content
-    - Doing narrative, research, or ceremony-world work that affects relationships
+    - Doing narrative, research, or ceremony-perspective work that affects relationships
 
 It governs **how LLMs reason about, ask about, and document**:
 
@@ -94,7 +94,7 @@ LLMs must:
 - **Structural Thinking**: See structures of relationship rather than isolated “problems”.[^1_14]
 - **Structural Tension**: Treat unresolved kinship questions as productive tension to be held, not gaps to be patched.[^1_15][^1_16]
 - **Creative Orientation**: Focus on **creating healthy kin networks**, not just eliminating issues.[^1_17]
-- **Narrative Beats**: Use ceremony-world beats to record key moments of relational harm, repair, and new covenants.[^1_18]
+- **Narrative Beats**: Use beats read from the ceremony perspective to record key moments of relational harm, repair, and new covenants.[^1_18]
 - **Managerial Moment of Truth**: Apply “truth as a verb” to relational discrepancies: expectation vs. delivery in care, consent, reciprocity.[^1_19]
 
 ***
@@ -118,7 +118,7 @@ Under this protocol, each directory is treated as a **being-with-a-role**:
 ### 3.2 Kinship Hubs vs ordinary directories
 
 - A **Kinship Hub** is any directory explicitly declared as such in its `KINSHIP.md`:
-    - Root of a project or universe
+    - Root of a project or domain
     - A major sub-domain node (e.g., `/ceremony`, `/research`, `/code`, `/land`)
 - Non-hub directories can still carry `KINSHIP.md`, but **they inherit and localize** the hub’s obligations.
 
@@ -264,7 +264,7 @@ LLMs should **offer** to create or extend `KINSHIP.md` when:
 - A new repo or root directory is being initialized for long-term or relational work.
 - A directory begins to function as a **hub** for:
     - Community-facing work
-    - Ceremony-world or story-world work
+    - Ceremony or story work
     - Sensitive or sovereign data
     - Interdisciplinary crossings or high-stakes decisions
 - The user expresses interest in kinship, Indigenous paradigms, ceremony, or relational accountability.
@@ -405,7 +405,7 @@ LLMs must:
 
 - Narrative beats:
     - Capture key relational events that impact kinship (harms, apologies, new covenants, major reorganizations).
-    - Are referenced from `KINSHIP.md` so the **ceremony-world history** stays visible.[^1_18]
+    - Are referenced from `KINSHIP.md` so the **ceremony history** stays visible.[^1_18]
 - Narrative remixing:
     - When re-telling or adapting project stories:
         - Preserve **relational stakes and kinship architecture**
