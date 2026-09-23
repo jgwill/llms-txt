@@ -174,8 +174,8 @@
 
 ## Storytelling (WillWrite) — AI-Powered Narrative Generation
 > A Python package (aliases: `willwrite`, `specforge`) that empowers users to manifest complete, coherent narratives from a single creative prompt. Uses a LangGraph state machine to orchestrate multi-stage generation (prompt analysis → story elements → outlines → chapter-by-chapter scene generation → revision → final assembly) with PHOENIX_WEAVE session persistence for resuming across interruptions. Features URI-based multi-provider LLM support (Google Gemini, Ollama, OpenRouter), enhanced multi-source RAG (local knowledge bases, web content, CoAiAPy datasets via FAISS), and a five-phase Indigenous ceremonial integration (IAIP) mapping story generation to Miigwechiwendam → Nindokendaan → Ningwaab → Nindoodam → Migwech. Includes an MCP server for LLM agent orchestration, tiered dependency architecture (Core ~50MB → +RAG 3-5GB → +Specialized), and complete RISE-framework specifications in rispecs/. This package IS a Ceremonial Technology — treating narrative generation as a relational and creative practice, not a problem to solve.
-- **Link**: [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt)
-- **Full**: [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt)
+- **Link**: [docs.storytelling.jgwill.com/llms.txt](https://docs.storytelling.jgwill.com/llms.txt)
+- **Full**: [docs.storytelling.jgwill.com/llms-full.txt](https://docs.storytelling.jgwill.com/llms-full.txt)
 - **Docs**: [docs/storytelling.md](./docs/storytelling.md)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md
 

@@ -195,8 +195,8 @@
 
 ## Storytelling (WillWrite) — AI Narrative Generation
 > AI-powered narrative generation system that transforms prompts into complete multi-chapter stories through advancing patterns, using LangGraph, multi-provider LLMs, RAG, and Indigenous ceremonial integration (IAIP).
-- **Link**: [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt)
-- **Full**: [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt)
+- **Link**: [docs.storytelling.jgwill.com/llms.txt](https://docs.storytelling.jgwill.com/llms.txt)
+- **Full**: [docs.storytelling.jgwill.com/llms-full.txt](https://docs.storytelling.jgwill.com/llms-full.txt)
 - **Docs**: [docs/storytelling.md](./docs/storytelling.md)
 - **Related**: llms-creative-orientation.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-narrative-beats.txt, llms-narrative-remixing.txt
 

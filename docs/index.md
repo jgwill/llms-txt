@@ -62,7 +62,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 
 | Application | Description | Source |
 |-------------|------------|--------|
-| [Storytelling](storytelling.md) | AI-powered narrative generation through advancing patterns | [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt) |
+| [Storytelling](storytelling.md) | AI-powered narrative generation through advancing patterns | [docs.storytelling.jgwill.com/llms.txt](https://docs.storytelling.jgwill.com/llms.txt) |
 
 <!-- app stilm needs some work.  how could we talks about that statement
 -->

@@ -18,8 +18,8 @@ What distinguishes it from other text generation tools:
 
 | Resource | URL |
 |----------|-----|
-| **llms.txt** | [storytelling.jgwill.com/llms.txt](https://storytelling.jgwill.com/llms.txt) |
-| **llms-full.txt** | [storytelling.jgwill.com/llms-full.txt](https://storytelling.jgwill.com/llms-full.txt) |
+| **llms.txt** | [docs.storytelling.jgwill.com/llms.txt](https://docs.storytelling.jgwill.com/llms.txt) |
+| **llms-full.txt** | [docs.storytelling.jgwill.com/llms-full.txt](https://docs.storytelling.jgwill.com/llms-full.txt) |
 | **Source** | [github.com/jgwill/storytelling](https://github.com/jgwill/storytelling) |
 | **Specifications** | [rispecs/](https://github.com/jgwill/storytelling/tree/main/rispecs) |
 
@@ -42,7 +42,7 @@ Each stage is a checkpoint — sessions can be resumed from any point.
 
 ### Architecture Diagrams
 
-The [README.md](https://github.com/jgwill/storytelling) at [storytelling.jgwill.com](https://storytelling.jgwill.com) includes three Mermaid architecture diagrams:
+The [README.md](https://github.com/jgwill/storytelling) at [docs.storytelling.jgwill.com](https://docs.storytelling.jgwill.com) includes three Mermaid architecture diagrams:
 
 1. **Story Generation Pipeline** — full LangGraph node graph with STC phases (Germination / Assimilation / Completion)
 2. **STC State Machine** — pipeline stages as creative phase state transitions; reveals oscillation risk in the chapter revision loop
@@ -117,8 +117,8 @@ All governed by the [Creative Orientation Operating Guide](https://github.com/jg
 
 ## Key Sources
 
-- [llms.txt](https://storytelling.jgwill.com/llms.txt) — compact index for LLM consumption
-- [llms-full.txt](https://storytelling.jgwill.com/llms-full.txt) — expanded index with detailed summaries
+- [llms.txt](https://docs.storytelling.jgwill.com/llms.txt) — compact index for LLM consumption
+- [llms-full.txt](https://docs.storytelling.jgwill.com/llms-full.txt) — expanded index with detailed summaries
 - [Source repository](https://github.com/jgwill/storytelling)
 - [Creative Orientation](../llms-creative-orientation.txt) — foundational framework
 - [RISE Framework](../llms-rise-framework.txt) — specification methodology
