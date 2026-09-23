@@ -135,6 +135,7 @@
 > The comprehensive guide to Robert Fritz's Structural Thinking for LLMs. Integrates FST/SCCP source materials, Indigenous paradigm as ceremonial technology, PDE template with Four Directions mapping. Supersedes both Gemini and Claude versions.
 - **Link**: [llms-structural-thinking.txt](./llms-structural-thinking.txt)
 - **Related**: llms-structural-tension-charts.txt, llms-creative-orientation.txt, llms-rise-framework.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-pde.txt
+- **Sub-documents**: llms-st-three-steps.md, llms-st-four-questions.md, llms-st-structural-tension.md, llms-st-patterns.md, llms-st-consulting.md, llms-st-anti-patterns.md, llms-st-language-guide.md
 
 ## Medicine Wheel Developer Suite — Package Reference
 > The `@medicine-wheel/*` package inventory — the ontology, ceremony, narrative, storage, film-production and application libraries, what each is for, and how the suite versions. Medicine Wheel authors it; `__PULL_upstream.sh` carries it here, so the local copy is generated and never retyped.
