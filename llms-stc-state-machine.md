@@ -196,7 +196,7 @@ one of them telescoped.
 
 Read it back as a chart:
 
-- **`CurrentReality`** is the initial state — the honest one, not the flattering one.
+- **`CurrentReality`** is the initial state — what actually is, not what is hoped.
 - **`Germination` is a composite state.** That IS the telescoped action step: a chart inside a
   chart. Nothing about the master chart changes when you telescope; a state gains children.
 - **The `moment_of_truth` transition carries a `condition`.** A guard is a Creator Moment of Truth
@@ -204,7 +204,7 @@ Read it back as a chart:
   built a machine that always advances, which is exactly the fantasy structural tension exists to
   prevent.
 - **`reality_updated` on `Assimilation` has no `nextState`.** That is an internal transition:
-  reality was reassessed, the position did not change. Recording that honestly is what keeps
+  reality was reassessed, the position did not change. Recording it is what keeps
   "current reality" a measurement rather than a mood.
 - **`Published` is `kind: "final"`.** Reaching it fires the machine's end handlers. Tension
   resolves; it does not linger.
@@ -345,7 +345,7 @@ canvas reporting `○ no disk` while the agent writes happily somewhere else.
 its **first non-history child**. Name the desired outcome before current reality and the final state
 becomes the initial state: the machine is `done` at construction and every event answers
 `handled: false, error: "machine has reached a final state"`. Current reality first, always — which
-is also the honest order to think in.
+is also the order to think in.
 
 The rest of the surface reads (`get_definition`, `get_project_file`, `list_states`,
 `list_events`, `load_definition`), builds (`add_event`), removes (`remove_state`), generates code
@@ -378,7 +378,7 @@ machine.done;                            // true once the desired outcome is rea
 return the new state; read `machine.state` for that. `handled: true, changed: false` is the
 internal transition: reality reassessed, position unmoved.
 
-`context` is the guard lookup table: a Moment of Truth answered honestly. Build the same machine
+`context` is the guard lookup table: a Moment of Truth, answered. Build the same machine
 with **no** context and `moment_of_truth` is refused — guards **fail closed** rather than pretend.
 That default is the right one for creative work: unexamined guards do not become permission.
 

@@ -66,7 +66,7 @@ From "The Secret of Professional Creators":
 
 Structural tension resolves naturally through:
 1. **Clear desired outcome** (what you want to create)
-2. **Honest current reality** (where you actually are)
+2. **Current reality** (where you actually are)
 3. **Strategic action steps** (intermediary results)
 4. **Completion flowing into reality** (advancement changes the structure)
 
@@ -76,7 +76,7 @@ The system seeks equilibrium through **advancement**, not through **assumption**
 
 For COAIA Memory to maintain creative orientation:
 1. **No default current reality** - require explicit assessment
-2. **Tension-aware prompting** - guide users to honest current reality
+2. **Tension-aware prompting** - guide users to state current reality as it is
 3. **Context extraction** - derive reality from user's actual situation
 4. **Placeholder tension** - if default needed, maintain productive discrepancy
 

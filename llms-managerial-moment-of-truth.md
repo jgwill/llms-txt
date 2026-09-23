@@ -189,7 +189,7 @@ These pitfalls often stem from the biases and tendencies discussed in `llms-digi
    - What is your ACTUAL current reality now relative to this desired outcome?
    - Avoid: "I'm making progress" (comparative/vague)
    - Use: "Completed Django models section, struggling with views implementation" (specific/factual)
-   - Ask: "Do I honestly agree that THIS is where I am?" (get to yes with yourself)
+   - Ask: "Do I agree that THIS is where I am?" (get to yes with yourself)
 
 2. **Analyze How You Got Here**
    - What actions did you actually take?
@@ -214,7 +214,7 @@ These tools enable the Creator's Moment of Truth to happen continuously througho
 
 **Common Pitfalls in Chart Reviews:**
 
-- **Skipping the truth-telling**: Assuming progress without honest assessment
+- **Skipping the truth-telling**: Assuming progress without assessing what was delivered
 - **Premature resolution**: Marking things complete when they're partially done
 - **Concept-driven updates**: "I should be further along" vs "Here's where I actually am"
 - **Ignoring learning**: Not incorporating insights gained through action
@@ -231,7 +231,7 @@ These tools enable the Creator's Moment of Truth to happen continuously througho
 |---|---|---|
 | `chartId` | string (required) | Chart to evaluate |
 | `phase` | enum: `full`, `acknowledge`, `analyze`, `update`, `recommit` | Which MMOT phase to run (default: `full`) |
-| `assessment` | string | Agent's honest assessment — expected vs. delivered |
+| `assessment` | string | Agent's assessment — expected vs. delivered |
 | `direction` | enum: `South`, `East`, `West`, `North` | Directional perspective for collective inquiry |
 | `correctiveActions` | string[] | New action steps to add based on evaluation |
 | `updateReality` | boolean | Write evaluation into current reality (default: `true`) |

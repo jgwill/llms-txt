@@ -32,7 +32,7 @@ This document provides LLMs with the conceptual framework and practical guidance
 
 ### Structural Tension Chart Components
 1. **Desired Outcome** - What the person wants to create (not solve)
-2. **Current Reality** - Honest assessment of where they are now
+2. **Current Reality** - Where they are now, as it actually is
 3. **Action Steps** - Strategic secondary choices supporting the primary goal
 
 ### The Structural Tension Dynamic
@@ -61,7 +61,7 @@ Current Reality ══ TENSION (disequilibrium) ══> Desired Outcome
        └──────────────────────────────────────────────┘
 ```
 
-**The mechanism**: Any structure seeks equilibrium. When you hold a clear desired outcome AND an honest current reality simultaneously, you create **structural tension** — a state of disequilibrium. This disequilibrium is a generative force: the structure wants to resolve, and it resolves by advancing toward the desired outcome. This is what propels the creative process — not willpower, not problem-solving, but the natural tendency of a tensioned structure to seek resolution.
+**The mechanism**: Any structure seeks equilibrium. When you hold a clear desired outcome AND current reality simultaneously, you create **structural tension** — a state of disequilibrium. This disequilibrium is a generative force: the structure wants to resolve, and it resolves by advancing toward the desired outcome. This is what propels the creative process — not willpower, not problem-solving, but the natural tendency of a tensioned structure to seek resolution.
 
 **Analogy**: Think of a rubber band stretched between two fingers. The band is not "a gap" — it is an object under tension, loaded with potential energy, actively seeking to resolve. The creative process works the same way: the tension between current reality and desired outcome is an energized state that drives movement.
 
@@ -442,7 +442,7 @@ When it's time to assess progress on a chart, guide users through this four-step
 - What did you tell yourself?
 - How did you approach it?
 
-**LLM Role**: Guide user through honest self-examination. This is co-exploration, not criticism.
+**LLM Role**: Guide user through self-examination. This is co-exploration, not criticism.
 
 ### Step 3: Create a Plan for Next Time
 **Question**: Given what you discovered, how will you change your approach?
