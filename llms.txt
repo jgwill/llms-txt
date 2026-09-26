@@ -59,6 +59,11 @@
 - **Link**: [llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md](./llms-inquiry-6406eb37-69b1-471d-9cac-07ae69449c35.md)
 - **Related**: llms-creative-orientation.txt, llms-delayed-resolution-principle.md, llms-managerial-moment-of-truth.md, llms-narrative-beats.txt, llms-rise-framework.txt, llms-structural-tension-charts.txt, llms-structural-thinking.txt
 
+## Language Integrity: Refusing LLM Default Patterns
+> A pattern-recognition system for detecting and correcting how large language models pad communication with decorative adjectives, false-work verbs, hedging, and collective vagueness. Anchored in creative orientation: precise language serves creation; padded language performs expertise (problem-solving posture). Parallel to paradigm pollution detection but operates at the sentence/word level.
+- **Link**: [llms-language-integrity.md](./llms-language-integrity.md)
+- **Related**: llms-creative-orientation.txt, llms-pollution-detection-checklist.md, llms-managerial-moment-of-truth.md, llms-structural-thinking.txt
+- **AIS Practice**: jgwill/src/AIS/AIS_LANGUAGE_INTEGRITY.md
 
 ## Leadership in Structural Dynamics
 > A guide to leadership through the lens of Structural Dynamics, emphasizing structural intervention over individual will.
