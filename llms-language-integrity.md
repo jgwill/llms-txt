@@ -230,6 +230,6 @@ When you choose precision, you choose creation. When you choose padding, you def
 ---
 
 *Last Updated: 2026-09-26*
-*Status: Canonical Guidance — Distributed via llms-txt ecosystem*
+*Status: Canonical Guidance — Distributed via llms-txt ecosystem*.  It is a first draft so it will be subject to revision and also something that will generate the discussion that Ava and Mia will have in our system as form of podcast where the'll make fun of these fluff.
 *Source: Real dialogue from medicine-wheel-guillaume revision; pattern recognition across jgwill repositories*
 *Related Ceremony: jgwill/src#403 (AIS language integrity as relational practice)*
