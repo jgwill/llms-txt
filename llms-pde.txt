@@ -2,10 +2,10 @@
 
 > Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents, mapping dependencies through Four Directions, and holding ambiguities as productive tension.
 
-**Version**: 0.3
-**Document ID**: llms-pde-v0.3
-**Last Updated**: 2026-05-31
-**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, the current `miaco decompose run --help` surface, and implementation in miaco (lean CLI) and mcp-pde / miadi-code (MCP lineage).
+**Version**: 0.4
+**Document ID**: llms-pde-v0.4
+**Last Updated**: 2026-09-30
+**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, and implementation in miaco (lean CLI) and mcp-pde / miadi-code (MCP lineage). miaco's command surface is read from `miaco skill show`, not copied here.
 
 ---
 
@@ -120,6 +120,8 @@ Additional files may appear alongside the PDE pair:
 - `pde-inquiry-enrichment.md` — knowledge base search results (from `qmd search`/`qmd query`) that enrich the decomposition with discovered content
 - `pde-four-questions.md` — Structural Thinking Four Questions generated from the decomposition's ambiguities and intents (see `llms-pde-structural-thinking.md`)
 
+miaco writes more beside these (clarifications, QMD queries, memory resolution, the executor package). `miaco skill show` lists each file with the step that writes it.
+
 ---
 
 ## PDE → Structural Thinking Bridge
@@ -143,41 +145,16 @@ Two lineages implement PDE with different trade-offs:
 
 ### Lean Lineage (miaco)
 
-Single-file implementation (`decompose.ts`) with multi-engine dispatch, strategy selection, parent-child PDE nesting, engine fallback, and `.pde/` persistence. For current agent work, **prefer `miaco decompose run`** as the operational entrypoint because it exposes the newest strategy and provenance controls.
+The `mia-co` npm package (`miaco` CLI) decomposes with multi-engine dispatch, strategy selection, parent-child nesting, engine fallback, and `.pde/` persistence. Beyond decomposition it carries the PDE onward: clarification, QMD enrichment, the medicine wheel's memory, Structural Thinking, Structural Tension Charts, schema validation, and an executor handoff. For current agent work, **prefer `miaco decompose run`** as the operational entrypoint.
 
 ```bash
-miaco decompose run -p "<prompt>" -e copilot -w .
-miaco qmd-inquiry-decompose run --pde <uuid>   # enrich with knowledge base
-miaco pde-to-st run --pde <uuid>               # generate Four Questions
+miaco decompose run -P prompt.md -s iterative-refinement -w .
 ```
 
-Current `miaco decompose run` options include:
+This file does not repeat miaco's commands, options or engines. They change with each release, and a copy here falls behind without anyone noticing. The current surface is:
 
-```bash
-miaco decompose run \
-  --prompt "<text>" \
-  --engine copilot \
-  --strategy standard \
-  --workdir . \
-  --format text
-```
-
-Important controls:
-
-| Option | Use |
-|--------|-----|
-| `-p, --prompt <text>` / `-P, --prompt-file <path>` | Provide the source prompt. `@path` is also supported with `--prompt`. |
-| `-e, --engine <engine>` | Engine: `copilot`, `claude`, `gemini`, `codex`, `pva`, or `hermes`. |
-| `-m, --model <model>` | Override the selected engine model. |
-| `--fallback-provider <provider>` | Root-only fallback after Copilot rate limits: `auto`, `none`, `codex`, `claude`, or a comma-separated chain. |
-| `-s, --strategy <strategy>` | Decomposition strategy: `standard`, `iterative-refinement`, or `adversarial-consensus`. |
-| `--add-dir <paths...>` | Add directories to the engine workspace and persist them in `meta.json`. |
-| `--parent <uuid>` / `--parent-path <path>` | Attach a decomposition to an existing PDE lineage. |
-| `--child-kind <kind>` | Relation to parent: `milestone`, `issue`, `sub-task`, `follow-up`, `refinement`, or `sibling`. |
-| `--meta <json>` | Persist provenance under `meta.json`. |
-| `--session-id <id>` | Persist a known engine session id for the PDE tree. |
-| `--uuid <uuid>` | Supply a caller-owned UUID. |
-| `--json` / `--format json` | Print the stored record for automation. |
+- `miaco skill show`: the skill packaged with the CLI. It covers the whole PDE path, what each step writes, strategies and engines, and a release check fails when it leaves out a command. `miaco skill install --global --yes` puts it where agents read skills.
+- `miaco --help` and `miaco <command> --help`: every option and environment variable, with current and default values.
 
 ### Strategy Selection
 
@@ -237,19 +214,7 @@ Dedicated MCP server (`mcp-pde-server.ts`) exposes 5 tools, 2 resources, 1 promp
 
 ## Engine Configuration
 
-The current miaco PDE surface supports several engines with different cost/quality profiles:
-
-| Engine | Default Model | Binary | Use Case |
-|--------|--------------|--------|----------|
-| copilot | gpt-5-mini | `copilot` | Default — free tier, fast, good for most decompositions |
-| claude | engine default / override | `claude` | Higher quality for complex prompts |
-| gemini | engine default / override | `gemini` | Alternative semantic reading |
-| codex | engine default / override | `codex` | Codex-aligned decomposition workflows |
-| pva | provider/model override | PVA adapter | Provider-routed decomposition via `--pva-provider`, `--pva-model`, and `--pva-thinking` |
-| hermes | provider passthrough | `hermes` | Hermes Agent workflows via `--hermes-provider` |
-
-**Fallback**: use `--fallback-provider auto`, `none`, `codex`, `claude`, or a comma-separated chain for root-only fallback after Copilot rate limits.
-**Cost guard (MIAC-18)**: Using opus or sonnet models with copilot engine is blocked to prevent unnecessary premium token consumption.
+Engines, default models and the fallback chain are CLI facts. `miaco --help` prints each engine variable with its current and default value, and `miaco decompose run --help` shows the fallback options.
 
 ---
 
