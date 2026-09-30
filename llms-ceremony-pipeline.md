@@ -123,7 +123,7 @@ A conceptual bridge discovered in March 2026 that maps the Managerial Moment of 
 - 🌊 **WEST** (agents proceed, synthesis) = **EXECUTION**
 - ❄️ **NORTH** (Veritas performance review / MMOT) = **REVIEW**
 
-**Important distinction**: This is NOT the same as the mcp-pde Four Directions mapping (where WEST = validation and NORTH = action). The difference is domain-specific — the MMOT-Medicine Wheel mapping reflects performance review dynamics, while PDE uses its own decomposition framework. Both are valid in their respective contexts. Neither overwrites the other.
+**Important distinction**: This is NOT the same as the PDE Four Directions mapping (where WEST = validation and NORTH = action). The difference is domain-specific — the MMOT-Medicine Wheel mapping reflects performance review dynamics, while PDE uses its own decomposition framework. Both are valid in their respective contexts. Neither overwrites the other.
 
 ---
 

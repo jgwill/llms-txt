@@ -32,12 +32,10 @@ When any of these change, check both sides:
 - `miaco decompose run --help`
 - supported strategies: `standard`, `iterative-refinement`, `adversarial-consensus`
 - parent/child PDE flags and child-kind semantics
-- mcp-pde support for strategy-aware decomposition
 - issue references used in commits and follow-up work
 
 ## Related Issues
 
 - `jgwill/llms-txt#37` - Intent Analyst skill examples
-- `jgwill/llms-txt#38` - PDE strategy guidance and mcp-pde parity
+- `jgwill/llms-txt#38` - PDE strategy guidance
 - `miadisabelle/workspace-openclaw#101` - workspace skill upgrade lane
-- `jgwill/mcp-pde` - MCP-standard decomposition lineage

@@ -54,9 +54,9 @@ For current agent work, use `miaco decompose run` as the main operational entryp
 miaco decompose run -P prompt.md -e copilot -s iterative-refinement -w .
 ```
 
-Use `standard` when you need the stable baseline or compatibility with existing MCP decomposition flows. Use `iterative-refinement` when the prompt is layered, recursive, or likely to benefit from multiple readings before action. Treat `adversarial-consensus` as experimental until the local parser and downstream artifact shape are verified.
+Use `standard` when you need the stable baseline. Use `iterative-refinement` when the prompt is layered, recursive, or likely to benefit from multiple readings before action. Treat `adversarial-consensus` as experimental until the local parser and downstream artifact shape are verified.
 
-The current MCP path (`mcp-pde`, repo `jgwill/mcp-pde`) remains the standard decomposition interface. Strategy-aware MCP support is a likely future direction; until it exists, prefer `miaco decompose run --strategy ...` for strategy selection.
+The mcp-pde MCP server (`jgwill/mcp-pde`) is deprecated. Do not use it. miaco is the decomposition interface.
 
 ---
 

@@ -2,10 +2,10 @@
 
 > Intention exploration as EAST practice: decomposing prompts into explicit and implicit intents, mapping dependencies through Four Directions, and holding ambiguities as productive tension.
 
-**Version**: 0.4
-**Document ID**: llms-pde-v0.4
+**Version**: 0.5
+**Document ID**: llms-pde-v0.5
 **Last Updated**: 2026-09-30
-**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, and implementation in miaco (lean CLI) and mcp-pde / miadi-code (MCP lineage). miaco's command surface is read from `miaco skill show`, not copied here.
+**Content Source**: Derived from practical PDE usage, the medicine-wheel-prompt-decomposition npm package, and implementation in miaco. miaco's command surface is read from `miaco skill show`, not copied here.
 
 ---
 
@@ -139,11 +139,9 @@ This bridge is implemented in `miaco pde-to-st run --pde <uuid>` and documented 
 
 ---
 
-## Implementation Architectures
+## Implementation
 
-Two lineages implement PDE with different trade-offs:
-
-### Lean Lineage (miaco)
+### miaco
 
 The `mia-co` npm package (`miaco` CLI) decomposes with multi-engine dispatch, strategy selection, parent-child nesting, engine fallback, and `.pde/` persistence. Beyond decomposition it carries the PDE onward: clarification, QMD enrichment, the medicine wheel's memory, Structural Thinking, Structural Tension Charts, schema validation, and an executor handoff. For current agent work, **prefer `miaco decompose run`** as the operational entrypoint.
 
@@ -160,7 +158,7 @@ This file does not repeat miaco's commands, options or engines. They change with
 
 | Strategy | Use When | Current Guidance |
 |----------|----------|------------------|
-| `standard` | You need the stable baseline, compatibility with existing MCP flows, or a quick first-pass decomposition. | Default. Use for mcp-pde parity and low-risk decomposition. |
+| `standard` | You need the stable baseline or a quick first-pass decomposition. | Default. Use for low-risk decomposition. |
 | `iterative-refinement` | The prompt is layered, lineage-heavy, ambiguous, or likely to benefit from multiple passes before action. | Recommended for Intent Analyst work and recursive PDE review. |
 | `adversarial-consensus` | The decomposition needs explicit challenge, contrast, or competing readings. | Experimental. Use only when the local implementation is known to parse the strategy output cleanly. |
 
@@ -186,29 +184,9 @@ miaco decompose run \
 
 If the work is a child of an existing decomposition, add `--parent <uuid>` or `--parent-path <path>` with the appropriate `--child-kind`.
 
-### Deep Lineage (miadi-code)
+### Deprecated: mcp-pde
 
-5-layer architecture in dedicated `pde/` module (11 files):
-
-1. **Intent Extraction** — explicit + implicit intents with classification (CREATION, MODIFICATION, ANALYSIS, VALIDATION, INTEGRATION, COMMUNICATION)
-2. **Dependency Analysis** — graph construction with parallelization detection
-3. **Medicine Wheel Mapping** — direction assignment with ceremony type
-4. **Workflow Generation** — staged execution templates (parallel/sequential/conditional)
-5. **Execution Planning** — checkpoints, status tracking, fallback strategies
-
-Dedicated MCP server (`mcp-pde-server.ts`) exposes 5 tools, 2 resources, 1 prompt. Webhook integration sends decompositions to the Miadi event hub.
-
-### MCP Tools (mcp-pde / miadi-code)
-
-| Tool | Purpose |
-|------|---------|  
-| `pde_decompose` | Build system prompt for LLM decomposition |
-| `pde_parse_response` | Parse LLM response → DecompositionResult, store, optionally webhook |
-| `pde_get` | Retrieve stored decomposition by ID |
-| `pde_list` | List stored decompositions |
-| `pde_export_markdown` | Export as git-diffable markdown |
-
-**Current recommendation**: mcp-pde remains the stable MCP-standard decomposition path. Strategy-aware decomposition may be added to `jgwill/mcp-pde`, but until that support is present and verified, use `miaco decompose run --strategy ...` for `iterative-refinement` and `adversarial-consensus` work.
+The mcp-pde MCP server (`jgwill/mcp-pde`, and `mcp-pde-server.ts` with its `pde_*` tools in miadi-code) is deprecated. Do not use it or point agents at it. miaco is the PDE implementation, including strategy-aware decomposition.
 
 ---
 
@@ -223,7 +201,6 @@ Engines, default models and the fallback chain are CLI facts. `miaco --help` pri
 * Transform PDE into "Structural Tension Chart" (Strategic Action Planning) — implemented in `miaco stc`
 * Inquiry routing from PDE decompositions via `qmd search`/`qmd query` — implemented in `miaco qmd-inquiry-decompose`
 * Four Questions generation from PDE ambiguities — implemented in `miaco pde-to-st`
-* Strategy-aware mcp-pde support for `iterative-refinement` and `adversarial-consensus`
 * Miadi MCP server integration with Redis storage and web UI
 
 ---

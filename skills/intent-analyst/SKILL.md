@@ -59,9 +59,9 @@ miaco decompose run \
   --workdir .
 ```
 
-## MCP Boundary
+## mcp-pde is deprecated
 
-`mcp-pde` remains the standard MCP decomposition interface. Do not assume it supports `iterative-refinement` or `adversarial-consensus` until that support exists in `jgwill/mcp-pde` and has been verified. When strategy matters today, use `miaco decompose run --strategy ...`.
+The mcp-pde MCP server (`jgwill/mcp-pde`) is deprecated. Do not use it for decomposition. Use `miaco decompose run --strategy ...`.
 
 ## Local Skill Parity
 
@@ -71,7 +71,7 @@ This skill is the portable llms-txt guidance. Its local operational peer is:
 /home/mia/.openclaw/workspace/skills/miaco-decompose-pde-basic/
 ```
 
-Keep these in parity when `miaco decompose run --help` changes, when strategy support changes, or when `mcp-pde` gains strategy-aware behavior. The llms-txt side should explain the role and method; the workspace side should preserve the exact local commands and operating conventions.
+Keep these in parity when `miaco decompose run --help` changes or when strategy support changes. The llms-txt side should explain the role and method; the workspace side should preserve the exact local commands and operating conventions.
 
 ## Output Shape
 
