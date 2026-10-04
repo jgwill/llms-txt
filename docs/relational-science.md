@@ -12,7 +12,7 @@ Relational Science is not a rejection of systematic inquiry — it is a reorient
 - **Research transforms the researcher** — inquiry that leaves you unchanged has failed its purpose
 - **Accountability extends beyond the project** — obligations to relations persist beyond timelines and deliverables
 
-This system draws on Shawn Wilson's framing of *research as ceremony* and the Four Rs / Six Rs of Indigenous research (Responsibility, Respect, Relationality, Reciprocity, Relevance, Representation).
+This system draws on Shawn Wilson's framing of *research as ceremony*: "research isn't just like a ceremony, it is a ceremony" (*Research Is Ceremony*, 2008, p. 124). The Rs it also draws on are not Wilson's set. The Four Rs (Respect, Relevance, Reciprocity, Responsibility) are Kirkness & Barnhardt's (1991). Wilson writes respect, reciprocity and responsibility in his own voice (pp. 77–78, 99), and credits the label "three R's" to Cora Weber-Pillwax, whose set is respect, reciprocity and relationality (p. 58). The six-R list used here (Responsibility, Respect, Relationality, Reciprocity, Relevance, Representation) is not Wilson's either, and no source for it is named yet.
 
 ---
 
