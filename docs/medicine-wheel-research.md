@@ -54,7 +54,7 @@ The `mw` tool allows researchers to manage the relational research lifecycle dir
 - **Ceremony**: `mw ceremony open <intention>` / `mw ceremony close <id>`
 - **Research**: `mw cycle create <question>` / `mw beat create <dir> <title>`
 - **Relational**: `mw node create` / `mw edge create` / `mw web <id>`
-- **Validation**: `mw validate wilson` / `mw validate ocap`
+- **Validation**: `mw validate wilson` / `mw validate ocap` (the `wilson` check is the suite's own measure, named for Wilson; it is not his)
 
 ### mwsrv — Medicine Wheel Server
 The `mwsrv` tool launches the platform's Next.js application, which serves as the data hub and collaborative interface.
@@ -86,7 +86,7 @@ A dual-view approach where:
 | **Algorithmic** | Efficiency, Deep-Thinking Ratio, Think-n early halting | Token-level metrics, energy optimization |
 | **Indigenous** | Wilson alignment, OCAP, relational governance | `computeWilsonAlignment`, `auditOcapCompliance`, `relationalCompleteness` |
 
-The `ontology-core` package makes both views computable in the same space — Wilson alignment scores and OCAP flags alongside conventional AI metrics.
+The `ontology-core` package makes both views computable in the same space — Wilson alignment scores and OCAP flags alongside conventional AI metrics. The Wilson alignment score is ours, named for Wilson: he does not judge any paradigm "as being better or worse than another" (*Research Is Ceremony*, 2008, p. 35), and no score in his name comes from his book.
 
 ---
 

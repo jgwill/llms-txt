@@ -50,7 +50,7 @@ See: [Structural Tension](structural-tension.md) · [Creative Orientation](creat
 
 The [Medicine Wheel Developer Suite](medicine-wheel-research.md) encodes relational accountability as computable structures:
 
-- **Wilson Alignment Scores** — measuring research against Respect, Reciprocity, Responsibility
+- **Wilson Alignment Scores** — the suite's own 0–1 measure of respect, reciprocity and responsibility. The name is ours, not a measure of Wilson's: he does not judge any paradigm "as being better or worse than another" (*Research Is Ceremony*, 2008, p. 35)
 - **OCAP Flags** — Ownership, Control, Access, Possession for Indigenous data sovereignty
 - **Relational Completeness** — auditing whether relations carry their full obligations
 

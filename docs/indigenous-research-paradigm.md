@@ -88,7 +88,7 @@ The portfolio embodies a **Two-Eyed AI** dynamic:
 - One eye on **algorithmic efficiency** — Deep-Thinking Ratio, optimal resource use
 - One eye on **Indigenous research paradigms** — Wilson alignment, OCAP, relational governance
 
-The [Medicine Wheel Developer Suite](medicine-wheel-research.md) makes this braid technical: Wilson alignment scores and OCAP flags computed alongside conventional AI metrics.
+The [Medicine Wheel Developer Suite](medicine-wheel-research.md) makes this braid technical: Wilson alignment scores (the suite's own measure, named for Wilson, not his) and OCAP flags computed alongside conventional AI metrics.
 
 ---
 
