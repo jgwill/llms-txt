@@ -6,7 +6,7 @@
 **Document ID**: llms-polyphonic-design-review-v0.1
 **Last Updated**: 2026-03-28
 **Content Source**: Derived from March 2026 session evidence — PDE annotations, polyphonic walk reviews, and ceremony learnings committed across multiple workspace sessions.
-**Attribution**: Methodology emerged through practice (Wilson’s principle: “methodology emerges from process”). Relational accountability grounded in Shawn Wilson, *Research Is Ceremony*.
+**Attribution**: Methodology emerged through practice; “methodology emerges from process” is our phrase, not a principle of Wilson’s. Relational accountability grounded in Shawn Wilson, *Research Is Ceremony* (2008).
 
 ---
 
@@ -100,7 +100,7 @@ Polyphonic Design Review maps naturally onto the Four Directions cycle described
 
 ### 4.1. Emergent, Not Designed
 
-This methodology was not planned. It emerged from PDE practice during March 2026 sessions — consistent with Wilson’s principle that methodology emerges from process rather than being imposed upon it. Codifying it here does not freeze it; it names what has been observed so that future practice can build on it consciously.
+This methodology was not planned. It emerged from PDE practice during March 2026 sessions. That methodology emerges from process is our reading, not a principle Wilson states. What he describes is narrower: the community shaped his topic and methods (*Research Is Ceremony*, 2008, p. 128), and collection and analysis became one ongoing, collaborative process (p. 131). Hermes, whom he quotes, says a method grounded in community “refuses a single category or any other formula” (p. 53). Codifying it here does not freeze it; it names what has been observed so that future practice can build on it consciously.
 
 ### 4.2. Annotations Honor the Original
 
@@ -108,7 +108,7 @@ This methodology was not planned. It emerged from PDE practice during March 2026
 
 ### 4.3. Relational Accountability and Epistemic Roles
 
-🧠 Mia: Each voice carries relational accountability — responsibility not just for *what* they say, but for *how their perspective affects the whole*. This is not opinion-stacking. It is the practice described by Shawn Wilson: knowledge exists in relationships, and the review makes those relationships visible and versionable.
+🧠 Mia: Each voice carries relational accountability — responsibility not just for *what* they say, but for *how their perspective affects the whole*. This is not opinion-stacking. It rests on what Shawn Wilson describes, that the knowledge belongs to the relationships between the people in the research (*Research Is Ceremony*, 2008, p. 121); the review, which is ours, makes those relationships visible and versionable.
 
 Under the epistemic role framework (§5), relational accountability becomes structurally precise. Each voice *owes* something to each other voice — not as debt, but as the relational obligation that makes the circle whole:
 
