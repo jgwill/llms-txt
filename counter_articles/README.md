@@ -65,7 +65,7 @@ All templates build on these frameworks from `llms-txt`:
 ### During Writing
 1. **Draft all sections** using template structure
 2. **Maintain advancing-pattern orientation** (creative, not reactive)
-3. **Integrate Wilson's four pillars explicitly**:
+3. **Integrate Wilson's four elements explicitly** (he draws them as a circle, each informing the others, p. 108; the answers in parentheses are ours, not his):
    - **Ontology**: What is real? (relationships, not discrete objects)
    - **Epistemology**: How do we know? (transformation, not extraction)
    - **Axiology**: What matters? (reciprocity, seven generations, kinship)
@@ -122,7 +122,7 @@ Research that builds new capacity with each iteration, rather than oscillating b
 - **[Incompatible Sources](incompatible-sources/README.md)** — Curated index of sources with paradigmatic incompatibilities, with bias injection points and counter-positions
 
 ### Seminal Academic Sources
-- **Wilson** (2008): Chapter 1 positions Indigenous research paradigm against Western scientific paradigm
+- **Wilson** (2008): defines a research paradigm (ontology, epistemology, methodology, axiology) and articulates an Indigenous one. He does not position it against the dominant paradigm: he justifies his strategies "rather than argue against the use of an alternative" (p. 35)
 - **Kovach** (2009): Chapter 2 demonstrates conversational method as rigorous alternative
 - **Chilisa** (2012): Chapter 3 positions relational paradigm with decolonial grounding
 - **Fricker** (2007): Develops testimonial and hermeneutical injustice frameworks

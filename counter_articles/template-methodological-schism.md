@@ -175,7 +175,7 @@ Consequence of choosing B: [Pattern produced]
 
 ### Schism 4: Western Academic Paradigm vs. Indigenous Research Paradigm
 **Core incompatibility**: Positivist ontology, objective epistemology, efficiency axiology vs. relational ontology, positioned knowing, reciprocal values
-**Wilson source**: All four pillars incompatible
+**Wilson source**: Wilson defines the four elements of a paradigm (2008, pp. 33–34). "All four incompatible" is our reading, not his: he does not judge any paradigm "as being better or worse than another" (p. 35)
 **Consequence difference**: Knowledge as property vs. knowledge as shared wisdom
 
 ---
