@@ -1,0 +1,548 @@
+meta:
+  packet: indigenous-relational-foundations
+  generated: 2026-07-20
+  method: deep-research-foundations
+  verification_status: live-web-verified
+  verification_note: >
+    Every entry marked `verified: true` was checked on 2026-07-20 against a live
+    publisher page, journal record, national library / repository catalogue, or
+    indexing service, and the author, year, title, venue and locator all matched.
+    Entries marked `verified: false` could NOT be confirmed and must not be cited
+    as settled in any public-facing document until they are.
+  scope: >
+    Sources grounding the claims made in docs/indigenous-research-paradigm.md,
+    docs/relational-science.md, docs/ceremonial-technology.md,
+    docs/medicine-wheel-research.md, LICENSE (IKSL), and the llms-* guidance files.
+  stance: >
+    This ledger deliberately includes sources that CHALLENGE this portfolio's
+    synthesis. See the `posture` field on each entry: `supports`, `qualifies`,
+    or `challenges`.
+
+sources:
+
+  # ── FIELD 01 — Indigenous research paradigm / research as ceremony ──────────
+
+  - id: wilson-2008
+    field: indigenous-research-paradigm
+    posture: supports
+    author: "Wilson, Shawn"
+    year: 2008
+    title: "Research Is Ceremony: Indigenous Research Methods"
+    venue: "Fernwood Publishing, Halifax & Winnipeg"
+    isbn: "9781552662816"
+    url: "https://fernwoodpublishing.ca/books/research-is-ceremony-shawn-wilson"
+    supports: >
+      The portfolio's core framing of relational ontology / epistemology / axiology
+      and "relational accountability". Wilson (Opaskwayak Cree) describes an
+      Indigenous research paradigm shared across Canada and Australia in which
+      research IS the ceremony of maintaining accountability to relationships.
+    caution: >
+      Wilson's relational accountability is accountability to actual, named,
+      living relations — people, communities, land, ancestors. It is NOT a
+      property of a document or a computable score. See gap-analysis GAP-03.
+    verified: true
+
+  - id: kovach-2021
+    field: indigenous-research-paradigm
+    posture: supports
+    author: "Kovach, Margaret"
+    year: 2021
+    title: "Indigenous Methodologies: Characteristics, Conversations, and Contexts, Second Edition"
+    venue: "University of Toronto Press, Toronto"
+    isbn: "9781487525644"
+    doi: "10.3138/9781487525644"
+    url: "https://utppublishing.com/doi/book/10.3138/9781487525644"
+    supports: >
+      Tribal-specific epistemology as the ground of Indigenous methodology.
+      Kovach (Nêhiyaw and Saulteaux, Pasqua First Nation) is a primary source for
+      the position that Indigenous methodologies are rooted in SPECIFIC nations'
+      knowledge systems, not a generic Indigenous method.
+    caution: >
+      Kovach's tribal-specificity requirement is the strongest published argument
+      against the pan-Indigenous composition described in gap-analysis GAP-01.
+    verified: true
+
+  - id: smith-2021
+    field: indigenous-research-paradigm
+    posture: qualifies
+    author: "Smith, Linda Tuhiwai"
+    year: 2021
+    title: "Decolonizing Methodologies: Research and Indigenous Peoples, Third Edition"
+    venue: "Zed Books / Bloomsbury, London"
+    isbn: "9781786998125"
+    url: "https://www.bloomsbury.com/us/decolonizing-methodologies-9781786998125/"
+    supports: >
+      The foundational critique of research as an instrument of colonisation, and
+      the standard by which "decolonizing" claims are judged. First edition 1999.
+    caution: >
+      Smith's framework treats decolonizing research as accountable to Indigenous
+      communities' own agendas and control — not as a methodological style that a
+      researcher can adopt unilaterally.
+    verified: true
+
+  - id: absolon-2011
+    field: indigenous-research-paradigm
+    posture: supports
+    author: "Absolon, Kathleen E. (Minogiizhigokwe)"
+    year: 2011
+    title: "Kaandossiwin: How We Come to Know"
+    venue: "Fernwood Publishing, Halifax & Winnipeg"
+    note: "Second edition published 2022 as 'Kaandossiwin: How We Come to Know — Indigenous Re-Search Methodologies'"
+    url: "https://fernwoodpublishing.ca/books/kaandossiwin-2nd-ed"
+    supports: >
+      Anishinaabe framing of Indigenous re-search as wholistic, relational and
+      interdependent with Indigenous philosophies and ways of life.
+    verified: true
+
+  - id: chilisa-2020
+    field: indigenous-research-paradigm
+    posture: supports
+    author: "Chilisa, Bagele"
+    year: 2020
+    title: "Indigenous Research Methodologies, Second Edition"
+    venue: "SAGE Publications, Los Angeles"
+    isbn: "9781483333472"
+    url: "https://us.sagepub.com/en-us/nam/indigenous-research-methodologies/book241776"
+    supports: >
+      Global (notably African) Indigenous methodology, useful for showing that
+      "Indigenous methodology" is a plural field, not a single paradigm.
+    verified: true
+
+  - id: kirkness-barnhardt-1991
+    field: indigenous-research-paradigm
+    posture: qualifies
+    author: "Kirkness, Verna J.; Barnhardt, Ray"
+    year: 1991
+    title: "First Nations and Higher Education: The Four R's — Respect, Relevance, Reciprocity, Responsibility"
+    venue: "Journal of American Indian Education, 30(3), 1–15"
+    eric_id: "EJ438242"
+    url: "https://www.uaf.edu/ankn/publications/collective-works-of-ray-b/Four-Rs-2nd-Ed.pdf"
+    supports: >
+      The actual origin of the "Four Rs" (Respect, Relevance, Reciprocity,
+      Responsibility) that this portfolio attributes to Wilson as "Wilson's 3R".
+    caution: >
+      Attribution correction required. See gap-analysis GAP-07.
+    verified: true
+
+  # ── FIELD 02 — Two-Eyed Seeing / Etuaptmumk ─────────────────────────────────
+
+  - id: bartlett-marshall-marshall-2012
+    field: two-eyed-seeing
+    posture: supports
+    author: "Bartlett, Cheryl; Marshall, Murdena; Marshall, Albert"
+    year: 2012
+    title: "Two-Eyed Seeing and other lessons learned within a co-learning journey of bringing together indigenous and mainstream knowledges and ways of knowing"
+    venue: "Journal of Environmental Studies and Sciences, 2(4), 331–340"
+    doi: "10.1007/s13412-012-0086-8"
+    url: "https://link.springer.com/article/10.1007/s13412-012-0086-8"
+    supports: >
+      The canonical published definition of Etuaptmumk / Two-Eyed Seeing by Mi'kmaw
+      Elder Albert Marshall with Cheryl Bartlett and Murdena Marshall: learning to
+      see from one eye with the strengths of Indigenous ways of knowing, from the
+      other with the strengths of Western ways of knowing, and using both together.
+    caution: >
+      Two-Eyed Seeing is described as a CO-LEARNING JOURNEY between people — an
+      ongoing relationship, not a design pattern or a dual-view abstraction.
+    verified: true
+
+  - id: wright-etal-2019
+    field: two-eyed-seeing
+    posture: challenges
+    author: "Wright, Amy L.; Gabel, Chelsea; Ballantyne, Marilyn; Jack, Susan M.; Wahoush, Olive"
+    year: 2019
+    title: "Using Two-Eyed Seeing in Research With Indigenous People: An Integrative Review"
+    venue: "International Journal of Qualitative Methods, 18"
+    doi: "10.1177/1609406919869695"
+    url: "https://journals.sagepub.com/doi/full/10.1177/1609406919869695"
+    supports: >
+      Documents that guidance on the practical application of Two-Eyed Seeing
+      remains vague, producing inconsistent practice; the literature is unsettled
+      on whether it is an ethical protocol, a guiding principle, or a framework.
+    challenges: >
+      "A simplistic application of Two-Eyed Seeing (e.g., as merely supporting
+      rationale for the consideration of Indigenous perspectives) undermines the
+      entire premise of the approach as egalitarian and collaborative."
+    verified: true
+
+  - id: broadhead-howard-2021
+    field: two-eyed-seeing
+    posture: challenges
+    author: "Broadhead, Lee-Anne; Howard, Sean"
+    year: 2021
+    title: "Confronting the contradictions between Western and Indigenous science: a critical perspective on Two-Eyed Seeing"
+    venue: "AlterNative: An International Journal of Indigenous Peoples, 17(1), 111–119"
+    doi: "10.1177/1177180121996326"
+    url: "https://journals.sagepub.com/doi/full/10.1177/1177180121996326"
+    supports: >
+      A direct critical perspective: Two-Eyed Seeing's commitment to avoiding
+      "a clash of knowledges" can undermine its transformative potential.
+    challenges: >
+      Argues some worldview differences are not reconcilable through dialogue —
+      "conflict-avoidance is not conflict resolution" — and that in practice
+      Western science is often deployed instrumentally without any genuine
+      epistemological transformation. Directly applicable to a project that maps
+      Two-Eyed Seeing onto a software type system.
+    verified: true
+
+  # ── FIELD 03 — Medicine Wheel propriety ─────────────────────────────────────
+
+  - id: mashford-pringle-shawanda-2023
+    field: medicine-wheel-propriety
+    posture: qualifies
+    author: "Mashford-Pringle, Angela; Shawanda, Amy"
+    year: 2023
+    title: "Using the Medicine Wheel as theory, conceptual framework, analysis, and evaluation tool in health research"
+    venue: "SSM — Qualitative Research in Health, 3, 100251"
+    doi: "10.1016/j.ssmqr.2023.100251"
+    url: "https://www.sciencedirect.com/science/article/pii/S2667321523000355"
+    supports: >
+      Establishes that the Medicine Wheel CAN legitimately be used as a conceptual
+      framework, evaluation method, analysis tool and theory in research.
+    caution: >
+      The authors' condition is decisive: researchers using the Medicine Wheel as
+      a framework must be "connected to their community teachings rather than
+      pan-Indigenize." The article's own grounding is explicitly Anishinaabe.
+      Mashford-Pringle is Algonquin (Timiskaming First Nation).
+    verified: true
+
+  - id: robertson-2021
+    field: medicine-wheel-propriety
+    posture: challenges
+    author: "Robertson, Lloyd Hawkeye"
+    year: 2021
+    title: "The Medicine Wheel Revisited: Reflections on Indigenization in Counseling and Education"
+    venue: "SAGE Open, 11(2)"
+    doi: "10.1177/21582440211015202"
+    url: "https://journals.sagepub.com/doi/10.1177/21582440211015202"
+    supports: >
+      Peer-reviewed, open-access treatment of the contested history of the modern
+      Medicine Wheel and of "indigenization" as a practice.
+    challenges: >
+      Raises the question of whether widely-circulated Medicine Wheel frameworks
+      accurately represent the traditions they are said to come from. Should be
+      read alongside, not instead of, Indigenous-authored sources.
+    verified: true
+
+  - id: bear-nicholas-via-sfu
+    field: medicine-wheel-propriety
+    posture: challenges
+    author: "Bear Nicholas, Andrea (cited via SFU Library, 'Project 57 Week 54: Medicine Wheels')"
+    year: 2021
+    title: "Critique of the generic medicine wheel displacing nation-specific oral traditions"
+    venue: "Secondary citation — SFU Library blog"
+    url: "https://www.lib.sfu.ca/about/reach-us/library-blog/medicine-wheels"
+    supports: >
+      Wolastoqew scholar Andrea Bear Nicholas is reported to argue that broad
+      adoption of a generic medicine wheel has "effectively and almost totally
+      displaced the unique oral traditions of many Indigenous nations."
+    verified: false
+    unverified_reason: >
+      The ARGUMENT is well-attested in secondary sources, but the PRIMARY
+      publication (title, venue, year) was not located during this pass. Cite the
+      SFU Library page as a secondary source, or locate the primary before using
+      Bear Nicholas in any public document. Do not cite as if primary.
+
+  - id: aldred-2000
+    field: medicine-wheel-propriety
+    posture: challenges
+    author: "Aldred, Lisa"
+    year: 2000
+    title: "Plastic Shamans and Astroturf Sun Dances: New Age Commercialization of Native American Spirituality"
+    venue: "American Indian Quarterly, 24(3), 329–352"
+    url: "https://muse.jhu.edu/article/193"
+    supports: >
+      The seminal account of how non-Native commercialization of Native spiritual
+      traditions marginalizes and disembodies Indigenous histories and identities.
+    challenges: >
+      The relevant standard for any project that packages ceremonial vocabulary
+      into a commercially distributed software product. Applies regardless of the
+      author's intent.
+    verified: true
+
+  # ── FIELD 04 — Indigenous data sovereignty: OCAP® and CARE ──────────────────
+
+  - id: fnigc-ocap
+    field: data-sovereignty
+    posture: challenges
+    author: "First Nations Information Governance Centre (FNIGC)"
+    year: 2014
+    year_note: "OCAP® logo trademarks registered Aug 2014; acronym trademarks approved Aug 2015"
+    title: "The First Nations Principles of OCAP®"
+    venue: "FNIGC, Akwesasne / Ottawa"
+    url: "https://fnigc.ca/ocap-training/"
+    supports: >
+      The authoritative definition. OCAP® (Ownership, Control, Access, Possession)
+      is a standard for how FIRST NATIONS data is collected, protected, used and
+      shared, asserted and governed by First Nations through FNIGC.
+    challenges: >
+      Three facts constrain this portfolio's usage: (1) OCAP® is explicitly
+      First Nations–specific and NOT intended as a pan-Indigenous set of
+      principles; (2) OCAP® and PCAP® are REGISTERED TRADEMARKS of FNIGC, which
+      states it sought trademark protection precisely to prevent misuse and
+      improper interpretation that could distort the principles' original intent;
+      (3) OCAP® describes a governance relationship with a First Nation, not a
+      property that software can self-assess. See gap-analysis GAP-02.
+    verified: true
+    verification_note: >
+      Verified via FNIGC's own site and corroborating records. A direct fetch of
+      fnigc.ca returned HTTP 403 to the automated agent, and the FNIGC brochure
+      PDF could not be text-extracted; the claims above were confirmed from the
+      FNIGC page content surfaced in search and corroborating institutional guides.
+      RECOMMENDATION: a human should read fnigc.ca/ocap-training directly and
+      contact FNIGC before any public claim of OCAP® conformance is published.
+
+  - id: carroll-etal-2020
+    field: data-sovereignty
+    posture: supports
+    author: "Carroll, Stephanie Russo; Garba, Ibrahim; Figueroa-Rodríguez, Oscar L.; Holbrook, Jarita; Lovett, Raymond; Materechera, Simeon; Parsons, Mark; Raseroka, Kay; Rodriguez-Lonebear, Desi; Rowe, Robyn; Sara, Rodrigo; Walker, Jennifer D.; Anderson, Jane; Hudson, Maui"
+    year: 2020
+    title: "The CARE Principles for Indigenous Data Governance"
+    venue: "Data Science Journal, 19(1): 43, 1–12"
+    doi: "10.5334/dsj-2020-043"
+    url: "https://datascience.codata.org/articles/10.5334/dsj-2020-043"
+    supports: >
+      Collective Benefit, Authority to Control, Responsibility, Ethics — developed
+      by the International Indigenous Data Sovereignty Interest Group within the
+      Research Data Alliance. People- and purpose-oriented, designed to sit
+      alongside the data-centric FAIR principles.
+    engineering_note: >
+      CARE is the appropriate general framework for this portfolio's governance
+      layer. It is international in scope, openly published under an open-access
+      licence, and carries no trademark. Where the code currently says "OCAP",
+      "CARE-informed" is very likely the accurate and defensible label.
+    verified: true
+
+  - id: kukutai-taylor-2016
+    field: data-sovereignty
+    posture: supports
+    editor: "Kukutai, Tahu; Taylor, John (eds.)"
+    year: 2016
+    title: "Indigenous Data Sovereignty: Toward an Agenda"
+    venue: "ANU Press, CAEPR Research Monograph No. 38, Canberra"
+    isbn: "9781760460303"
+    url: "https://press-files.anu.edu.au/downloads/press/n2140/pdf/book.pdf"
+    supports: >
+      The founding volume of the Indigenous data sovereignty field, premised on
+      UNDRIP: Indigenous peoples hold inherent and inalienable rights over the
+      collection, ownership and application of data about them, their lifeways
+      and their territories.
+    verified: true
+
+  # ── FIELD 05 — Seven Generations ────────────────────────────────────────────
+
+  - id: clarkson-morrissette-regallet-1992
+    field: seven-generations
+    posture: qualifies
+    author: "Clarkson, Linda; Morrissette, Vern; Régallet, Gabriel"
+    year: 1992
+    title: "Our Responsibility to the Seventh Generation: Indigenous Peoples and Sustainable Development"
+    venue: "International Institute for Sustainable Development (IISD), Winnipeg"
+    url: "https://www.iisd.org/system/files/publications/seventh_gen.pdf"
+    supports: >
+      The main documented vector by which "seven generations" entered international
+      sustainable-development discourse.
+    caution: >
+      This is the SUSTAINABILITY-DISCOURSE lineage, distinct from Haudenosaunee
+      ceremonial and governance transmission. Which lineage a project is drawing
+      on should be stated. See gap-analysis GAP-05.
+    verified: true
+
+  - id: seven-generations-attribution-caution
+    field: seven-generations
+    posture: challenges
+    author: "Multiple secondary sources (incl. Wikipedia 'Seven generation sustainability'; NAIS Keywords, Dartmouth)"
+    year: 2026
+    year_note: "Consulted 2026-07-20"
+    title: "Attribution caution on the popular 'seventh generation' formulation"
+    url: "https://www.nais-keywords.com/seventh-generation"
+    supports: >
+      The widely-circulated edict — "In every deliberation, we must consider the
+      impact on the seventh generation" — is commonly attributed to the
+      Haudenosaunee Great Law of Peace (Gayanashagowa) but does NOT appear in
+      written transcriptions of the Great Law.
+    verified: false
+    unverified_reason: >
+      The caution is consistently reported across multiple secondary sources and
+      is credible, but no primary Haudenosaunee source or peer-reviewed study was
+      confirmed in this pass. Treat as "widely reported, primary confirmation
+      outstanding." Do not present as settled scholarship. A Haudenosaunee source
+      (e.g. Onondaga Nation or Haudenosaunee Confederacy publications) should be
+      consulted before this repository makes any claim about Great Law content.
+
+  # ── FIELD 06 — Fritz structural dynamics ────────────────────────────────────
+
+  - id: fritz-1989
+    field: structural-dynamics
+    posture: supports
+    author: "Fritz, Robert"
+    year: 1989
+    title: "The Path of Least Resistance: Learning to Become the Creative Force in Your Own Life"
+    venue: "Fawcett Columbine / Ballantine Books, New York (revised & expanded edition)"
+    isbn: "9780449903377"
+    url: "https://www.penguinrandomhouse.com/books/56713/the-path-of-least-resistance-by-robert-fritz/"
+    supports: >
+      The primary source for structural tension, creative orientation, and
+      advancing vs. oscillating structural patterns.
+    caution: >
+      Trade press, not peer-reviewed. See gap-analysis GAP-06.
+    verified: true
+
+  - id: bodaken-fritz-2006
+    field: structural-dynamics
+    posture: supports
+    author: "Bodaken, Bruce; Fritz, Robert"
+    year: 2006
+    title: "The Managerial Moment of Truth: The Essential Step in Helping People Improve Performance"
+    venue: "Free Press (Simon & Schuster), New York"
+    isbn: "9780743288521"
+    isbn_reissue: "9781451655353"
+    url: "https://www.simonandschuster.com/books/The-Managerial-Moment-of-Truth/Bruce-Bodaken/9781451655353"
+    supports: >
+      The source of MMOT as used throughout this portfolio: acknowledging present
+      reality; examining thinking about how it came to be; creating a plan for
+      what must change; establishing a feedback system.
+    caution: >
+      MMOT is an organizational performance-management practice authored by a
+      management consultant and a health-insurance CEO. Naming it a ceremonial
+      or relational-accountability practice is an interpretive move by this
+      portfolio, not a claim made by the source.
+    verified: true
+
+  - id: senge-fritz-lineage
+    field: structural-dynamics
+    posture: qualifies
+    author: "Senge, Peter M. (on Fritz); Innovation Associates lineage"
+    year: 1990
+    year_note: "The Fifth Discipline, 1990; Schools That Learn features Fritz's structural approach"
+    title: "Fritz's reception within organizational learning"
+    venue: "Doubleday/Currency; see also robertfritz.com"
+    url: "https://www.robertfritz.com/wp/about-us/"
+    supports: >
+      Establishes a real intellectual lineage: Senge, Fritz, David Peter Stroh and
+      Charles Kiefer co-founded Innovation Associates in the late 1970s; Senge
+      credits Fritz's influence and features his structural approach.
+    caution: >
+      This is endorsement and lineage within the organizational-learning
+      practitioner community. It is NOT an empirical validation of structural
+      dynamics as a theory, and should not be presented as one.
+    verified: true
+
+  # ── FIELD 07 — Braiding, appropriation, and the synthesis claim ─────────────
+
+  - id: kimmerer-2013
+    field: braiding-and-critique
+    posture: qualifies
+    author: "Kimmerer, Robin Wall"
+    year: 2013
+    title: "Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants"
+    venue: "Milkweed Editions, Minneapolis"
+    isbn: "9781571313355"
+    url: "https://milkweed.org/book/braiding-sweetgrass"
+    supports: >
+      The most widely-read model of braiding Indigenous and scientific knowledge.
+      Kimmerer is Potawatomi and a trained botanist.
+    caution: >
+      Kimmerer's braid is authored from within BOTH strands by one person who
+      holds both. It is a demonstration of practice, not a licence or a general
+      method that transfers to any pairing of frameworks. Citing Kimmerer does
+      not itself authorize a braid.
+    verified: true
+
+  - id: tuck-yang-2012
+    field: braiding-and-critique
+    posture: challenges
+    author: "Tuck, Eve; Yang, K. Wayne"
+    year: 2012
+    title: "Decolonization is not a metaphor"
+    venue: "Decolonization: Indigeneity, Education & Society, 1(1), 1–40"
+    url: "https://clas.osu.edu/sites/clas.osu.edu/files/Tuck%20and%20Yang%202012%20Decolonization%20is%20not%20a%20metaphor.pdf"
+    supports: >
+      The decisive challenge to this portfolio's framing. Decolonization means the
+      repatriation of Indigenous land and life; it is not a metaphor for other
+      improvements to our societies, schools — or software practices.
+    challenges: >
+      Directly on point: "easily grafting decolonize or decolonization onto any
+      existing colonial theoretic framework could be another form of colonial
+      appropriation." The portfolio's central claim grafts ceremonial and
+      decolonial vocabulary onto a Western management framework. Tuck and Yang
+      name the "settler moves to innocence" this produces. Any PR presenting this
+      work as decolonizing must engage this paper directly. See GAP-04.
+    verified: true
+
+  - id: todd-2016
+    field: braiding-and-critique
+    posture: challenges
+    author: "Todd, Zoe"
+    year: 2016
+    title: "An Indigenous Feminist's Take On The Ontological Turn: 'Ontology' Is Just Another Word For Colonialism"
+    venue: "Journal of Historical Sociology, 29(1), 4–22"
+    doi: "10.1111/johs.12124"
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/johs.12124"
+    supports: >
+      Todd (Métis) critiques Euro-Western theory that adopts Indigenous relational
+      concepts while failing to cite, credit, or be accountable to living
+      Indigenous thinkers and nations.
+    challenges: >
+      Sharply relevant to a codebase whose foundational module is literally named
+      `ontology-core` and which encodes "relations as first-class beings" while
+      citing few living Indigenous thinkers and no named community partner.
+    verified: true
+
+  - id: forbes-wetiko
+    field: braiding-and-critique
+    posture: qualifies
+    author: "Forbes, Jack D."
+    year: 1978
+    year_note: "Widely circulated in the 2008 Seven Stories Press edition"
+    title: "Columbus and Other Cannibals: The Wétiko Disease of Exploitation, Imperialism and Terrorism"
+    venue: "Seven Stories Press, New York (2008 edition)"
+    url: "https://www.sevenstories.com/books/3026-columbus-and-other-cannibals"
+    supports: >
+      The scholarly source for wétiko/windigo as "the sickness of exploitation."
+      Forbes was of Powhatan-Renape and Lenape background.
+    caution: >
+      wétiko is Cree; windigo is Ojibwe; wintiko is Powhatan. It is an Algonquian
+      concept. This portfolio spells it "Wetigo" and places it beside Mi'kmaw,
+      Lakota, Innu and Polynesian terms in a single table. See GAP-01.
+    verified: true
+
+  # ── FIELD 08 — Indigenous AI (the adjacent field this work claims) ──────────
+
+  - id: lewis-etal-2020
+    field: indigenous-ai
+    posture: supports
+    author: "Lewis, Jason Edward (ed.); Abdilla, Angie; Arista, Noelani; et al."
+    year: 2020
+    title: "Indigenous Protocol and Artificial Intelligence Position Paper"
+    venue: "Initiative for Indigenous Futures & CIFAR, Honolulu / Montreal"
+    doi: "10.11573/spectrum.library.concordia.ca.00986506"
+    url: "https://spectrum.library.concordia.ca/986506/"
+    supports: >
+      The reference document for Indigenous knowledge systems in conversation with
+      AI. Comprises design guidelines, essays, artworks and prototypes.
+    engineering_note: >
+      Its guidelines are the appropriate external standard against which this
+      portfolio's Medicine Wheel suite should be assessed — and it models the
+      thing this portfolio currently lacks: multiple named Indigenous authors
+      speaking from named nations.
+    verified: true
+
+  - id: lewis-whaanga-yolgormez-2024
+    field: indigenous-ai
+    posture: supports
+    author: "Lewis, Jason Edward; Whaanga, Hēmi; Yolgörmez, Ceyda"
+    year: 2024
+    title: "Abundant intelligences: placing AI within Indigenous knowledge frameworks"
+    venue: "AI & SOCIETY, 40(4), 2141–2157"
+    doi: "10.1007/s00146-024-02099-4"
+    url: "https://link.springer.com/article/10.1007/s00146-024-02099-4"
+    supports: >
+      The peer-reviewed statement of the Abundant Intelligences program that
+      docs/medicine-wheel-research.md claims alignment with. Indigenous-led,
+      Indigenous-majority, 37 co-investigators, 12 Indigenous community-based
+      organizations, NFRF Transformation grant, 2023–2029.
+    caution: >
+      The program's defining structural feature is Indigenous leadership and
+      community partnership. "Alignment with" a program constituted that way is
+      a claim about relationships, not about topic overlap. See GAP-08.
+    verified: true
