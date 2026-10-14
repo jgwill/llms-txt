@@ -121,10 +121,15 @@
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md, llms-rispecs-layout.md
 
-## RISpecs Kinship — a specification's `.kin.md`
-> A specification introduces itself through its relations. Its `.kin.md` names them across folders, layers and repositories (ancestor, upstream, downstream, sibling, guardian, place) and says what each asks of an agent: begin upstream, tell downstream, consume a sibling without restating it, bring a held decision to its holder. Two duties: keep it true, follow it before acting. Grounded in Shawn Wilson, *Research Is Ceremony* (2008), pp. 78–80, 113–114.
+## Relationality — what we mean by "relational"
+> Read before any guidance that says relationship, relational or kin. It means relationality as Shawn Wilson writes it, not a relational database. A thing is known through its relationships; knowledge lives in its context; a relationship is held from both sides (*chapan*); relationships carry responsibility (relational accountability). Grounded in *Research Is Ceremony* (2008), pp. 70–74, 78–80 and 114, with speakers and pages.
+- **Link**: [llms-relationality.md](./llms-relationality.md)
+- **Related**: llms-rispecs-kinship.md, llms-kinship-hub-system.md, llms-kinship-hub-system-full.md
+
+## RISpecs Kinship — a specification's kin file
+> Every specification folder has a kin file, `<topic>.kin.md`. It says who and what the spec is in relationship with (came from, we rely on, relies on us, walks beside, holds a decision), where each relative lives, and what each relationship asks of us. Agents write it with the first spec, keep it true (named from both sides), and read it before acting: what we rely on, we change there first; what relies on us, we tell; a held decision goes to its keeper.
 - **Link**: [llms-rispecs-kinship.md](./llms-rispecs-kinship.md)
-- **Related**: llms-rise-framework.txt, llms-rispecs-layout.md, llms-kinship-hub-system.md
+- **Related**: llms-relationality.md, llms-rise-framework.txt, llms-rispecs-layout.md, llms-kinship-hub-system.md
 
 ## RISpecs Layout — the `rispecs/` tree
 > Where a specification lands and what it is named: a `rispecs/` per repository or package, a roadmap README at every level, one folder per surface, two-digit prefixes that keep reading order in R → I → S → E sequence, and the `git mv` procedure for moving a misplaced spec without breaking those who cite it.

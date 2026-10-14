@@ -10,6 +10,8 @@ description: >
 
 # Relational Research: Indigenous Paradigm Framework
 
+**What we mean by relational**: relationality, not a relational database. A thing is known through its relationships, and those relationships carry responsibility. Definition, in Shawn Wilson's words: [llms-relationality.md](../../llms-relationality.md).
+
 ## Core Insight: Structural Tension IS Ceremonial Technology
 
 The structural dynamics frameworks (Creative Orientation, Structural Tension Charts, MMOT, Delayed Resolution) function as **ceremonial technology** bridging Western methodologies with sacred relational Indigenous ways.

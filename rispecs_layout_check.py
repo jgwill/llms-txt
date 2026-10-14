@@ -99,6 +99,20 @@ def check_folder(folder, rel, links_only):
                        f"pairs with no {stem}.spec.md, folder or relation-to- name (llms-rispecs-kinship.md)")
 
 
+NOT_SPEC = {"README.md", "README.rise.md", "AGENTS.md", "CLAUDE.md", "STATUS.md"}
+
+
+def check_kin(folder, rel):
+    """Every folder of specs has a kin file (llms-rispecs-kinship.md § Write it)."""
+    files = [f for _c, _d, fs in os.walk(folder) for f in fs if f.endswith(".md")]
+    if not any(f not in NOT_SPEC for f in files):
+        return  # nothing here is a spec yet
+    if any(f.endswith(".kin.md") or f.endswith(".rispec.md") or f == "KINSHIP.md" for f in files):
+        return  # a kin file anywhere in the folder speaks for it
+    report("WARN", "no-kin", rel,
+           "no kin file: write <name>.kin.md the next time you work here (llms-rispecs-kinship.md)")
+
+
 def check_root(root, rel, links_only):
     files = markdown_files(root)
     topics = [d for d in subfolders(root) if d not in SUPPORT_DIRS]
@@ -116,6 +130,10 @@ def check_root(root, rel, links_only):
                 if t not in text:
                     report("WARN", "unindexed-topic", os.path.join(rel, t) + "/",
                            "not named in the root README roadmap")
+            for t in topics:
+                check_kin(os.path.join(root, t), os.path.join(rel, t) + "/")
+        else:
+            check_kin(root, rel + "/")
     check_folder(root, rel, links_only)
     for current, dirs, _files in os.walk(root):
         dirs[:] = sorted(d for d in dirs if not d.startswith("."))

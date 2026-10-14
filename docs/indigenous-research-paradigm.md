@@ -2,6 +2,8 @@
 
 > A decolonized operating system for AI engagement that centers relationality, ceremony, and accountability in research practice.
 
+**What we mean by relational**: relationality, not a relational database. A thing is known through its relationships, and those relationships carry responsibility. Definition, in Shawn Wilson's words: [llms-relationality.md](../llms-relationality.md).
+
 ---
 
 ## The Core Insight

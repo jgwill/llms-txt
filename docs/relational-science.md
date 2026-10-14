@@ -2,6 +2,8 @@
 
 > A system for decolonizing knowledge practices by centering relationality — where knowledge, beings, and technologies exist within webs of accountability rather than as isolated objects.
 
+**What we mean by relational**: relationality, not a relational database. A thing is known through its relationships, and those relationships carry responsibility. Definition, in Shawn Wilson's words: [llms-relationality.md](../llms-relationality.md).
+
 ---
 
 ## What Is Relational Science?

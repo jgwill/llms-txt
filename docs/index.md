@@ -40,7 +40,7 @@ Both systems share a foundational commitment: **knowledge work is not problem-so
 |-------------|------------|--------|
 | [Digital Decision Making](digital-decision-making.md) | TandT binary evaluation for clarity | [llms-digital-decision-making.md](../llms-digital-decision-making.md) |
 | [Performance Review (MMOT)](performance-truth.md) | Managerial Moment of Truth as relational accountability | [llms-managerial-moment-of-truth.md](../llms-managerial-moment-of-truth.md) |
-| [Kinship Hub System](kinship-hub.md) | Treating repos as beings in networks of relations | [llms-kinship-hub-system.md](../llms-kinship-hub-system.md) |
+| [Kinship Hub System](kinship-hub.md) | Treating repos as beings in networks of relations, and every spec folder as having a kin file | [llms-kinship-hub-system.md](../llms-kinship-hub-system.md), [llms-rispecs-kinship.md](../llms-rispecs-kinship.md), [llms-relationality.md](../llms-relationality.md) |
 
 <!--TODO
 * as relational accountability, we would have to talk about it !

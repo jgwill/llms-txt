@@ -110,18 +110,21 @@ When working under this protocol, LLMs must:
 
 ***
 
-## 6. Kinship at Smaller Scales: a Specification's `.kin.md`
+## 6. Kinship at Smaller Scales: a Specification's Kin File
 
-The same idea holds below the repository. A specification in `rispecs/` introduces itself through its relations in a `.kin.md`: `<topic>.kin.md` for a topic folder, `NN-<part>.kin.md` for one part. These relations often reach other layers of the architecture in other repositories: the package that realizes the spec, the app that consumes it, the contract it stands on, the person who holds a decision.
+What we mean by *relationship* and *relational*: `llms-relationality.md`. It is relationality, not a relational database.
+
+The same idea holds below the repository. Every specification folder in `rispecs/` has a kin file, `<topic>.kin.md`. It says who and what the specification is in relationship with, often in other repositories: the package built from it, the app that uses it, the contract it relies on, the person who holds a decision. It also says what each relationship asks of us.
 
 | Scale | File | Protocol |
 |---|---|---|
 | Repository | `KINSHIP.md` | This file |
-| Topic folder | `rispecs/<topic>/<topic>.kin.md` (or a folder `KINSHIP.md`) | `llms-rispecs-kinship.md` |
+| Spec folder | `rispecs/<topic>/<topic>.kin.md` (or a folder `KINSHIP.md`) | `llms-rispecs-kinship.md` |
 | Part | `rispecs/<topic>/NN-<part>.kin.md` | `llms-rispecs-kinship.md` |
 
-A relation that holds for the whole repository is written once, here, in `KINSHIP.md`. A spec's kin points up to it.
+A relationship that holds for the whole repository is written once, here, in `KINSHIP.md`. A spec's kin file points up to it.
 
-A spec's kin carries the same two duties this protocol asks of `KINSHIP.md`, made concrete for specifications:
-1. **Keep it true**: a moved kin, a new version or a new consumer is a relational change, written on both sides.
-2. **Follow it before acting**: an upstream change begins upstream, downstream is told, and a held decision goes to its holder.
+The kin file asks three things of agents. They are the same care this protocol asks of `KINSHIP.md`:
+1. **Write it** with the folder's first spec.
+2. **Keep it true**: a moved relative, a new version or a new relative is a relational change, named from both sides.
+3. **Read it before you act**: what we rely on, we change there first; what relies on us, we tell; a held decision goes to its keeper.

@@ -432,7 +432,7 @@ LLMs must:
         - Lineage (architectural)
         - Responsibilities (ethical/relational)
         - Protocols (operational).
-- A specification carries its own kin: `rispecs/<topic>/<topic>.kin.md` names the spec's relations across folders, layers and repositories (ancestor, upstream, downstream, sibling, guardian, place) and what each asks of the agent. Agents keep it true and follow it before acting. It is the repository's `KINSHIP.md` at the scale of one surface (`llms-rispecs-kinship.md`, grounded in *Research Is Ceremony* pp. 78–80, 113–114).
+- Every specification folder has a kin file, `rispecs/<topic>/<topic>.kin.md`. It names who and what the spec is in relationship with (came from, we rely on, relies on us, walks beside, holds a decision) and what each relationship asks of us. Agents write it, keep it true, and read it before acting. It is the repository's `KINSHIP.md` at the scale of one spec folder (`llms-rispecs-kinship.md`; what *relational* means: `llms-relationality.md`).
 
 ***
 
