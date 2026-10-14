@@ -1,11 +1,12 @@
 # RISE Framework for LLMs
 > A comprehensive framework for creative-oriented reverse engineering, intent extraction, specification creation, and export optimization that transforms how LLMs understand, analyze, and generate code architectures through structural tension dynamics.
 
-**Version**: 1.3.0
-**Document ID**: llms-rise-framework-v1.3.0
-**Last Updated**: 2026-10-10
+**Version**: 1.4.0
+**Document ID**: llms-rise-framework-v1.4.0
+**Last Updated**: 2026-10-14
 **Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles  
 v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)  
+v1.4.0: Where Specifications Land is one tree, read in R → I → S → E order; the layout, its names and how to move a misplaced spec live in `llms-rispecs-layout.md` (jgwill/llms-txt#45)  
 **Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext  
 **Composed by**: Guillaume D.Isabelle, 2025
 
@@ -295,14 +296,28 @@ For implementation teams:
 
 #### Where Specifications Land {#where-specifications-land}
 
-Specifications land in the `rispecs/` folder of the repository or package they describe, one topic subfolder per feature (for example `./rispecs/llm_prompt_support/`, with `llm_prompt_support.spec.md` describing how the LLM supports an app).
+Specifications land in the `rispecs/` folder at the root of the repository or package they describe, one folder per surface (for example `./rispecs/llm_prompt_support/`, with `llm_prompt_support.spec.md` describing how the LLM supports an app). The full tree, the reserved names, the reading order, and how to move a spec that sits in the wrong place are in **`llms-rispecs-layout.md`**. In short:
 
-A subfolder holds:
-- `SPEC.md`: the master of the subfolder, saying how the other files are used (for example `./rispecs/app/SPEC.md` describing how to use the other specs to build the app)
-- `<feature>.spec.md`: the specification, what to build
-- `<feature>.kin.md`: the relational context, the why behind the spec, paired with the `.spec.md` when relational context matters
-- `<feature>.rispec.md`: the specification and its relational context together in one file
-- `STATUS.md`: the current implementation state
+```
+rispecs/
+├── README.md                    roadmap: one row per topic folder, with status
+├── AGENTS.md                    optional: this repository's overrides of this list
+└── <topic>/                     one folder per surface, kebab-case
+    ├── README.md                the topic's roadmap: outcome, files in reading order, status
+    ├── 01-reverse-engineer.md   R   what the prototype does, observed   (when the folder holds the whole pass)
+    ├── 02-intent.md             I   desired outcome, current reality, tension
+    ├── SPEC.md                  S   master: the whole surface, and how its parts compose
+    ├── 03-<part>.spec.md        S   a part: what to build
+    ├── 03-<part>.kin.md         S   its relational context, the why: same number, same stem
+    ├── 04-<part>.rispec.md      S   a part and its relational context in one file
+    ├── 05-export.md             E   how an implementer, a harness or an episode takes it up
+    └── STATUS.md                P4  the current implementation state
+```
+
+- **Which folder**: ask "whose part is this?" A `rispecs/` that describes several surfaces holds only `README.md` and `AGENTS.md` at its root, and one folder per surface. A `rispecs/` that describes one surface (a package, a single app) is that surface's folder, and its parts sit at its root.
+- **Which order**: the two-digit prefix is reading order, and reading order follows R → I → S → E. In a numbered family, `00-<topic>-master.spec.md` holds the `SPEC.md` role. One folder never has both.
+- **One file**: a surface specified in one file is `<topic>/<topic>.spec.md`.
+- **Moving**: moving changes the folder, never the file name. Other files cite specs by name.
 
 Drawings (see Drawn Specifications) sit beside the specs that cite them. `_archived_*.md` files are frozen: do not edit them and do not implement from them. A repository's own `rispecs/AGENTS.md` overrides this list.
 
@@ -574,6 +589,7 @@ The RISE framework represents a fundamental shift in how we understand the relat
 - `llms-narrative-remixing.txt`: Methods for transforming technical content into engaging narratives
 - `llms-structural-thinking.txt`: Core principles of structural dynamics and tension-based progress
 - `llms-managerial-moment-of-truth.md`: MMOT framework for iterative refinement through planning → executing → learning loops
+- `llms-rispecs-layout.md`: the `rispecs/` tree — reserved names, reading order (R → I → S → E), and how to move a misplaced spec with `git mv`
 - `llms-stc-state-machine.md`: structural tension charts as state machines — and one concrete Exportation terminus, where a designed machine emits its own rispec (`generate_rispec`), folding in the originating PDE decomposition's intent
 
 ### Implementation Examples {#implementation-examples}
@@ -649,6 +665,13 @@ ls -ltra ./rispecs/
 # -rw-r--r-- 1 user group  704 Dec 15 05:05 ui.spec.md
 # -rw-r--r-- 1 user group  452 Dec 15 05:05 tools.spec.md
 # -rw-r--r-- 1 user group  290 Dec 15 05:05 data-models.spec.md
+```
+
+This example's `rispecs/` describes one surface (a single app), so its parts sit at the root. In a `rispecs/` with topic folders, look at the folder of the surface you are upgrading. In a fresh clone every file time is the checkout time, so ask git instead of `ls`:
+
+```bash
+# Last commit that touched the topic's specs
+git log -1 --format='%cs %h %s' -- rispecs/<topic>/
 ```
 
 **Analysis Pattern**:

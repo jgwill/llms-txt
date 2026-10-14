@@ -66,6 +66,27 @@ Generate implementation-ready specifications that preserve creative intent.
 - Natural progression through user journeys is preserved
 - Structural dynamics that resolve tension forward are maintained
 
+## Where Specifications Land
+
+Write into the `rispecs/` at the root of the repository or package the spec describes. The full layout is in [`llms-rispecs-layout.md`](../../llms-rispecs-layout.md).
+
+```
+rispecs/
+├── README.md                 roadmap: one row per topic folder
+└── <topic>/                  one folder per surface
+    ├── README.md             outcome, files in reading order, status
+    ├── 01-reverse-engineer.md · 02-intent.md      R, I (when the whole pass lives here)
+    ├── SPEC.md               master: the whole surface, how the parts compose
+    ├── 03-<part>.spec.md     a part · 03-<part>.kin.md its why
+    ├── 04-export.md          E
+    └── STATUS.md             what is built
+```
+
+- **Whose part is this?** Put the file in that surface's folder. A `rispecs/` root that has topic folders holds only `README.md` and `AGENTS.md`.
+- **Numbers are reading order**, and reading order follows R → I → S → E. They are given at birth and never reused.
+- **Moving a misplaced spec** uses `git mv` into its surface's folder and keeps the file name. Then fix path citations, and add a Moved row to `rispecs/README.md`.
+- **Check**: run `python3 rispecs_layout_check.py <repo>` from a jgwill/llms-txt checkout.
+
 ## Creative Orientation in Specifications
 
 | Reactive (Traditional) | Creative (RISE) |

@@ -109,6 +109,11 @@
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
 
+## RISpecs Layout — the `rispecs/` tree
+> The layout of a `rispecs/` folder as one tree an agent can draft into. A `rispecs/` sits at the root of the repository or package it describes. Its root holds a roadmap `README.md` (one row per topic folder) and an optional `AGENTS.md`; every surface gets its own kebab-case folder laid out the same way at every level: a roadmap `README.md`, `01-reverse-engineer.md` and `02-intent.md` when the folder holds the whole pass, a `SPEC.md` master (or the `00-<topic>-master.spec.md` slot in numbered families), numbered `NN-<part>.spec.md` parts with same-stem `.kin.md` relational context, an `NN-export.md`, and `STATUS.md`. Two-digit prefixes hold reading order, and reading order follows R → I → S → E. A `rispecs/` that describes one surface (a package) is itself laid out as that surface's folder. Three questions place any file — which `rispecs/`, whose part is it, which reserved name — and a reorganization moves files with `git mv` into the folder of their surface without renaming them, since code comments, AGENTS files and episode manifests cite specs by name. `rispecs_layout_check.py` reports loose files beside topic folders, missing roadmaps, unindexed topics, and the relative links a move broke.
+- **Link**: [llms-rispecs-layout.md](./llms-rispecs-layout.md)
+- **Related**: llms-rise-framework.txt
+
 ## Macrostructural Patterning Analysis for LLMs
 > This document provides a framework for LLMs to assist in macrostructural patterning analysis. It explains how to identify oscillating patterns by mapping a person's stories into generic steps and validating them across different life domains. The core principle is that structure determines behavior, and the goal is to understand this structure, not to "solve" it as a problem.
 - **Link**: [llms-sccp-patterning.md](./llms-sccp-patterning.md)

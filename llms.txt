@@ -119,7 +119,13 @@
 ## RISE Framework
 > The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures.
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
-- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md
+- **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md, llms-rispecs-layout.md
+
+## RISpecs Layout — the `rispecs/` tree
+> Where a specification lands and what it is named: a `rispecs/` per repository or package, a roadmap README at every level, one folder per surface, two-digit prefixes that keep reading order in R → I → S → E sequence, and the `git mv` procedure for moving a misplaced spec without breaking those who cite it.
+- **Link**: [llms-rispecs-layout.md](./llms-rispecs-layout.md)
+- **Checker**: [rispecs_layout_check.py](./rispecs_layout_check.py)
+- **Related**: llms-rise-framework.txt
 
 ## Macrostructural Patterning Analysis (SCCP)
 > A guide for using Robert Fritz's Structural Dynamics to identify and understand recurring behavioral patterns (macrostructural patterning).

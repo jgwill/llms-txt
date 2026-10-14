@@ -12,6 +12,7 @@
 # you when a target's CLAUDE.md or skills reference an llms-* file this list omits.
 
 llms-rise-framework.txt
+llms-rispecs-layout.md
 llms-creative-orientation.txt
 llms-narrative-remixing.txt
 llms-structural-thinking.txt
