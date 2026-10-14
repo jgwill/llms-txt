@@ -1,16 +1,35 @@
 # RISE Framework for LLMs
-> A comprehensive framework for creative-oriented reverse engineering, intent extraction, specification creation, and export optimization that transforms how LLMs understand, analyze, and generate code architectures through structural tension dynamics.
+> A creative-oriented method in four phases, Reverse-engineer → Intent-extract → Specify → Export. It reads a prototype, names what its creator wanted to bring into being, writes that as prose code another LLM can build from, and lands the specification where it is built and remembered. A fifth movement, the Return, keeps the specification true as the code moves on. Each phase leaves a named file in `rispecs/`.
 
-**Version**: 1.4.0
-**Document ID**: llms-rise-framework-v1.4.0
+**Version**: 2.0.0
+**Document ID**: llms-rise-framework-v2.0.0
 **Last Updated**: 2026-10-14
-**Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles  
-v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)  
-v1.4.0: Where Specifications Land is one tree, read in R → I → S → E order; the layout, its names and how to move a misplaced spec live in `llms-rispecs-layout.md` (jgwill/llms-txt#45)  
-**Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext  
+**Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles
+v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)
+v1.4.0: Where Specifications Land is one tree, read in R → I → S → E order; the layout lives in `llms-rispecs-layout.md` (jgwill/llms-txt#45)
+v2.0.0: One phase per letter. Specify is its own phase (it sat inside Intent). Export is Phase 4. Maintenance becomes the Return, moved into the method from after the document's footer. Each phase names the file it leaves. The reference examples are repositories you can read (jgwill/llms-txt#45)
+**Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext
 **Composed by**: Guillaume D.Isabelle, 2025
 
-The RISE framework enables LLMs to move beyond reactive approaches to embrace creative archaeology - extracting and preserving the beloved qualities that make prototypes valuable while focusing on desired outcomes through creative manifestation.
+The RISE framework moves an LLM from reactive documentation to creative archaeology. It extracts and preserves the beloved qualities that make a prototype valuable, and it keeps the desired outcome in view while it does.
+
+> **Phase numbers before 2.0.** Versions 1.x numbered Export as Phase 3 and maintenance as Phase 4, with Specify folded into Intent. So a citation of "RISE Phase 4" written before 2026-10-14 means [the Return](#the-return), and one of "Phase 3" from that time means [Export](#phase4-export).
+
+## The Method at a Glance {#at-a-glance}
+
+**R**everse-engineer → **I**ntent-extract → **S**pecify → **E**xport → ↺ Return
+
+| Phase | The question it answers | What it leaves in `rispecs/<topic>/` |
+|---|---|---|
+| 1 · **R** Reverse-engineer | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
+| 2 · **I** Intent-extract | What did its creator want to bring into being? | `02-intent.md`, and a `.kin.md` beside each spec whose why matters |
+| 3 · **S** Specify | What is to be built, in prose another LLM can implement? | `SPEC.md` and `NN-<part>.spec.md`, or one `<topic>.spec.md` |
+| 4 · **E** Export | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the `rispecs:` entry of the episode |
+| ↺ Return | What has the code done since the spec was written? | `STATUS.md`, and the specs brought up to date |
+
+Number prefixes keep the files in the order the phases wrote them. The full tree, the reserved names and how to move a misplaced spec are in **`llms-rispecs-layout.md`**.
+
+R and I need not live in the same folder as S and E. When the reverse-engineering lives in an episode vessel or in the donor scripts, the topic's `README.md` says where, and the folder begins at its specs.
 
 ## SpecLang Foundation: Prose Code {#speclang-foundation}
 
@@ -29,21 +48,21 @@ RISE builds upon SpecLang's core insight: **specifications are "prose code"** - 
 - Exact protocol steps when precise behavior is critical
 - The model infers idiomatic implementation from context
 
-**"Creating and Adjust"**
+**"Create and Adjust"**
 - Start simple, refine against running output
 - Only detail the parts that need to change
 - Stop when what you see matches what you want
-- Leverage the model's ability to infer intent
+- Use the model's ability to infer intent
 
 **Bi-directional Ideation**
 - The model "yes-ands" your intent, extending ideas naturally
-- The model provides feedback on where to increase precision
-- This empowers creative process while freeing you from specifying common-sense requirements
+- The model tells you where more precision is needed
+- You are free of specifying common-sense requirements, and the creative process stays yours
 
 **Intent-based Expression**
 - Focus on behavior, let toolchain handle plumbing
 - Setup, dependencies, and compilation are managed automatically
-- You get robust, real-world applications while focusing on your spec
+- Your attention stays on the spec, and the application that comes out runs in the real world
 
 ## Core Principles {#core-principles}
 
@@ -70,7 +89,7 @@ RISE builds upon SpecLang's core insight: **specifications are "prose code"** - 
 
 * NOT "Desired Structural State" just "Desired State".  Avoid adding words just to look like intelligent and make it greater than it is...
 
-This represents natural tension dynamics rather than forced connections between states - understanding the structural forces that create inevitable progression toward desired outcomes.
+This represents natural tension dynamics rather than forced connections between states: the structural forces that move a system toward its desired outcome.
 
 ### Advancing vs Oscillating Patterns
 **Advancing Patterns**: Structural relationships that support continuous movement toward desired outcomes
@@ -87,15 +106,15 @@ This represents natural tension dynamics rather than forced connections between 
 
 **R**everse-engineer → **I**ntent-extract → **S**pecify → **E**xport
 
-### Phase 1: Reverse-Engineering (Creative Archaeology) {#phase1-reverse-engineering}
+### Phase 1: Reverse-engineer (Creative Archaeology) {#phase1-reverse-engineering}
 
 #### Purpose
-Extract SpecLang specifications that capture both concrete functionality and creative intent, focusing on what applications enable users to create through natural progression.
+Observe what the prototype does and what makes it valuable, before deciding anything about it. Phase 1 reads; it does not yet judge or design.
 
 #### Discovery Process
 **A. Core Creative Intent**
 - What does this application empower users to create or achieve?
-- What desired outcomes does it facilitate?
+- What desired outcomes does it make possible?
 - What structural tension exists between current user reality and desired results?
 
 **B. User Creation Flows**
@@ -105,7 +124,7 @@ Extract SpecLang specifications that capture both concrete functionality and cre
 
 **C. Feature Inventory (Creation-Focused)**
 - Vision-Supporting Features: Enable users to clarify desired outcomes
-- Tension-Resolving Features: Facilitate natural progression toward goals
+- Tension-Resolving Features: Carry natural progression toward goals
 - Manifestation Features: Support actual creation of desired results
 
 **D. Aspirational & Creative Goals**
@@ -116,8 +135,8 @@ Extract SpecLang specifications that capture both concrete functionality and cre
 **E. Structural Patterns Worth Preserving**
 - Architectural decisions that enable natural progression
 - Data flow patterns that support structural tension resolution
-- Integration patterns that facilitate creative advancement
-- Performance characteristics that enhance creative flow
+- Integration patterns that carry creative advancement
+- Performance characteristics that keep creative flow
 
 **F. Prototype Addresses**
 When the input is a hosted prototype (for example a v0 app), record two addresses in the first specification written:
@@ -126,43 +145,78 @@ When the input is a hosted prototype (for example a v0 app), record two addresse
 
 Later passes reach the same source through these two. An episode holding the prototype keeps the published address in its manifest and the editing address on the node, for the people who may edit.
 
+#### What Phase 1 Leaves
+`rispecs/<topic>/01-reverse-engineer.md`: the observations, sections A–F, with where each was seen (a file, a screen, a commit, a session). Evidence too large for one file (surveys, transcripts, deep-dive reviews) goes in `research/` beside it. When the observations live elsewhere (an episode vessel, the donor scripts), the topic's `README.md` names the place, and no `01-` file is written.
+
+### Phase 2: Intent-extract {#phase2-intent-extract}
+
+#### Purpose
+Name what the prototype's creator wanted to bring into being, as distinct from what the code happens to do. Phase 2 turns the observations of Phase 1 into a desired outcome, a current reality, and the tension between them.
+
 #### Intent Extraction Framework
-For each identified component, extract:
+For each component identified in Phase 1, extract:
 - **Creative Intent**: What does this enable users to create or achieve?
 - **Structural Intent**: How does this contribute to tension resolution?
 - **Advancement Intent**: How does this support moving from current reality to desired outcome?
 
-### Phase 2: Intent Refinement (Innovation Strategy) {#phase2-intent-refinement}
-
-#### Purpose
-Transform reverse-engineered understanding into precise specifications by identifying desired outcomes and structural dynamics that enable natural progression.
-
-#### Specification Framework
-**1. Desired Outcome Definition**
+#### Desired Outcome Definition
 - What specific result does the user want to create?
 - How will they know when they've achieved this outcome?
 - What makes this outcome valuable to them?
 
-**2. Structural Tension Analysis**
+#### Structural Tension Analysis
 - What is the current reality?
 - What is the desired state?
 - How does tension naturally progress toward the desired state?
 
-**3. Creative Advancement Scenarios**
-Replace traditional BDD scenarios with Creative Advancement Scenarios, written in the one field list given under [Creative Advancement Scenario Format](#creative-advancement-scenarios) in Phase 3.
+#### Beloved Qualities
+- What would users miss if it were gone?
+- Which design decisions carry the creator's vision, and must survive a rewrite?
+
+#### Relational Context
+Intent has relations: the lineage a surface comes from, the kin it serves, the agreements it holds. When these shape what is to be built, write them as relational context: the why behind a spec.
+
+#### What Phase 2 Leaves
+`rispecs/<topic>/02-intent.md`: the desired outcome, the current reality, the structural tension, and the beloved qualities. Relational context goes in a `.kin.md` with the same number and stem as the spec it explains (`03-recording.kin.md` beside `03-recording.spec.md`). A spec and its kin may also be written together as one `.rispec.md`.
+
+### Phase 3: Specify {#phase3-specify}
+
+#### Purpose
+Write what is to be built as prose code: detailed enough that another LLM implements the surface from the specification alone, open enough that it infers the idiomatic rest.
+
+#### What a Specification Holds
+**1. Desired Outcome**: what the surface enables users to create, carried from Phase 2.
+
+**2. Current Reality**: where things stand now, in plain facts. It takes no value word.
 
 * Note that this is "**Current Reality**" NOT "Current Structural Reality" !!!
+
+**3. Creative Advancement Scenarios**: the flows by which users reach the outcome, written in the format below instead of BDD scenarios.
 
 **4. Supporting Structures**
 - What application features enable this natural progression?
 - How do these features support advancing rather than oscillating patterns?
-- What structural relationships ensure inevitable movement toward desired outcomes?
+- What structural relationships carry movement toward desired outcomes?
 
-### SpecLang Specification Syntax {#speclang-syntax}
+**5. Natural language describing the whole of the functional aspects**: screens, components, data, behavior, in SpecLang syntax.
+
+#### Creative Advancement Scenario Format {#creative-advancement-scenarios}
+```
+**Creative Advancement Scenario**: [Scenario Name]
+
+**User Intent**: [Desired outcome they want to create]
+**Current Reality**: [Starting state/context]
+**Natural Progression Steps**:
+  1. [Structural dynamic enables...]
+  2. [System responds by...]
+  3. [User advances toward...]
+**Achieved Outcome**: [Manifested desired result]
+**Supporting Features**: [Application capabilities enabling this advancement]
+```
+
+#### SpecLang Specification Syntax {#speclang-syntax}
 
 RISE specifications follow SpecLang's structured Markdown format. This provides consistent organization while maintaining natural language expressiveness.
-
-#### Document Structure
 
 ```markdown
 # ApplicationName
@@ -186,8 +240,6 @@ Description of the component's purpose.
 Description of data structure and relationships.
 ```
 
-#### Key Syntax Elements
-
 | Element | Purpose | Example |
 |---------|---------|---------|
 | `# Title` | Application/spec name | `# SpecNews` |
@@ -202,9 +254,9 @@ Description of data structure and relationships.
 
 The `**Behavior:**`, `**Styling:**`, and `**Layout:**` sections map directly to structural tension dynamics:
 
-- **Behavior** defines the *underlying structure* that determines how the application functions - this is the primary driver of structural tension resolution. When reverse-engineering, behavior reveals the structural dynamics that enable users to advance toward desired outcomes.
+- **Behavior** defines the *underlying structure* that determines how the application functions: the primary driver of structural tension resolution. When reverse-engineering, behavior reveals the structural dynamics that enable users to advance toward desired outcomes.
 
-- **Styling** and **Layout** represent the *manifestation layer* - they must be explicitly reverse-engineered because they encode design decisions that support (or hinder) the user's natural progression through the application.
+- **Styling** and **Layout** represent the *manifestation layer*. They must be explicitly reverse-engineered because they encode design decisions that support (or hinder) the user's natural progression through the application.
 
 The hierarchy (`## Screens` → `## Components` → `### ComponentName`) mirrors how structural tension flows through an application: from high-level user outcomes (screens) to the building blocks (components) that enable those outcomes.
 
@@ -225,13 +277,13 @@ The hierarchy (`## Screens` → `## Components` → `### ComponentName`) mirrors
 - When progress reaches 100%, redirect to `/success?taskId=$id`
 ```
 
-### Specification Autonomy and Implementation Agnosticism
+#### Specification Autonomy and Implementation Agnosticism
 
-RISE specifications are **completely autonomous from any specific codebase**. They serve as a conceptual blueprint, describing the system's desired behavior, structural dynamics, and creative intent in a manner that is independent of its implementation language, framework, or existing code.
+RISE specifications are **autonomous from any specific codebase**. They describe the system's desired behavior, structural dynamics, and creative intent independently of its implementation language, framework, or existing code.
 
-*   **Codebase-Agnostic**: A RISE specification should be comprehensive enough for another LLM (or human developer) to **re-implement the entire system from scratch**, without needing access to the original source code.
-*   **Conceptual References**: Any references within a RISE specification (e.g., to "Prompts Specification," "Data Schemas," or "API Definitions") are **conceptual pointers to other RISE specifications**, not direct file paths within an existing codebase. These referenced specifications are themselves codebase-agnostic.
-*   **"Black Box" Principle**: The specification describes the system as a "black box" from an implementation perspective. It focuses on *what* the system does and *how* it achieves desired outcomes through structural dynamics, rather than *how* it is currently coded.
+*   **Codebase-Agnostic**: A RISE specification is complete enough for another LLM (or human developer) to **re-implement the entire system from scratch**, without access to the original source code.
+*   **Conceptual References**: References within a RISE specification (e.g., to "Prompts Specification," "Data Schemas," or "API Definitions") are **pointers to other RISE specifications**, not file paths within an existing codebase. Within a `rispecs/` folder, those other specifications are siblings: `./03-data-models.spec.md`.
+*   **"Black Box" Principle**: The specification describes the system as a "black box" from an implementation perspective. It says *what* the system does and *how* it reaches desired outcomes through structural dynamics, not *how* it is currently coded.
 
 #### Drawn Specifications {#drawn-specifications}
 
@@ -243,12 +295,12 @@ Behaviour, data and usage can be drawn instead of written:
 | Data | entity-relationship drawing | `*.erdf.json` (Spec 80) |
 | A usage scenario | sequence drawing | `*.sqdf.json` (Spec 81) |
 
-One `*.sysdf.json` (Spec 82) lists which drawings belong together. A sequence drawing is the drawn form of a Creative Advancement Scenario (see [Creative Advancement Scenario Format](#creative-advancement-scenarios)). Write the prose scenario first and draw it when messages between actors matter.
+One `*.sysdf.json` (Spec 82) lists which drawings belong together. A sequence drawing is the drawn form of a Creative Advancement Scenario. Write the prose scenario first and draw it when messages between actors matter. A drawing sits beside the spec that cites it.
 
 #### Quality Criteria
 - ✅ Creating Focus: Emphasizes what users create, not problems solved
-- ✅ Structural Dynamics: Natural forces driving progression (desequilibrium betweer current reality and what is desired)
-- ✅ Advancing Patterns: Inevitable movement toward outcomes
+- ✅ Structural Dynamics: Natural forces driving progression (the disequilibrium between current reality and what is desired)
+- ✅ Advancing Patterns: Movement toward outcomes
 - ✅ Desired Outcomes: Clear, specific results users want
 - ✅ Natural Progression: Movement through structural dynamics, not forced effort
 
@@ -259,40 +311,18 @@ One `*.sysdf.json` (Spec 82) lists which drawings belong together. A sequence dr
 - ❌ Oscillating patterns: Back-and-forth movement descriptions
 - ❌ BDD scenarios: Traditional reactive scenario structures
 
-### Phase 3: Exportation (Export Optimization) {#phase3-export-optimization}
+#### What Phase 3 Leaves
+The specification files of the topic folder:
+- `SPEC.md`: the master, the whole surface and how its parts compose, when the surface is specified in parts. In a numbered family, `00-<topic>-master.spec.md` holds this role.
+- `NN-<part>.spec.md`: each part, numbered in reading order after `01-reverse-engineer.md` and `02-intent.md` when those exist.
+- `<topic>.spec.md`: the whole surface, when one file holds it.
+
+Evaluate the work by asking: if another LLM took what was written, would it implement the functionality adequately?
+
+### Phase 4: Export {#phase4-export}
 
 #### Purpose
-Transform refined specifications into optimized formats for different collaboration contexts while preserving structural dynamics and creative advancement patterns.
-
-#### Export Formats
-
-**1. Technical Documentation Export**
-For developers and technical teams:
-- Architecture Overview: How structural dynamics enable desired outcomes
-- Feature Specifications: What each feature enables users to create
-- Technical Requirements: Supporting infrastructure for advancing patterns
-- Implementation Guidelines: Preserving creative orientation in code
-
-**2. Stakeholder Communication Export**
-For business stakeholders and decision makers:
-- Value Proposition: What users can create through this system
-- Success Metrics: Measuring advancement toward desired outcomes
-- Resource Requirements: Supporting structural dynamics implementation
-- Timeline Planning: Natural progression phases
-
-**3. User Experience Export**
-For design and UX teams:
-- User Journey Maps: Advancing patterns through desired outcome creation
-- Interface Requirements: Supporting natural progression
-- Interaction Principles: Enabling rather than forcing user advancement
-- Usability Guidelines: Adequate dynamics in interface design
-
-**4. Development Team Export**
-For implementation teams:
-- Creative Advancement Scenarios: Detailed outcome-creation flows
-- API Specifications: Endpoints enabling desired outcome achievement
-- Data Models: Adequate struture of the relationships to support advancement
-- Testing Frameworks: Validating creative advancement patterns
+The specification leaves its author. It lands where its readers will find it, it is written for each reader who takes it up, and it is recorded where the work is remembered. Implementation follows Export: an implementer, a harness or a code generator builds from what Phase 4 hands over. That building is not a fifth letter of RISE, and the Return keeps it and the specification in step.
 
 #### Where Specifications Land {#where-specifications-land}
 
@@ -304,57 +334,303 @@ rispecs/
 ├── AGENTS.md                    optional: this repository's overrides of this list
 └── <topic>/                     one folder per surface, kebab-case
     ├── README.md                the topic's roadmap: outcome, files in reading order, status
-    ├── 01-reverse-engineer.md   R   what the prototype does, observed   (when the folder holds the whole pass)
-    ├── 02-intent.md             I   desired outcome, current reality, tension
-    ├── SPEC.md                  S   master: the whole surface, and how its parts compose
-    ├── 03-<part>.spec.md        S   a part: what to build
-    ├── 03-<part>.kin.md         S   its relational context, the why: same number, same stem
-    ├── 04-<part>.rispec.md      S   a part and its relational context in one file
-    ├── 05-export.md             E   how an implementer, a harness or an episode takes it up
-    └── STATUS.md                P4  the current implementation state
+    ├── 01-reverse-engineer.md   1 R  what the prototype does, observed
+    ├── 02-intent.md             2 I  desired outcome, current reality, tension
+    ├── SPEC.md                  3 S  master: the whole surface, and how its parts compose
+    ├── 03-<part>.spec.md        3 S  a part: what to build
+    ├── 03-<part>.kin.md         2 I  its relational context, the why: same number, same stem
+    ├── 04-<part>.rispec.md      3 S  a part and its relational context in one file
+    ├── 05-export.md             4 E  how an implementer, a harness or an episode takes it up
+    └── STATUS.md                ↺    what is built, what is not yet
 ```
 
 - **Which folder**: ask "whose part is this?" A `rispecs/` that describes several surfaces holds only `README.md` and `AGENTS.md` at its root, and one folder per surface. A `rispecs/` that describes one surface (a package, a single app) is that surface's folder, and its parts sit at its root.
-- **Which order**: the two-digit prefix is reading order, and reading order follows R → I → S → E. In a numbered family, `00-<topic>-master.spec.md` holds the `SPEC.md` role. One folder never has both.
-- **One file**: a surface specified in one file is `<topic>/<topic>.spec.md`.
-- **Moving**: moving changes the folder, never the file name. Other files cite specs by name.
+- **Which order**: the two-digit prefix is reading order, and reading order follows R → I → S → E.
+- **Moving**: moving a spec changes its folder, never its file name. Code comments, AGENTS files and episode manifests cite specs by name.
 
-Drawings (see Drawn Specifications) sit beside the specs that cite them. `_archived_*.md` files are frozen: do not edit them and do not implement from them. A repository's own `rispecs/AGENTS.md` overrides this list.
+`_archived_*.md` files are frozen: do not edit them and do not implement from them. A repository's own `rispecs/AGENTS.md` overrides this list.
 
-Each spec file is Markdown with sections like:
-- Desired Outcome Definition
-- Natural Language describing the whole functional aspects
+#### Writing for Each Reader
 
-Evaluate the work by asking: if another LLM took what was written, would it implement the functionality adequately?
+The same specification is taken up by different readers. An export file (`NN-export.md`) writes for the one who builds next; the others are reached through the README and, when asked for, a document of their own.
 
-#### Creative Advancement Scenario Format {#creative-advancement-scenarios}
-```
-**Creative Advancement Scenario**: [Scenario Name]
+**1. Development Team Export** (the usual `NN-export.md`)
+- Creative Advancement Scenarios: Detailed outcome-creation flows
+- API Specifications: Endpoints enabling desired outcome achievement
+- Data Models: The structure of the relationships that supports advancement
+- Testing Frameworks: Validating creative advancement patterns
+- For a harness or plugin: the recipe per harness, and the gates that prove it built
 
-**User Intent**: [Desired outcome they want to create]
-**Current Reality**: [Starting state/context]
-**Natural Progression Steps**: 
-  1. [Structural dynamic enables...]
-  2. [System responds by...]
-  3. [User advances toward...]
-**Achieved Outcome**: [Manifested desired result]
-**Supporting Features**: [Application capabilities enabling this advancement]
-```
+**2. Technical Documentation Export**
+- Architecture Overview: How structural dynamics enable desired outcomes
+- Feature Specifications: What each feature enables users to create
+- Technical Requirements: Supporting infrastructure for advancing patterns
+- Implementation Guidelines: Preserving creative orientation in code
 
-* Note that this is "**Current Reality**" NOT "Current Structural Reality" !!!
+**3. Stakeholder Communication Export**
+- Value Proposition: What users can create through this system
+- Success Metrics: Measuring advancement toward desired outcomes
+- Resource Requirements: Supporting structural dynamics implementation
+- Timeline Planning: Natural progression phases
+
+**4. User Experience Export**
+- User Journey Maps: Advancing patterns through desired outcome creation
+- Interface Requirements: Supporting natural progression
+- Interaction Principles: Enabling rather than forcing user advancement
+- Usability Guidelines: Adequate dynamics in interface design
 
 #### Recording the Export {#recording-the-export}
 
 The export is complete when the episode that prompted it lists its products in `episode.yaml`:
-- `rispecs:` the spec folders, with `derived_from` naming the prototype and `system` naming the stateloom system drawing
+- `rispecs:` the spec folders, with `derived_from` naming the prototype and `system` naming the stateloom system drawing. Each entry is cited as `rise://<owner>/<repo>/rispecs/<topic>/<entry file>`, pinned to the commit the episode stood on.
 - the drawings
 - `prototypes:` each prototype with its published address (the editing address stays on the node)
 
-Phase 4 starts from these lists.
+The Return starts from these lists.
+
+#### What Phase 4 Leaves
+- `NN-export.md` in the topic folder, numbered after the specs: what the next builder needs, and how they prove it built.
+- A row for the topic in `rispecs/README.md`: its desired outcome in a sentence, its status, its issue.
+- The `rispecs:` entry in the episode's `episode.yaml`.
+
+### ↺ The Return: Keeping Specifications Alive {#the-return}
+
+#### Purpose
+A specification is true on the day it is exported. The Return keeps it true as the code moves on: it is a RISE pass run on what changed. R reads the git history since the specification, I reads the intent in the commit messages, S writes the change into the specs, and E records the new state in `STATUS.md` and in the episode.
+
+**Current reality**: commits land daily and specification updates are manual and infrequent. **Desired outcome**: specifications that match the code at each release. The Return holds that tension with a staleness timeline and an upgrade workflow driven by git history.
+
+#### Step 1: Staleness Timeline (R)
+
+Date the specification against the code. In a fresh clone every file time is the checkout time, so ask git rather than `ls`:
+
+```bash
+# Last commit that touched the topic's specs
+git log -1 --format='%cs %h %s' -- rispecs/<topic>/
+
+# Commits to the code since then
+LAST_SPEC_DATE="2025-12-15"
+git log --since="$LAST_SPEC_DATE" --pretty=format:"%h - %s (%ar)" --no-merges
+
+# Example Output:
+# cc73aec - Responsive Implementation (2 days ago)
+# a247fd8 - Restored Gemini, was not leading anymore (2 days ago)
+# 4859929 - SDK removal (2 days ago)
+```
+
+On a long-lived checkout, `ls -ltra ./rispecs/<topic>/` gives the same reading. A `rispecs/` that describes one surface (a single app, as in the case study below) is listed at its root.
+
+**What This Reveals**:
+- **Elapsed Time**: How many days/hours between last spec edit and latest commit
+- **Commit Count**: Number of changes the specs do not yet carry (e.g., 12 commits in the 2 days since the last spec)
+- **Distance**: The longer the elapsed time, the further the code has moved from what the specs describe
+
+#### Step 2: Commit Message Mining (I)
+
+Use commit messages as breadcrumbs to what changed and why.
+
+```bash
+git log --since="$LAST_SPEC_DATE" --pretty=format:"%h|%s|%an|%ar" --no-merges
+
+# Example Output:
+# cc73aec|Responsive Implementation|Mia|2 days ago
+# a247fd8|Restored Gemini, was not leading anymore|Mia|2 days ago
+# 4859929|SDK removal|Mia|2 days ago
+```
+
+1. **Feature Additions**: Keywords like "Add", "Implement", "Create"
+   - Example: "Add keyboard navigation system" → Update `ui.spec.md`
+2. **Refactors**: Keywords like "Refactor", "Restructure", "Migrate"
+   - Example: "Refactor Gemini SDK → REST API" → Update `tools.spec.md` + `mcp-bridges.spec.md`
+3. **Fixes with Architectural Weight**: Keywords like "Fix", "Resolve" + technical detail
+   - Example: "Fix White Screen (SDK removal)" → Documents a design decision
+4. **Developer Intent**: Well-written commits encode "why"
+   - Example: "Restored Gemini, was not leading anymore" → Implies SDK failed, REST succeeded
+
+Disciplined commit messages give every change its why. Thin ones send you back to reading the code.
+
+#### Step 3: Differential Analysis (I → S)
+
+Map changed files to the specs that describe them.
+
+```bash
+git diff --name-only $LAST_SPEC_DATE..HEAD
+git diff $LAST_SPEC_DATE..HEAD -- src/App.tsx
+```
+
+| Changed File(s) | Rispec File to Update | Reason |
+|----------------|----------------------|--------|
+| `src/App.tsx` | `ui.spec.md` | Main component orchestration changes |
+| `services/latticeWeaver.ts` | `tools.spec.md` + `mcp-bridges.spec.md` | New Gemini service layer |
+| `components/*.tsx` | `ui.spec.md` | New UI components (ShortcutHelp, ResonanceMeter) |
+| `public/manifest.json` | `data-models.spec.md` | PWA schema addition |
+| `types.ts` | `data-models.spec.md` | Type definition changes |
+
+When the specs live in another repository than the code, run the git log in the code's repository and date the specs in theirs.
+
+#### Step 4: Specification Update (S)
+
+For each affected spec:
+
+1. **Read Implementation**: Use git diff output + file reads to understand exact changes
+2. **Extract Creative Intent**: What does this enable users to create?
+3. **Write with RISE Principles**:
+   - Focus on desired outcomes (not problems solved)
+   - Use structural tension framing (current reality → desired state)
+   - Include implementation-sufficient detail (another LLM can code from spec)
+   - Keep advancing pattern language (natural progression, not forced effort)
+
+A spec part that grows a family of its own becomes a sub-topic folder (`llms-rispecs-layout.md`). A new part takes the next free number. Numbers already given are never reused.
+
+**Example (from Narrative Lattice Weaver upgrade)**:
+
+```markdown
+## Part 8H: Responsive Canvas with ResizeObserver (Iteration 14-15)
+
+**Creative Intent**: Users create lattice explorations on any device—mobile, tablet, desktop—without fixed-size limitations.
+
+**Responsive Implementation**:
+
+\`\`\`typescript
+const containerRef = useRef<HTMLDivElement>(null);
+const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+useEffect(() => {
+  const updateDimensions = () => {
+    if (containerRef.current) {
+      const { width, height } = containerRef.current.getBoundingClientRect();
+      setDimensions({ width, height });
+    }
+  };
+
+  const resizeObserver = new ResizeObserver(() => {
+    updateDimensions();
+  });
+
+  if (containerRef.current) {
+    resizeObserver.observe(containerRef.current);
+  }
+
+  return () => resizeObserver.disconnect();
+}, []);
+\`\`\`
+
+**What This Enables**:
+- **Mobile Lattices**: Visualizer works on phones without horizontal scroll
+- **Sidebar Tolerance**: When universe cards collapse, canvas reflows gracefully
+- **Projection Mode**: Fullscreen presentation adjusts to any screen aspect ratio
+
+**Implementation Reference**: Commit cc73aec "Responsive Implementation"
+```
+
+- ✅ Creative orientation: "Users create lattice explorations"
+- ✅ Code snippets: Implementation-sufficient TypeScript
+- ✅ "What This Enables" section: Outcome-focused bullets
+- ✅ Git traceability: Commit reference establishes provenance
+
+#### Step 5: Validation and Record (E)
+
+✅ **All Commits Since the Last Spec Analyzed**
+- Every commit from the period since the last spec reviewed
+- Commit messages cross-referenced with rispec updates
+- No commit left without a place in the specs, or a stated reason it has none
+
+✅ **New Features Written with Desired Outcomes**
+- Each feature framed as "what users create"
+- No reactive language ("this fixes", "this eliminates")
+- Structural tension established (current reality → desired state)
+
+✅ **Creative Orientation Preserved**
+- Language patterns: "enables", "creates", "natural progression"
+- Avoided patterns: "bridges gap", "solves problem", "forces user to"
+
+✅ **Implementation-Sufficient Detail**
+- Another LLM can implement from specs alone
+- Code snippets included where architectural patterns matter
+- Types/schemas provided for data structures
+- API contracts specified (endpoints, parameters, returns)
+
+✅ **Cross-Reference Coherence**
+- Updated rispec files reference each other correctly
+- Data model changes reflected in tool specifications
+- UI component specs align with architectural diagrams
+
+✅ **Git Provenance and Record**
+- Commit hashes cited for major features ("Implementation Reference")
+- `STATUS.md` says what is built and what is not yet, as of which commit
+- The episode that asked for the Return lists the specs it touched
+
+**"Black Box" Test**: Can another LLM re-implement the complete system from the upgraded specs without accessing source code?
+
+#### Return Anti-Patterns
+
+❌ **Batch Updates Without Git Analysis**
+- **Wrong**: "I'll just read all the code and update specs manually"
+- **Right**: Start with git log to understand timeline and intent
+
+❌ **Reactive Framing**
+- **Wrong**: "Added export feature to fix users not being able to save sessions"
+- **Right**: "Users create portable lattice artifacts—downloadable JSON preserving complete session state"
+
+❌ **Implementation Details Without Creative Intent**
+- **Wrong**: "Added ResizeObserver to LatticeVisualizer.tsx"
+- **Right**: "Creative Intent: Users create lattice explorations on any device... [then implementation]"
+
+❌ **Missing Git Provenance**
+- **Wrong**: "Gemini integration now uses REST API"
+- **Right**: "Gemini REST API Integration (Commit a247fd8: 'Restored Gemini')"
+
+❌ **Spec-Code Timestamp Inversion**
+- **Wrong**: Updating rispecs months after implementation
+- **Right**: Regular Returns (weekly or per sprint) to keep the distance between code and spec short
+
+#### Case Study: Narrative Lattice Weaver (Dec 2025)
+
+- **Baseline**: 10 rispec files (4,686 lines) at the root of a one-app `rispecs/`, last modified Dec 15 05:05 UTC
+- **Implementation**: UI prototype evolved Dec 13-15 (Iterations 10-15, 12 commits)
+- **Distance**: 2 days, 10+ features the specs did not yet carry
+
+**R — Staleness timeline**: `git log --since="2025-12-13" --oneline --no-merges` → 12 commits (cc73aec Responsive Implementation, a247fd8 Restored Gemini, 4859929 SDK removal, …).
+
+**I — Commit mining**: Iteration 10: localStorage persistence, keyboard nav, playback, ResonanceMeter · Iteration 11: in-context editing, session export, resonant arcs · Iteration 12: Gemini AI weaving (SDK → REST API) · Iteration 13: PWA manifest, icon.svg · Iterations 14-15: ResizeObserver responsive canvas.
+
+**I → S — Differential analysis**:
+```bash
+$ git diff --name-only 2025-12-13..HEAD
+src/App.tsx                       # → ui.spec.md (persistence, keyboard, export)
+services/latticeWeaver.ts         # → tools.spec.md (new tool: lattice_weave_generative)
+components/LatticeVisualizer.tsx  # → ui.spec.md (ResizeObserver responsive)
+components/ShortcutHelp.tsx       # → ui.spec.md (new component)
+components/ResonanceMeter.tsx     # → ui.spec.md (new component)
+public/manifest.json              # → data-models.spec.md (PWA schema)
+```
+
+**S — Update**: `ui.spec.md` 704→1,145 lines (8 new sections for 7 UI features) · `tools.spec.md` 452→639 lines (Category 8: Generative Weaving tool) · `data-models.spec.md` 290→462 lines (4 new schemas). Total +800 lines carrying every change the specs had not yet described.
+
+**E — Validation**: all 12 commits mapped to rispec sections; every feature has a "What This Enables" section; commits cc73aec, a247fd8, 4859929 cited; another LLM can implement the Gemini integration from `tools.spec.md` alone.
+
+**Lessons**:
+- **Commit Discipline = Upgrade Velocity**: "Restored Gemini, was not leading anymore" carried the architectural context in one line
+- **Two Days of Distance Stays Small**: Short Returns keep each one short
+- **Git Log as Archaeological Tool**: Timeline reconstruction took minutes, not hours
+
+#### Tools for the Return
+
+**Today**: `git log` and `git diff` by hand, the RISE quality checklist, and `rispecs_layout_check.py` (jgwill/llms-txt) for the shape of the folder.
+
+**Possible tools**:
+1. **Staleness report**: a CI check that names the topics whose last spec commit is older than the code they describe by more than 7 days
+2. **Commit-to-Rispec Mapper**: an agent that reads commit messages and proposes which specs a Return should touch
+3. **Draft Return sections**: an LLM drafts rispec sections from git diffs for human review
+
+**MCP Tool Shapes**:
+- `rise_detect_spec_staleness(rispec_dir, source_dir)` → a staleness report
+- `rise_suggest_upgrades(commit_hash)` → proposed rispec edits for a commit
+- `rise_validate_spec(rispec_file)` → the RISE quality checklist, run
 
 ## Implementation Guidelines for LLMs
 
-### Iterative Refinement Workflow ("Creating and Adjust")
+### Iterative Refinement Workflow ("Create and Adjust")
 
 Iterative specification development through the MMOT planning → executing → learning loop (see `llms-managerial-moment-of-truth.md`).
 
@@ -379,7 +655,7 @@ Iterative specification development through the MMOT planning → executing → 
 - What you see matches what you want
 - Specification captures intent at necessary detail level
 - Further specification would create unnecessary rigidity
-- Document the achieved state for future reference
+- Record the achieved state in `STATUS.md`
 
 **Connection to MMOT**: Each iteration is a "moment of truth" where you acknowledge tension between desired outcome and current reality, analyze the dynamics that produced the current state, and refine to advance toward alignment.
 
@@ -403,15 +679,17 @@ Iterative specification development through the MMOT planning → executing → 
 - "Correcting deficiencies with..."
 - "Handling complications of..."
 
+See `llms-language-integrity.md` for the word-level patterns: decorative adjectives, false-work verbs, hedging.
+
 ### Structural Analysis Framework
 
 When analyzing code through RISE:
 
-1. **Identify Creative Enablers**: What does each component allow users to create?
-2. **Map Tension Dynamics**: How does the system naturally progress toward desired outcomes?
-3. **Preserve Beloved Qualities**: What makes users love this functionality?
-4. **Document Advancement Patterns**: How do features support inevitable progression?
-5. **Eliminate Oscillating Elements**: Identify and redesign back-and-forth patterns
+1. **Identify Creative Enablers**: What does each component allow users to create? (Phase 1)
+2. **Map Tension Dynamics**: How does the system naturally progress toward desired outcomes? (Phase 2)
+3. **Preserve Beloved Qualities**: What makes users love this functionality? (Phase 2)
+4. **Specify Advancement Patterns**: How do features support progression toward the outcome? (Phase 3)
+5. **Redesign Oscillating Elements**: Name the back-and-forth patterns, and specify the advancing structure that replaces them (Phase 3)
 
 ### Quality Assurance Checklist
 
@@ -426,7 +704,7 @@ For each RISE analysis, validate:
 **✅ Structural Dynamics Maintained**
 - Natural progression rather than forced advancement
 - Tension progression toward desired states
-- Inevitable movement through structural relationships
+- Movement carried by structural relationships
 - No dependency on willpower or determination
 
 **✅ Technical Accuracy**
@@ -435,16 +713,21 @@ For each RISE analysis, validate:
 - Code guidelines preserve structural dynamics
 - Testing validates outcome creation through natural progression
 
+**✅ Landed and Recorded**
+- Each file sits in the folder of its surface, named for its phase (`llms-rispecs-layout.md`)
+- The topic has a row in `rispecs/README.md`
+- The episode that asked for the work lists the spec folder
+
 ## Practical Applications
 
 ### Legacy Code Analysis
-- Apply Phase 1 to extract creative intent from existing systems
-- Use Phase 2 to refine understanding of desired outcomes
-- Generate Phase 3 exports for modernization planning
-- Preserve beloved qualities while enabling advancement
+- Phase 1 reads the creative intent out of the existing system
+- Phase 2 names the desired outcomes it was built toward
+- Phases 3 and 4 write and land the specification a modernization is built from
+- The beloved qualities survive the rewrite because Phase 2 named them
 
 ### New Feature Development
-- Start with desired outcome identification (not reactive statements)
+- Start with desired outcome identification (not reactive statements). There is no prototype to reverse-engineer, so the topic folder begins at `02-intent.md` or at its spec
 - Design structural dynamics that naturally progress toward outcomes
 - Create advancing patterns rather than feature additions
 - Test creative advancement scenarios instead of edge cases
@@ -453,13 +736,14 @@ For each RISE analysis, validate:
 - Focus on what endpoints enable users to create
 - Structure resources around desired outcome achievement
 - Design data flows that support natural progression
-- Document creative advancement patterns for developers
+- Write creative advancement patterns for developers into the export
 
 ### System Architecture
 - Organize components around creative enablement
 - Design relationships that support structural tension progression
 - Create patterns that advance rather than oscillate
 - Build infrastructure for natural user progression
+- One `rispecs/` topic folder per surface the architecture names
 
 ## Integration with Creative Orientation
 
@@ -513,27 +797,32 @@ For each RISE analysis, validate:
 **Incorrect**: "Users can toggle between different views to find what they need"
 **Correct**: "The interface advances users toward their desired information through progressive disclosure that builds understanding"
 
+### Pitfall 5: Specs Without a Place
+**Incorrect**: A new `feature.spec.md` dropped at the `rispecs/` root beside twenty topic folders, or two layouts offered as equal options
+**Correct**: Ask "whose part is this?", write the file into that surface's folder, and give it its phase's name (`llms-rispecs-layout.md`)
+
 ## Success Metrics
 
 A successful RISE analysis produces:
 
 1. **Specifications that Preserve Beloved Qualities**: Capture what makes prototypes valuable to users
 2. **Creative Advancement Scenarios**: Replace reactive user stories with outcome-creation flows
-3. **Structural Dynamic Documentation**: Explain how features naturally progress toward desired states
-4. **Advancing Pattern Architecture**: Design systems that inevitably move toward user goals
+3. **Structural Dynamic Specifications**: Explain how features naturally progress toward desired states
+4. **Advancing Pattern Architecture**: Design systems that move toward user goals
 5. **Cross-Context Export Formats**: Maintain creative orientation across technical, business, and user experience contexts
+6. **A Folder Another Agent Can Read**: Files named by phase, in reading order, under a roadmap, recorded in the episode
 
 ## Framework Evolution
 
-### Meta-Learning Opportunities
+### Meta-Learning
 The RISE framework itself demonstrates creative orientation principles:
 - **Desired Outcome**: LLMs that understand and preserve creative consciousness in code
 - **Current Reality**: Traditional reverse-engineering focused on reactive approaches
 - **Structural Tension**: The contrast creates natural advancement toward creative-oriented analysis
-- **Advancing Pattern**: Each application of RISE enhances the framework's effectiveness
+- **Advancing Pattern**: Each application of RISE informs the next version of the framework
 
 ### Recursive Enhancement
-- Apply RISE to analyze RISE itself for continuous improvement
+- Apply RISE to analyze RISE itself (this version is one such Return: three phase models found in the guidance became one)
 - Use Creative Advancement Scenarios to evolve the methodology
 - Preserve the beloved qualities that make RISE effective
 - Generate specifications for next-generation creative archaeology tools
@@ -542,29 +831,31 @@ The RISE framework itself demonstrates creative orientation principles:
 - **SpecLang Ecosystem**: Connect RISE with broader intent-driven development
 - **AI Development Tools**: Embed RISE principles in LLM training and evaluation
 - **Software Architecture**: Apply RISE to system design and component organization
-- **Team Collaboration**: Use RISE exports to enhance cross-functional understanding
+- **Team Collaboration**: Use RISE exports to build cross-functional understanding
 
 ## Conclusion
 
-The RISE framework transforms how LLMs approach code analysis, moving from reactive documentation to creative archaeology that preserves and enhances the beloved qualities of software systems. By focusing on desired outcomes, structural dynamics, and advancing patterns, RISE enables LLMs to understand not just what code does, but what it enables users to create.
+RISE moves an LLM from reactive documentation to creative archaeology that preserves the beloved qualities of software systems. By holding desired outcomes, structural dynamics, and advancing patterns in view, it lets an LLM understand not just what code does, but what it enables users to create.
 
-This creative orientation approach ensures that specifications become living documents that drive continued development rather than static descriptions of existing functionality. Through structural tension dynamics and advancing pattern recognition, RISE reveals natural connections between technical analysis and creative consciousness, enabling AI systems to participate in the creative process of software development.
+Specifications written this way stay alive: the Return carries them forward with the code, and the folder they live in tells the next agent where to begin.
 
 ---
 
-# Resources for Further Development
+## Resources for Further Development
 
 ### Testing Creative Orientation Understanding
-Use these commands to validate LLM creative orientation:
 ```bash
 # Test RISE understanding
 llm prompt -m [model] "Apply the RISE framework to analyze a todo list application, focusing on what it enables users to create"
 
-# Test structural tension comprehension  
+# Test structural tension comprehension
 llm prompt -m [model] "Explain structural tension in software architecture through natural progression dynamics"
 
 # Test creative advancement scenarios
 llm prompt -m [model] "Create a Creative Advancement Scenario for user authentication that focuses on desired outcomes through creative enablement"
+
+# Test where a spec lands
+llm prompt -m [model] "Using llms-rispecs-layout.md, name the folder and file name for a new spec of the export screen of a repository whose rispecs/ already holds ui/ and data-models/ folders"
 ```
 
 ### Integration Projects
@@ -573,470 +864,47 @@ llm prompt -m [model] "Create a Creative Advancement Scenario for user authentic
 - **Automated Code Analysis**: Build tools that extract creative intent from legacy systems
 - **Collaborative Specification**: Develop workflows that preserve creative consciousness across teams
 
-The RISE framework represents a fundamental shift in how we understand the relationship between code and consciousness, enabling technology to serve not just functional needs but creative aspirations.
-
 ---
 
 ## Related Resources {#related-resources}
 
 ### Core Framework Documentation
-- **[Creative Orientation Principles](#creative-orientation)**: Understanding the foundational mindset shift from reactive to generative approaches
+- **[The Method at a Glance](#at-a-glance)**: the four phases and the Return, each with the file it leaves
+- **[Creative Orientation Principles](#creative-orientation)**: The foundational mindset shift from reactive to generative approaches
 - **[Structural Tension Dynamics](#structural-tension)**: The driving force behind natural progression in creative systems
-- **[RISE Method Implementation](#rise-method)**: Complete 4-phase methodology for creative-oriented reverse engineering
+- **[RISE Method](#rise-method)**: Phases 1–4 and [the Return](#the-return)
 
 ### Related LLMS-txt Files
+- `llms-rispecs-layout.md`: the `rispecs/` tree — reserved names, reading order (R → I → S → E), and how to move a misplaced spec with `git mv`; `rispecs_layout_check.py` checks a repository against it
 - `llms-creative-orientation.txt`: Deep dive into creative vs reactive approaches and structural thinking
+- `llms-language-integrity.md`: word-level precision, the companion of the language patterns above
 - `llms-narrative-remixing.txt`: Methods for transforming technical content into engaging narratives
 - `llms-structural-thinking.txt`: Core principles of structural dynamics and tension-based progress
 - `llms-managerial-moment-of-truth.md`: MMOT framework for iterative refinement through planning → executing → learning loops
-- `llms-rispecs-layout.md`: the `rispecs/` tree — reserved names, reading order (R → I → S → E), and how to move a misplaced spec with `git mv`
-- `llms-stc-state-machine.md`: structural tension charts as state machines — and one concrete Exportation terminus, where a designed machine emits its own rispec (`generate_rispec`), folding in the originating PDE decomposition's intent
+- `llms-stc-state-machine.md`: structural tension charts as state machines — and one concrete Export terminus, where a designed machine emits its own rispec (`generate_rispec`), folding in the originating PDE decomposition's intent
 
-### Implementation Examples {#implementation-examples}
+### Reference Rispecs You Can Read {#implementation-examples}
 
-**Note for LLM Access**: The following examples demonstrate RISE framework in practice. For public access to these implementations:
+Each shows one shape the layout allows, in a repository an agent can open:
 
-#### Live Examples
-- **SpecLang Portal**: Educational framework demonstrating methodology principles
-  - *Status*: Available for deployment as static React application
-  - *Contains*: Comprehensive SpecLang methodology documentation, interactive demos, agent workflow guides
-  
-- **RISE Framework App**: Operational 3-phase implementation with working templates  
-  - *Status*: Production-ready React application with Google Gemini integration
-  - *Contains*: Complete prompt templates for all phases, quality assurance checklists, visual documentation
+| Repository and folder | Shape |
+|---|---|
+| `jgwill/miadi-orchestration-kit` `rispecs/medicine-wheel/` | A whole pass in one folder: `README.md`, `01-reverse-engineer.md` → `02-intent.md` → `03-specify.md` → `04-export.md` → `05-source-ledger.md` |
+| `jgwill/Miadi` `rispecs/a2a/` | A spec family, S only: `00-a2a-master.spec.md`, numbered parts, `STATUS.md` |
+| `miadisabelle/gmtermux` `rispecs/composition-recorder/` | A suite master (`composition-recorder-suite.spec.md`) with unnumbered parts. The README gives the reading order and says the folder holds the S and E of a pass over the recorder |
+| `jgwill/Miadi` `rispecs/voice-episode-binding/` | A master `SPEC.md` beside `voice-episode-binding.spec.md`, its `.kin.md` and `STATUS.md`. Code cites the spec by path and `§` |
+| `jgwill/smcraft` `rispecs/` | A one-surface `rispecs/`: a numbered family at the root (`70-smdf-format.spec.md`, `80-erdf-format.spec.md`, …). Specs 80–82 define the drawing formats of [Drawn Specifications](#drawn-specifications) |
 
-- **WillWrite Specifications**: Complete application spec suite showcasing RISE in practice
-  - *Status*: Comprehensive specification documents demonstrating creative orientation
-  - *Contains*: Creative Advancement Scenarios, Structural Tension blocks, full development instructions
-
-#### Accessing Implementation Examples
-
-* STATUS: Will plan to make these public somehow
-
-**For LLMs requesting these examples**:
-1. **Repository Access**: Request GitHub repository links for `jgwill/speclang-ecosystem` or similar
-2. **Embedded Examples**: Key templates and scenarios are embedded throughout this document
-3. **Live Deployment**: Working applications may be available at domain endpoints (request current URLs)
-4. **Specification Extracts**: Core methodologies are fully documented in the framework phases above
-
-**For Implementation**: These examples serve as reference architectures for creating your own RISE-compliant applications and specifications.
+Earlier examples (the SpecLang Portal, the RISE Framework App, the WillWrite specification suite) are not public yet.
 
 ### Cross-Reference Navigation
-- Jump to [Phase 1 Implementation](#phase1-reverse-engineering) for codebase analysis guidance
+- Jump to [Phase 1](#phase1-reverse-engineering) for codebase analysis guidance
 - See [Creative Advancement Scenarios](#creative-advancement-scenarios) for BDD alternatives
+- See [Where Specifications Land](#where-specifications-land) before writing a file
 - Review [Language Patterns](#language-patterns) for creative orientation communication
 
 ---
 
-**Document Compliance**: LLMS-txt Standard v1.0 Compliant  
-**Usage Guidelines**: This document is designed for LLM training and guidance. Preserve creative orientation principles when implementing or extending these concepts.  
+**Document Compliance**: LLMS-txt Standard v1.0 Compliant
+**Usage Guidelines**: This document is designed for LLM training and guidance. Preserve creative orientation principles when implementing or extending these concepts.
 **License**: Open sharing encouraged with proper attribution to original sources.
-
-
----
-
-## Phase 4: Rispec Maintenance & Evolution {#phase4-maintenance}
-
-### Purpose
-
-Enable continuous upgrade of existing rispecs as codebases evolve, maintaining specification-implementation alignment through git-log-driven methodology.
-
-### Creative Intent
-
-**Desired Outcome**: LLMs that create living specifications—documents that evolve with code rather than becoming stale artifacts.
-
-**Current reality**: commits land daily and specification updates are manual and infrequent. **Desired outcome**: specifications that match the code at each release. Phase 4 resolves this tension through staleness detection and systematic upgrade workflows.
-
----
-
-### Git-Log-Driven Upgrade Methodology
-
-#### Step 1: Staleness Timeline
-
-**Purpose**: Quantify specification staleness by comparing last-modified timestamps.
-
-**Commands**:
-
-```bash
-# Identify rispecs last modification times
-ls -ltra ./rispecs/
-
-# Example Output:
-# -rw-r--r-- 1 user group  704 Dec 15 05:05 ui.spec.md
-# -rw-r--r-- 1 user group  452 Dec 15 05:05 tools.spec.md
-# -rw-r--r-- 1 user group  290 Dec 15 05:05 data-models.spec.md
-```
-
-This example's `rispecs/` describes one surface (a single app), so its parts sit at the root. In a `rispecs/` with topic folders, look at the folder of the surface you are upgrading. In a fresh clone every file time is the checkout time, so ask git instead of `ls`:
-
-```bash
-# Last commit that touched the topic's specs
-git log -1 --format='%cs %h %s' -- rispecs/<topic>/
-```
-
-**Analysis Pattern**:
-
-```bash
-# Get commits since last rispec update
-LAST_SPEC_DATE="2025-12-15"  # From ls -ltra output
-git log --since="$LAST_SPEC_DATE" --pretty=format:"%h - %s (%ar)" --no-merges
-
-# Example Output:
-# cc73aec - Responsive Implementation (2 days ago)
-# a247fd8 - Restored Gemini, was not leading anymore (2 days ago)
-# 4859929 - SDK removal (2 days ago)
-```
-
-**What This Reveals**:
-- **Elapsed Time**: How many days/hours between last spec edit and latest commit
-- **Commit Count**: Number of unrecorded changes (e.g., 12 commits in the 2 days since the last spec)
-- **Urgency**: Longer elapsed time = higher specification debt
-
----
-
-#### Step 2: Commit Message Mining
-
-**Purpose**: Use commit messages as breadcrumbs to understand what changed and why.
-
-**Command**:
-
-```bash
-# Extract commit messages from the period since the last spec
-git log --since="$LAST_SPEC_DATE" --pretty=format:"%h|%s|%an|%ar" --no-merges
-
-# Example Output:
-# cc73aec|Responsive Implementation|Mia|2 days ago
-# a247fd8|Restored Gemini, was not leading anymore|Mia|2 days ago
-# 4859929|SDK removal|Mia|2 days ago
-```
-
-**Analysis Pattern**:
-
-1. **Identify Feature Additions**: Keywords like "Add", "Implement", "Create"
-   - Example: "Add keyboard navigation system" → Update ui.spec.md
-
-2. **Detect Refactors**: Keywords like "Refactor", "Restructure", "Migrate"
-   - Example: "Refactor Gemini SDK → REST API" → Update tools.spec.md + mcp-bridges.spec.md
-
-3. **Spot Bug Fixes with Architectural Impact**: Keywords like "Fix", "Resolve" + technical detail
-   - Example: "Fix White Screen (SDK removal)" → Documents design decision
-
-4. **Extract Developer Intent**: Well-written commits encode "why"
-   - Example: "Restored Gemini, was not leading anymore" → Implies SDK failed, REST succeeded
-
-**Quality Indicator**: Disciplined commit messages = 100% commit traceability. Poor messages = manual code archaeology required.
-
----
-
-#### Step 3: Differential Analysis
-
-**Purpose**: Identify which files changed and map to corresponding rispec files.
-
-**Commands**:
-
-```bash
-# See all changed files in the period since the last spec
-git diff --name-only $LAST_SPEC_DATE..HEAD
-
-# Example Output:
-# src/App.tsx
-# src/components/LatticeVisualizer.tsx
-# services/latticeWeaver.ts
-# components/ShortcutHelp.tsx
-# components/ResonanceMeter.tsx
-# public/manifest.json
-
-# See actual code changes
-git diff $LAST_SPEC_DATE..HEAD -- src/App.tsx
-```
-
-**Mapping Pattern**:
-
-| Changed File(s) | Rispec File to Update | Reason |
-|----------------|----------------------|--------|
-| `src/App.tsx` | `ui.spec.md` | Main component orchestration changes |
-| `services/latticeWeaver.ts` | `tools.spec.md` + `mcp-bridges.spec.md` | New Gemini service layer |
-| `components/*.tsx` | `ui.spec.md` | New UI components (ShortcutHelp, ResonanceMeter) |
-| `public/manifest.json` | `data-models.spec.md` | PWA schema addition |
-| `types.ts` | `data-models.spec.md` | Type definition changes |
-
-**Cross-Repository Tracking**: If rispecs live in separate repository from source code:
-
-```bash
-# In source repo
-cd /path/to/source-code
-git log --since="2025-12-15"
-
-# In rispec repo
-cd /path/to/rispecs-repo
-ls -ltra ./rispecs/
-# Compare timestamps across repos
-```
-
----
-
-#### Step 4: Specification Update
-
-**Purpose**: Document discovered features using RISE creative orientation principles.
-
-**Update Pattern**:
-
-For each affected rispec file:
-
-1. **Read Implementation**: Use git diff output + file reads to understand exact changes
-2. **Extract Creative Intent**: What does this enable users to create?
-3. **Document with RISE Principles**:
-   - Focus on desired outcomes (not problems solved)
-   - Use structural tension framing (current reality → desired state)
-   - Include implementation-sufficient detail (another LLM can code from spec)
-   - Preserve advancing pattern language (natural progression, not forced effort)
-
-**Example (from Narrative Lattice Weaver upgrade)**:
-
-```markdown
-## Part 8H: Responsive Canvas with ResizeObserver (Iteration 14-15)
-
-**Creative Intent**: Users create lattice explorations on any device—mobile, tablet, desktop—without fixed-size limitations.
-
-**Responsive Implementation**:
-
-\`\`\`typescript
-const containerRef = useRef<HTMLDivElement>(null);
-const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-useEffect(() => {
-  const updateDimensions = () => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect();
-      setDimensions({ width, height });
-    }
-  };
-
-  const resizeObserver = new ResizeObserver(() => {
-    updateDimensions();
-  });
-
-  if (containerRef.current) {
-    resizeObserver.observe(containerRef.current);
-  }
-
-  return () => resizeObserver.disconnect();
-}, []);
-\`\`\`
-
-**What This Enables**:
-- **Mobile Lattices**: Visualizer works on phones without horizontal scroll
-- **Sidebar Tolerance**: When universe cards collapse, canvas reflows gracefully
-- **Projection Mode**: Fullscreen presentation adjusts to any screen aspect ratio
-
-**Implementation Reference**: Commit cc73aec "Responsive Implementation"
-```
-
-**Key Characteristics**:
-- ✅ Creative orientation: "Users create lattice explorations"
-- ✅ Code snippets: Implementation-sufficient TypeScript
-- ✅ "What This Enables" section: Outcome-focused bullets
-- ✅ Git traceability: Commit reference establishes provenance
-
----
-
-#### Step 5: Validation
-
-**Purpose**: Ensure upgraded specifications meet RISE quality criteria.
-
-**Quality Checklist**:
-
-✅ **All Commits Since the Last Spec Analyzed**
-- Every commit from the period since the last spec reviewed
-- Commit messages cross-referenced with rispec updates
-- No "mystery commits" left undocumented
-
-✅ **New Features Documented with Desired Outcomes**
-- Each feature framed as "what users create"
-- No reactive language ("this fixes", "this eliminates")
-- Structural tension established (current reality → desired state)
-
-✅ **Creative Orientation Preserved**
-- Language patterns: "enables", "creates", "natural progression"
-- Avoided patterns: "bridges gap", "solves problem", "forces user to"
-- Advancing patterns: Features support inevitable movement toward goals
-
-✅ **Structural Dynamics Maintained**
-- Natural progression described (not forced connections)
-- Tension resolution through organic advancement
-- No dependency on willpower or determination language
-
-✅ **Implementation-Sufficient Detail Added**
-- Another LLM can implement from specs alone
-- Code snippets included where architectural patterns matter
-- TypeScript types/schemas provided for data structures
-- API contracts specified (endpoints, parameters, returns)
-
-✅ **Cross-Reference Coherence**
-- Updated rispec files reference each other correctly
-- Data model changes reflected in tool specifications
-- UI component specs align with architectural diagrams
-
-✅ **Git Provenance Established**
-- Commit hashes cited for major features
-- "Implementation Reference" sections link spec to code history
-- Timeline traceable (Iteration numbers, dates)
-
-**"Black Box" Test**: Can another LLM re-implement the complete system from upgraded specs without accessing source code?
-
----
-
-### Upgrade Quality Criteria
-
-**✅ Comprehensive Coverage**
-- Specification line count growth proportional to implementation growth
-- No features left undocumented (100% commit coverage)
-
-**✅ Creative Orientation Alignment**
-- RISE language patterns maintained throughout
-- No reactive/problem-solving framing introduced
-- Structural tension dynamics preserved
-
-**✅ Traceability Maintained**
-- Git commit references establish provenance
-- Iteration numbers track feature evolution timeline
-- "Before/After" code snippets show transformation
-
-**✅ Implementation Sufficiency**
-- Type definitions complete (TypeScript/Python schemas)
-- API contracts specified (parameters, returns, error codes)
-- Component hierarchies documented
-- Integration points mapped
-
----
-
-### Upgrade Anti-Patterns (Avoid These)
-
-❌ **Batch Updates Without Git Analysis**
-- **Wrong**: "I'll just read all the code and update specs manually"
-- **Right**: Start with git log to understand timeline and intent
-
-❌ **Reactive Framing**
-- **Wrong**: "Added export feature to fix users not being able to save sessions"
-- **Right**: "Users create portable lattice artifacts—downloadable JSON preserving complete session state"
-
-❌ **Implementation Details Without Creative Intent**
-- **Wrong**: "Added ResizeObserver to LatticeVisualizer.tsx"
-- **Right**: "Creative Intent: Users create lattice explorations on any device... [then implementation]"
-
-❌ **Missing Git Provenance**
-- **Wrong**: "Gemini integration now uses REST API"
-- **Right**: "Gemini REST API Integration (Commit a247fd8: 'Restored Gemini')"
-
-❌ **Spec-Code Timestamp Inversion**
-- **Wrong**: Updating rispecs months after implementation
-- **Right**: Regular upgrade cycles (weekly/sprint-based) to keep the distance between code and spec short
-
----
-
-### Real-World Case Study: Narrative Lattice Weaver (Dec 2025)
-
-**Context**:
-- **Baseline**: 10 rispec files (4,686 lines), last modified Dec 15 05:05 UTC
-- **Implementation**: UI prototype evolved Dec 13-15 (Iterations 10-15, 12 commits)
-- **Staleness**: 2 days, 10+ undocumented features
-
-**Step 1: Staleness Timeline**
-
-```bash
-$ ls -ltra /workspace/.../rispecs/
-# All files: Dec 15 05:05
-
-$ git log --since="2025-12-13" --oneline --no-merges
-cc73aec Responsive Implementation
-a247fd8 Restored Gemini, was not leading anymore
-4859929 SDK removal
-[9 more commits...]
-
-# Result: 12 commits in the 2 days since the last spec
-```
-
-**Step 2: Commit Message Mining**
-
-Key commits identified:
-- **Iteration 10**: localStorage persistence, keyboard nav, playback, ResonanceMeter
-- **Iteration 11**: In-context editing, session export, resonant arcs
-- **Iteration 12**: Gemini AI weaving (SDK crisis → REST API)
-- **Iteration 13**: PWA manifest, icon.svg
-- **Iteration 14-15**: ResizeObserver responsive canvas
-
-**Step 3: Differential Analysis**
-
-```bash
-$ git diff --name-only 2025-12-13..HEAD
-src/App.tsx  # → ui.spec.md (persistence, keyboard, export)
-services/latticeWeaver.ts  # → tools.spec.md (new tool: lattice_weave_generative)
-components/LatticeVisualizer.tsx  # → ui.spec.md (ResizeObserver responsive)
-components/ShortcutHelp.tsx  # → ui.spec.md (new component)
-components/ResonanceMeter.tsx  # → ui.spec.md (new component)
-public/manifest.json  # → data-models.spec.md (PWA schema)
-```
-
-**Step 4: Specification Update**
-
-Files upgraded:
-1. **ui.spec.md**: 704→1,145 lines (+441 lines, 8 new sections for 7 UI features)
-2. **tools.spec.md**: 452→639 lines (+187 lines, Category 8: Generative Weaving tool)
-3. **data-models.spec.md**: 290→462 lines (+172 lines, 4 new schemas)
-
-**Total**: +800 lines of specification capturing 100% of the implementation changes that were missing from the specs
-
-**Step 5: Validation**
-
-✅ All 12 commits analyzed and mapped to rispec sections
-✅ Creative orientation preserved (every feature has "What This Enables" section)
-✅ Git provenance established (commits cc73aec, a247fd8, 4859929 cited)
-✅ Implementation-sufficient (TypeScript snippets, API contracts, component specs)
-✅ "Black Box" test: Another LLM can implement Gemini integration from tools.spec.md alone
-
-**Lessons**:
-- **Commit Discipline = Upgrade Velocity**: Well-written commits ("Restored Gemini, was not leading anymore") provided instant architectural context
-- **2 Days of Staleness = Manageable**: Short feedback loops prevent specification debt
-- **Git Log as Archaeological Tool**: Timeline reconstruction took minutes, not hours
-
----
-
-### Integration with RISE Phase 3
-
-Phase 3 ends by writing the episode lists (see [Recording the Export](#recording-the-export)). Phase 4 reads them to know which specs, drawings and prototype to compare with git history, and writes its result back to the same episode.
-
----
-
-### Tools & Automation Opportunities
-
-**Manual Workflow** (Current):
-1. Developer runs `ls -ltra` + `git log` manually
-2. Developer reads git diffs and updates rispecs
-3. Developer validates against RISE quality checklist
-
-**Automation Potential** (Future):
-1. **Spec Staleness Dashboard**: CI/CD check warns when rispec timestamps lag behind source code >7 days
-2. **Commit-to-Rispec Mapper**: AI agent parses commit messages, suggests which rispecs need updates
-3. **Auto-Generated Upgrade Prompts**: LLM generates draft rispec sections from git diffs for human review
-
-**MCP Tool Integration**:
-- `rise_detect_spec_staleness(rispec_dir, source_dir)` → Returns a staleness report
-- `rise_suggest_upgrades(commit_hash)` → Proposes rispec edits based on commit
-- `rise_validate_spec(rispec_file)` → Runs RISE quality checklist
-
----
-
-## Summary
-
-Phase 4 transforms RISE from a one-time specification creation framework into a **living documentation methodology**. By leveraging git history as the source of truth, LLMs can maintain specification-implementation alignment with:
-
-- **Staleness Timeline**: Quantify staleness via timestamps
-- **Commit Message Mining**: Extract intent from disciplined git logs
-- **Differential Analysis**: Map code changes to rispec files
-- **RISE-Aligned Updates**: Document features with creative orientation
-- **Validation**: Ensure implementation sufficiency and traceability
-
-The result: Specifications that evolve with code, maintaining their role as **codebase-agnostic blueprints** while honoring the beloved qualities that emerge through iteration.
-
----
-

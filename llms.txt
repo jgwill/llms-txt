@@ -117,7 +117,7 @@
 
 
 ## RISE Framework
-> The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures.
+> The RISE (Reverse-engineer, Intent-extract, Specify, Export) framework is a method for creative-oriented analysis and generation of code architectures: one phase per letter, each leaving a named file in `rispecs/`, and a Return that keeps the specifications true as the code moves on (2.0.0).
 - **Link**: [llms-rise-framework.txt](./llms-rise-framework.txt)
 - **Related**: llms-creative-orientation.txt, llms-structural-thinking.txt, llms-managerial-moment-of-truth.md, llms-stc-state-machine.md, llms-rispecs-layout.md
 

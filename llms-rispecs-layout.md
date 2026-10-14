@@ -2,9 +2,10 @@
 
 > The shape of a `rispecs/` folder: one tree, the names a file can take in it, the order its files are read in, and how to move a spec that sits in the wrong place. Use this when you draft a spec, when you open a `rispecs/` for the first time, and when you reorganize one.
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 **Last Updated**: 2026-10-14
-**Extends**: `llms-rise-framework.txt` § Where Specifications Land (1.4.0 points here)
+**Companion of**: `llms-rise-framework.txt` 2.0.0. The method names what each phase leaves; this file says where it lands and what it is called  
+**1.1.0**: the tree is labelled with the 2.0 phases (1 R · 2 I · 3 S · 4 E · ↺ Return). A `.kin.md` belongs to Intent, and `STATUS.md` belongs to the Return
 **Issue**: jgwill/llms-txt#45
 **Checker**: [`rispecs_layout_check.py`](./rispecs_layout_check.py)
 
@@ -20,16 +21,16 @@
     │
     ├── 📂 <topic>/                          one folder per surface, kebab-case
     │   ├── 📜 README.md                     the topic's roadmap: outcome, files in reading order, status
-    │   ├── 🔍 01-reverse-engineer.md        R   what the prototype does, observed
-    │   ├── 🎯 02-intent.md                  I   desired outcome, current reality, structural tension
-    │   ├── 🧭 SPEC.md                       S   master: the whole surface, and how its parts compose
-    │   ├── 📐 03-<part>.spec.md             S   a part: what to build
-    │   ├── 🧬 03-<part>.kin.md              S   that part's relational context: same number, same stem
-    │   ├── 📐 04-<part>.rispec.md           S   a part with its relational context in one file
-    │   ├── 📦 05-export.md                  E   how an implementer, a harness or an episode takes it up
-    │   ├── 🗃️ 06-source-ledger.md               sources, provenance, confidence
-    │   ├── 🩺 STATUS.md                     P4  what is built, what is not yet
-    │   ├── 🖼️ <drawing>.svg | .html             beside the spec that cites it
+    │   ├── 🔍 01-reverse-engineer.md        1 R  what the prototype does, observed
+    │   ├── 🎯 02-intent.md                  2 I  desired outcome, current reality, structural tension
+    │   ├── 🧭 SPEC.md                       3 S  master: the whole surface, and how its parts compose
+    │   ├── 📐 03-<part>.spec.md             3 S  a part: what to build
+    │   ├── 🧬 03-<part>.kin.md              2 I  that part's relational context: same number, same stem
+    │   ├── 📐 04-<part>.rispec.md         2+3    a part with its relational context in one file
+    │   ├── 📦 05-export.md                  4 E  how an implementer, a harness or an episode takes it up
+    │   ├── 🗃️ 06-source-ledger.md               the sources every phase drew on, with confidence
+    │   ├── 🩺 STATUS.md                     ↺    the Return: what is built, what is not yet
+    │   ├── 🖼️ <name>.smdf.json · .erdf.json · .sqdf.json · .html   3 S  drawn specs, beside the spec that cites them
     │   ├── 📂 schemas/ · fixtures/              machine-readable contracts the specs cite
     │   ├── 📂 research/                         R and I evidence too large for 01 and 02
     │   ├── 📂 proposals/                        `*.proposal.md`: specs not yet adopted
@@ -38,6 +39,8 @@
     └── 📂 <topic>/
         └── 📐 <topic>.spec.md               a surface specified in one file: the folder carries its name
 ```
+
+The labels name the phase that writes each file, as in `llms-rise-framework.txt` § The Method at a Glance. ↺ is the Return, the RISE pass that keeps the specs true as the code moves on.
 
 Every file in the tree is optional except the two roadmaps. Draw only what the work holds.
 A spec family with no reverse-engineering in this repository starts at `SPEC.md` and `01-<part>.spec.md`.
@@ -74,11 +77,11 @@ A spec about another repository's surface lands in that repository, and here you
 | `SPEC.md` | **Master spec.** The desired outcome of the whole surface, and how the parts compose | A folder whose surface is specified in parts |
 | `<topic>.spec.md` | The whole spec of a surface specified in one file | A one-spec folder: the stem matches the folder name |
 | `NN-<part>.spec.md` | A part: what to build | Numbered in reading order |
-| `NN-<part>.kin.md` | The part's relational context: the why, lineage, kin. Same `NN` and stem as its spec | Beside its spec |
+| `NN-<part>.kin.md` | The part's relational context, written in Phase 2: the why, lineage, kin. Same `NN` and stem as its spec | Beside its spec |
 | `NN-<part>.rispec.md` | Spec and relational context in one file, instead of the pair | |
-| `01-reverse-engineer.md` · `02-intent.md` | R and I, when the folder holds the whole pass | First |
+| `01-reverse-engineer.md` · `02-intent.md` | Phases 1 and 2, when the folder holds the whole pass | First |
 | `NN-export.md` · `NN-source-ledger.md` | E, and the record of sources | After the specs |
-| `STATUS.md` | Implementation state (Phase 4) | Once implementation starts |
+| `STATUS.md` | Implementation state, kept by the Return | Once implementation starts |
 | `_archived_<name>.md` | **Frozen.** Do not edit it. Do not implement from it. An active spec wins over it | Where the file was |
 | `schemas/` · `fixtures/` · `research/` · `proposals/` | Support folders, named by role, never by date. Not topics | Inside a topic |
 

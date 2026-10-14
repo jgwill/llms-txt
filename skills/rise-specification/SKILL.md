@@ -4,85 +4,110 @@ description: >
   RISE (Reverse-engineer, Intent-extract, Specify, Export) framework for creating specifications
   through creative archaeology rather than reactive documentation. Built on SpecLang prose-code
   methodology. Use when reverse-engineering existing code, extracting creative intent from
-  prototypes, creating specifications that preserve what users love, or generating SpecLang
-  prose-code specs that focus on desired outcomes rather than problem elimination.
+  prototypes, creating specifications that preserve what users love, generating SpecLang
+  prose-code specs that focus on desired outcomes rather than problem elimination, deciding where
+  a spec lands in rispecs/ and what it is named, or bringing existing rispecs up to date with the
+  code (the Return).
 ---
 
 # RISE Specification Framework
+
+Full method: [`llms-rise-framework.txt`](../../llms-rise-framework.txt) (2.0.0). Where each file lands: [`llms-rispecs-layout.md`](../../llms-rispecs-layout.md).
 
 ## SpecLang Foundation: Prose Code
 
 Specifications are "prose code" — natural language representations of computation behavior that still require you to "think like a programmer."
 
-### Key Principles
 - **Spec as Source of Truth**: The specification is what you maintain; executable code is secondary
 - **Variable Detail**: Offhand remarks for boilerplate, exact protocol for critical behavior
 - **"Create and Adjust"**: Start simple, refine against running output, stop when it matches your vision
 - **Bi-directional Ideation**: The model "yes-ands" your intent, extending ideas naturally
 - **Intent-based Expression**: Focus on behavior, let toolchain handle plumbing
 
-## The RISE Method
+## The Method: One Phase per Letter, One File per Phase
 
-**R**everse-engineer → **I**ntent-extract → **S**pecify → **E**xport
+**R**everse-engineer → **I**ntent-extract → **S**pecify → **E**xport → ↺ Return
 
-### Phase 1: Reverse-Engineering (Creative Archaeology)
+| Phase | Question | Leaves in `rispecs/<topic>/` |
+|---|---|---|
+| 1 · R | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
+| 2 · I | What did its creator want to bring into being? | `02-intent.md`, `.kin.md` beside a spec |
+| 3 · S | What is to be built, in prose another LLM implements? | `SPEC.md` + `NN-<part>.spec.md`, or `<topic>.spec.md` |
+| 4 · E | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the episode's `rispecs:` entry |
+| ↺ Return | What has the code done since? | `STATUS.md`, specs brought up to date |
 
-Extract specifications capturing both functionality and creative intent.
+Before 2.0, Export was "Phase 3" and maintenance was "Phase 4". Read old citations that way.
 
-**Discovery Process:**
+### Phase 1: Reverse-engineer (Creative Archaeology)
+
+Observe before deciding. Record:
 - **Core Creative Intent**: What does this application empower users to create?
-- **User Creation Flows**: Map journeys leading to manifestation of desired outcomes
-- **Structural Tension**: What tension exists between current user reality and desired results?
-- **Advancing vs. Oscillating**: Which patterns support continuous movement? Which create back-and-forth?
+- **User Creation Flows**: Journeys leading to the desired outcomes, and their choice points
+- **Feature Inventory**: Vision-supporting, tension-resolving, manifestation features
+- **Structural Patterns Worth Preserving**: Architecture, data flow, integrations that carry the progression
+- **Prototype Addresses**: published address and editing address, for a hosted prototype
 
-### Phase 2: Intent Extraction
+When the observations live elsewhere (an episode vessel, donor scripts), the topic `README.md` names the place.
 
-Identify the beloved qualities — what makes the prototype valuable beyond its features.
+### Phase 2: Intent-extract
 
-**Extract:**
-- What users genuinely care about preserving
-- The creative consciousness embedded in design decisions
-- Structural dynamics that naturally guide users toward goals
-- Choice points where users advance toward their vision
+Name what the creator wanted, as distinct from what the code happens to do:
+- **Desired Outcome**: what result, how users know they have it, why it matters to them
+- **Current Reality**: plain facts, no value word ("Current Reality", never "Current Structural Reality")
+- **Structural Tension**: how the tension between the two naturally progresses
+- **Beloved Qualities**: what users would miss, which design decisions must survive a rewrite
+- **Relational Context**: lineage, kin, agreements. Write it as a `.kin.md` with the same stem as its spec
 
-### Phase 3: Specification Creation
+### Phase 3: Specify
 
-Write SpecLang prose-code that captures intent at the right level of detail.
+Write SpecLang prose code at the right level of detail:
+- Desired outcome, current reality, **Creative Advancement Scenarios** (not BDD), supporting structures
+- `## Screens` → `## Components` → `## Data`, with `**Behavior:**`, `**Styling:**`, `**Layout:**`
+- Codebase-agnostic: references point to sibling specs (`./03-data-models.spec.md`), never to code paths as contracts
+- Draw when drawing says it better: `*.smdf.json` (behaviour), `*.erdf.json` (data), `*.sqdf.json` (a scenario), beside the spec
+- **Test**: could another LLM implement the surface from this alone?
 
-**Guidelines:**
-- Focus on what the system enables users to CREATE
-- Describe desired outcomes, not just features
-- Identify structural tension dynamics in user flows
-- Use advancing-pattern language, not problem-solving framing
-- Variable detail: precise where critical, suggestive where flexible
+```
+**Creative Advancement Scenario**: [Scenario Name]
+**User Intent**: [Desired outcome they want to create]
+**Current Reality**: [Starting state/context]
+**Natural Progression Steps**: 1. … 2. … 3. …
+**Achieved Outcome**: [Manifested desired result]
+**Supporting Features**: [Capabilities enabling this advancement]
+```
 
-### Phase 4: Export Optimization
+### Phase 4: Export
 
-Generate implementation-ready specifications that preserve creative intent.
+The specification leaves its author:
+- **Lands** in its surface's folder in `rispecs/` (below), with a row in `rispecs/README.md`
+- **Written for the next builder** in `NN-export.md`: scenarios, contracts, data models, the per-harness recipe, and the gates that prove it built
+- **Recorded** in the episode: `rispecs:` as `rise://<owner>/<repo>/rispecs/<topic>/<entry>`, pinned to a commit, with `derived_from` and `system`
 
-**Ensure:**
-- Spec supports advancing patterns, not oscillating maintenance
-- Features build upon each other systematically
-- Natural progression through user journeys is preserved
-- Structural dynamics that resolve tension forward are maintained
+Implementation follows Export. It is not a fifth letter.
+
+### ↺ The Return
+
+A RISE pass run on what changed since the spec was written:
+- **R**: `git log -1 --format='%cs %h' -- rispecs/<topic>/`, then `git log --since=<that date> --no-merges` on the code
+- **I**: read the commit messages for intent ("Restored Gemini, was not leading anymore")
+- **S**: map `git diff --name-only` to the specs, and write each change with its creative intent and commit reference
+- **E**: update `STATUS.md`, and list the touched specs in the episode
 
 ## Where Specifications Land
-
-Write into the `rispecs/` at the root of the repository or package the spec describes. The full layout is in [`llms-rispecs-layout.md`](../../llms-rispecs-layout.md).
 
 ```
 rispecs/
 ├── README.md                 roadmap: one row per topic folder
 └── <topic>/                  one folder per surface
     ├── README.md             outcome, files in reading order, status
-    ├── 01-reverse-engineer.md · 02-intent.md      R, I (when the whole pass lives here)
-    ├── SPEC.md               master: the whole surface, how the parts compose
-    ├── 03-<part>.spec.md     a part · 03-<part>.kin.md its why
-    ├── 04-export.md          E
-    └── STATUS.md             what is built
+    ├── 01-reverse-engineer.md · 02-intent.md      1 R, 2 I (when the whole pass lives here)
+    ├── SPEC.md               3 S  master: the whole surface, how the parts compose
+    ├── 03-<part>.spec.md     3 S  a part · 03-<part>.kin.md its why (2 I)
+    ├── 04-export.md          4 E
+    └── STATUS.md             ↺    what is built
 ```
 
-- **Whose part is this?** Put the file in that surface's folder. A `rispecs/` root that has topic folders holds only `README.md` and `AGENTS.md`.
+- **Whose part is this?** Put the file in that surface's folder. A `rispecs/` root that has topic folders holds only `README.md` and `AGENTS.md`. A `rispecs/` that describes one surface (a package) is that surface's folder.
 - **Numbers are reading order**, and reading order follows R → I → S → E. They are given at birth and never reused.
 - **Moving a misplaced spec** uses `git mv` into its surface's folder and keeps the file name. Then fix path citations, and add a Moved row to `rispecs/README.md`.
 - **Check**: run `python3 rispecs_layout_check.py <repo>` from a jgwill/llms-txt checkout.
@@ -93,11 +118,9 @@ rispecs/
 |---|---|
 | "Fix the search feature" | "Users create precise search queries that manifest their desired information" |
 | "Remove loading delays" | "Instant, fluid interaction that supports creative flow" |
-| "Handle edge cases" | "Graceful support for all paths users take toward their vision" |
+| "Handle edge cases" | "Support for every path users take toward their vision" |
 | Features = problems to solve | Features = outcomes to create |
 | Oscillating maintenance specs | Advancing creation specs |
-
-## Advancing vs. Oscillating Patterns in Code
 
 **Advancing**: Features build on each other. Natural progression. Structural dynamics resolve tension forward.
 
@@ -108,4 +131,4 @@ rispecs/
 ## Integration
 
 - **Creative Orientation** (`/creative-orientation`): Foundation — RISE implements creative archaeology
-- **Structural Tension Charting** (`/structural-tension-charting`): Specs can be structured as tension charts with desired system state vs. current state
+- **Structural Tension Charting** (`/structural-tension-charting`): A spec's desired outcome and current reality can be held as a tension chart, and a designed chart can export its own rispec (`generate_rispec`, `llms-stc-state-machine.md`)
