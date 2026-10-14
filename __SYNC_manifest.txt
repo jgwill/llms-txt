@@ -13,6 +13,7 @@
 
 llms-rise-framework.txt
 llms-rispecs-layout.md
+llms-rispecs-kinship.md
 llms-creative-orientation.txt
 llms-narrative-remixing.txt
 llms-structural-thinking.txt

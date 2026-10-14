@@ -92,9 +92,11 @@ def check_folder(folder, rel, links_only):
     for f in files:
         if f.endswith(".kin.md"):
             stem = f[: -len(".kin.md")]
-            if f"{stem}.spec.md" not in files and stem not in ("SPEC",):
+            folder_kin = stem == os.path.basename(os.path.normpath(folder))  # <topic>.kin.md speaks for the folder
+            if (f"{stem}.spec.md" not in files and f"{stem}.rispec.md" not in files
+                    and not folder_kin and not stem.startswith("relation-to-")):
                 report("INFO", "kin-without-spec", os.path.join(rel, f),
-                       f"no {stem}.spec.md beside it (a .kin.md pairs with the spec of the same stem)")
+                       f"pairs with no {stem}.spec.md, folder or relation-to- name (llms-rispecs-kinship.md)")
 
 
 def check_root(root, rel, links_only):

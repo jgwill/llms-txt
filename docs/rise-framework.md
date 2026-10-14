@@ -26,7 +26,7 @@ repository it describes.
 | Phase | The question it answers | What it leaves in `rispecs/<topic>/` |
 |---|---|---|
 | 1 · **R** Reverse-engineer | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
-| 2 · **I** Intent-extract | What did its creator want to bring into being? | `02-intent.md`, a `.kin.md` beside a spec |
+| 2 · **I** Intent-extract | What did its creator want to bring into being, and in which relations does it live? | `02-intent.md`, the kin `<topic>.kin.md` |
 | 3 · **S** Specify | What is to be built, in prose another LLM can implement? | `SPEC.md` + `NN-<part>.spec.md` |
 | 4 · **E** Export | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the episode's `rispecs:` entry |
 | ↺ Return | What has the code done since the spec was written? | `STATUS.md`, specs brought up to date |
@@ -46,7 +46,7 @@ repository it describes.
 - Distinguish between what the code *does* and what the creator *intended*
 - Name the structural tension: desired outcome and current reality
 - Preserve the "beloved qualities" that make prototypes valuable
-- Write relational context (lineage, kin) as a `.kin.md` beside the spec it explains
+- Name the relations the surface lives in, across layers and repositories, and what each asks, in its kin (`<topic>.kin.md`, see [llms-rispecs-kinship.md](../llms-rispecs-kinship.md))
 
 ### Phase 3: Specify (S)
 
@@ -86,7 +86,8 @@ rispecs/
     ├── 01-reverse-engineer.md  R
     ├── 02-intent.md            I
     ├── SPEC.md                 S  master: the whole surface, how the parts compose
-    ├── 03-<part>.spec.md       S  · 03-<part>.kin.md its why
+    ├── <topic>.kin.md          I  kin: relations, and what each asks
+    ├── 03-<part>.spec.md       S  a part
     ├── 04-export.md            E
     └── STATUS.md               ↺  what is built
 ```

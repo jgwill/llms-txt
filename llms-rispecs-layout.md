@@ -2,10 +2,11 @@
 
 > The shape of a `rispecs/` folder: one tree, the names a file can take in it, the order its files are read in, and how to move a spec that sits in the wrong place. Use this when you draft a spec, when you open a `rispecs/` for the first time, and when you reorganize one.
 
-**Version**: 1.1.0
+**Version**: 1.2.0
 **Last Updated**: 2026-10-14
 **Companion of**: `llms-rise-framework.txt` 2.0.0. The method names what each phase leaves; this file says where it lands and what it is called  
-**1.1.0**: the tree is labelled with the 2.0 phases (1 R · 2 I · 3 S · 4 E · ↺ Return). A `.kin.md` belongs to Intent, and `STATUS.md` belongs to the Return
+**1.1.0**: the tree is labelled with the 2.0 phases (1 R · 2 I · 3 S · 4 E · ↺ Return). A `.kin.md` belongs to Intent, and `STATUS.md` belongs to the Return  
+**1.2.0**: the kin is the spec's relations and what each asks (`llms-rispecs-kinship.md`). `<topic>.kin.md` speaks for the folder
 **Issue**: jgwill/llms-txt#45
 **Checker**: [`rispecs_layout_check.py`](./rispecs_layout_check.py)
 
@@ -25,8 +26,9 @@
     │   ├── 🎯 02-intent.md                  2 I  desired outcome, current reality, structural tension
     │   ├── 🧭 SPEC.md                       3 S  master: the whole surface, and how its parts compose
     │   ├── 📐 03-<part>.spec.md             3 S  a part: what to build
-    │   ├── 🧬 03-<part>.kin.md              2 I  that part's relational context: same number, same stem
-    │   ├── 📐 04-<part>.rispec.md         2+3    a part with its relational context in one file
+    │   ├── 🧬 <topic>.kin.md                2 I  the surface's kin: its relations across layers and repositories, and what each asks
+    │   ├── 🧬 03-<part>.kin.md              2 I  one part's own relations: same number, same stem
+    │   ├── 📐 04-<part>.rispec.md         2+3    a part with its kin in one file
     │   ├── 📦 05-export.md                  4 E  how an implementer, a harness or an episode takes it up
     │   ├── 🗃️ 06-source-ledger.md               the sources every phase drew on, with confidence
     │   ├── 🩺 STATUS.md                     ↺    the Return: what is built, what is not yet
@@ -77,8 +79,10 @@ A spec about another repository's surface lands in that repository, and here you
 | `SPEC.md` | **Master spec.** The desired outcome of the whole surface, and how the parts compose | A folder whose surface is specified in parts |
 | `<topic>.spec.md` | The whole spec of a surface specified in one file | A one-spec folder: the stem matches the folder name |
 | `NN-<part>.spec.md` | A part: what to build | Numbered in reading order |
-| `NN-<part>.kin.md` | The part's relational context, written in Phase 2: the why, lineage, kin. Same `NN` and stem as its spec | Beside its spec |
-| `NN-<part>.rispec.md` | Spec and relational context in one file, instead of the pair | |
+| `<topic>.kin.md` | **Kin.** The surface's relations: ancestor, upstream, downstream, sibling, guardian, place. Each one says where its kin lives and what it asks. Kept true, and read before acting (`llms-rispecs-kinship.md`) | A topic whose relations reach another folder, layer or repository. `KINSHIP.md` may play this role in a folder; never both |
+| `NN-<part>.kin.md` | One part's own relations. Same `NN` and stem as its spec | Beside its spec |
+| `relation-to-<kin>.kin.md` | One relation that needs room of its own | In the topic folder |
+| `NN-<part>.rispec.md` | Spec and kin in one file, instead of the pair | |
 | `01-reverse-engineer.md` · `02-intent.md` | Phases 1 and 2, when the folder holds the whole pass | First |
 | `NN-export.md` · `NN-source-ledger.md` | E, and the record of sources | After the specs |
 | `STATUS.md` | Implementation state, kept by the Return | Once implementation starts |
@@ -128,9 +132,10 @@ rispecs/a2a/                                a spec family, S only (R and I live 
 
 1. `rispecs/README.md`: which folder holds the surface you are working on.
 2. The folder's `README.md`, then `SPEC.md`, or the `00-` master when there is no `SPEC.md`.
-3. The numbered files in order. Read a `.kin.md` with its spec.
-4. `STATUS.md`, before you claim anything is built.
-5. Skip `_archived_*` unless you are tracing history.
+3. The kin (`<topic>.kin.md`), before you change anything: it says what the change asks of other folders and repositories.
+4. The numbered files in order. A part's own `.kin.md` is read with its spec.
+5. `STATUS.md`, before you claim anything is built.
+6. Skip `_archived_*` unless you are tracing history.
 
 A folder with no README is read from `SPEC.md`, then from its lowest number, then from the file named after the folder.
 
@@ -197,7 +202,7 @@ python3 rispecs_layout_check.py --links <repo>        # broken relative links on
 | `no-entry` | WARN | A folder holds several files and none says it is read first (`README.md`, `SPEC.md`, `00-`) |
 | `broken-link` | WARN | A relative Markdown link points at nothing |
 | `duplicate-number` | INFO | Two files share a `NN-` prefix |
-| `kin-without-spec` | INFO | A `.kin.md` has no `.spec.md` of the same stem. That is right for a kin file about a relationship rather than a part |
+| `kin-without-spec` | INFO | A `.kin.md` matches no spec, folder or `relation-to-` name. `<topic>.kin.md` (the folder's kin) and `relation-to-<kin>.kin.md` are recognised |
 
 Folders named `archive`/`archives`, and paths beginning with `.` or `_` (`.pde/`, `_sessiondata/`), are not checked.
 Exit codes: `0` clean, `1` findings, `2` could not look.

@@ -77,7 +77,22 @@ Treat each repo/directory as a **being in a network of relations**, not a neutra
 - Erasing or rewriting user-authored kinship text without instruction
 - Resolving conflicts or consent questions unilaterally
 
+## At the Scale of a Specification: `.kin.md`
+
+A spec in `rispecs/` carries its kin in `<topic>.kin.md` (or `NN-<part>.kin.md`). It is not "the why" and not a database pointer. It holds the spec's relations, often to other layers in other repositories, and what each asks:
+
+| Relation | It asks |
+|---|---|
+| upstream (we stand on it) | Begin there: issue in that repo, change and publish, then bump here |
+| downstream (it stands on us) | After our change: an issue in their repo naming the section, or bump and deliver |
+| sibling | Consume, never restate |
+| guardian | Bring the held decision to its holder |
+| place | Deliver to where it runs |
+
+Two duties: **keep it true** (write a relation on both sides; open an issue where you cannot write) and **follow it before acting**. Restore harmony where the relation lives, not only in the local text. Full protocol: [`llms-rispecs-kinship.md`](../../llms-rispecs-kinship.md).
+
 ## Integration
 
 - **Relational Research** (`/relational-research`): Provides the paradigmatic foundation for kinship thinking
 - **Delayed Resolution** (`/delayed-resolution`): Unresolved tensions held explicitly, not smoothed over
+- **RISE Specification** (`/rise-specification`): Phase 2 names a spec's kin; the Return walks it

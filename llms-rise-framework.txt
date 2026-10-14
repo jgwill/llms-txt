@@ -1,13 +1,14 @@
 # RISE Framework for LLMs
 > A creative-oriented method in four phases, Reverse-engineer → Intent-extract → Specify → Export. It reads a prototype, names what its creator wanted to bring into being, writes that as prose code another LLM can build from, and lands the specification where it is built and remembered. A fifth movement, the Return, keeps the specification true as the code moves on. Each phase leaves a named file in `rispecs/`.
 
-**Version**: 2.0.0
-**Document ID**: llms-rise-framework-v2.0.0
+**Version**: 2.1.0
+**Document ID**: llms-rise-framework-v2.1.0
 **Last Updated**: 2026-10-14
 **Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles
 v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)
 v1.4.0: Where Specifications Land is one tree, read in R → I → S → E order; the layout lives in `llms-rispecs-layout.md` (jgwill/llms-txt#45)
-v2.0.0: One phase per letter. Specify is its own phase (it sat inside Intent). Export is Phase 4. Maintenance becomes the Return, moved into the method from after the document's footer. Each phase names the file it leaves. The reference examples are repositories you can read (jgwill/llms-txt#45)
+v2.0.0: One phase per letter. Specify is its own phase (it sat inside Intent). Export is Phase 4. Maintenance becomes the Return, moved into the method from after the document's footer. Each phase names the file it leaves. The reference examples are repositories you can read (jgwill/llms-txt#45)  
+v2.1.0: A `.kin.md` holds the specification's relations: across folders, layers of the architecture and repositories, and what each asks of the agent. It is found in R, named in I, carried in E, and walked in the Return. Before, it was "the why behind a spec". See `llms-rispecs-kinship.md` (jgwill/llms-txt#46)  
 **Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext
 **Composed by**: Guillaume D.Isabelle, 2025
 
@@ -22,7 +23,7 @@ The RISE framework moves an LLM from reactive documentation to creative archaeol
 | Phase | The question it answers | What it leaves in `rispecs/<topic>/` |
 |---|---|---|
 | 1 · **R** Reverse-engineer | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
-| 2 · **I** Intent-extract | What did its creator want to bring into being? | `02-intent.md`, and a `.kin.md` beside each spec whose why matters |
+| 2 · **I** Intent-extract | What did its creator want to bring into being, and in which relations does it live? | `02-intent.md`, and the kin: `<topic>.kin.md`, the relations and what each asks |
 | 3 · **S** Specify | What is to be built, in prose another LLM can implement? | `SPEC.md` and `NN-<part>.spec.md`, or one `<topic>.spec.md` |
 | 4 · **E** Export | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the `rispecs:` entry of the episode |
 | ↺ Return | What has the code done since the spec was written? | `STATUS.md`, and the specs brought up to date |
@@ -146,7 +147,7 @@ When the input is a hosted prototype (for example a v0 app), record two addresse
 Later passes reach the same source through these two. An episode holding the prototype keeps the published address in its manifest and the editing address on the node, for the people who may edit.
 
 #### What Phase 1 Leaves
-`rispecs/<topic>/01-reverse-engineer.md`: the observations, sections A–F, with where each was seen (a file, a screen, a commit, a session). Evidence too large for one file (surveys, transcripts, deep-dive reviews) goes in `research/` beside it. When the observations live elsewhere (an episode vessel, the donor scripts), the topic's `README.md` names the place, and no `01-` file is written.
+`rispecs/<topic>/01-reverse-engineer.md`: the observations, sections A–F, with where each was seen (a file, a screen, a commit, a session). What the prototype stands on and what stands on it (packages, services, other repositories' contracts, its consumers) are observed here too, and become the first rows of the kin. Evidence too large for one file (surveys, transcripts, deep-dive reviews) goes in `research/` beside it. When the observations live elsewhere (an episode vessel, the donor scripts), the topic's `README.md` names the place, and no `01-` file is written.
 
 ### Phase 2: Intent-extract {#phase2-intent-extract}
 
@@ -173,11 +174,13 @@ For each component identified in Phase 1, extract:
 - What would users miss if it were gone?
 - Which design decisions carry the creator's vision, and must survive a rewrite?
 
-#### Relational Context
-Intent has relations: the lineage a surface comes from, the kin it serves, the agreements it holds. When these shape what is to be built, write them as relational context: the why behind a spec.
+#### Kin: the Relations a Surface Lives In
+A surface is not specified alone: it is the relations it holds. It came from an episode, a prototype or a person's words. It stands on packages and contracts held in other repositories. Packages, apps and specs in other layers stand on it. Siblings hold the neighbouring parts of the same reality. Some of its decisions are held by a person. Phase 2 names these relations, and for each one what it asks of whoever works on the spec: begin upstream, tell downstream, consume a sibling without restating it, bring a held decision to its holder.
+
+This is relation in the sense Shawn Wilson writes from (*Research Is Ceremony*, 2008, pp. 79–80), not a database pointer. The file that holds it, its core sections, and the two duties it asks of agents (keep it true, follow it before acting) are in **`llms-rispecs-kinship.md`**.
 
 #### What Phase 2 Leaves
-`rispecs/<topic>/02-intent.md`: the desired outcome, the current reality, the structural tension, and the beloved qualities. Relational context goes in a `.kin.md` with the same number and stem as the spec it explains (`03-recording.kin.md` beside `03-recording.spec.md`). A spec and its kin may also be written together as one `.rispec.md`.
+`rispecs/<topic>/02-intent.md`: the desired outcome, the current reality, the structural tension, and the beloved qualities. The relations go in the kin: `<topic>.kin.md` for the whole surface, or `NN-<part>.kin.md` beside a part that has relations of its own (`03-recording.kin.md` beside `03-recording.spec.md`). Each relation is written with where its kin lives (`owner/repo` and path, `rise://`, a package name) and what it asks. A spec and its kin may also be written together as one `.rispec.md`.
 
 ### Phase 3: Specify {#phase3-specify}
 
@@ -338,8 +341,8 @@ rispecs/
     ├── 02-intent.md             2 I  desired outcome, current reality, tension
     ├── SPEC.md                  3 S  master: the whole surface, and how its parts compose
     ├── 03-<part>.spec.md        3 S  a part: what to build
-    ├── 03-<part>.kin.md         2 I  its relational context, the why: same number, same stem
-    ├── 04-<part>.rispec.md      3 S  a part and its relational context in one file
+    ├── 03-<part>.kin.md         2 I  its kin: relations across layers and repositories, and what each asks
+    ├── 04-<part>.rispec.md      3 S  a part and its kin in one file
     ├── 05-export.md             4 E  how an implementer, a harness or an episode takes it up
     └── STATUS.md                ↺    what is built, what is not yet
 ```
@@ -391,6 +394,7 @@ The Return starts from these lists.
 #### What Phase 4 Leaves
 - `NN-export.md` in the topic folder, numbered after the specs: what the next builder needs, and how they prove it built.
 - A row for the topic in `rispecs/README.md`: its desired outcome in a sentence, its status, its issue.
+- The reciprocal rows. Every downstream kin that will take this spec up (a package, an app, a plugin) carries the relation in its own `.kin.md` or `KINSHIP.md`, or receives an issue asking for it.
 - The `rispecs:` entry in the episode's `episode.yaml`.
 
 ### ↺ The Return: Keeping Specifications Alive {#the-return}
@@ -555,6 +559,11 @@ useEffect(() => {
 - Data model changes reflected in tool specifications
 - UI component specs align with architectural diagrams
 
+✅ **Relations Walked**
+- Every relation in the kin checked against its kin: a moved path, a newer version, a new consumer, a changed contract
+- What was out of step restored where the relation lives, not only here (`llms-rispecs-kinship.md` § Restoring harmony)
+- A dated Harmony entry in the kin
+
 ✅ **Git Provenance and Record**
 - Commit hashes cited for major features ("Implementation Reference")
 - `STATUS.md` says what is built and what is not yet, as of which commit
@@ -717,6 +726,7 @@ For each RISE analysis, validate:
 - Each file sits in the folder of its surface, named for its phase (`llms-rispecs-layout.md`)
 - The topic has a row in `rispecs/README.md`
 - The episode that asked for the work lists the spec folder
+- The kin names the relations and what each asks, and the reciprocal rows exist
 
 ## Practical Applications
 
@@ -876,6 +886,7 @@ llm prompt -m [model] "Using llms-rispecs-layout.md, name the folder and file na
 
 ### Related LLMS-txt Files
 - `llms-rispecs-layout.md`: the `rispecs/` tree — reserved names, reading order (R → I → S → E), and how to move a misplaced spec with `git mv`; `rispecs_layout_check.py` checks a repository against it
+- `llms-rispecs-kinship.md`: the `.kin.md`. A specification's relations across folders, layers and repositories, what each asks, and the two duties: keep it true, follow it before acting
 - `llms-creative-orientation.txt`: Deep dive into creative vs reactive approaches and structural thinking
 - `llms-language-integrity.md`: word-level precision, the companion of the language patterns above
 - `llms-narrative-remixing.txt`: Methods for transforming technical content into engaging narratives

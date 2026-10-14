@@ -31,7 +31,7 @@ Specifications are "prose code" — natural language representations of computat
 | Phase | Question | Leaves in `rispecs/<topic>/` |
 |---|---|---|
 | 1 · R | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
-| 2 · I | What did its creator want to bring into being? | `02-intent.md`, `.kin.md` beside a spec |
+| 2 · I | What did its creator want to bring into being, and in which relations does it live? | `02-intent.md`, the kin `<topic>.kin.md` |
 | 3 · S | What is to be built, in prose another LLM implements? | `SPEC.md` + `NN-<part>.spec.md`, or `<topic>.spec.md` |
 | 4 · E | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the episode's `rispecs:` entry |
 | ↺ Return | What has the code done since? | `STATUS.md`, specs brought up to date |
@@ -56,7 +56,7 @@ Name what the creator wanted, as distinct from what the code happens to do:
 - **Current Reality**: plain facts, no value word ("Current Reality", never "Current Structural Reality")
 - **Structural Tension**: how the tension between the two naturally progresses
 - **Beloved Qualities**: what users would miss, which design decisions must survive a rewrite
-- **Relational Context**: lineage, kin, agreements. Write it as a `.kin.md` with the same stem as its spec
+- **Kin**: the relations the surface lives in (ancestor, upstream, downstream, sibling, guardian, place), each with where its kin lives and what it asks. Write `<topic>.kin.md` per [`llms-rispecs-kinship.md`](../../llms-rispecs-kinship.md). It is not "the why", and not a database pointer
 
 ### Phase 3: Specify
 
@@ -93,6 +93,11 @@ A RISE pass run on what changed since the spec was written:
 - **S**: map `git diff --name-only` to the specs, and write each change with its creative intent and commit reference
 - **E**: update `STATUS.md`, and list the touched specs in the episode
 
+## The Kin: Two Duties
+
+1. **Keep it true.** Update the kin when a relation changes: the spec's contract, a moved or renamed kin, a new version, a new consumer, a new dependency. Write the reciprocal row in the kin's own file, or open an issue there.
+2. **Follow it before acting.** Upstream: the change begins there (issue, publish, then bump here). Downstream: tell them or bump and deliver. Sibling: consume, never restate. Guardian: bring the held decision to its holder. Place: deliver to where it runs. Record what you did under Harmony.
+
 ## Where Specifications Land
 
 ```
@@ -102,7 +107,8 @@ rispecs/
     ├── README.md             outcome, files in reading order, status
     ├── 01-reverse-engineer.md · 02-intent.md      1 R, 2 I (when the whole pass lives here)
     ├── SPEC.md               3 S  master: the whole surface, how the parts compose
-    ├── 03-<part>.spec.md     3 S  a part · 03-<part>.kin.md its why (2 I)
+    ├── <topic>.kin.md        2 I  kin: relations across layers and repos, what each asks
+    ├── 03-<part>.spec.md     3 S  a part
     ├── 04-export.md          4 E
     └── STATUS.md             ↺    what is built
 ```

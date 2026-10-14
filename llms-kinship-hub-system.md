@@ -107,3 +107,21 @@ When working under this protocol, LLMs must:
 - Describing only technical dependencies and ignoring people, communities, and more‑than‑human relations when the user has named them elsewhere.  
 - Erasing or rewriting user‑authored kinship text without explicit instruction.  
 - Resolving conflicts or consent questions unilaterally instead of naming them and asking.
+
+***
+
+## 6. Kinship at Smaller Scales: a Specification's `.kin.md`
+
+The same idea holds below the repository. A specification in `rispecs/` introduces itself through its relations in a `.kin.md`: `<topic>.kin.md` for a topic folder, `NN-<part>.kin.md` for one part. These relations often reach other layers of the architecture in other repositories: the package that realizes the spec, the app that consumes it, the contract it stands on, the person who holds a decision.
+
+| Scale | File | Protocol |
+|---|---|---|
+| Repository | `KINSHIP.md` | This file |
+| Topic folder | `rispecs/<topic>/<topic>.kin.md` (or a folder `KINSHIP.md`) | `llms-rispecs-kinship.md` |
+| Part | `rispecs/<topic>/NN-<part>.kin.md` | `llms-rispecs-kinship.md` |
+
+A relation that holds for the whole repository is written once, here, in `KINSHIP.md`. A spec's kin points up to it.
+
+A spec's kin carries the same two duties this protocol asks of `KINSHIP.md`, made concrete for specifications:
+1. **Keep it true**: a moved kin, a new version or a new consumer is a relational change, written on both sides.
+2. **Follow it before acting**: an upstream change begins upstream, downstream is told, and a held decision goes to its holder.
