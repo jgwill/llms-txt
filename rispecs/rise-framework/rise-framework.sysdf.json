@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "namespace": "jgwill.llms-txt",
+    "name": "RiseFramework",
+    "description": "The system of drawings of the RISE framework. Its specification is ../../llms-rise-framework.txt."
+  },
+  "members": [
+    {
+      "path": "rise-framework.erdf.json"
+    }
+  ],
+  "actors": []
+}

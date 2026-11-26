@@ -3,6 +3,7 @@
 
 **Version**: 2.3.0
 **Document ID**: llms-rise-framework-v2.3.0
+**Drawn as**: [`rispecs/rise-framework/rise-framework.sysdf.json`](rispecs/rise-framework/), an ERD of the framework's entities and how they relate
 **Last Updated**: 2026-11-26
 **Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles
 v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)

@@ -1,0 +1,434 @@
+{
+  "settings": {
+    "namespace": "jgwill.llms-txt",
+    "name": "RiseFramework",
+    "description": "The entities of the RISE framework 2.3.0 (llms-rise-framework.txt) and how they relate: what each phase leaves in a topic folder, the system of drawings, and the capability a system draws.",
+    "notes": "Drawn 2026-11-26 from llms-rise-framework.txt 2.3.0, at Guillaume's ask: the framework's entities and relationships, kept in the repository so a person and an agent can discuss and navigate them. Drawing.role and Drawing.executed are proposed (jgwill/smcraft#35), the decision-model kind is proposed (jgwill/smcraft#32), Capability kind plugin is proposed (jgwill/medicine-wheel#181). Held for 3.0.0: D1 to D4 of jgwill/llms-txt#48."
+  },
+  "entities": [
+    {
+      "name": "Repository",
+      "description": "A GitHub repository that holds code, specifications and capabilities.",
+      "attributes": [
+        {
+          "name": "slug",
+          "type": "string",
+          "key": "pk",
+          "description": "owner/repo"
+        }
+      ]
+    },
+    {
+      "name": "Prototype",
+      "description": "The working code Phase 1 reads: what it does and what people love in it.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "where the code lives"
+        },
+        {
+          "name": "repository",
+          "type": "string",
+          "references": "Repository"
+        }
+      ]
+    },
+    {
+      "name": "Topic",
+      "description": "One rispecs/<topic>/ folder, one surface. Holds every file the phases leave.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "rispecs/<topic>/"
+        },
+        {
+          "name": "repository",
+          "type": "string",
+          "references": "Repository"
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "its row in rispecs/README.md"
+        }
+      ]
+    },
+    {
+      "name": "ReverseEngineering",
+      "description": "1 R. 01-reverse-engineer.md: what the prototype does, observed. May live in an episode vessel; the topic README says where.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "01-reverse-engineer.md"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        },
+        {
+          "name": "prototype",
+          "type": "string",
+          "references": "Prototype"
+        }
+      ]
+    },
+    {
+      "name": "Intent",
+      "description": "2 I. 02-intent.md: desired outcome, current reality, beloved qualities, the tension.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "02-intent.md"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        },
+        {
+          "name": "desiredOutcome",
+          "type": "string",
+          "description": "what will exist"
+        },
+        {
+          "name": "currentReality",
+          "type": "string",
+          "description": "what is true now"
+        }
+      ]
+    },
+    {
+      "name": "KinFile",
+      "description": "2 I. <topic>.kin.md or <part>.kin.md: the relatives of the spec and what each relationship asks of us.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "<topic>.kin.md"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        }
+      ]
+    },
+    {
+      "name": "KinRelation",
+      "description": "One relative in a kin file and the kind of relationship. Relationality as in llms-relationality.md, not a database relation.",
+      "attributes": [
+        {
+          "name": "kinFile",
+          "type": "string",
+          "references": "KinFile"
+        },
+        {
+          "name": "relative",
+          "type": "string",
+          "description": "a file, package, repository, person or episode"
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "came from | we rely on | relies on us | walks beside | holds a decision"
+        },
+        {
+          "name": "asks",
+          "type": "string",
+          "description": "what the relationship asks of the agent"
+        }
+      ]
+    },
+    {
+      "name": "Specification",
+      "description": "3 S. Prose code another LLM can implement: SPEC.md (master), NN-<part>.spec.md, <topic>.spec.md or NN-<part>.rispec.md.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        },
+        {
+          "name": "form",
+          "type": "string",
+          "description": "master | part | whole | rispec"
+        }
+      ]
+    },
+    {
+      "name": "CreativeAdvancementScenario",
+      "description": "A usage scenario in place of BDD: Desired Outcome, Current Reality, Natural Progression, Resolution.",
+      "attributes": [
+        {
+          "name": "name",
+          "type": "string",
+          "key": "pk"
+        },
+        {
+          "name": "specification",
+          "type": "string",
+          "references": "Specification"
+        },
+        {
+          "name": "sequence",
+          "type": "string",
+          "references": "Drawing",
+          "nullable": true,
+          "description": "the sequence drawing that backs it, when there is one (jgwill/llms-txt#44)"
+        }
+      ]
+    },
+    {
+      "name": "System",
+      "description": "3 S since 2.3.0. <topic>.sysdf.json: lists the drawings that belong together. One per topic.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "<topic>.sysdf.json"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "key": "uk",
+          "references": "Topic",
+          "description": "one system per topic"
+        },
+        {
+          "name": "capability",
+          "type": "string",
+          "references": "Capability",
+          "nullable": true,
+          "description": "the capability it draws (2.3.0)"
+        }
+      ]
+    },
+    {
+      "name": "Drawing",
+      "description": "3 S since 2.3.0. A member of a system: an ERD (.erdf.json), a state machine (.smdf.json), a sequence (.sqdf.json), a decision model (.dmdf.json, proposed).",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk"
+        },
+        {
+          "name": "system",
+          "type": "string",
+          "references": "System"
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "erdf | smdf | sqdf | dmdf (proposed, jgwill/smcraft#32)"
+        },
+        {
+          "name": "role",
+          "type": "string",
+          "nullable": true,
+          "description": "proposed, jgwill/smcraft#35: unique in the system, what a person calls it"
+        },
+        {
+          "name": "executed",
+          "type": "boolean",
+          "nullable": true,
+          "description": "proposed, jgwill/smcraft#35: the Factory runs it, so the drawing is the definition"
+        }
+      ]
+    },
+    {
+      "name": "Capability",
+      "description": "What a repository can do: a row of .miadi/capabilities.jsonl, addressed miadi-capability://<owner>/<repo>/<kind>/<name>.",
+      "attributes": [
+        {
+          "name": "address",
+          "type": "string",
+          "key": "pk",
+          "description": "miadi-capability://<owner>/<repo>/<kind>/<name>"
+        },
+        {
+          "name": "repository",
+          "type": "string",
+          "references": "Repository"
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "package | cli | skill | decision | app; plugin proposed (jgwill/medicine-wheel#181)"
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "description": "4 E. NN-export.md: how an implementer, a harness or an episode takes the spec up.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "NN-export.md"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        }
+      ]
+    },
+    {
+      "name": "Episode",
+      "description": "A Chronicle episode, miadi-chronicle://<n>. Its episode.yaml lists the rispecs it holds.",
+      "attributes": [
+        {
+          "name": "address",
+          "type": "string",
+          "key": "pk",
+          "description": "miadi-chronicle://<n>"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "description": "↺ Return. STATUS.md: what is built and what is not yet, kept true as the code moves on.",
+      "attributes": [
+        {
+          "name": "path",
+          "type": "string",
+          "key": "pk",
+          "description": "STATUS.md"
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "references": "Topic"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Repository",
+      "to": "Topic",
+      "cardinality": "1:N",
+      "label": "holds in rispecs/"
+    },
+    {
+      "from": "Repository",
+      "to": "Prototype",
+      "cardinality": "1:N",
+      "label": "holds"
+    },
+    {
+      "from": "Repository",
+      "to": "Capability",
+      "cardinality": "1:N",
+      "label": "states"
+    },
+    {
+      "from": "Prototype",
+      "to": "ReverseEngineering",
+      "cardinality": "1:N",
+      "label": "is read in"
+    },
+    {
+      "from": "Topic",
+      "to": "ReverseEngineering",
+      "cardinality": "1:1",
+      "label": "R · begins with"
+    },
+    {
+      "from": "Topic",
+      "to": "Intent",
+      "cardinality": "1:1",
+      "label": "I · names its intent in"
+    },
+    {
+      "from": "Topic",
+      "to": "KinFile",
+      "cardinality": "1:N",
+      "label": "I · keeps its relatives in"
+    },
+    {
+      "from": "KinFile",
+      "to": "KinRelation",
+      "cardinality": "1:N",
+      "label": "lists"
+    },
+    {
+      "from": "Topic",
+      "to": "Specification",
+      "cardinality": "1:N",
+      "label": "S · is specified in"
+    },
+    {
+      "from": "Specification",
+      "to": "CreativeAdvancementScenario",
+      "cardinality": "1:N",
+      "label": "tells its usage as"
+    },
+    {
+      "from": "Topic",
+      "to": "System",
+      "cardinality": "1:1",
+      "label": "S · is drawn by"
+    },
+    {
+      "from": "System",
+      "to": "Drawing",
+      "cardinality": "1:N",
+      "label": "lists"
+    },
+    {
+      "from": "Drawing",
+      "to": "CreativeAdvancementScenario",
+      "cardinality": "1:1",
+      "label": "backs, when a sequence"
+    },
+    {
+      "from": "System",
+      "to": "Capability",
+      "cardinality": "N:1",
+      "label": "draws"
+    },
+    {
+      "from": "Capability",
+      "to": "Specification",
+      "cardinality": "N:M",
+      "label": "is specified in"
+    },
+    {
+      "from": "Topic",
+      "to": "Export",
+      "cardinality": "1:N",
+      "label": "E · is taken up through"
+    },
+    {
+      "from": "Export",
+      "to": "Episode",
+      "cardinality": "N:M",
+      "label": "is recorded in"
+    },
+    {
+      "from": "Topic",
+      "to": "Status",
+      "cardinality": "1:1",
+      "label": "↺ is kept true in"
+    }
+  ]
+}
