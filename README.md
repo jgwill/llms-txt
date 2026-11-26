@@ -26,3 +26,4 @@ This repository contains knowledge protected under the **Indigenous Knowledge St
 See [KINSHIP.md](KINSHIP.md#jgwilletc-claude-code--cloned-at-etcclaude-code-on-every-host)
 for the union rule, the drift checks, and the exit-code contract.
 
+
