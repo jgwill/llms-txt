@@ -4,6 +4,50 @@
 
 ---
 
+> **RISE is being refactored toward 3.0: model-driven specification.** The version in effect is **2.3.0** (2026-11-26). A specification is now written together with its drawings, and 3.0.0 will bind the two and check them. This header says what changed, where each resource is, and where to take the work up.
+
+## In transition: 2.3.0 toward 3.0 {#in-transition}
+
+**Iggy, this section is addressed to you first.** It is written so you can read the refactor, give feedback, and take up its next steps. Every other agent reads it the same way.
+
+### What changed in 2.3.0
+
+- **A new specification comes with its drawings.** For each kind that applies to the topic: data as an ERD (`*.erdf.json`), behaviour as state machines (`*.smdf.json`), usage as sequences (`*.sqdf.json`), decisions as decision models (`*.dmdf.json`) once the loom releases them. One kind may have several drawings. One `<topic>.sysdf.json` lists them, beside the spec.
+- **The spec names its system and the capability it draws** in its first lines. The capability is addressed `miadi-capability://<owner>/<repo>/<kind>/<name>`.
+- **Drawings are made and checked with the stateloom tools** (`@miadi/stateloom-mcp`, `smcx`, the `stateloom-system`, `stateloom-erd`, `stateloom-design` and `stateloom-sequence` skills).
+- **Compatible with 2.x.** Every 2.x topic folder stays valid. A topic gains its drawings when the Return next touches it.
+- **3.0.0 waits on four decisions,** D1 to D4: which side is trusted when prose and an executed drawing differ, flat files or a `drawings/` folder, whether a decision model joins a system, and an `#Element` fragment on `rise://` addresses. Guillaume answers them on jgwill/llms-txt#48 (D3 on jgwill/smcraft#32).
+
+### Where each resource is
+
+| Resource | What it holds | Where |
+|---|---|---|
+| The framework text, section *Toward 3.0* | the intent, the rule in effect, compatibility, D1 to D4, the upgrade path for each repository | [llms-rise-framework.txt](../llms-rise-framework.txt), published at https://llms.jgwill.com/llms-rise-framework.txt |
+| RISE drawn as a model | an ERD of 15 entities and 18 relationships, its system, the Mermaid render, a kin file | [rispecs/rise-framework/](https://github.com/jgwill/llms-txt/tree/main/rispecs/rise-framework), files at https://llms.jgwill.com/rispecs/rise-framework/rise-framework.sysdf.json and `.../rise-framework.erdf.json` |
+| The binding proposal | how a spec and its system are bound from both sides, with D1 to D4 and an ERD | jgwill/Miadi [rispecs/spec-system-binding/](https://github.com/jgwill/Miadi/tree/main/rispecs/spec-system-binding) |
+| The rispecs layout | where every file of a topic sits, drawings included | [llms-rispecs-layout.md](../llms-rispecs-layout.md) |
+| The plan | master chart `stc:east:1795710193737` on the medicine wheel, one telescoped chart per repository | the medicine-wheel MCP: `get_chart` |
+
+| Issue | What it carries |
+|---|---|
+| jgwill/llms-txt#48 | the 3.0.0 section of the text, and D1 to D4 |
+| jgwill/llms-txt#49 | the drawing of RISE, discussed one entity at a time |
+| jgwill/llms-txt#44 | a Creative Advancement Scenario backed by a sequence drawing |
+| jgwill/smcraft#35 | a system names its spec, each member has a role, the binding is checked |
+| jgwill/smcraft#36 | a drawing exports as one HTML page an issue can show |
+| jgwill/smcraft#32 | the decision model, the fourth kind of drawing |
+| jgwill/medicine-wheel#181 | a capability names its system, and a plugin with its components is a capability kind |
+
+### Iggy: how to start, and where to give feedback
+
+1. Read *Toward 3.0* in the framework text, then this page's phases below.
+2. Open the drawing with the stateloom MCP: `set_project_file` on `rispecs/rise-framework/rise-framework.sysdf.json`, then `check_system`. Compare each entity with the text.
+3. Give feedback on jgwill/llms-txt#49 for the drawing and on jgwill/llms-txt#48 for the text. Start each comment with the entity's name or the decision's code, and sign it as Iggy.
+4. The next steps, in order, one writer per repository at a time: jgwill/smcraft#36, then jgwill/medicine-wheel#181 (it can run beside it), then jgwill/smcraft#35 once D1 and D2 are answered, then RISE 3.0.0 on jgwill/llms-txt#48, then the orchestration kit and jgwill/Miadi, and last one capability read from its spec to its system and back.
+5. D1 to D4 are answered by Guillaume. Propose, with your reason, on the issue that holds each one.
+
+---
+
 ## Foundation: Specifications as Prose Code
 
 RISE builds on SpecLang's core insight: **specifications are "prose code"** — natural language representations of computation that still require you to think like a programmer.
@@ -88,6 +132,8 @@ rispecs/
     ├── SPEC.md                 S  master: the whole surface, how the parts compose
     ├── <topic>.kin.md          I  the kin file, always: relatives, and what each asks
     ├── 03-<part>.spec.md       S  a part
+    ├── <topic>.sysdf.json      S  the system: its drawings (2.3.0)
+    ├── *.erdf · *.smdf · *.sqdf.json  S  the drawings, beside the spec
     ├── 04-export.md            E
     └── STATUS.md               ↺  what is built
 ```
@@ -113,7 +159,8 @@ RISE changes how reverse engineering is practiced:
 
 ## Key Sources
 
-- [llms-rise-framework.txt](../llms-rise-framework.txt) — full framework (2.0.0)
+- [llms-rise-framework.txt](../llms-rise-framework.txt) — full framework (2.3.0; *Toward 3.0* is the refactor in progress)
+- [rispecs/rise-framework/](https://github.com/jgwill/llms-txt/tree/main/rispecs/rise-framework) — RISE drawn as an ERD and a system
 - [llms-rispecs-layout.md](../llms-rispecs-layout.md) — the `rispecs/` tree, its names, and how to move a misplaced spec
 - [llms-creative-orientation.txt](../llms-creative-orientation.txt) — foundational principles
 - [llms-structural-thinking.txt](../llms-structural-thinking.txt) — structural thinking methodology (master index)
