@@ -1,15 +1,16 @@
 # RISE Framework for LLMs
 > A creative-oriented method in four phases, Reverse-engineer → Intent-extract → Specify → Export. It reads a prototype, names what its creator wanted to bring into being, writes that as prose code another LLM can build from, and lands the specification where it is built and remembered. A fifth movement, the Return, keeps the specification true as the code moves on. Each phase leaves a named file in `rispecs/`.
 
-**Version**: 2.2.0
-**Document ID**: llms-rise-framework-v2.2.0
-**Last Updated**: 2026-10-14
+**Version**: 2.3.0
+**Document ID**: llms-rise-framework-v2.3.0
+**Last Updated**: 2026-11-26
 **Content Source**: Synthesized from speclangportal250529, rise-framework-250713a3b, and creative orientation principles
 v1.3.0: Exportation names where specs land and how they bind to a chronicle episode (jgwill/Miadi#769, jgwill/miadi-orchestration-kit#80)
 v1.4.0: Where Specifications Land is one tree, read in R → I → S → E order; the layout lives in `llms-rispecs-layout.md` (jgwill/llms-txt#45)
 v2.0.0: One phase per letter. Specify is its own phase (it sat inside Intent). Export is Phase 4. Maintenance becomes the Return, moved into the method from after the document's footer. Each phase names the file it leaves. The reference examples are repositories you can read (jgwill/llms-txt#45)  
 v2.1.0: A `.kin.md` holds the specification's relationships across folders, layers and repositories, and what each asks of the agent; before, it was "the why behind a spec" (jgwill/llms-txt#46)  
 v2.2.0: Every topic folder has a kin file, written with its first spec. *Relationship* means relationality as defined in `llms-relationality.md`, not a database relation. One vocabulary: came from, we rely on, relies on us, walks beside, holds a decision (jgwill/llms-txt#47)  
+v2.3.0: Toward 3.0, Model-Driven Specification. A new specification is written with its drawings (ERD, state machines, sequences), listed by one `<topic>.sysdf.json` and tied to the capability it draws. 2.x folders stay valid. What 3.0.0 holds open and the upgrade path for each repository are stated (jgwill/llms-txt#48)  
 **Attribution**: Built upon SpecLang methodology by Johan Rosenkilde, Russell Horton, Krzysztof Cieślak, and Jonathan Carter at GitHubNext
 **Composed by**: Guillaume D.Isabelle, 2025
 
@@ -25,13 +26,68 @@ The RISE framework moves an LLM from reactive documentation to creative archaeol
 |---|---|---|
 | 1 · **R** Reverse-engineer | What does the prototype do, and what do people love in it? | `01-reverse-engineer.md` |
 | 2 · **I** Intent-extract | What did its creator want to bring into being, and what is it in relationship with? | `02-intent.md`, and the kin file `<topic>.kin.md`: its relatives and what each relationship asks of us |
-| 3 · **S** Specify | What is to be built, in prose another LLM can implement? | `SPEC.md` and `NN-<part>.spec.md`, or one `<topic>.spec.md` |
+| 3 · **S** Specify | What is to be built, in prose another LLM can implement? | `SPEC.md` and `NN-<part>.spec.md`, or one `<topic>.spec.md`, and since 2.3.0 its drawings with one `<topic>.sysdf.json` ([Toward 3.0](#model-driven)) |
 | 4 · **E** Export | Who takes it up, and where is it remembered? | `NN-export.md`, a row in `rispecs/README.md`, the `rispecs:` entry of the episode |
 | ↺ Return | What has the code done since the spec was written? | `STATUS.md`, and the specs brought up to date |
 
 Number prefixes keep the files in the order the phases wrote them. The full tree, the reserved names and how to move a misplaced spec are in **`llms-rispecs-layout.md`**.
 
 R and I need not live in the same folder as S and E. When the reverse-engineering lives in an episode vessel or in the donor scripts, the topic's `README.md` says where, and the folder begins at its specs.
+
+## Toward 3.0: Model-Driven Specification {#model-driven}
+
+> **Status in 2.3.0.** The intention is stated here, and one rule takes effect now: a new specification is written with its drawings. The binding between a specification and its drawings is proposed (jgwill/llms-txt#48) and no tool checks it yet. Version 3.0.0 writes that binding into Phase 3, Phase 4 and the Return, once the decisions below are made.
+
+### What we intend
+
+A topic's prose specification and its system of drawings become one model, kept in one `rispecs/<topic>/` folder and named from both sides. The prose says why, for whom, and what a person decided. The drawings say what exists, how it behaves, how it is used and how it decides. A person and an agent open the system on the stateloom canvas, talk over one element, and change a definition by changing its drawing. Some drawings already run: an engine executes a state machine from its document. For those, changing the drawing changes the system.
+
+The model also tells an agent what a repository can do. Each system draws one capability of the repository that holds it, so an agent arriving in a repository can go from a capability to its specification and its drawings, and back.
+
+### What takes effect now (2.3.0)
+
+1. **A new specification comes with its drawings.** For each kind below that applies to the topic, draw one or more documents. One `<topic>.sysdf.json` lists them.
+
+| Kind | Drawing | File | What it backs in the spec |
+|---|---|---|---|
+| data | entity-relationship drawing | `*.erdf.json` | the Data section, its models and their relations |
+| behaviour | state machine | `*.smdf.json` | a lifecycle, a component's states, a structural tension chart (`llms-stc-state-machine.md`) |
+| usage | sequence drawing | `*.sqdf.json` | a Creative Advancement Scenario (jgwill/llms-txt#44) |
+| decision | decision model | `*.dmdf.json` | proposed in jgwill/smcraft#32. Not a member of a system until it is released |
+
+2. **A kind may have several drawings.** A topic may hold two ERDs and three machines. Until a member carries a role (jgwill/smcraft#35), tell them apart by file name and by the member's `notes`, and list each one in the spec's first lines.
+3. **The spec names its system and the capability it draws in its first lines.** The system by file name, the capability by its address `miadi-capability://<owner>/<repo>/<kind>/<name>` when the repository has a `.miadi/capabilities.jsonl`. The drawings sit beside the spec, flat in the topic folder.
+4. **Draw with the loom.** The `@miadi/stateloom-mcp` server or the `smcx` CLI, with the skills `stateloom-system`, `stateloom-erd`, `stateloom-design` and `stateloom-sequence`. `check_system` reports where a name crossing between drawings does not agree. `replay_scenario` walks a sequence through the machines. `generate_rispec` on the system gives back prose to read against the spec.
+5. **Close the loop with the capability.** After the spec and its system exist, add the spec to the capability's `specifications` (`rise://<owner>/<repo>/rispecs/<topic>/...`). Then a reader can start from either end.
+
+### What stays compatible
+
+- Every 2.x topic folder stays valid. A spec without drawings is not wrong. It gains its drawings the next time the Return touches it, starting with the topics whose code runs a drawing.
+- File names, phase numbers, the kin file and the reading order of 2.2.0 do not change.
+- An agent reading a folder with no system reads the prose as before.
+
+### What is held for 3.0.0
+
+Four decisions are open. A spec written now does not settle them. They are the proposal's D1 to D4, in `rise://jgwill/Miadi/rispecs/spec-system-binding/spec-system-binding.spec.md`, which also carries an ERD of the binding:
+
+- **D1.** Which side is trusted when the prose and an executed drawing differ. The proposal: the drawing for names, structure and behaviour, the prose for intent and for what a person decided.
+- **D2.** Drawings flat beside the spec, or in a `drawings/` subfolder for a large topic.
+- **D3.** Whether a decision model joins a system (Q3 of jgwill/smcraft#32).
+- **D4.** An `#<Element>` fragment on `rise://` addresses, so the prose can cite one state or one entity.
+
+### The upgrade path, by repository
+
+Recommended, not started. Each line is carried by its own issue, in this order: the RISE text names the rule, the loom carries and checks it, the wheel lets a capability name its system, and the kit and the Factory use it.
+
+| Repository | What it gains | Issue |
+|---|---|---|
+| jgwill/llms-txt | 3.0.0: a Model-driven specification section in Phase 3, a paragraph in Phase 4 and in the Return, the system file in `llms-rispecs-layout.md` | jgwill/llms-txt#48, jgwill/llms-txt#44 |
+| jgwill/smcraft (`@miadi/stateloom*`) | a system names its spec (`binding`), each member has a role and may be marked `executed`, checks Y006, Y007 and B001 to B003, `generate_rispec` writes into the topic folder, `smcx rispec`, the decision model as a fourth kind | jgwill/smcraft#35, jgwill/smcraft#32 |
+| jgwill/medicine-wheel | a capability names the system that draws it, a plugin and its components (skills, agents, hooks, commands, MCP servers) are a capability kind, a system and its drawings can be nodes on the wheel | jgwill/medicine-wheel#181, jgwill/medicine-wheel#151 |
+| jgwill/miadi-orchestration-kit | its plugins (`miadi-stateloom`, `mia-episode-companion` and others) open the system of an episode's or a capability's topic on the canvas, and its capability file states each plugin as a plugin | |
+| jgwill/Miadi | `rispecs/AGENTS.md` names the drawing files, `@miadi/rispecs-builder` puts a topic's system before its prose, and the first bound topics are `session-hooks-interpretation/`, `pde/` and `media-generation/` | |
+| every repository with `llms.txt` and `llms-full.txt` | says which RISE version its rispecs follow and where its systems are | |
+| each host's installed copy (`/etc/claude-code/llms-rise-framework.txt`) | carries this repository's version | |
 
 ## SpecLang Foundation: Prose Code {#speclang-foundation}
 
@@ -308,6 +364,8 @@ Behaviour, data and usage can be drawn instead of written:
 
 One `*.sysdf.json` (Spec 82) lists which drawings belong together. A sequence drawing is the drawn form of a Creative Advancement Scenario. Write the prose scenario first and draw it when messages between actors matter. A drawing sits beside the spec that cites it.
 
+Since 2.3.0 a new specification is written with its drawings, one or more of each kind that applies. [Toward 3.0](#model-driven) says what takes effect now and what is held.
+
 #### Quality Criteria
 - ✅ Creating Focus: Emphasizes what users create, not problems solved
 - ✅ Structural Dynamics: Natural forces driving progression (the disequilibrium between current reality and what is desired)
@@ -327,6 +385,7 @@ The specification files of the topic folder:
 - `SPEC.md`: the master, the whole surface and how its parts compose, when the surface is specified in parts. In a numbered family, `00-<topic>-master.spec.md` holds this role.
 - `NN-<part>.spec.md`: each part, numbered in reading order after `01-reverse-engineer.md` and `02-intent.md` when those exist.
 - `<topic>.spec.md`: the whole surface, when one file holds it.
+- `<topic>.sysdf.json` and its drawings (`*.erdf.json`, `*.smdf.json`, `*.sqdf.json`), beside the spec (2.3.0).
 
 Evaluate the work by asking: if another LLM took what was written, would it implement the functionality adequately?
 
@@ -352,6 +411,8 @@ rispecs/
     ├── <topic>.kin.md           2 I  the kin file: its relatives, and what each relationship asks of us
     ├── 03-<part>.kin.md         2 I  a part's own relatives, when it has some
     ├── 04-<part>.rispec.md      3 S  a part and its kin in one file
+    ├── <topic>.sysdf.json       3 S  the system: which drawings belong together (2.3.0)
+    ├── <name>.erdf.json · .smdf.json · .sqdf.json   3 S  its drawings, beside the spec
     ├── 05-export.md             4 E  how an implementer, a harness or an episode takes it up
     └── STATUS.md                ↺    what is built, what is not yet
 ```
@@ -410,6 +471,8 @@ The Return starts from these lists.
 
 #### Purpose
 A specification is true on the day it is exported. The Return keeps it true as the code moves on: it is a RISE pass run on what changed. R reads the git history since the specification, I reads the intent in the commit messages, S writes the change into the specs, and E records the new state in `STATUS.md` and in the episode.
+
+Since 2.3.0 a topic the Return touches that has no drawings gains them, and a topic that has them runs `check_system` again ([Toward 3.0](#model-driven)).
 
 **Current reality**: commits land daily and specification updates are manual and infrequent. **Desired outcome**: specifications that match the code at each release. The Return holds that tension with a staleness timeline and an upgrade workflow driven by git history.
 

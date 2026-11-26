@@ -8,7 +8,7 @@
 >
 > Canonical: <https://docs.smcraft.jgwill.com/llms.txt>
 >
-> `pull-content-sha256: 981cfc63af218889`
+> `pull-content-sha256: c71efe16e975c30b`
 
 ---
 
@@ -16,7 +16,7 @@
 
 **Engine:** `@miadi/stateloom-engine` — 0.4.4 (npm; renamed from `smcraft`, deprecated) / `miadi-stateloom-engine` 0.2.1 (PyPI, CLI `smcg`)
 **Loom packages:** `@miadi/stateloom-*` — protocol, client, hub, react, canvas, cli, mcp, skills, web
-**Framework:** RISE v1.2 (Reverse-engineer → Intent-extract → Specify → Export)
+**Framework:** RISE 2.3.0 (Reverse-engineer → Intent-extract → Specify → Export). Since 2.3.0 a new specification is written with its drawings, listed by one `.sysdf.json`. The loom is where they are drawn and checked. Where this goes: <https://llms.jgwill.com/llms-rise-framework.txt> § Toward 3.0, jgwill/llms-txt#48, and the loom's part jgwill/smcraft#35
 **Repository:** https://github.com/jgwill/smcraft
 **Published at:** https://docs.smcraft.jgwill.com
 
@@ -34,9 +34,9 @@ Ten published npm packages, plus the Python engine on PyPI. The designer source 
 | `npm i @miadi/stateloom-react` (0.1.6) | React 19 binding: `useSmcraftBridge`, session core. Re-exports the protocol's viewport helpers at the address the web designer has always imported them from. |
 | `npm i @miadi/stateloom-canvas` (0.1.4) | The design surface as a mountable component: `<StateMachineCanvas>` — wheel/⌃wheel/middle-drag/Space+drag/pinch navigation, composite drill-down, box dragging, routed edges, settled event chips, zoom HUD. Props in, callbacks out; every colour a `--slc-*` CSS variable. Ship `@miadi/stateloom-canvas/styles.css` with it. |
 | `npm i -g @miadi/stateloom-cli` (0.1.3) | Bin `smcx` — drive the loom from a terminal. |
-| `npx -y @miadi/stateloom-mcp` (0.2.6) | The MCP server. Bins `stateloom-mcp` and legacy `smcraft-mcp`. |
+| `npx -y @miadi/stateloom-mcp` (0.4.1) | The MCP server. Bins `stateloom-mcp` and legacy `smcraft-mcp`. |
 | `npx -y @miadi/stateloom-skills` (0.3.2) | Bin `stateloom` — installs agent skills into `.claude/skills/`. |
-| `npx -y @miadi/stateloom-web` (0.1.9) | Bin `stateloom-web` — the visual designer, prebuilt. Serves on 4598; reads its bridge URL at runtime from `GET /api/config`, so a published build carries nobody's URL and a redeploy is a restart, never a rebuild. |
+| `npx -y @miadi/stateloom-web` (0.3.5) | Bin `stateloom-web` — the visual designer, prebuilt. Serves on 4598; reads its bridge URL at runtime from `GET /api/config`, so a published build carries nobody's URL and a redeploy is a restart, never a rebuild. |
 
 Dependency direction: everything points at `@miadi/stateloom-protocol`. Nothing points back.
 
@@ -78,7 +78,7 @@ State classification is derived from structure, not declared: leaf (no children)
 
 Full schema: [Spec 70 — SMDF Format](https://github.com/jgwill/smcraft/blob/main/rispecs/70-smdf-format.spec.md)
 
-## MCP server — 17 state-machine tools, 10 ERD tools
+## MCP server — 65 tools: 22 state-machine, 10 ERD, 14 sequence, 10 system, 9 stage
 
 `@miadi/stateloom-mcp`, stdio by default (Streamable HTTP optional — see Transport below). Registration:
 
@@ -104,6 +104,12 @@ Full schema: [Spec 70 — SMDF Format](https://github.com/jgwill/smcraft/blob/ma
 **Act** — `validate_definition()`, `generate_code(language)`, `generate_rispec(intent?)`, `render_diagram(format?, path?, scale?, theme?, stamp?, open?)`
 
 **Document** — `set_project_file(path)`, `get_project_file()`
+
+**Objects** — `add_object(instance, class)`: declare what the machine is constructed with (fixes L001/L003 without `load_definition`).
+
+**Describe in place** — `update_state(name, description?, kind?, prompt?)`, `update_event(id, description)`, `remove_transition(state, event, nextState?)`: no need to rewrite the machine with `load_definition`.
+
+**Prompts** — `set_prompt(state, prompt)` (and `prompt` on `add_state`): what an agent resolves while the machine is in that state; engines ignore it, `generate_rispec` prints it.
 
 **Notes** (either document type) — `get_notes()`, `set_notes(target?, notes)`: working notes on the diagram or on one state / entity, saved in the document (`settings.notes`, `notes` on a shape) for whoever opens it next. Read them before changing a diagram someone else worked on. Engines and codegen ignore them
 
@@ -133,6 +139,34 @@ From `@miadi/stateloom-protocol`: `validateErd`, `checkLinks`, `checkStateOf`, `
 
 Examples: `examples/library_lending.erdf.json`, `examples/trading_strategy.erdf.json`. Full spec: [Spec 80 — ERDF Format](https://github.com/jgwill/smcraft/blob/main/rispecs/80-erdf-format.spec.md)
 
+## SQDF — Sequence Definition Format
+
+The third sibling: a `.sqdf.json` tells one usage scenario — `participants[]` (`name`, and what it is: `actor`, `service`, `object` = a machine's object instance, `holds` = entities) and `messages[]` in order (`from`, `to`, `label`, and optionally `event` it fires, `machine` when several define it, `carries` an entity, `state` the machine is in afterwards, `optional`, `reply`). `fragments[]` (`kind` alt|opt|loop, `label`, `after` = the main message it branches after, `messages`). Messages are addressed `"9"` (main) and `"f1.2"` (fragment 1, message 2). Rules S001–S006.
+
+**Sequence tools** — `create_sequence(namespace, name, description?, path?, overwrite?)`, `add_participant`, `update_participant`, `rename_participant`, `move_participant`, `remove_participant`, `add_message`, `update_message(ref, …)`, `remove_message(ref)`, `move_message(ref, to)`, `add_fragment`, `add_fragment_message`, `remove_fragment`, `validate_sequence()`. `render_diagram` gives a Mermaid `sequenceDiagram`.
+
+From `@miadi/stateloom-protocol`: `validateSequence`, `renderMermaidSequence`, `sequenceLayout`, the pure edits `addParticipant` … `removeFragment`. From `@miadi/stateloom-canvas`: `<SequenceCanvas>`. Full spec: [Spec 81 — SQDF Format](https://github.com/jgwill/smcraft/blob/main/rispecs/81-sqdf-format.spec.md)
+
+## SYSDF — the drawings as one system
+
+**Why it exists:** a system is what an agent and a person talk over while designing, and what a session that does not finish hands to the next instance. Arriving in a repo, look for a `.sysdf.json` and read its notes (`get_notes`) before designing; before ending an unfinished design session, leave the scenario as a sequence, the notes saying what was decided and what is open, and the `check_system` warnings as the next instance's to-do.
+
+A `.sysdf.json` names a system's members (`.erdf.json`, `.smdf.json`, `.sqdf.json`, paths relative to the system file — the only document that holds paths) and `actors[]` (`person` | `agent` | `service` | `external`). `settings.reconcile` is `propose` (default) or `auto`.
+
+**System tools** — `create_system`, `add_member`, `remove_member`, `add_actor`, `remove_actor`, `set_reconcile_mode(mode)`, `check_system()` (Y001–Y004, each member's own rules, L001–L004, and L005 event / L006 participant / L007 carried entity / L008 replay, L009 a state with no way out), `replay_scenario()`, `reconcile_scenario(apply?)`, `show(member?, focus?, note?)`. `generate_rispec` with a system active writes one rispec, each scenario path a Creative Advancement Scenario.
+
+**The replay** walks each message's event through every member machine that defines it, by the runtime's rules (leaf, then ancestors; composites enter their first non-history child; `final` ends the machine), keeping the set of states unevaluated guards could lead to. **Reconcile** adds what a scenario implies — an event no machine defines, a transition a machine refuses when the message names the `state` that follows, entities a message carries or a participant holds, actors — and never removes. In **`auto`** mode every sequence edit applies it at once and answers in one line (`STATELOOM_RECONCILE` overrides the mode per session). **`show`** relays a `view:show` through the hub to the canvases open on the system: which member, which element (`entity:X`, `state:X`, `event:X`, `message:9`…); nothing is written.
+
+From `@miadi/stateloom-protocol`: `checkSystem`, `replayScenario`, `reconcileScenario`, `reconcileSystem`, `systemLinks`, `linksOf`. Worked example: `examples/wave-count/` (Episode 140). Full spec: [Spec 82 — SYSDF](https://github.com/jgwill/smcraft/blob/main/rispecs/82-sysdf-system.spec.md)
+
+## The stage and the marks — the agent shows, the person points back
+
+**Stage tools** — `show_step(say, doc?, focus?, spotlight?, region?, title?, system?, audio?)` puts one step on the person's canvas: open the drawing, select `focus`, dim all but `spotlight`, frame `region`, show `say` as a caption. `write_tour(name, steps, …)` writes `<name>.tour.json` (paths relative to it, T001–T009); `play_tour(tour?, from?, autoplay?)` hands it to the canvases, which play it with their own controls; `stage_control(action, index?)` — play, pause, next, prev, goto, stop. `read_marks(doc?, system?, all?)` returns what is on the person's screen and the marks waiting for the agent — notes anchored to elements or an area of a drawing, kept in `<drawing>.marks.json` — read it before replying to a person who has the canvas open. `answer_mark(id, text?, resolve?, show?)` replies in the thread; `add_mark(text, elements?, region?, kind?)` leaves the agent's question; `await_marks(timeoutSeconds?)` waits for the next mark; `what_is_on_screen()`. Stages are named (`STATELOOM_STAGE`, default `default`); the hub answers `GET /stage/<name>`.
+
+**Talking on the canvas (Spec 84)** — with `STATELOOM_COMPANION_URL` set, the designer records takes into a Mia episode companion and plays its replies. A take carries what the canvas showed (`captures/<take>/canvas.json`; the wake says "spoken at the canvas"). Answer about drawings with `mia-listen reply <take> --steps steps.json` — an array of Spec 83 steps with absolute paths, one or two sentences each; the canvas plays them as a tour, each step's drawing opened and lit while its own voice plays. From `@miadi/stateloom-react`: `createTakeRecorder`, `createCompanionThread`, `replyTour`, `takeContext`, and `present()` on the stage session; from `@miadi/stateloom-canvas`: `CompanionDock`.
+
+From `@miadi/stateloom-protocol`: `validateTour`, `resolveTourPaths`, `stepHoldMs`, `addMark`, `replyToMark`, `marksWaitingOn`, `marksPathOf`, `machineElementBoxes`, `erdElementBoxes`, `sequenceElementBoxes`, `elementsInRegion`, `elementAt`, `formatReview`. Components: `StageOverlay`, `StageCaption`, `MarkComposer`, `MarkThread`, `MarksPanel` (`@miadi/stateloom-canvas`); `useStage`, `createStageSession`, `browserVoice`, `browserDictation` (`@miadi/stateloom-react`). Full spec: [Spec 83 — the stage and the marks](https://github.com/jgwill/smcraft/blob/main/rispecs/83-stage-and-marks.spec.md)
+
 ## Terminal — `smcx`
 
 Global options: `--bridge <url>`, `--doc <path>`, `--name <label>`.
@@ -149,6 +183,13 @@ smcx render [--as svg|png|mermaid|ascii] [--out path|-] [--scale n]
             [--theme dark|light] [--title text] [--stamp] [--open]
 smcx open [--web url]
 smcx presence
+smcx stage show --say text [--focus k:n] [--spotlight a,b] [--drawing path]
+smcx stage play <tour.json> [--from n] [--paused]
+smcx stage control <play|pause|next|prev|goto|stop> [n]
+smcx stage where                                   what the person's canvas shows
+smcx marks [--all] [--json]                        the marks waiting, with the context
+smcx marks await [--timeout s]                     exit 0 with the next mark, 4 on timeout
+smcx marks reply <id> [text] [--resolve]
 ```
 
 Mutations are durable-first: the definition is written to disk, then emitted to the hub. A machine can be edited with no hub running at all.
@@ -165,7 +206,7 @@ npx -y @miadi/stateloom-skills skills install --all
 
 Installs a ready-to-use `SKILL.md` into `.claude/skills/`. Ten skills, sources in [`./skills/`](https://github.com/jgwill/smcraft/blob/main/skills/):
 
-`stateloom-setup`, `stateloom-docker`, `stateloom-design`, `stateloom-erd` (the entity-relationship diagram beside the machines: tools, rules, `check_links`, the two notations), `stateloom-live-loop`, `stateloom-render`, `stateloom-codegen`, `stateloom-rispec`, `stateloom-service`, `stateloom-tailnet`.
+`stateloom-setup`, `stateloom-docker`, `stateloom-design`, `stateloom-erd` (the entity-relationship diagram beside the machines: tools, rules, `check_links`, the two notations), `stateloom-sequence` (usage scenarios: participants, messages that fire events and carry entities, fragments), `stateloom-system` (the drawings as one system: checks, replay, reconcile in propose or auto mode, `show`), `stateloom-stage` (show the work on the canvas step by step or as a tour; read and answer the person's marks), `stateloom-live-loop`, `stateloom-render`, `stateloom-codegen`, `stateloom-rispec`, `stateloom-service`, `stateloom-tailnet`.
 
 The last two are the deployment pair: `stateloom-service` runs the hub and canvas as
 supervised systemd user units over the published packages — including the upgrade a bare
@@ -191,6 +232,12 @@ stand the whole loom up, and keep it up, from these alone.
 | `STATELOOM_MCP_TOKEN` | — | Bearer token, REQUIRED in HTTP mode — the server refuses to start without it. |
 | `STATELOOM_MCP_ROOT` | — | Confine the MCP's active document to this directory. |
 | `STATELOOM_MCP_LOCK_PROJECT` | — | `1` refuses `set_project_file` entirely. |
+| `STATELOOM_RECONCILE` | — | `auto` or `propose`: this session's reconcile mode, over the system's own `settings.reconcile`. |
+| `STATELOOM_CHRONICLE_ROOT` | — | The canvas admits `<root>/<episode>/diagrams/*.json` under it, and nothing else there. |
+| `STATELOOM_STAGE` | `default` | The stage an MCP server, `smcx` and a canvas present on (Spec 83). A page joins another with `?stage=`. |
+| `STATELOOM_AGENT_NAME` | `mcp-agent` / `agent` | How the agent is named on the hub, on marks and on captions. |
+| `STATELOOM_COMPANION_URL` | — | A Mia episode companion (`phone-capture`, e.g. `http://127.0.0.1:8771`). Set, the designer shows the Talk dock and proxies `/api/companion/*` to it — never a reply post (Spec 84). |
+| `STATELOOM_COMPANION_EPISODE` | — | The episode the Talk dock speaks in when the page names none (`?episode=`) and the drawing is not under the chronicle. |
 
 4598 (canvas) and 4599 (hub) are the loom's pair. `scripts/live-loop.sh env|hub|web-build|web|mcp-line` resolves all of it once and writes `.env.smcraft-live`.
 
@@ -199,6 +246,8 @@ stand the whole loom up, and keep it up, from these alone.
 A browser download always, and `--stamp` / `stamp: true` on demand, produce `[ep252--]<Machine>--<yyMMddHHmmss>.<ext>` — the chronicle episode when the document lives under one, the machine's own name, and a stamp to the second. Built once in `bridge-protocol/src/exportName.ts`, so every surface names files alike.
 
 ## RISE Specifications
+
+Under RISE 2.3.0 a specification in any repository is written with its drawings, and those drawings are made here: SMDF (Spec 70), ERDF (Spec 80), SQDF (Spec 81, `rispecs/81-sqdf-format.spec.md`), and one SYSDF system listing them (Spec 82, `rispecs/82-sysdf-system.spec.md`). What a system will carry so it names the spec it draws (a binding, a role per member, checks between prose and drawings, an export written into the topic folder) is jgwill/smcraft#35. It is proposed, not built.
 
 - [Spec 70 — SMDF Format](https://github.com/jgwill/smcraft/blob/main/rispecs/70-smdf-format.spec.md): schema, state types, validation V001–V014, JSON/XML
 - [Spec 71 — Runtime Engine](https://github.com/jgwill/smcraft/blob/main/rispecs/71-runtime-engine.spec.md): State, Context, ContextAsync, TransitionHelper, observers
@@ -211,6 +260,7 @@ A browser download always, and `--stamp` / `stamp: true` on demand, produce `[ep
 - [Spec 78 — Forgewright Episode Rendering](https://github.com/jgwill/smcraft/blob/main/rispecs/78-forgewright-episode-rendering.plan.md): plan
 - [Spec 79 — Layout Persistence](https://github.com/jgwill/smcraft/blob/main/rispecs/79-layout-persistence.plan.md): plan
 - [Spec 80 — ERDF Format](https://github.com/jgwill/smcraft/blob/main/rispecs/80-erdf-format.spec.md): entity-relationship sibling of SMDF, rules E001–E005, link rules L001–L004, MCP tools, canvas
+- [Spec 83 — The Stage and the Marks](https://github.com/jgwill/smcraft/blob/main/rispecs/83-stage-and-marks.spec.md): tours and steps an agent plays on the canvas, marks a person leaves on any drawing, the wire, the tools
 
 ## Lineage / KINSHIP
 

@@ -8,11 +8,11 @@
 >
 > Canonical: <https://docs.medicine-wheel.jgwill.com/llms.txt>
 >
-> `pull-content-sha256: 88024aa9783d998f`
+> `pull-content-sha256: 6b8f1533d9442290`
 
 ---
 
-> A TypeScript framework for relational healing, ceremonial inquiry, and Indigenous-aligned software development — grounded in the Four Directions, Wilson's three R's, and OCAP® data sovereignty principles.
+> A TypeScript framework for relational healing, ceremonial inquiry, and Indigenous-aligned software development — grounded in the Four Directions, Shawn Wilson's relational accountability (respect, reciprocity, responsibility), and OCAP® data sovereignty principles.
 
 **Language:** TypeScript (ES2022, ESM)
 **License:** Indigenous Knowledge Stewardship License (IKSL) v1.0, MIT derived
@@ -25,23 +25,23 @@
 
 - [app](https://github.com/jgwill/medicine-wheel): Medicine Wheel app (`@medicine-wheel/app`) — the Next.js visual layer plus two CLIs: `mwsrv` (starts the server against a `.mw/store`, local or Docker) and `mw` (talks to the running server — status, orientation, directions, node/edge/ceremony/beat ops, charts, validators, skills); installs and runs without `@medicine-wheel/mcp`
 - [ontology-core](https://github.com/jgwill/medicine-wheel/blob/main/src/ontology-core): Foundational ontology layer for the Medicine Wheel Developer Suite — unified types, RDF vocabulary, Zod schemas, constants, semantic query helpers grounded in Indigenous relational ontology
-- [creative-orientation](https://github.com/jgwill/medicine-wheel/blob/main/src/creative-orientation): The orientation question, asked before the work — is there a prior state you are restoring? Yes routes to gap analysis (a fire); no routes to structural tension (a creating act). Holds the routing signals, not the instruments
-- [gap-analysis](https://github.com/jgwill/medicine-wheel/blob/main/src/gap-analysis): Problem-solving built properly for when something worked and stopped — evidenced baseline, observation, difference, verifiable elimination steps. The baseline requirement is what separates a fire from a creating act
-- [creative-problem-solving](https://github.com/jgwill/medicine-wheel/blob/main/src/creative-problem-solving): A signpost, not a door — carries the routing question and re-exports `@medicine-wheel/creative-orientation`. Named a prior state? gap-analysis. Named none? structural tension
+- [creative-orientation](https://github.com/jgwill/medicine-wheel/blob/main/src/creative-orientation): The orientation question, asked before the work — is there a prior state you are restoring? Yes routes to a gap analysis, which looks for what is missing and is not part of the creative orientation (the turn follows it); no routes to structural tension (a creating act). Holds the routing signals, not the instruments
+- [gap-analysis](https://github.com/jgwill/medicine-wheel/blob/main/src/gap-analysis): A gap analysis looks for what is missing — evidenced baseline, observation, difference, verifiable elimination steps — and can be useful when something worked and stopped. It is not part of the creative orientation: `turnToCreativeOrientation` follows it, keeps the findings as current reality, names the pull to fill each missing item, and asks for the desired outcome of a structural tension chart
+- [creative-problem-solving](https://github.com/jgwill/medicine-wheel/blob/main/src/creative-problem-solving): A signpost, not a door — carries the routing question and re-exports `@medicine-wheel/creative-orientation`. Named a prior state? gap-analysis, then the turn. Named none? structural tension
 - [brainstorming](https://github.com/jgwill/medicine-wheel/blob/main/src/brainstorming): Idea into committed design through approval gates a human holds — phased sessions where every emitted outcome, including the tool's own multiple-choice questions, passes the orientation check before it is spoken
 - [ceremony-protocol](https://github.com/jgwill/medicine-wheel/blob/main/src/ceremony-protocol): Ceremony lifecycle protocol — manages ceremony state, phase transitions, governance enforcement, and ceremonial review workflows
-- [fire-keeper](https://github.com/jgwill/medicine-wheel/blob/main/src/fire-keeper): Fire Keeper coordination agent — tends the ceremony fire, ensures relational integrity through gating conditions, and maintains Wilson alignment as an active agent
-- [community-review](https://github.com/jgwill/medicine-wheel/blob/main/src/community-review): Community-based ceremonial review protocol — implements Wilson's validation through Elder review circles, consensus-seeking, and relational accountability assessment
+- [fire-keeper](https://github.com/jgwill/medicine-wheel/blob/main/src/fire-keeper): Fire Keeper coordination agent — tends the ceremony fire through gating conditions (consent, ceremony phase, trajectory confidence) and brings value conflicts to people; it does not measure relational accountability (#155)
+- [community-review](https://github.com/jgwill/medicine-wheel/blob/main/src/community-review): Community-based ceremonial review protocol — review circles, consensus-seeking and relational accountability assessment, after the community-grounded credibility Wilson describes; its Elder step is the package's own design
 - [community-identity](https://github.com/jgwill/medicine-wheel/blob/main/src/community-identity): Who is in the circle — a person is a `human` node with `metadata.kind: "person"` and a role, a circle is a `circle` node, membership is a `member_of` edge; roles carry a permission map, and tokens and invitation codes stay with the consumer, never on the wheel
 - [consent-lifecycle](https://github.com/jgwill/medicine-wheel/blob/main/src/consent-lifecycle): Ongoing relational consent lifecycle — consent as a living relational obligation with lifecycle tracking, renewal, renegotiation, and community-level consent protocols
 - [narrative-engine](https://github.com/jgwill/medicine-wheel/blob/main/src/narrative-engine): Beat sequencing, arc validation, cadence patterns, and timeline building for the Medicine Wheel Developer Suite
-- [importance-unit](https://github.com/jgwill/medicine-wheel/blob/main/src/importance-unit): ImportanceUnit — the relational unit of knowledge carrying epistemic weight, source dimensions (Land/Dream/Code/Vision), circle depth tracking, and accountability links grounded in Wilson's relational epistemology
+- [importance-unit](https://github.com/jgwill/medicine-wheel/blob/main/src/importance-unit): ImportanceUnit — the relational unit of knowledge carrying epistemic weight, source dimensions (Land/Dream/Code/Vision), circle depth tracking, and accountability links, built after Wilson's relational accountability (the four sources and any weighting are this suite's, #155)
 - [relational-index](https://github.com/jgwill/medicine-wheel/blob/main/src/relational-index): Four-source epistemic dimensional indexing — Land, Dream, Code, Vision traversal with cross-dimensional mapping and spiral depth metrics
-- [transformation-tracker](https://github.com/jgwill/medicine-wheel/blob/main/src/transformation-tracker): Research transformation tracking — Wilson validity criterion: if research doesn't change you, you haven't done it right. Tracks researcher, community, and relational transformation
+- [transformation-tracker](https://github.com/jgwill/medicine-wheel/blob/main/src/transformation-tracker): Research transformation tracking — built on the lesson Wilson quotes from his co-researchers, "If research doesn't change you as a person, then you haven't done it right" (2008, p. 135); the validity check is ours. Tracks researcher, community, and relational transformation
 - [graph-viz](https://github.com/jgwill/medicine-wheel/blob/main/src/graph-viz): Medicine Wheel graph visualization — circular layout with four-direction node positioning, ceremony-aware edges, and OCAP® indicators
 - [relational-query](https://github.com/jgwill/medicine-wheel/blob/main/src/relational-query): Query builder, graph traversal, and accountability audit for the Medicine Wheel relational web. Protocol-aware: respects ceremony boundaries and OCAP® compliance during traversal.
 - [prompt-decomposition](https://github.com/jgwill/medicine-wheel/blob/main/src/prompt-decomposition): Ontology-enriched prompt decomposition engine for the Medicine Wheel Developer Suite — intent extraction, relational dependency mapping, and ceremony-aware action stacking
-- [ui-components](https://github.com/jgwill/medicine-wheel/blob/main/src/ui-components): React UI components for the Medicine Wheel Developer Suite — direction cards, beat timelines, node inspectors, OCAP® badges, and Wilson alignment gauges.
+- [ui-components](https://github.com/jgwill/medicine-wheel/blob/main/src/ui-components): React UI components for the Medicine Wheel Developer Suite — direction cards, beat timelines, node inspectors, OCAP® badges, and alignment gauges (`WilsonMeter` shows the suite's own number, not Wilson's; #155).
 - [client](https://github.com/jgwill/medicine-wheel/blob/main/src/client): Typed HTTP door to a running wheel — nodes, edges, ceremonies, beats and the ceremonial diary, with the wheel's paging honesty (`count`, `total`, `matched`, `truncated`) carried through and fail-fast errors that name the status. No retry; `limit: 'all'` asks for the whole store
 - [data-store](https://github.com/jgwill/medicine-wheel/blob/main/src/data-store): Shared Redis data-access layer for the Medicine Wheel Developer Suite — connection management, Node/Edge/Ceremony CRUD, session-ceremony linking, and discovery helpers
 - [session-reader](https://github.com/jgwill/medicine-wheel/blob/main/src/session-reader): Session event reader for the Medicine Wheel Developer Suite — JSONL parsing, session summaries, analytics extraction, and search across agent session data
@@ -81,6 +81,8 @@ The Next.js app surfaces that relational state as REST endpoints (also consumed 
 
 ## Specifications (RISE Framework)
 
+The rispecs follow RISE 2.x. RISE 2.3.0 (§ Toward 3.0 of [llms-rise-framework.txt](https://llms.jgwill.com/llms-rise-framework.txt)) asks a new specification to come with its drawings (ERD, state machines, sequences in one `.sysdf.json`) and to name the repository capability it draws. The wheel's part is recommended, not started: a capability names the system that draws it, a plugin and its components (skills, agents, hooks, commands, MCP servers) become a capability kind, and a system and its drawings can be nodes on the wheel (jgwill/medicine-wheel#181, jgwill/medicine-wheel#151).
+
 - [System Spec](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/medicine-wheel.spec.md): Top-level overview linking all packages
 - [ontology-core](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/ontology-core.spec.md): Types, schemas, vocabulary, constants, queries
 - [ceremony-protocol](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/ceremony-protocol.spec.md): Ceremony state, phases, governance
@@ -92,7 +94,7 @@ The Next.js app surfaces that relational state as REST endpoints (also consumed 
 - [narrative-beats-lifecycle](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/narrative-beats-lifecycle.spec.md): A beat's life from registration to witnessing
 - [importance-unit](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/importance-unit.spec.md): Epistemic weight, source dimensions, circle depth
 - [relational-index](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/relational-index.spec.md): Four-source dimensional indexing, spiral depth
-- [transformation-tracker](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/transformation-tracker.spec.md): Wilson validity, seven generations, reciprocity
+- [transformation-tracker](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/transformation-tracker.spec.md): a validity check built on Wilson (ours), seven generations, reciprocity
 - [graph-viz](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/graph-viz.spec.md): Layout engine, SVG paths, data converters
 - [relational-query](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/relational-query.spec.md): Query, traversal, audit, Cypher
 - [relational-web-package](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/relational-web-package.spec.md): The neighbourhood a caller receives, and what it withholds
@@ -120,19 +122,19 @@ The Next.js app surfaces that relational state as REST endpoints (also consumed 
 - [llms-full.txt](https://github.com/jgwill/medicine-wheel/blob/main/llms-full.txt): Exhaustive reference with code samples and full API
 - [ALPHA.md](https://github.com/jgwill/medicine-wheel/blob/main/ALPHA.md): What "experimental alpha" means for anyone depending on this
 - [RELEASING.md](https://github.com/jgwill/medicine-wheel/blob/main/RELEASING.md): Publishing is not deploying — publish, install globally, run the binary, then bump
-- [CLAUDE.md](https://github.com/jgwill/medicine-wheel/blob/main/CLAUDE.md): Repo laws for agents — versioning, topological workspaces, skills, infra registration
-- [rispecs/CLAUDE.md](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/CLAUDE.md): Specification index
+- [AGENTS.md](https://github.com/jgwill/medicine-wheel/blob/main/AGENTS.md): Repo laws for agents — versioning, topological workspaces, skills, infra registration
+- [rispecs/AGENTS.md](https://github.com/jgwill/medicine-wheel/blob/main/rispecs/AGENTS.md): Specification index
 - [llms/llms-rise-framework.txt](https://llms.jgwill.com/llms-rise-framework.txt): RISE methodology guide
 - [llms/llms-kinship-hub-system.md](https://llms.jgwill.com/llms-kinship-hub-system.md): Kinship hub protocol
 
 ## Key Concepts
 
 - **Four Directions**: East (vision/Waabinong), South (growth/Zhaawanong), West (reflection/Epangishmok), North (wisdom/Kiiwedinong)
-- **Wilson's Three R's**: Respect, Reciprocity, Responsibility — scored 0–1 per relation
+- **Respect, reciprocity, responsibility** (Wilson 2008, p. 77; p. 99): scored 0–1 per relation; the scores are this library's construct
 - **OCAP®**: Ownership, Control, Access, Possession — Indigenous data sovereignty
 - **Structural Tension**: Germination → Assimilation → Completion creative cycle
 - **Ceremonial Inquiry**: opening → council → integration → closure phase progression
-- **Orientation**: the question asked before an instrument is chosen — a named prior state is a fire (gap analysis); no prior state is a creating act (structural tension)
+- **Orientation**: the question asked before an instrument is chosen — a named prior state routes to a gap analysis, which looks for what is missing and is followed by the turn to the creative orientation; no prior state is a creating act (structural tension)
 
 ## Cross-Repository Links
 

@@ -277,9 +277,9 @@ Ten published npm packages, plus the Python engine on PyPI. The designer source 
 | `npm i @miadi/stateloom-react` (0.1.6) | React 19 binding: `useSmcraftBridge`, session core. Re-exports the protocol's viewport helpers at the address the web designer has always imported them from. |
 | `npm i @miadi/stateloom-canvas` (0.1.4) | The design surface as a mountable component: `<StateMachineCanvas>` — wheel/⌃wheel/middle-drag/Space+drag/pinch navigation, composite drill-down, box dragging, routed edges, settled event chips, zoom HUD. Props in, callbacks out; every colour a `--slc-*` CSS variable. Ship `@miadi/stateloom-canvas/styles.css` with it. |
 | `npm i -g @miadi/stateloom-cli` (0.1.3) | Bin `smcx` — drive the loom from a terminal. |
-| `npx -y @miadi/stateloom-mcp` (0.2.6) | The MCP server. Bins `stateloom-mcp` and legacy `smcraft-mcp`. |
+| `npx -y @miadi/stateloom-mcp` (0.4.1) | The MCP server. Bins `stateloom-mcp` and legacy `smcraft-mcp`. |
 | `npx -y @miadi/stateloom-skills` (0.3.2) | Bin `stateloom` — installs agent skills into `.claude/skills/`. |
-| `npx -y @miadi/stateloom-web` (0.1.9) | Bin `stateloom-web` — the visual designer, prebuilt. Serves on 4598; reads its bridge URL at runtime from `GET /api/config`, so a published build carries nobody's URL and a redeploy is a restart, never a rebuild. |
+| `npx -y @miadi/stateloom-web` (0.3.5) | Bin `stateloom-web` — the visual designer, prebuilt. Serves on 4598; reads its bridge URL at runtime from `GET /api/config`, so a published build carries nobody's URL and a redeploy is a restart, never a rebuild. |
 
 Dependency direction: everything points at `@miadi/stateloom-protocol`. Nothing points back.
 
